@@ -1,256 +1,256 @@
 /******************************************************************************
 
-                  °æÈ¨ËùÓÐ (C), 2010-2015, ¹úÍøµçÁ¦Í¨ÐÅÓëÓÃµç¼¼Êõ·Ö¹«Ë¾
+                  ç‰ˆæƒæ‰€æœ‰ (C), 2010-2015, å›½ç½‘ç”µåŠ›é€šä¿¡ä¸Žç”¨ç”µæŠ€æœ¯åˆ†å…¬å¸
 
  ******************************************************************************
-  ÎÄ ¼þ Ãû   : con3761adp.h
-  °æ ±¾ ºÅ   : ³õ¸å
-  ×÷    Õß   : liming
-  Éú³ÉÈÕÆÚ   : 2013Äê4ÔÂ8ÈÕ ÐÇÆÚÒ»
-  ×î½üÐÞ¸Ä   :
-  ¹¦ÄÜÃèÊö   : ¼¯ÖÐÆ÷376.1Ð­Òé½âÎöÊÊÅä²ã Í·ÎÄ¼þ 
-  º¯ÊýÁÐ±í   :
-  ÐÞ¸ÄÀúÊ·   :
-  ¼òÐ´ËµÃ÷   : CM ¼¯ÖÐÆ÷µ½Ö÷Õ¾   MC Ö÷Õ¾µ½¼¯ÖÐÆ÷
-  1.ÈÕ    ÆÚ   : 2013Äê4ÔÂ8ÈÕ ÐÇÆÚÒ»
-    ×÷    Õß   : liming
-    ÐÞ¸ÄÄÚÈÝ   : ´´½¨ÎÄ¼þ
+  æ–‡ ä»¶ å   : con3761adp.h
+  ç‰ˆ æœ¬ å·   : åˆç¨¿
+  ä½œ    è€…   : liming
+  ç”Ÿæˆæ—¥æœŸ   : 2013å¹´4æœˆ8æ—¥ æ˜ŸæœŸä¸€
+  æœ€è¿‘ä¿®æ”¹   :
+  åŠŸèƒ½æè¿°   : é›†ä¸­å™¨376.1åè®®è§£æžé€‚é…å±‚ å¤´æ–‡ä»¶ 
+  å‡½æ•°åˆ—è¡¨   :
+  ä¿®æ”¹åŽ†å²   :
+  ç®€å†™è¯´æ˜Ž   : CM é›†ä¸­å™¨åˆ°ä¸»ç«™   MC ä¸»ç«™åˆ°é›†ä¸­å™¨
+  1.æ—¥    æœŸ   : 2013å¹´4æœˆ8æ—¥ æ˜ŸæœŸä¸€
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : åˆ›å»ºæ–‡ä»¶
 
 ******************************************************************************/
 #ifndef _CON_3761_ADP_H_
 #define _CON_3761_ADP_H_
 #include "qgdw_3761_api.h"
 
-#pragma pack(push)  // ²ÉÓÃÒ»×Ö½Ú¶ÔÆë
+#pragma pack(push)  // é‡‡ç”¨ä¸€å­—èŠ‚å¯¹é½
 #pragma pack(1)
 
 typedef eMtErr eCmErr;
 
-/* (1)¶¨ÒåÖ÷Õ¾Óë¼¯ÖÐÆ÷Í¨ÐÅÐ­ÒéÃüÁîÀàÐÍ, Ã¿ÌõÃüÁî¶ÔÒ»Ìõ3761Ð­Òé 
- * (2)¸ÃÐ­Òé·ÖÊ®Áù´óÀà,Ã¿´óÀà,×î¶àÖ§³Ö255¸ö×ÓÃüÁî
- * (3)ÓÐÐ©´óÀàÖ»ÄÜÖð¸ö×ÓÃüÁî·¢ËÍ,ÓÐÐ©ÃüÁîÖ§³Ö¸Ã´óÀàÏÂÈÎÒâ¸ö×ÓÃüÁîµÄ×éºÏ,
- *    µ«×éºÏµÄ×ÓÃüÁî±êÊ¶ÐèÎ¨Ò»
- * (4)ÊÊÅä²ã±àÐ´ÕßÐèÒª×¢²áÊµÏÖ,¸ÃÃüÁîÓëAPIÃüÁîÖ®¼äÖ±½ÓÏà»¥×ª»»
+/* (1)å®šä¹‰ä¸»ç«™ä¸Žé›†ä¸­å™¨é€šä¿¡åè®®å‘½ä»¤ç±»åž‹, æ¯æ¡å‘½ä»¤å¯¹ä¸€æ¡3761åè®® 
+ * (2)è¯¥åè®®åˆ†åå…­å¤§ç±»,æ¯å¤§ç±»,æœ€å¤šæ”¯æŒ255ä¸ªå­å‘½ä»¤
+ * (3)æœ‰äº›å¤§ç±»åªèƒ½é€ä¸ªå­å‘½ä»¤å‘é€,æœ‰äº›å‘½ä»¤æ”¯æŒè¯¥å¤§ç±»ä¸‹ä»»æ„ä¸ªå­å‘½ä»¤çš„ç»„åˆ,
+ *    ä½†ç»„åˆçš„å­å‘½ä»¤æ ‡è¯†éœ€å”¯ä¸€
+ * (4)é€‚é…å±‚ç¼–å†™è€…éœ€è¦æ³¨å†Œå®žçŽ°,è¯¥å‘½ä»¤ä¸ŽAPIå‘½ä»¤ä¹‹é—´ç›´æŽ¥ç›¸äº’è½¬æ¢
 */
 typedef enum
 {
-    CM_CMD_UNKOWN,                  // Î´ÖªÃüÁî  
+    CM_CMD_UNKOWN,                  // æœªçŸ¥å‘½ä»¤  
 
-    /* È·ÈÏ¨M·ñÈÏ£¨AFN=00H£© */
-    CMD_ALL_OK,                     // È«²¿È·ÈÏ
-    CMD_ALL_DENY,                   // È«²¿·ñÈÏ
-    CMD_ONE_BY_ONE,                 // °´Êý¾Ýµ¥Ôª±êÊ¶È·ÈÏºÍ·ñÈÏ
-
-
-    /* ¸´Î»ÃüÁî£¨AFN=01H£© */ 
-    CMD_HARD_INIT,                  // Ó²¼þ³õÊ¼»¯
-    CMD_DATA_INIT,                  // Êý¾ÝÇø³õÊ¼»¯
-    CMD_FACTORY_RESET,              // ²ÎÊý¼°È«ÌåÊý¾ÝÇø³õÊ¼»¯£¨¼´»Ö¸´ÖÁ³ö³§ÅäÖÃ£©
-    CMD_PARA_INIT,                  // ²ÎÊý£¨³ýÓëÏµÍ³Ö÷Õ¾Í¨ÐÅÓÐ¹ØµÄ£©¼°È«ÌåÊý¾ÝÇø³õÊ¼»¯
+    /* ç¡®è®¤âˆ•å¦è®¤ï¼ˆAFN=00Hï¼‰ */
+    CMD_ALL_OK,                     // å…¨éƒ¨ç¡®è®¤
+    CMD_ALL_DENY,                   // å…¨éƒ¨å¦è®¤
+    CMD_ONE_BY_ONE,                 // æŒ‰æ•°æ®å•å…ƒæ ‡è¯†ç¡®è®¤å’Œå¦è®¤
 
 
-    /* Á´Â·½Ó¿Ú¼ì²â£¨AFN=02H£© */
-    CMD_LOG_IN,                     // µÇÂ¼       ÎÞÊý¾Ýµ¥Ôª
-    CMD_LOG_OUT,                    // ÍË³öµÇÂ¼   ÎÞÊý¾Ýµ¥Ôª
-    CMD_HEART_BEAT,                 // ÐÄÌø       ÎÞÊý¾Ýµ¥Ôª
-
-    /* ÉèÖÃ²ÎÊý£¨AFN == 04H£© */ 
-    //CMD_CFG_NOT_ELEC ,            // ·ÇµçÆø²âÁ¿µãÊý¾Ý²ÎÊýÅäÖÃ
-                                    // 1£ºÎÂ¶È£¬2£ºÁ÷Á¿£¬3£ºÁ÷ËÙ£¬4£ºÑ¹Á¦£¬
-                                    // 5£ºÊª¶È£¬6£ºÕÕ¶È£¬7£º×ªËÙ£¬ÆäËû£º±¸ÓÃ
-
-    CMD_CFG_TML_UP,                 // ÉèÖÃ ÖÕ¶ËÉÏÐÐÍ¨ÐÅ¿ÚÍ¨ÐÅ²ÎÊýÉèÖÃ
-    CMD_CFG_TML_POWER,              // ÉèÖÃ ÖÕ¶ËµçÄÜ±í/½»Á÷²ÉÑù×°ÖÃÅäÖÃ²ÎÊý
-    CMD_CFG_ASK_1,                  // 1ÀàÊý¾ÝÅäÖÃÉèÖÃ(ÔÚÖÕ¶ËÖ§³ÖµÄ1ÀàÊý¾ÝÅäÖÃÄÚ) CMD_AFN_4_F38_CFG_ASK_1
-    CMD_CFG_ASK_2,                  // 2ÀàÊý¾ÝÅäÖÃÉèÖÃ(ÔÚÖÕ¶ËÖ§³ÖµÄ2ÀàÊý¾ÝÅäÖÃÄÚ) CMD_AFN_4_F39_CFG_ASK_2
-    CMD_CFG_AUTO_1,                 // ¶¨Ê±ÉÏ±¨1ÀàÊý¾ÝÈÎÎñÉèÖÃ    CMD_AFN_4_F65_CFG_AUTO_1
-    CMD_CFG_AUTO_2,                 // ¶¨Ê±ÉÏ±¨2ÀàÊý¾ÝÈÎÎñÉèÖÃ    CMD_AFN_4_F66_CFG_AUTO_2
-    CMD_GO_AUTO_1,                  // ¶¨Ê±ÉÏ±¨1ÀàÊý¾ÝÈÎÎñÆô¶¯/Í£Ö¹ÉèÖÃ CMD_AFN_4_F67_GOP_AUTO_1
-    CMD_GO_AUTO_2,                  // ¶¨Ê±ÉÏ±¨2ÀàÊý¾ÝÈÎÎñÆô¶¯/Í£Ö¹ÉèÖÃ CMD_AFN_4_F68_GOP_AUTO_2
-
-    /* ¿ØÖÆÃüÁî£¨AFN == 05H£©*/
-    CMD_CTRL_CHECK_TIME,            // ¶ÔÊ±ÃüÁî
-
-    CMD_PERMIT_TALK_GO,             // ÔÊÐíÖÕ¶ËÓëÖ÷Õ¾Í¨»°  Ã»ÓÐÓ¦ÓÃ²ãÊý¾Ý pn = p0
-    CMD_PERMIT_TALK_STOP,           // ½ûÖ¹ÖÕ¶ËÓëÖ÷Õ¾Í¨»°  Ã»ÓÐÓ¦ÓÃ²ãÊý¾Ý pn = p0
-
-    CMD_PERMIT_LINK_ON,             // ¼¤»îÖÕ¶ËÁ¬½ÓÖ÷Õ¾    Ã»ÓÐÓ¦ÓÃ²ãÊý¾Ý pn = p0
-    CMD_PERMIT_LINK_OFF,            // ÃüÁîÖÕ¶Ë¶Ï¿ªÁ¬½Ó    Ã»ÓÐÓ¦ÓÃ²ãÊý¾Ý pn = p0
-
-    CMD_AUTO_REPORT_GO,             // ÔÊÐíÖÕ¶ËÖ÷¶¯ÉÏ±¨   Ã»ÓÐÓ¦ÓÃ²ãÊý¾Ý pn = p0
-    CMD_AUTO_REPORT_STOP,           // ½ûÖ¹ÖÕ¶ËÖ÷¶¯ÉÏ±¨   Ã»ÓÐÓ¦ÓÃ²ãÊý¾Ý pn = p0
+    /* å¤ä½å‘½ä»¤ï¼ˆAFN=01Hï¼‰ */ 
+    CMD_HARD_INIT,                  // ç¡¬ä»¶åˆå§‹åŒ–
+    CMD_DATA_INIT,                  // æ•°æ®åŒºåˆå§‹åŒ–
+    CMD_FACTORY_RESET,              // å‚æ•°åŠå…¨ä½“æ•°æ®åŒºåˆå§‹åŒ–ï¼ˆå³æ¢å¤è‡³å‡ºåŽ‚é…ç½®ï¼‰
+    CMD_PARA_INIT,                  // å‚æ•°ï¼ˆé™¤ä¸Žç³»ç»Ÿä¸»ç«™é€šä¿¡æœ‰å…³çš„ï¼‰åŠå…¨ä½“æ•°æ®åŒºåˆå§‹åŒ–
 
 
-    /* ÇëÇóÅäÖÃ (AFN == 09H£© */ 
-    CMD_AFN_TML_VERSION,            // ÖÕ¶Ë°æ±¾ÐÅÏ¢  pn = p0  ¶ÔÓ¦Êý¾Ý½á¹¹ sMtTmlVersion
-    CMD_AFN_TML_INPUT_OUT,          // ÖÕ¶ËÖ§³ÖµÄÊäÈë¡¢Êä³ö¼°Í¨ÐÅ¶Ë¿ÚÅäÖÃ  pn = p0  ¶ÔÓ¦Êý¾Ý½á¹¹ sMtTmlInputOut
-    CMD_TML_OTHER_CFG,              // ÖÕ¶ËÖ§³ÖµÄÆäËûÅäÖÃ  ¶ÔÓ¦Êý¾Ý½á¹¹ sMtTmlOtherCfg
-    CMD_SUPPORT_PARA_CFG,           // ÖÕ¶ËÖ§³ÖµÄ²ÎÊýÅäÖÃ      CMD_AFN_9_F4_SUPPORT_PARA_CFG
-    CMD_SUPPORT_CTRL_CFG,           // ÖÕ¶ËÖ§³ÖµÄ¿ØÖÆÅäÖÃ      CMD_AFN_9_F5_SUPPORT_CTRL_CFG
-    CMD_SUPPORT_ASK1_CFG,           // ÖÕ¶ËÖ§³ÖµÄ1ÀàÊý¾ÝÅäÖÃ   CMD_AFN_9_F6_SUPPORT_ASK1_CFG
-    CMD_SUPPORT_ASK2_CFG,           // ÖÕ¶ËÖ§³ÖµÄ2ÀàÊý¾ÝÅäÖÃ   CMD_AFN_9_F7_SUPPORT_ASK2_CFG
-    CMD_SUPPORT_EVNT_CFG,           // ÖÕ¶ËÖ§³ÖµÄÊÂ¼þ¼ÇÂ¼ÅäÖÃ  CMD_AFN_9_F8_SUPPORT_EVNT_CFG
+    /* é“¾è·¯æŽ¥å£æ£€æµ‹ï¼ˆAFN=02Hï¼‰ */
+    CMD_LOG_IN,                     // ç™»å½•       æ— æ•°æ®å•å…ƒ
+    CMD_LOG_OUT,                    // é€€å‡ºç™»å½•   æ— æ•°æ®å•å…ƒ
+    CMD_HEART_BEAT,                 // å¿ƒè·³       æ— æ•°æ®å•å…ƒ
+
+    /* è®¾ç½®å‚æ•°ï¼ˆAFN == 04Hï¼‰ */ 
+    //CMD_CFG_NOT_ELEC ,            // éžç”µæ°”æµ‹é‡ç‚¹æ•°æ®å‚æ•°é…ç½®
+                                    // 1ï¼šæ¸©åº¦ï¼Œ2ï¼šæµé‡ï¼Œ3ï¼šæµé€Ÿï¼Œ4ï¼šåŽ‹åŠ›ï¼Œ
+                                    // 5ï¼šæ¹¿åº¦ï¼Œ6ï¼šç…§åº¦ï¼Œ7ï¼šè½¬é€Ÿï¼Œå…¶ä»–ï¼šå¤‡ç”¨
+
+    CMD_CFG_TML_UP,                 // è®¾ç½® ç»ˆç«¯ä¸Šè¡Œé€šä¿¡å£é€šä¿¡å‚æ•°è®¾ç½®
+    CMD_CFG_TML_POWER,              // è®¾ç½® ç»ˆç«¯ç”µèƒ½è¡¨/äº¤æµé‡‡æ ·è£…ç½®é…ç½®å‚æ•°
+    CMD_CFG_ASK_1,                  // 1ç±»æ•°æ®é…ç½®è®¾ç½®(åœ¨ç»ˆç«¯æ”¯æŒçš„1ç±»æ•°æ®é…ç½®å†…) CMD_AFN_4_F38_CFG_ASK_1
+    CMD_CFG_ASK_2,                  // 2ç±»æ•°æ®é…ç½®è®¾ç½®(åœ¨ç»ˆç«¯æ”¯æŒçš„2ç±»æ•°æ®é…ç½®å†…) CMD_AFN_4_F39_CFG_ASK_2
+    CMD_CFG_AUTO_1,                 // å®šæ—¶ä¸ŠæŠ¥1ç±»æ•°æ®ä»»åŠ¡è®¾ç½®    CMD_AFN_4_F65_CFG_AUTO_1
+    CMD_CFG_AUTO_2,                 // å®šæ—¶ä¸ŠæŠ¥2ç±»æ•°æ®ä»»åŠ¡è®¾ç½®    CMD_AFN_4_F66_CFG_AUTO_2
+    CMD_GO_AUTO_1,                  // å®šæ—¶ä¸ŠæŠ¥1ç±»æ•°æ®ä»»åŠ¡å¯åŠ¨/åœæ­¢è®¾ç½® CMD_AFN_4_F67_GOP_AUTO_1
+    CMD_GO_AUTO_2,                  // å®šæ—¶ä¸ŠæŠ¥2ç±»æ•°æ®ä»»åŠ¡å¯åŠ¨/åœæ­¢è®¾ç½® CMD_AFN_4_F68_GOP_AUTO_2
+
+    /* æŽ§åˆ¶å‘½ä»¤ï¼ˆAFN == 05Hï¼‰*/
+    CMD_CTRL_CHECK_TIME,            // å¯¹æ—¶å‘½ä»¤
+
+    CMD_PERMIT_TALK_GO,             // å…è®¸ç»ˆç«¯ä¸Žä¸»ç«™é€šè¯  æ²¡æœ‰åº”ç”¨å±‚æ•°æ® pn = p0
+    CMD_PERMIT_TALK_STOP,           // ç¦æ­¢ç»ˆç«¯ä¸Žä¸»ç«™é€šè¯  æ²¡æœ‰åº”ç”¨å±‚æ•°æ® pn = p0
+
+    CMD_PERMIT_LINK_ON,             // æ¿€æ´»ç»ˆç«¯è¿žæŽ¥ä¸»ç«™    æ²¡æœ‰åº”ç”¨å±‚æ•°æ® pn = p0
+    CMD_PERMIT_LINK_OFF,            // å‘½ä»¤ç»ˆç«¯æ–­å¼€è¿žæŽ¥    æ²¡æœ‰åº”ç”¨å±‚æ•°æ® pn = p0
+
+    CMD_AUTO_REPORT_GO,             // å…è®¸ç»ˆç«¯ä¸»åŠ¨ä¸ŠæŠ¥   æ²¡æœ‰åº”ç”¨å±‚æ•°æ® pn = p0
+    CMD_AUTO_REPORT_STOP,           // ç¦æ­¢ç»ˆç«¯ä¸»åŠ¨ä¸ŠæŠ¥   æ²¡æœ‰åº”ç”¨å±‚æ•°æ® pn = p0
+
+
+    /* è¯·æ±‚é…ç½® (AFN == 09Hï¼‰ */ 
+    CMD_AFN_TML_VERSION,            // ç»ˆç«¯ç‰ˆæœ¬ä¿¡æ¯  pn = p0  å¯¹åº”æ•°æ®ç»“æž„ sMtTmlVersion
+    CMD_AFN_TML_INPUT_OUT,          // ç»ˆç«¯æ”¯æŒçš„è¾“å…¥ã€è¾“å‡ºåŠé€šä¿¡ç«¯å£é…ç½®  pn = p0  å¯¹åº”æ•°æ®ç»“æž„ sMtTmlInputOut
+    CMD_TML_OTHER_CFG,              // ç»ˆç«¯æ”¯æŒçš„å…¶ä»–é…ç½®  å¯¹åº”æ•°æ®ç»“æž„ sMtTmlOtherCfg
+    CMD_SUPPORT_PARA_CFG,           // ç»ˆç«¯æ”¯æŒçš„å‚æ•°é…ç½®      CMD_AFN_9_F4_SUPPORT_PARA_CFG
+    CMD_SUPPORT_CTRL_CFG,           // ç»ˆç«¯æ”¯æŒçš„æŽ§åˆ¶é…ç½®      CMD_AFN_9_F5_SUPPORT_CTRL_CFG
+    CMD_SUPPORT_ASK1_CFG,           // ç»ˆç«¯æ”¯æŒçš„1ç±»æ•°æ®é…ç½®   CMD_AFN_9_F6_SUPPORT_ASK1_CFG
+    CMD_SUPPORT_ASK2_CFG,           // ç»ˆç«¯æ”¯æŒçš„2ç±»æ•°æ®é…ç½®   CMD_AFN_9_F7_SUPPORT_ASK2_CFG
+    CMD_SUPPORT_EVNT_CFG,           // ç»ˆç«¯æ”¯æŒçš„äº‹ä»¶è®°å½•é…ç½®  CMD_AFN_9_F8_SUPPORT_EVNT_CFG
     
-    /* ²éÑ¯²ÎÊý£¨AFN == 0AH£© */ 
-    CMD_CFG_TML_UP_Q,               // ²éÑ¯ ÖÕ¶ËÉÏÐÐÍ¨ÐÅ¿ÚÍ¨ÐÅ²ÎÊýÉèÖÃ           CMD_AFN_A_F1_TML_UP_CFG
-    CMD_CFG_TML_POWER_Q,            // ²éÑ¯ ÖÕ¶ËµçÄÜ±í/½»Á÷²ÉÑù×°ÖÃÅäÖÃ²ÎÊý   (ÃüÁîÓÐ²ÎÊý sMtTmlPowerCfg_Q)   CMD_AFN_A_F10_TML_POWER_CFG
-    CMD_CFG_ASK_1_Q,                // 1ÀàÊý¾ÝÅäÖÃÉèÖÃ(ÔÚÖÕ¶ËÖ§³ÖµÄ1ÀàÊý¾ÝÅäÖÃÄÚ) (ÃüÁîÓÐ²ÎÊý sMtAsk1Cfg_Q) CMD_AFN_A_F38_CFG_ASK_1
-    CMD_CFG_ASK_2_Q,                // 2ÀàÊý¾ÝÅäÖÃÉèÖÃ(ÔÚÖÕ¶ËÖ§³ÖµÄ2ÀàÊý¾ÝÅäÖÃÄÚ) (ÃüÁîÓÐ²ÎÊý sMtAsk2Cfg_Q) CMD_AFN_A_F39_CFG_ASK_2
-    CMD_CFG_AUTO_1_Q,               // ²éÑ¯¶¨Ê±ÉÏ±¨1ÀàÊý¾ÝÈÎÎñÉèÖÃ      CMD_AFN_A_F65_CFG_AUTO_1
-    CMD_CFG_AUTO_2_Q,               // ²éÑ¯¶¨Ê±ÉÏ±¨2ÀàÊý¾ÝÈÎÎñÉèÖÃ      CMD_AFN_A_F66_CFG_AUTO_2
-    CMD_GOP_AUTO_1_Q,               // ¶¨Ê±ÉÏ±¨1ÀàÊý¾ÝÈÎÎñÆô¶¯/Í£Ö¹ÉèÖÃ CMD_AFN_A_F67_GOP_AUTO_1
-    CMD_GOP_AUTO_2_Q,               // ¶¨Ê±ÉÏ±¨2ÀàÊý¾ÝÈÎÎñÆô¶¯/Í£Ö¹ÉèÖÃ CMD_AFN_A_F68_GOP_AUTO_2
+    /* æŸ¥è¯¢å‚æ•°ï¼ˆAFN == 0AHï¼‰ */ 
+    CMD_CFG_TML_UP_Q,               // æŸ¥è¯¢ ç»ˆç«¯ä¸Šè¡Œé€šä¿¡å£é€šä¿¡å‚æ•°è®¾ç½®           CMD_AFN_A_F1_TML_UP_CFG
+    CMD_CFG_TML_POWER_Q,            // æŸ¥è¯¢ ç»ˆç«¯ç”µèƒ½è¡¨/äº¤æµé‡‡æ ·è£…ç½®é…ç½®å‚æ•°   (å‘½ä»¤æœ‰å‚æ•° sMtTmlPowerCfg_Q)   CMD_AFN_A_F10_TML_POWER_CFG
+    CMD_CFG_ASK_1_Q,                // 1ç±»æ•°æ®é…ç½®è®¾ç½®(åœ¨ç»ˆç«¯æ”¯æŒçš„1ç±»æ•°æ®é…ç½®å†…) (å‘½ä»¤æœ‰å‚æ•° sMtAsk1Cfg_Q) CMD_AFN_A_F38_CFG_ASK_1
+    CMD_CFG_ASK_2_Q,                // 2ç±»æ•°æ®é…ç½®è®¾ç½®(åœ¨ç»ˆç«¯æ”¯æŒçš„2ç±»æ•°æ®é…ç½®å†…) (å‘½ä»¤æœ‰å‚æ•° sMtAsk2Cfg_Q) CMD_AFN_A_F39_CFG_ASK_2
+    CMD_CFG_AUTO_1_Q,               // æŸ¥è¯¢å®šæ—¶ä¸ŠæŠ¥1ç±»æ•°æ®ä»»åŠ¡è®¾ç½®      CMD_AFN_A_F65_CFG_AUTO_1
+    CMD_CFG_AUTO_2_Q,               // æŸ¥è¯¢å®šæ—¶ä¸ŠæŠ¥2ç±»æ•°æ®ä»»åŠ¡è®¾ç½®      CMD_AFN_A_F66_CFG_AUTO_2
+    CMD_GOP_AUTO_1_Q,               // å®šæ—¶ä¸ŠæŠ¥1ç±»æ•°æ®ä»»åŠ¡å¯åŠ¨/åœæ­¢è®¾ç½® CMD_AFN_A_F67_GOP_AUTO_1
+    CMD_GOP_AUTO_2_Q,               // å®šæ—¶ä¸ŠæŠ¥2ç±»æ•°æ®ä»»åŠ¡å¯åŠ¨/åœæ­¢è®¾ç½® CMD_AFN_A_F68_GOP_AUTO_2
 
-    /* ÇëÇó1ÀàÊý¾Ý£¨AFN=0CH£© */
-    CMD_CURNT_PQUI,                 // µ±Ç°ÈýÏà¼°×ÜÓÐ/ÎÞ¹¦¹¦ÂÊ¡¢¹¦ÂÊÒòÊý£¬ÈýÏàµçÑ¹¡¢µçÁ÷¡¢ÁãÐòµçÁ÷¡¢ÊÓÔÚ¹¦ÂÊ
-    CMD_TML_CLOCK,                  // ÖÕ¶ËÈÕÀúÊ±ÖÓ  Êý¾Ý½á¹¹ sMtUserClock   CMD_AFN_C_F2_TML_CLOCK
-    CMD_DC_RLTM_DATA,               // Ö±Á÷Ä£ÄâÁ¿ÊµÊ±Êý¾Ý CMD_AFN_C_F73_DC_RLTM_DATA
-    CMD_POWER_CUR,                  // µ±Ç°A¡¢B¡¢CÈýÏàÕý/·´ÏòÓÐ¹¦µçÄÜÊ¾Öµ¡¢×éºÏÎÞ¹¦1/2µçÄÜÊ¾Öµ ¶ÔÓ¦3761ÃüÁî CMD_AFN_C_F31_POWER_CUR
-    CMD_CURT_HARM_VALUE,            // µ±Ç°A¡¢B¡¢CÈýÏàµçÑ¹¡¢µçÁ÷2¡«N´ÎÐ³²¨ÓÐÐ§Öµ CMD_AFN_C_F57_CURT_HARM_VALUE
-    CMD_CURT_HARM_RATE,             // µ±Ç°A¡¢B¡¢CÈýÏàµçÑ¹¡¢µçÁ÷2¡«N´ÎÐ³²¨º¬ÓÐÂÊ CMD_AFN_C_F58_CURT_HARM_RATE
-    CMD_FRTH_HAVE_POWR_C,           // µ±Ç°ÕýÏòÓÐ¹¦µçÄÜÊ¾Öµ£¨×Ü¡¢·ÑÂÊ1¡«M£©              CMD_AFN_C_F129_FRTH_HAVE_POWR_C
-    CMD_FRTH_NONE_POWR_C,           // µ±Ç°ÕýÏòÎÞ¹¦£¨×éºÏÎÞ¹¦1£©µçÄÜÊ¾Öµ£¨×Ü¡¢·ÑÂÊ1¡«M£© CMD_AFN_C_F130_FRTH_NONE_POWR_C
+    /* è¯·æ±‚1ç±»æ•°æ®ï¼ˆAFN=0CHï¼‰ */
+    CMD_CURNT_PQUI,                 // å½“å‰ä¸‰ç›¸åŠæ€»æœ‰/æ— åŠŸåŠŸçŽ‡ã€åŠŸçŽ‡å› æ•°ï¼Œä¸‰ç›¸ç”µåŽ‹ã€ç”µæµã€é›¶åºç”µæµã€è§†åœ¨åŠŸçŽ‡
+    CMD_TML_CLOCK,                  // ç»ˆç«¯æ—¥åŽ†æ—¶é’Ÿ  æ•°æ®ç»“æž„ sMtUserClock   CMD_AFN_C_F2_TML_CLOCK
+    CMD_DC_RLTM_DATA,               // ç›´æµæ¨¡æ‹Ÿé‡å®žæ—¶æ•°æ® CMD_AFN_C_F73_DC_RLTM_DATA
+    CMD_POWER_CUR,                  // å½“å‰Aã€Bã€Cä¸‰ç›¸æ­£/åå‘æœ‰åŠŸç”µèƒ½ç¤ºå€¼ã€ç»„åˆæ— åŠŸ1/2ç”µèƒ½ç¤ºå€¼ å¯¹åº”3761å‘½ä»¤ CMD_AFN_C_F31_POWER_CUR
+    CMD_CURT_HARM_VALUE,            // å½“å‰Aã€Bã€Cä¸‰ç›¸ç”µåŽ‹ã€ç”µæµ2ï½žNæ¬¡è°æ³¢æœ‰æ•ˆå€¼ CMD_AFN_C_F57_CURT_HARM_VALUE
+    CMD_CURT_HARM_RATE,             // å½“å‰Aã€Bã€Cä¸‰ç›¸ç”µåŽ‹ã€ç”µæµ2ï½žNæ¬¡è°æ³¢å«æœ‰çŽ‡ CMD_AFN_C_F58_CURT_HARM_RATE
+    CMD_FRTH_HAVE_POWR_C,           // å½“å‰æ­£å‘æœ‰åŠŸç”µèƒ½ç¤ºå€¼ï¼ˆæ€»ã€è´¹çŽ‡1ï½žMï¼‰              CMD_AFN_C_F129_FRTH_HAVE_POWR_C
+    CMD_FRTH_NONE_POWR_C,           // å½“å‰æ­£å‘æ— åŠŸï¼ˆç»„åˆæ— åŠŸ1ï¼‰ç”µèƒ½ç¤ºå€¼ï¼ˆæ€»ã€è´¹çŽ‡1ï½žMï¼‰ CMD_AFN_C_F130_FRTH_NONE_POWR_C
     
-    /* ÇëÊ¾2ÀàÊý¾Ý (AFN = 0DH) */
-    CMD_UBLN_OVER_D,                // ÈÕ²»Æ½ºâ¶ÈÔ½ÏÞÀÛ¼ÆÊ±¼ä ÈÕ¶³½á  Êý¾Ý½á¹¹ sMtUblnOverD ¶ÔÓ¦ÃüÁî CMD_AFN_D_F28_UBLN_OVER_D
-    CMD_UBLN_OVER_M,                // ÔÂ²»Æ½ºâ¶ÈÔ½ÏÞÀÛ¼ÆÊ±¼ä ÔÂ¶³½á  Êý¾Ý½á¹¹ sMtUblnOverM ¶ÔÓ¦ÃüÁî CMD_AFN_D_F36_UBLN_OVER_M
+    /* è¯·ç¤º2ç±»æ•°æ® (AFN = 0DH) */
+    CMD_UBLN_OVER_D,                // æ—¥ä¸å¹³è¡¡åº¦è¶Šé™ç´¯è®¡æ—¶é—´ æ—¥å†»ç»“  æ•°æ®ç»“æž„ sMtUblnOverD å¯¹åº”å‘½ä»¤ CMD_AFN_D_F28_UBLN_OVER_D
+    CMD_UBLN_OVER_M,                // æœˆä¸å¹³è¡¡åº¦è¶Šé™ç´¯è®¡æ—¶é—´ æœˆå†»ç»“  æ•°æ®ç»“æž„ sMtUblnOverM å¯¹åº”å‘½ä»¤ CMD_AFN_D_F36_UBLN_OVER_M
 
 
-    // ¶ÁÈ¡ÎÂ¶ÈÓëÊª¶ÈÒÔÏÂÁ½¸öÃüÁîÎªÔÝÊ±Ìæ´úÐÔÃüÁî£¬ºóÐø¿ÉÄÜ»á±ä
-    CMD_NELC_TEMP,                  // ¶ÁÈ¡ÎÂ¶È CMD_AFN_C_F17_TOTAL_POWER_HAVE
-    CMD_NELC_HUMi,                  // ¶ÁÈ¡Êª¶È CMD_AFN_C_F18_TOTAL_POWER_NONE
+    // è¯»å–æ¸©åº¦ä¸Žæ¹¿åº¦ä»¥ä¸‹ä¸¤ä¸ªå‘½ä»¤ä¸ºæš‚æ—¶æ›¿ä»£æ€§å‘½ä»¤ï¼ŒåŽç»­å¯èƒ½ä¼šå˜
+    CMD_NELC_TEMP,                  // è¯»å–æ¸©åº¦ CMD_AFN_C_F17_TOTAL_POWER_HAVE
+    CMD_NELC_HUMi,                  // è¯»å–æ¹¿åº¦ CMD_AFN_C_F18_TOTAL_POWER_NONE
     
    
-    CM_CMD_MAX,                     // ×î´óÃüÁî 
-}eCmCmd;            // contrator to master cmd ¼¯ÖÐÆ÷µ½Ö÷Õ¾µÄÃüÁî
+    CM_CMD_MAX,                     // æœ€å¤§å‘½ä»¤ 
+}eCmCmd;            // contrator to master cmd é›†ä¸­å™¨åˆ°ä¸»ç«™çš„å‘½ä»¤
 
 
 
 
 /****************************************************
  *
- * ÖðÌõÈ·ÈÏÓë·ñÈÏÊý¾Ý½á¹¹
+ * é€æ¡ç¡®è®¤ä¸Žå¦è®¤æ•°æ®ç»“æž„
  *
 {*///
 typedef struct
 {
-    eCmCmd eCmd;  // ÃüÁî
-    UINT16 usPN;  // ²âÁ¿µãºÅ
+    eCmCmd eCmd;  // å‘½ä»¤
+    UINT16 usPN;  // æµ‹é‡ç‚¹å·
     BOOL   bOk; 
 }sCmOne;
 
 typedef struct
 {
-    UINT8  ucNum;     // ÐèÒªÈ·ÈÏ»ò·ñÈÏµÄ×ÓÃüÁî¸öÊý
-    sCmOne sOne[1];   // Ã¿ÌõÈ·ÈÏÓë·ñÈÏÊý¾Ý
+    UINT8  ucNum;     // éœ€è¦ç¡®è®¤æˆ–å¦è®¤çš„å­å‘½ä»¤ä¸ªæ•°
+    sCmOne sOne[1];   // æ¯æ¡ç¡®è®¤ä¸Žå¦è®¤æ•°æ®
 }sCmOneByOne;
 ///*}
 
 
 /****************************************************
- * Êý¾Ý½á¹¹: ÖÕ¶Ë»ò¼¯ÖÐÆ÷Ö§³ÖµÄ²ÎÊýÅäÖÃ
- * ¶ÔÓ¦Êý¾Ý: sMtSuptParaCfg
+ * æ•°æ®ç»“æž„: ç»ˆç«¯æˆ–é›†ä¸­å™¨æ”¯æŒçš„å‚æ•°é…ç½®
+ * å¯¹åº”æ•°æ®: sMtSuptParaCfg
  *
 {*///
 typedef struct
 {
-    UINT8   ucNum;       // Ö§³ÖµÄÅäÖÃµÄ²ÎÊýµÄ¸öÊý
-    eCmCmd  eCfgCmd[1];  // Ö§³ÖµÄÅäÖÃ ¶ÔÓ¦ÉèÖÃ²ÎÊýÏÂµÄÃüÁî
+    UINT8   ucNum;       // æ”¯æŒçš„é…ç½®çš„å‚æ•°çš„ä¸ªæ•°
+    eCmCmd  eCfgCmd[1];  // æ”¯æŒçš„é…ç½® å¯¹åº”è®¾ç½®å‚æ•°ä¸‹çš„å‘½ä»¤
 
 }sCmSuptParaCfg;
 
 ///*}
 
 /****************************************************
- * Êý¾Ý½á¹¹: ÖÕ¶ËÖ§³ÖµÄ¿ØÖÆÅäÖÃ
- * ¶ÔÓ¦Êý¾Ý: sMtSuptCtrlCfg
+ * æ•°æ®ç»“æž„: ç»ˆç«¯æ”¯æŒçš„æŽ§åˆ¶é…ç½®
+ * å¯¹åº”æ•°æ®: sMtSuptCtrlCfg
  *
 {*///
 typedef struct
 {
-    UINT8   ucNum;       // Ö§³ÖµÄ¿ØÖÆÃüÁîµÄ¸öÊý
-    eCmCmd  eCfgCmd[1];  // Ö§³ÖµÄ¿ØÖÆÃüÁîµÄÃüÁî×Ö  CMD_CTRL_CHECK_TIME µ½ CMD_AUTO_REPORT_STOP
+    UINT8   ucNum;       // æ”¯æŒçš„æŽ§åˆ¶å‘½ä»¤çš„ä¸ªæ•°
+    eCmCmd  eCfgCmd[1];  // æ”¯æŒçš„æŽ§åˆ¶å‘½ä»¤çš„å‘½ä»¤å­—  CMD_CTRL_CHECK_TIME åˆ° CMD_AUTO_REPORT_STOP
 
 }sCmSuptCtrlCfg;
 ///*}
 
 
 /****************************************************
- * Êý¾Ý½á¹¹: ÖÕ¶ËÖ§³ÖµÄ1ÀàÊý¾ÝÅäÖÃ
- * ¶ÔÓ¦Êý¾Ý: sMtSuptAsk1
+ * æ•°æ®ç»“æž„: ç»ˆç«¯æ”¯æŒçš„1ç±»æ•°æ®é…ç½®
+ * å¯¹åº”æ•°æ®: sMtSuptAsk1
  *
 {*///
 typedef struct
 {
-    UINT8   ucNum;       // ÖÕ¶ËÖ§³ÖµÄ1ÀàÊý¾ÝÅä¸öÊý
-    eCmCmd  eCfgCmd[1];  // ucNum ¸öÃüÁî    CMD_CURNT_PQUI µ½ 
+    UINT8   ucNum;       // ç»ˆç«¯æ”¯æŒçš„1ç±»æ•°æ®é…ä¸ªæ•°
+    eCmCmd  eCfgCmd[1];  // ucNum ä¸ªå‘½ä»¤    CMD_CURNT_PQUI åˆ° 
 
 }sCmSuptAsk1;
 ///*}
 
 
 /****************************************************
- * Êý¾Ý½á¹¹: ÖÕ¶ËÖ§³ÖµÄ2ÀàÊý¾ÝÅäÖÃ
- * ¶ÔÓ¦Êý¾Ý: sMtSuptAsk2
- * ¶ÔÓ¦ÃüÁî: CMD_SUPPORT_ASK2_CFG
+ * æ•°æ®ç»“æž„: ç»ˆç«¯æ”¯æŒçš„2ç±»æ•°æ®é…ç½®
+ * å¯¹åº”æ•°æ®: sMtSuptAsk2
+ * å¯¹åº”å‘½ä»¤: CMD_SUPPORT_ASK2_CFG
  *
 {*///
 typedef struct
 {
-    UINT8   ucNum;       // ÖÕ¶ËÖ§³ÖµÄ1ÀàÊý¾ÝÅä¸öÊý
-    eCmCmd  eCfgCmd[1];  // ucNum ¸öÃüÁî    CMD_CURNT_PQUI µ½ 
+    UINT8   ucNum;       // ç»ˆç«¯æ”¯æŒçš„1ç±»æ•°æ®é…ä¸ªæ•°
+    eCmCmd  eCfgCmd[1];  // ucNum ä¸ªå‘½ä»¤    CMD_CURNT_PQUI åˆ° 
 
 }sCmSuptAsk2;
 
 ///*}
 
 /****************************************************
- * Êý¾Ý½á¹¹: 1ÀàÊý¾ÝÅäÖÃÉèÖÃ 
- * ¶ÔÓ¦Êý¾Ý: CMD_CFG_ASK_1  CMD_CFG_ASK_1_Q
+ * æ•°æ®ç»“æž„: 1ç±»æ•°æ®é…ç½®è®¾ç½® 
+ * å¯¹åº”æ•°æ®: CMD_CFG_ASK_1  CMD_CFG_ASK_1_Q
  *
 {*///
 typedef struct
 {    
-    UINT8   ucSmall;            //  ÓÃ»§Ð¡ÀàºÅ            
-    UINT8   ucFN;               //  Ö§³ÖµÄÃüÁî¸öÊý  0 ~ 248
-    eCmCmd  eCmd[MT_FN_MAX];    //  Ö§³ÖµÄÒ»ÀàÊý¾ÝÃüÁîÂë CMD_AFN_C_F2_TML_CLOCK µ½ CMD_AFN_C_F170_READ_METER
+    UINT8   ucSmall;            //  ç”¨æˆ·å°ç±»å·            
+    UINT8   ucFN;               //  æ”¯æŒçš„å‘½ä»¤ä¸ªæ•°  0 ~ 248
+    eCmCmd  eCmd[MT_FN_MAX];    //  æ”¯æŒçš„ä¸€ç±»æ•°æ®å‘½ä»¤ç  CMD_AFN_C_F2_TML_CLOCK åˆ° CMD_AFN_C_F170_READ_METER
 }sCmAsk1CfgOne;
 
 typedef struct
 {    
-    UINT8          ucBig;                //  ÓÃ»§Ð¡ÀàºÅ            
-    UINT8          ucM;                  // ±¾´ÎÉèÖÃµÄ×éÊým£¨m¡Ü¸ÃÓÃ»§´óÀàºÅÏÂÖ§³ÖµÄÓÃ»§Ð¡ÀàºÅ¸öÊý£©
-    sCmAsk1CfgOne  sOne[1];   // M¸öÐÅÏ¢
+    UINT8          ucBig;                //  ç”¨æˆ·å°ç±»å·            
+    UINT8          ucM;                  // æœ¬æ¬¡è®¾ç½®çš„ç»„æ•°mï¼ˆmâ‰¤è¯¥ç”¨æˆ·å¤§ç±»å·ä¸‹æ”¯æŒçš„ç”¨æˆ·å°ç±»å·ä¸ªæ•°ï¼‰
+    sCmAsk1CfgOne  sOne[1];   // Mä¸ªä¿¡æ¯
     
 }sCmAsk1Cfg;
 ///*}
 
 /****************************************************
- * Êý¾Ý½á¹¹: 2ÀàÊý¾ÝÅäÖÃÉèÖÃ 
- * ¶ÔÓ¦Êý¾Ý: CMD_CFG_ASK_2  CMD_CFG_ASK_2_Q
+ * æ•°æ®ç»“æž„: 2ç±»æ•°æ®é…ç½®è®¾ç½® 
+ * å¯¹åº”æ•°æ®: CMD_CFG_ASK_2  CMD_CFG_ASK_2_Q
  *
 {*///
 typedef struct
 {    
-    UINT8   ucSmall;            //  ÓÃ»§Ð¡ÀàºÅ            
-    UINT8   ucFN;               //  Ö§³ÖµÄÃüÁî¸öÊý  0 ~ 248
-    eCmCmd  eCmd[MT_FN_MAX];    //  Ö§³ÖµÄÒ»ÀàÊý¾ÝÃüÁîÂë CMD_AFN_D_F1_FRTH_POWR_P1P4_D µ½ CMD_AFN_D_F218_COLOR_YAWP_CURVE
+    UINT8   ucSmall;            //  ç”¨æˆ·å°ç±»å·            
+    UINT8   ucFN;               //  æ”¯æŒçš„å‘½ä»¤ä¸ªæ•°  0 ~ 248
+    eCmCmd  eCmd[MT_FN_MAX];    //  æ”¯æŒçš„ä¸€ç±»æ•°æ®å‘½ä»¤ç  CMD_AFN_D_F1_FRTH_POWR_P1P4_D åˆ° CMD_AFN_D_F218_COLOR_YAWP_CURVE
 }sCmAsk2CfgOne;
 
 typedef struct
 {    
-    UINT8          ucBig;                //  ÓÃ»§Ð¡ÀàºÅ            
-    UINT8          ucM;                  // ±¾´ÎÉèÖÃµÄ×éÊým£¨m¡Ü¸ÃÓÃ»§´óÀàºÅÏÂÖ§³ÖµÄÓÃ»§Ð¡ÀàºÅ¸öÊý£©
-    sCmAsk2CfgOne  sOne[1];   // M¸öÐÅÏ¢
+    UINT8          ucBig;                //  ç”¨æˆ·å°ç±»å·            
+    UINT8          ucM;                  // æœ¬æ¬¡è®¾ç½®çš„ç»„æ•°mï¼ˆmâ‰¤è¯¥ç”¨æˆ·å¤§ç±»å·ä¸‹æ”¯æŒçš„ç”¨æˆ·å°ç±»å·ä¸ªæ•°ï¼‰
+    sCmAsk2CfgOne  sOne[1];   // Mä¸ªä¿¡æ¯
     
 }sCmAsk2Cfg;
 ///*}
 
 /****************************************************
- * Êý¾Ý½á¹¹: ¶¨Ê±ÉÏ±¨1 2ÀàÊý¾ÝÈÎÎñ ÉèÖÃ¡¢²éÑ¯Ó¦´ð
- * ¶ÔÓ¦Êý¾Ý: sMtCfgAuto_1 sMtCfgAuto_2
- * ¶ÔÓ¦ÃüÁî: sCmCfgAuto_1 : CMD_CFG_AUTO_1 ºÍ CMD_CFG_AUTO_1_Q
- * ¶ÔÓ¦ÃüÁî: sCmCfgAuto_2 : CMD_CFG_AUTO_2 ºÍ CMD_CFG_AUTO_2_Q
+ * æ•°æ®ç»“æž„: å®šæ—¶ä¸ŠæŠ¥1 2ç±»æ•°æ®ä»»åŠ¡ è®¾ç½®ã€æŸ¥è¯¢åº”ç­”
+ * å¯¹åº”æ•°æ®: sMtCfgAuto_1 sMtCfgAuto_2
+ * å¯¹åº”å‘½ä»¤: sCmCfgAuto_1 : CMD_CFG_AUTO_1 å’Œ CMD_CFG_AUTO_1_Q
+ * å¯¹åº”å‘½ä»¤: sCmCfgAuto_2 : CMD_CFG_AUTO_2 å’Œ CMD_CFG_AUTO_2_Q
  *
 {*///
 typedef struct
@@ -262,156 +262,156 @@ typedef struct
 
 typedef struct
 {
-    eMtRptUnit    eUnit;               // ¶¨Ê±ÉÏ±¨ÖÜÆÚµ¥Î»(·Ö¡¢Ê±¡¢ÈÕ¡¢ÔÂ)
-    UINT8         ucPeriod;            // ¶¨Ê±ÉÏ±¨ÖÜÆÚ
-    sMtYWMDhms    sTime;               // ÉÏ±¨»ù×¼Ê±¼ä£ºÃë·ÖÊ±ÈÕÔÂÄê
-    UINT8         ucR;                 // ÇúÏßÊý¾Ý³éÈ¡±¶ÂÊR (1¡«96)
-    UINT8         ucN;                 // Êý¾Ýµ¥Ôª±êÊ¶¸öÊýn
-    sCmCmdPn      sCmdPn[1];   // N¸öÊý¾Ýµ¥Ôª±êÊ¶  
+    eMtRptUnit    eUnit;               // å®šæ—¶ä¸ŠæŠ¥å‘¨æœŸå•ä½(åˆ†ã€æ—¶ã€æ—¥ã€æœˆ)
+    UINT8         ucPeriod;            // å®šæ—¶ä¸ŠæŠ¥å‘¨æœŸ
+    sMtYWMDhms    sTime;               // ä¸ŠæŠ¥åŸºå‡†æ—¶é—´ï¼šç§’åˆ†æ—¶æ—¥æœˆå¹´
+    UINT8         ucR;                 // æ›²çº¿æ•°æ®æŠ½å–å€çŽ‡R (1ï½ž96)
+    UINT8         ucN;                 // æ•°æ®å•å…ƒæ ‡è¯†ä¸ªæ•°n
+    sCmCmdPn      sCmdPn[1];   // Nä¸ªæ•°æ®å•å…ƒæ ‡è¯†  
 
 }sCmCfgAuto_1, sCmCfgAuto_2;
 ///*}
 
 /****************************************************
- * Êý¾Ý½á¹¹: ÔÝÊ±Ìæ´úÃüÁî
- * ¶ÔÓ¦Êý¾Ý: sMtTotalPowerHave
- * ¶ÔÓ¦ÃüÁî: CMD_NELC_TEMP  CMD_NELC_HUMi
- * ¶ÔÓ¦ÃüÁî: CMD_AFN_C_F17_TOTAL_POWER_HAVE  CMD_AFN_C_F18_TOTAL_POWER_NONE
+ * æ•°æ®ç»“æž„: æš‚æ—¶æ›¿ä»£å‘½ä»¤
+ * å¯¹åº”æ•°æ®: sMtTotalPowerHave
+ * å¯¹åº”å‘½ä»¤: CMD_NELC_TEMP  CMD_NELC_HUMi
+ * å¯¹åº”å‘½ä»¤: CMD_AFN_C_F17_TOTAL_POWER_HAVE  CMD_AFN_C_F18_TOTAL_POWER_NONE
  *
 {*///
-typedef sMtTotalPowerHave sMcNelcTmper;  // ÎÂ¶È
-typedef sMtTotalPowerNone sMcNelcHumit;  // Êª¶È
+typedef sMtTotalPowerHave sMcNelcTmper;  // æ¸©åº¦
+typedef sMtTotalPowerNone sMcNelcHumit;  // æ¹¿åº¦
 ///*}
 
 typedef union
 {
-    // ÉÏÏÂÐÐÍ¨ÓÃ
-    sCmOneByOne      scmOneByOne;       // ÖðÌõÈ·ÈÏÓë·ñÈÏ             CMD_ONE_BY_ONE
-    sMtTmlUpCfg      sTmlUpCfg;         // ÖÕ¶ËÉÏÐÐÍ¨ÐÅ¿ÚÍ¨ÐÅ²ÎÊýÉèÖÃ CMD_CFG_TML_UP
-    sMtTmlPowerCfg   sTmlPowerCfg;      // ÖÕ¶ËµçÄÜ±í/½»Á÷²ÉÑù×°ÖÃÅäÖÃ²ÎÊý CMD_CFG_TML_POWER
-    sCmAsk1Cfg       sAsk1Cfg;          // ÉèÖÃ²ÎÊý CMD_CFG_ASK_1 ºÍ ²éÑ¯²ÎÊý CMD_CFG_ASK_1_Q
-    sCmAsk2Cfg       sAsk2Cfg;          // ÉèÖÃ²ÎÊý CMD_CFG_ASK_2 ºÍ ²éÑ¯²ÎÊý CMD_CFG_ASK_2_Q
-    sCmCfgAuto_1     sCfgAuto_1;        // ¶¨Ê±ÉÏ±¨1ÀàÊý¾ÝÈÎÎñ ÉèÖÃ¡¢²éÑ¯Ó¦´ð CMD_CFG_AUTO_1   CMD_CFG_AUTO_1_Q
-    sCmCfgAuto_2     sCfgAuto_2;        // ¶¨Ê±ÉÏ±¨2ÀàÊý¾ÝÈÎÎñ ÉèÖÃ¡¢²éÑ¯Ó¦´ð CMD_CFG_AUTO_2   CMD_CFG_AUTO_2_Q
-    sMtGopAuto_1     sGoAuto_1;         // ¶¨Ê±ÉÏ±¨1ÀàÊý¾ÝÈÎÎñÆô¶¯/Í£Ö¹ÉèÖÃ   CMD_GO_AUTO_1    CMD_GOP_AUTO_1_Q
-    sMtGopAuto_2     sGoAuto_2;         // ¶¨Ê±ÉÏ±¨1ÀàÊý¾ÝÈÎÎñÆô¶¯/Í£Ö¹ÉèÖÃ   CMD_GO_AUTO_2    CMD_GOP_AUTO_2_Q
+    // ä¸Šä¸‹è¡Œé€šç”¨
+    sCmOneByOne      scmOneByOne;       // é€æ¡ç¡®è®¤ä¸Žå¦è®¤             CMD_ONE_BY_ONE
+    sMtTmlUpCfg      sTmlUpCfg;         // ç»ˆç«¯ä¸Šè¡Œé€šä¿¡å£é€šä¿¡å‚æ•°è®¾ç½® CMD_CFG_TML_UP
+    sMtTmlPowerCfg   sTmlPowerCfg;      // ç»ˆç«¯ç”µèƒ½è¡¨/äº¤æµé‡‡æ ·è£…ç½®é…ç½®å‚æ•° CMD_CFG_TML_POWER
+    sCmAsk1Cfg       sAsk1Cfg;          // è®¾ç½®å‚æ•° CMD_CFG_ASK_1 å’Œ æŸ¥è¯¢å‚æ•° CMD_CFG_ASK_1_Q
+    sCmAsk2Cfg       sAsk2Cfg;          // è®¾ç½®å‚æ•° CMD_CFG_ASK_2 å’Œ æŸ¥è¯¢å‚æ•° CMD_CFG_ASK_2_Q
+    sCmCfgAuto_1     sCfgAuto_1;        // å®šæ—¶ä¸ŠæŠ¥1ç±»æ•°æ®ä»»åŠ¡ è®¾ç½®ã€æŸ¥è¯¢åº”ç­” CMD_CFG_AUTO_1   CMD_CFG_AUTO_1_Q
+    sCmCfgAuto_2     sCfgAuto_2;        // å®šæ—¶ä¸ŠæŠ¥2ç±»æ•°æ®ä»»åŠ¡ è®¾ç½®ã€æŸ¥è¯¢åº”ç­” CMD_CFG_AUTO_2   CMD_CFG_AUTO_2_Q
+    sMtGopAuto_1     sGoAuto_1;         // å®šæ—¶ä¸ŠæŠ¥1ç±»æ•°æ®ä»»åŠ¡å¯åŠ¨/åœæ­¢è®¾ç½®   CMD_GO_AUTO_1    CMD_GOP_AUTO_1_Q
+    sMtGopAuto_2     sGoAuto_2;         // å®šæ—¶ä¸ŠæŠ¥1ç±»æ•°æ®ä»»åŠ¡å¯åŠ¨/åœæ­¢è®¾ç½®   CMD_GO_AUTO_2    CMD_GOP_AUTO_2_Q
 
-    // ÉÏÐÐÌØÓÐ ¼¯ÖÐÆ÷µ½Ö÷Õ¾
-    sMtTmlVersion    sTmlVersion;       // ÖÕ¶Ë°æ±¾ÐÅÏ¢    CMD_AFN_TML_VERSION
-    sMtTmlInputOut   sTmlInputOut;      // ÖÕ¶ËÖ§³ÖµÄÊäÈë¡¢Êä³ö¼°Í¨ÐÅ¶Ë¿ÚÅäÖÃ CMD_AFN_TML_INPUT_OUT
-    sMtTmlOtherCfg   sTmlOtherCfg;      // ÖÕ¶ËÖ§³ÖµÄÆäËûÅäÖÃ     CMD_TML_OTHER_CFG
-    sCmSuptParaCfg   sTmlSuptParaCfg;   // ÖÕ¶ËÖ§³ÖµÄ²ÎÊýÅäÖÃ     CMD_SUPPORT_PARA_CFG
-    sCmSuptCtrlCfg   sTmlSuptCtrlCfg;   // ÖÕ¶ËÖ§³ÖµÄ¿ØÖÆÅäÖÃ     CMD_SUPPORT_CTRL_CFG
-    sCmSuptAsk1      sTmlSuptAsk1;      // ÖÕ¶ËÖ§³ÖµÄ1ÀàÊý¾ÝÅäÖÃ  CMD_SUPPORT_ASK1_CFG
-    sCmSuptAsk2      sTmlSuptAsk2;      // ÖÕ¶ËÖ§³ÖµÄ2ÀàÊý¾ÝÅäÖÃ  CMD_SUPPORT_ASK2_CFG
-    sMtSuptEvent     sTmlSuptEvent;     // ÖÕ¶ËÖ§³ÖµÄÊÂ¼þ¼ÇÂ¼ÅäÖÃ CMD_SUPPORT_EVNT_CFG
-    sMtUserClock     sTmlClock;         // ÖÕ¶ËÈÕÀúÊ±ÖÓ           CMD_TML_CLOCK 
-    sMtCurPQUI       sCurPQUI;          // µ±Ç°ÈýÏà¼°×ÜÓÐ/ÎÞ¹¦¹¦ÂÊ¡¢¹¦ÂÊÒòÊý£¬ÈýÏàµçÑ¹¡¢µçÁ÷¡¢ÁãÐòµçÁ÷¡¢ÊÓÔÚ¹¦ÂÊ CMD_CURNT_PQUI 
+    // ä¸Šè¡Œç‰¹æœ‰ é›†ä¸­å™¨åˆ°ä¸»ç«™
+    sMtTmlVersion    sTmlVersion;       // ç»ˆç«¯ç‰ˆæœ¬ä¿¡æ¯    CMD_AFN_TML_VERSION
+    sMtTmlInputOut   sTmlInputOut;      // ç»ˆç«¯æ”¯æŒçš„è¾“å…¥ã€è¾“å‡ºåŠé€šä¿¡ç«¯å£é…ç½® CMD_AFN_TML_INPUT_OUT
+    sMtTmlOtherCfg   sTmlOtherCfg;      // ç»ˆç«¯æ”¯æŒçš„å…¶ä»–é…ç½®     CMD_TML_OTHER_CFG
+    sCmSuptParaCfg   sTmlSuptParaCfg;   // ç»ˆç«¯æ”¯æŒçš„å‚æ•°é…ç½®     CMD_SUPPORT_PARA_CFG
+    sCmSuptCtrlCfg   sTmlSuptCtrlCfg;   // ç»ˆç«¯æ”¯æŒçš„æŽ§åˆ¶é…ç½®     CMD_SUPPORT_CTRL_CFG
+    sCmSuptAsk1      sTmlSuptAsk1;      // ç»ˆç«¯æ”¯æŒçš„1ç±»æ•°æ®é…ç½®  CMD_SUPPORT_ASK1_CFG
+    sCmSuptAsk2      sTmlSuptAsk2;      // ç»ˆç«¯æ”¯æŒçš„2ç±»æ•°æ®é…ç½®  CMD_SUPPORT_ASK2_CFG
+    sMtSuptEvent     sTmlSuptEvent;     // ç»ˆç«¯æ”¯æŒçš„äº‹ä»¶è®°å½•é…ç½® CMD_SUPPORT_EVNT_CFG
+    sMtUserClock     sTmlClock;         // ç»ˆç«¯æ—¥åŽ†æ—¶é’Ÿ           CMD_TML_CLOCK 
+    sMtCurPQUI       sCurPQUI;          // å½“å‰ä¸‰ç›¸åŠæ€»æœ‰/æ— åŠŸåŠŸçŽ‡ã€åŠŸçŽ‡å› æ•°ï¼Œä¸‰ç›¸ç”µåŽ‹ã€ç”µæµã€é›¶åºç”µæµã€è§†åœ¨åŠŸçŽ‡ CMD_CURNT_PQUI 
 
-    sMtUblnOverD     sUblnOverD;        // ÈÕ¶³½á ÈÕ²»Æ½ºâ¶ÈÔ½ÏÞÀÛ¼ÆÊ±¼ä  CMD_UBLN_OVER_D 
-    sMtUblnOverM     sUblnOverM;        // ÔÂ¶³½á ÔÂ²»Æ½ºâ¶ÈÔ½ÏÞÀÛ¼ÆÊ±¼ä  CMD_UBLN_OVER_M 
-    float            fDcRltmData;       // Ö±Á÷Ä£ÄâÁ¿ÊµÊ±Êý¾Ý (½ö3Î»ÓÐÐ§Êý¾Ý)  CMD_DC_RLTM_DATA CMD_AFN_C_F73_DC_RLTM_DATA
-    sMtCurPower      sCurPower;         // µ±Ç°A¡¢B¡¢CÈýÏàÕý/·´ÏòÓÐ¹¦µçÄÜÊ¾Öµ¡¢×éºÏÎÞ¹¦1/2µçÄÜÊ¾Öµ CMD_POWER_CUR
-    sMtCurtHarmValue sTmlCurtHarmValue; // µ±Ç°A¡¢B¡¢CÈýÏàµçÑ¹¡¢µçÁ÷2¡«N´ÎÐ³²¨ÓÐÐ§Öµ CMD_CURT_HARM_VALUE CMD_AFN_C_F57_CURT_HARM_VALUE
-    sMtCurtHarmRate  sTmlCurtHarmRate;  // µ±Ç°A¡¢B¡¢CÈýÏàµçÑ¹¡¢µçÁ÷2¡«N´ÎÐ³²¨º¬ÓÐÂÊ CMD_CURT_HARM_RATE  CMD_AFN_C_F58_CURT_HARM_RATE
-    sMtFrthHavePower sTmlFrthHavePowrC; // µ±Ç°ÕýÏòÓÐ¹¦µçÄÜÊ¾Öµ£¨×Ü¡¢·ÑÂÊ1¡«M£©           CMD_FRTH_HAVE_POWR_C CMD_AFN_C_F129_FRTH_HAVE_POWR_C
-    sMtFrthNonePower sTmlFrthNonePowrC; // µ±Ç°ÕýÏòÎÞ¹¦£¨×éºÏÎÞ¹¦1£©µçÄÜÊ¾Öµ£¨×Ü¡¢·ÑÂÊ1¡«M£©CMD_FRTH_NONE_POWR_C CMD_AFN_C_F130_FRTH_NONE_POWR_C
-    sMcNelcTmper     sNelcTmper;        // ÎÂ¶È CMD_NELC_TEMP
-    sMcNelcHumit     sNelcHumit;        // ÎÂ¶È CMD_NELC_HUMi
+    sMtUblnOverD     sUblnOverD;        // æ—¥å†»ç»“ æ—¥ä¸å¹³è¡¡åº¦è¶Šé™ç´¯è®¡æ—¶é—´  CMD_UBLN_OVER_D 
+    sMtUblnOverM     sUblnOverM;        // æœˆå†»ç»“ æœˆä¸å¹³è¡¡åº¦è¶Šé™ç´¯è®¡æ—¶é—´  CMD_UBLN_OVER_M 
+    float            fDcRltmData;       // ç›´æµæ¨¡æ‹Ÿé‡å®žæ—¶æ•°æ® (ä»…3ä½æœ‰æ•ˆæ•°æ®)  CMD_DC_RLTM_DATA CMD_AFN_C_F73_DC_RLTM_DATA
+    sMtCurPower      sCurPower;         // å½“å‰Aã€Bã€Cä¸‰ç›¸æ­£/åå‘æœ‰åŠŸç”µèƒ½ç¤ºå€¼ã€ç»„åˆæ— åŠŸ1/2ç”µèƒ½ç¤ºå€¼ CMD_POWER_CUR
+    sMtCurtHarmValue sTmlCurtHarmValue; // å½“å‰Aã€Bã€Cä¸‰ç›¸ç”µåŽ‹ã€ç”µæµ2ï½žNæ¬¡è°æ³¢æœ‰æ•ˆå€¼ CMD_CURT_HARM_VALUE CMD_AFN_C_F57_CURT_HARM_VALUE
+    sMtCurtHarmRate  sTmlCurtHarmRate;  // å½“å‰Aã€Bã€Cä¸‰ç›¸ç”µåŽ‹ã€ç”µæµ2ï½žNæ¬¡è°æ³¢å«æœ‰çŽ‡ CMD_CURT_HARM_RATE  CMD_AFN_C_F58_CURT_HARM_RATE
+    sMtFrthHavePower sTmlFrthHavePowrC; // å½“å‰æ­£å‘æœ‰åŠŸç”µèƒ½ç¤ºå€¼ï¼ˆæ€»ã€è´¹çŽ‡1ï½žMï¼‰           CMD_FRTH_HAVE_POWR_C CMD_AFN_C_F129_FRTH_HAVE_POWR_C
+    sMtFrthNonePower sTmlFrthNonePowrC; // å½“å‰æ­£å‘æ— åŠŸï¼ˆç»„åˆæ— åŠŸ1ï¼‰ç”µèƒ½ç¤ºå€¼ï¼ˆæ€»ã€è´¹çŽ‡1ï½žMï¼‰CMD_FRTH_NONE_POWR_C CMD_AFN_C_F130_FRTH_NONE_POWR_C
+    sMcNelcTmper     sNelcTmper;        // æ¸©åº¦ CMD_NELC_TEMP
+    sMcNelcHumit     sNelcHumit;        // æ¸©åº¦ CMD_NELC_HUMi
     
 
-    // ÏÂÐÐÌØÓÐ Ö÷Õ¾µ½¼¯ÖÐÆ÷
-    sMtUserClock     sCheckTime;        // ¶ÔÊ±ÃüÁî      CMD_CTRL_CHECK_TIME
-    sMtTmlPowerCfg_Q sTmlPowerCfg_Q;    // ÖÕ¶ËµçÄÜ±í/½»Á÷²ÉÑù×°ÖÃÅäÖÃ²ÎÊý ÃüÁî²ÎÊý CMD_CFG_TML_POWER_Q
-    sMtAsk1Cfg_Q     sAsk1Cfg_Q;        // 1ÀàÊý¾ÝÅäÖÃÉèÖÃ £¨ÔÚÖÕ¶ËÖ§³ÖµÄ1ÀàÊý¾ÝÅäÖÃÄÚ£©(²éÑ¯ÃüÁî²ÎÊý) CMD_CFG_ASK_1_Q
-    sMtAsk2Cfg_Q     sAsk2Cfg_Q;        // 1ÀàÊý¾ÝÅäÖÃÉèÖÃ £¨ÔÚÖÕ¶ËÖ§³ÖµÄ2ÀàÊý¾ÝÅäÖÃÄÚ£©(²éÑ¯ÃüÁî²ÎÊý) CMD_CFG_ASK_2_Q
-    sMtTd_c          sTd_c;             // ÇúÏßÀàÊý¾ÝÊ±±ê  ÃüÁî²ÎÊý   
-    sMtTd_h          sTd_h;             // Ð¡Ê±¶³½á ÃüÁî²ÎÊý
-    sMtTd_d          sTd_d;             // ÈÕ¶³½á   ÃüÁî²ÎÊý
-    sMtTd_m          sTd_m;             // ÔÂ¶³½á   ÃüÁî²ÎÊý  
+    // ä¸‹è¡Œç‰¹æœ‰ ä¸»ç«™åˆ°é›†ä¸­å™¨
+    sMtUserClock     sCheckTime;        // å¯¹æ—¶å‘½ä»¤      CMD_CTRL_CHECK_TIME
+    sMtTmlPowerCfg_Q sTmlPowerCfg_Q;    // ç»ˆç«¯ç”µèƒ½è¡¨/äº¤æµé‡‡æ ·è£…ç½®é…ç½®å‚æ•° å‘½ä»¤å‚æ•° CMD_CFG_TML_POWER_Q
+    sMtAsk1Cfg_Q     sAsk1Cfg_Q;        // 1ç±»æ•°æ®é…ç½®è®¾ç½® ï¼ˆåœ¨ç»ˆç«¯æ”¯æŒçš„1ç±»æ•°æ®é…ç½®å†…ï¼‰(æŸ¥è¯¢å‘½ä»¤å‚æ•°) CMD_CFG_ASK_1_Q
+    sMtAsk2Cfg_Q     sAsk2Cfg_Q;        // 1ç±»æ•°æ®é…ç½®è®¾ç½® ï¼ˆåœ¨ç»ˆç«¯æ”¯æŒçš„2ç±»æ•°æ®é…ç½®å†…ï¼‰(æŸ¥è¯¢å‘½ä»¤å‚æ•°) CMD_CFG_ASK_2_Q
+    sMtTd_c          sTd_c;             // æ›²çº¿ç±»æ•°æ®æ—¶æ ‡  å‘½ä»¤å‚æ•°   
+    sMtTd_h          sTd_h;             // å°æ—¶å†»ç»“ å‘½ä»¤å‚æ•°
+    sMtTd_d          sTd_d;             // æ—¥å†»ç»“   å‘½ä»¤å‚æ•°
+    sMtTd_m          sTd_m;             // æœˆå†»ç»“   å‘½ä»¤å‚æ•°  
     
 
-}uCmApp;  // ÓÃ»§²àÓ¦ÓÃ²ãÊý¾Ý    Óë  uMtApp Ò»Ò»¶ÔÓ¦
+}uCmApp;  // ç”¨æˆ·ä¾§åº”ç”¨å±‚æ•°æ®    ä¸Ž  uMtApp ä¸€ä¸€å¯¹åº”
 
 
 typedef struct
 {
-    eCmCmd   eCmd;        // ×ÓÃüÁî×Ö
-    UINT16   usPN;        // ×ÓÃüÁî×ÖÒ»¼¶²ÎÊý
-    BOOL     bApp;        // Ó¦ÓÃ²ãÊý¾ÝÊ±ÓÐÊ±ÎÞ
-    uCmApp   uAppData;    // Ó¦ÓÃ²ãÊý¾Ý ÁªºÏ
-}sCmSub;                  // ×ÓÃüÁîÊý¾Ý½á¹¹
+    eCmCmd   eCmd;        // å­å‘½ä»¤å­—
+    UINT16   usPN;        // å­å‘½ä»¤å­—ä¸€çº§å‚æ•°
+    BOOL     bApp;        // åº”ç”¨å±‚æ•°æ®æ—¶æœ‰æ—¶æ— 
+    uCmApp   uAppData;    // åº”ç”¨å±‚æ•°æ® è”åˆ
+}sCmSub;                  // å­å‘½ä»¤æ•°æ®ç»“æž„
 
 
 /*
- * ¶¨Òå½âÎöÓë·â×°¹²ÓÃÊý¾Ý½á¹¹, ¼¯ÖÐÆ÷µ÷ÓÃ
- * ËµÃ÷:
- * (1)Ã¿Ò»¸öÓÐÐ§Ö¡ÖÐ£¬Ö»°üº¬Ò»ÖÖÖ÷cmdÀàÐÍµÄ±¨ÎÄ
- * (2)Ã¿Ò»¸öÓÐÐ§Ö¡ÖÐ£¬¿ÉÒÔ°üº¬¶à¸ö¶ÔÓ¦ÓÚÖ÷cmdÀàÐÍµÄ×ÓcmdÀàÐÍµÄÊý¾ÝÓò
- *    ¸öÊý×îÉÙÒ»¸ö£¬¿ÉÒÔ¶à¸ö£¬ÇÒ¶à¸öÊ±ºò¿ÉÒÔÈÎÒâË³Ðò×éºÏ
- * (3)Ã¿¸ösubcmdÀàÐÍÏÂ¿ÉÄÜÓÐÊý¾Ý£¬¿ÉÒÔÎÞÓ¦ÓÃ²ãÊý¾ÝÓò
+ * å®šä¹‰è§£æžä¸Žå°è£…å…±ç”¨æ•°æ®ç»“æž„, é›†ä¸­å™¨è°ƒç”¨
+ * è¯´æ˜Ž:
+ * (1)æ¯ä¸€ä¸ªæœ‰æ•ˆå¸§ä¸­ï¼ŒåªåŒ…å«ä¸€ç§ä¸»cmdç±»åž‹çš„æŠ¥æ–‡
+ * (2)æ¯ä¸€ä¸ªæœ‰æ•ˆå¸§ä¸­ï¼Œå¯ä»¥åŒ…å«å¤šä¸ªå¯¹åº”äºŽä¸»cmdç±»åž‹çš„å­cmdç±»åž‹çš„æ•°æ®åŸŸ
+ *    ä¸ªæ•°æœ€å°‘ä¸€ä¸ªï¼Œå¯ä»¥å¤šä¸ªï¼Œä¸”å¤šä¸ªæ—¶å€™å¯ä»¥ä»»æ„é¡ºåºç»„åˆ
+ * (3)æ¯ä¸ªsubcmdç±»åž‹ä¸‹å¯èƒ½æœ‰æ•°æ®ï¼Œå¯ä»¥æ— åº”ç”¨å±‚æ•°æ®åŸŸ
  */
 typedef struct
 {
-    sMtAddress   sAddress;       // µØÖ·ÐÅÏ¢
-    BOOL         bReSend;        // ÊÇ·ñÎªÖØ·¢  TRUE ÖØ·¢µÄÖ¡¼ÆÊý²»»á×Ô¶¯Ôö¼Ó1 FALSE »á×ÔÔö1
-    BOOL         bActive;        // ÊÇ·ñÎªÖ÷¶¯ÉÏ±¨ (½öµÇÂ¼¡¢ÐÄÌø¡¢ÍË³öµÇÂ¼¡¢1Àà2ÀàÊý¾ÝÖ÷¶¯ÉÏ±¨Ê±ÎªÕæ)
-    UINT8        ucCmdNum;       // ¸Ã°üÖÐº¬ÓÐ×ÓÃüÁîµÄ¸öÊý ×îÉÙÓÐÒ»¸ö×ÓÃüÁî 
-    sCmSub       sCmdData[1];    // Ã¿Ìõ×ÓÃüÁîµÄÄÚÈÝ
+    sMtAddress   sAddress;       // åœ°å€ä¿¡æ¯
+    BOOL         bReSend;        // æ˜¯å¦ä¸ºé‡å‘  TRUE é‡å‘çš„å¸§è®¡æ•°ä¸ä¼šè‡ªåŠ¨å¢žåŠ 1 FALSE ä¼šè‡ªå¢ž1
+    BOOL         bActive;        // æ˜¯å¦ä¸ºä¸»åŠ¨ä¸ŠæŠ¥ (ä»…ç™»å½•ã€å¿ƒè·³ã€é€€å‡ºç™»å½•ã€1ç±»2ç±»æ•°æ®ä¸»åŠ¨ä¸ŠæŠ¥æ—¶ä¸ºçœŸ)
+    UINT8        ucCmdNum;       // è¯¥åŒ…ä¸­å«æœ‰å­å‘½ä»¤çš„ä¸ªæ•° æœ€å°‘æœ‰ä¸€ä¸ªå­å‘½ä»¤ 
+    sCmSub       sCmdData[1];    // æ¯æ¡å­å‘½ä»¤çš„å†…å®¹
     
 }sCmPacket;
 
 typedef struct
 {
-    eMtRole      eRole;                    // Éí·Ý    
-    UINT8        ucPermitDelayMinutes;     // ÔÊÐíÊ±ÑÓ
+    eMtRole      eRole;                    // èº«ä»½    
+    UINT8        ucPermitDelayMinutes;     // å…è®¸æ—¶å»¶
 
-}sCmInit; // 3761Ð­Òé²ã³õÊ¼»¯Êý¾Ý½á¹¹
+}sCmInit; // 3761åè®®å±‚åˆå§‹åŒ–æ•°æ®ç»“æž„
 
 eMtAFN ecmGetCmdAfn(eCmCmd eCmd);
 
-// ÉÏ²ãµ÷ÓÃ±¾Ä£¿éÇ°,±£È·Êµ½øÐÐ³õÊ¼»¯
+// ä¸Šå±‚è°ƒç”¨æœ¬æ¨¡å—å‰,ä¿ç¡®å®žè¿›è¡Œåˆå§‹åŒ–
 eCmErr ecm_3761_init(sCmInit * psCmInit); 
-// ÉÏ²ã½Ó¿Ú·â×°
+// ä¸Šå±‚æŽ¥å£å°è£…
 INT32 ncm_3761_pack(sCmPacket* psCmPacket, UINT8 * pBuf);
 INT32 ncm_3761_unpack(UINT8 * pBuf, UINT16 usBufLen, sCmPacket* psCmPacket);
 INT32 ncm_3761_checkAndGetPacket(UINT8  *pinBuf, UINT16 usLen, UINT16 *pusFirstOff, UINT16 *pusFirstLen);
 
 
-// ·â×°º¯Êý
+// å°è£…å‡½æ•°
 eCmErr ecm_3761_pack(sCmPacket* psCmPacket, UINT8 * pBuf, UINT16 *pusBufLen);
 
-// ½â·â×°º¯Êý
+// è§£å°è£…å‡½æ•°
 eCmErr ecm_3761_unpack(UINT8 * pBuf, UINT16 usBufLen, sCmPacket* psCmPacket);
 
-// ÅÐ¶ÏÊÇ·ñÎªÒ»¸öÓÐÐ§Ö¡
+// åˆ¤æ–­æ˜¯å¦ä¸ºä¸€ä¸ªæœ‰æ•ˆå¸§
 BOOL bcm_valid_3761_packet(UINT8  *pinBuf, UINT16 usLen);
 
 
-// ÕÒµ½µÚÒ»¸öÓÐÐ§Ö¡µÄÎ»ÖÃ
+// æ‰¾åˆ°ç¬¬ä¸€ä¸ªæœ‰æ•ˆå¸§çš„ä½ç½®
 eCmErr ecm_find_frist_valid_pack(UINT8  *pinBuf, UINT16 usLen, UINT16 *pusFirstOff, UINT16 *pusFirstLen);
 
-// Éè¼ÆÊÂ¼þ¼ÆÊýÆ÷
+// è®¾è®¡äº‹ä»¶è®¡æ•°å™¨
 void vCmSetEC(UINT8 ucEC1, UINT8 ucEC2);
 
-// ÉèÖÃÃÜÂë
+// è®¾ç½®å¯†ç 
 BOOL bCmSetPw(char *pw); 
 
-// ÄÚ²¿½Ó¿Ú
+// å†…éƒ¨æŽ¥å£
 eMtCmd emtTransAppData_cm_2_mt(eMtCmd emtCmd, uCmApp *pcmAppData, uMtApp *pmtAppData);
 eMtCmd emtTransAppData_mt_2_cm(eMtCmd emtCmd, uMtApp *pmtAppData, uCmApp *pcmAppData);
 
 eMtCmd eGetMtCmd(eCmCmd cmCMD);   
 eCmCmd eGetCmCmd(eMtCmd mtCMD);
-eMtPRM ecmGetPrm(eCmCmd cmCMD);  // »ñµÃ¸ÃÃüÁîµÄÖ÷¶¯ÐÔ
+eMtPRM ecmGetPrm(eCmCmd cmCMD);  // èŽ·å¾—è¯¥å‘½ä»¤çš„ä¸»åŠ¨æ€§
 
 typedef struct
 {
     eCmCmd ecmCMD;
     eMtCmd emtCMD;
-    eMtPRM ePrm;   // ¼¯ÖÐÆ÷·â×°¸ÃÃüÁîÊ±µÄÖ÷¶¯ÐÔ
+    eMtPRM ePrm;   // é›†ä¸­å™¨å°è£…è¯¥å‘½ä»¤æ—¶çš„ä¸»åŠ¨æ€§
  
-}sCmdMap; // ÃüÁîÓ³Éä
+}sCmdMap; // å‘½ä»¤æ˜ å°„
 
-#pragma pack(pop)  // Ò»×Ö½Ú¶ÔÆë
+#pragma pack(pop)  // ä¸€å­—èŠ‚å¯¹é½
 #endif /* _CON_3761_ADP_H_ */

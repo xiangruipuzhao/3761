@@ -8,20 +8,20 @@
 
 
 /*****************************************************************************
- º¯ Êý Ãû  : fmt_print
- ¹¦ÄÜÃèÊö  : ¸ñÊ½»¯Êä³ö
- ÊäÈë²ÎÊý  : char* str  
+ å‡½ æ•° å  : fmt_print
+ åŠŸèƒ½æè¿°  : æ ¼å¼åŒ–è¾“å‡º
+ è¾“å…¥å‚æ•°  : char* str  
              int fmt    
              ...        
- Êä³ö²ÎÊý  : ÎÞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êý  : 
- ±»µ÷º¯Êý  : 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å›ž å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ÐÞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê4ÔÂ26ÈÕ ÐÇÆÚÎå
-    ×÷    Õß   : liming
-    ÐÞ¸ÄÄÚÈÝ   : ÐÂÉú³Éº¯Êý
+ ä¿®æ”¹åŽ†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´4æœˆ26æ—¥ æ˜ŸæœŸäº”
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 void fmt_print(char* str,...)
@@ -60,56 +60,56 @@ void fmt_print(char* str,...)
 
 
 /*****************************************************************************
- º¯ Êý Ãû  : fm_print
- ¹¦ÄÜÃèÊö  : | | µÄ·½·¨À´ÊäÈë¸ñÊ½
- ÊäÈë²ÎÊý  : char* str              
+ å‡½ æ•° å  : fm_print
+ åŠŸèƒ½æè¿°  : | | çš„æ–¹æ³•æ¥è¾“å…¥æ ¼å¼
+ è¾“å…¥å‚æ•°  : char* str              
              unsigned int ulFormat
- Êä³ö²ÎÊý  : ÎÞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êý  : 
- ±»µ÷º¯Êý  : 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å›ž å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ÐÞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê4ÔÂ26ÈÕ ÐÇÆÚÎå
-    ×÷    Õß   : liming
-    ÐÞ¸ÄÄÚÈÝ   : ÐÂÉú³Éº¯Êý
+ ä¿®æ”¹åŽ†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´4æœˆ26æ—¥ æ˜ŸæœŸäº”
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 
-Ê¹ÓÃ°ïÖú£ºÇ°¾°É« | ±³¾°É« | ¶àÖÖ¹¦ÄÜÂë×éºÏ
+ä½¿ç”¨å¸®åŠ©ï¼šå‰æ™¯è‰² | èƒŒæ™¯è‰² | å¤šç§åŠŸèƒ½ç ç»„åˆ
 
-// ¹¦ÄÜ´úÂë
-FM_ALL_NORMAL     ÖØÐÂÉèÖÃÊôÐÔµ½È±Ê¡ÉèÖÃ
-FM_BOLD           ´ÖÌå 
-FM_HALF_BRIGHT    ÉèÖÃÒ»°ëÁÁ¶È 
-FM_UNDERLINE      ÏÂ»®Ïß
-FM_FLASH          ÉÁË¸
-FM_RES_WHITE      ·´°×ÏÔÊ¾
-FM_IN_VISIBLE     ²»¿É¼û
+// åŠŸèƒ½ä»£ç 
+FM_ALL_NORMAL     é‡æ–°è®¾ç½®å±žæ€§åˆ°ç¼ºçœè®¾ç½®
+FM_BOLD           ç²—ä½“ 
+FM_HALF_BRIGHT    è®¾ç½®ä¸€åŠäº®åº¦ 
+FM_UNDERLINE      ä¸‹åˆ’çº¿
+FM_FLASH          é—ªçƒ
+FM_RES_WHITE      åç™½æ˜¾ç¤º
+FM_IN_VISIBLE     ä¸å¯è§
 
-// Ç°¾°É«
+// å‰æ™¯è‰²
 FR_NORMAL  0x00 
 FR_BLACK   0x01  
 FR_RED     0x02
 FR_GREEN   0x03
 FR_YELLOW  0x04
 FR_BLUE    0x05
-FR_MAGENTA 0x06   Magenta ×ÏºìÉ«
-FR_CYAN    0x07   ÇàÀ¶É«
+FR_MAGENTA 0x06   Magenta ç´«çº¢è‰²
+FR_CYAN    0x07   é’è“è‰²
 FR_WHITE   0x08  
-FR_SET_UNDERLINE   Ä¬ÈÏÇ°¾°É«¼ÓÏÂ»®Ïß
+FR_SET_UNDERLINE   é»˜è®¤å‰æ™¯è‰²åŠ ä¸‹åˆ’çº¿
 FR_RMV_UNDERLINE 
 
-// ±³¾°É«
+// èƒŒæ™¯è‰²
 BK_NORMAL  
 BK_BLACK   
 BK_RED     
 BK_GREEN   
 BK_YELLOW  
 BK_BLUE    
-BK_MAGENTA  Magenta ×ÏºìÉ«
-BK_CYAN     ÇàÀ¶É«
+BK_MAGENTA  Magenta ç´«çº¢è‰²
+BK_CYAN     é’è“è‰²
 BK_WHITE    
-BK_DEFAULT  Ä¬ÈÏ±³¾°É«
+BK_DEFAULT  é»˜è®¤èƒŒæ™¯è‰²
 
 *****************************************************************************/
 void fm_print(char* str, unsigned int ulFormat)

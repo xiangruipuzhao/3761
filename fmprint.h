@@ -1,55 +1,55 @@
 /******************************************************************************
 
-                  °æÈ¨ËùÓĞ (C), 2001-2011, ¹úÍøµç¿ÆÔºÍ¨ĞÅÓëÓÃµç¼¼Êõ·Ö¹«Ë¾
+                  ç‰ˆæƒæ‰€æœ‰ (C), 2001-2011, å›½ç½‘ç”µç§‘é™¢é€šä¿¡ä¸ç”¨ç”µæŠ€æœ¯åˆ†å…¬å¸
 
  ******************************************************************************
-  ÎÄ ¼ş Ãû   : fmprint.h
-  °æ ±¾ ºÅ   : ³õ¸å
-  ×÷    Õß   : liming
-  Éú³ÉÈÕÆÚ   : 2013Äê4ÔÂ26ÈÕ ĞÇÆÚÎå
-  ×î½üĞŞ¸Ä   :
-  ¹¦ÄÜÃèÊö   : ÖÕ¶Ë¸ñÊ½»¯Êä³öÍ·ÎÄ¼ş£¬ÊµÏÖÖÕ¶ËÑùÊ½Êä³ö
-  º¯ÊıÁĞ±í   :
-  ĞŞ¸ÄÀúÊ·   :
-  1.ÈÕ    ÆÚ   : 2013Äê4ÔÂ26ÈÕ ĞÇÆÚÎå
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ´´½¨ÎÄ¼ş
+  æ–‡ ä»¶ å   : fmprint.h
+  ç‰ˆ æœ¬ å·   : åˆç¨¿
+  ä½œ    è€…   : liming
+  ç”Ÿæˆæ—¥æœŸ   : 2013å¹´4æœˆ26æ—¥ æ˜ŸæœŸäº”
+  æœ€è¿‘ä¿®æ”¹   :
+  åŠŸèƒ½æè¿°   : ç»ˆç«¯æ ¼å¼åŒ–è¾“å‡ºå¤´æ–‡ä»¶ï¼Œå®ç°ç»ˆç«¯æ ·å¼è¾“å‡º
+  å‡½æ•°åˆ—è¡¨   :
+  ä¿®æ”¹å†å²   :
+  1.æ—¥    æœŸ   : 2013å¹´4æœˆ26æ—¥ æ˜ŸæœŸäº”
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : åˆ›å»ºæ–‡ä»¶
 
 ******************************************************************************/
 
-// ¹¦ÄÜ´úÂë
-#define FM_ALL_NORMAL    0x00000   // ÖØĞÂÉèÖÃÊôĞÔµ½È±Ê¡ÉèÖÃ
-#define FM_BOLD          0x10000   // ´ÖÌå 
-#define FM_HALF_BRIGHT   0x20000   // ÉèÖÃÒ»°ëÁÁ¶È 
+// åŠŸèƒ½ä»£ç 
+#define FM_ALL_NORMAL    0x00000   // é‡æ–°è®¾ç½®å±æ€§åˆ°ç¼ºçœè®¾ç½®
+#define FM_BOLD          0x10000   // ç²—ä½“ 
+#define FM_HALF_BRIGHT   0x20000   // è®¾ç½®ä¸€åŠäº®åº¦ 
 #define FM_UNDERLINE     0x40000
-#define FM_FLASH         0x80000   // ÉÁË¸
-#define FM_RES_WHITE     0x100000  // ·´°×ÏÔÊ¾
-#define FM_IN_VISIBLE    0x200000  // ²»¿É¼û
+#define FM_FLASH         0x80000   // é—ªçƒ
+#define FM_RES_WHITE     0x100000  // åç™½æ˜¾ç¤º
+#define FM_IN_VISIBLE    0x200000  // ä¸å¯è§
 
-// Ç°¾°É«
+// å‰æ™¯è‰²
 #define FR_NORMAL  0x00 
 #define FR_BLACK   0x01  
 #define FR_RED     0x02
 #define FR_GREEN   0x03
 #define FR_YELLOW  0x04
 #define FR_BLUE    0x05
-#define FR_MAGENTA 0x06   // Magenta ×ÏºìÉ«
-#define FR_CYAN    0x07   // ÇàÀ¶É«
+#define FR_MAGENTA 0x06   // Magenta ç´«çº¢è‰²
+#define FR_CYAN    0x07   // é’è“è‰²
 #define FR_WHITE   0x08  
-#define FR_SET_UNDERLINE 0x09   // Ä¬ÈÏÇ°¾°É«¼ÓÏÂ»®Ïß
+#define FR_SET_UNDERLINE 0x09   // é»˜è®¤å‰æ™¯è‰²åŠ ä¸‹åˆ’çº¿
 #define FR_RMV_UNDERLINE 0x0A
 
-// ±³¾°É«
+// èƒŒæ™¯è‰²
 #define BK_NORMAL  0x0000
 #define BK_BLACK   0x0100
 #define BK_RED     0x0200
 #define BK_GREEN   0x0300
 #define BK_YELLOW  0x0400
 #define BK_BLUE    0x0500
-#define BK_MAGENTA 0x0600  // Magenta ×ÏºìÉ«
-#define BK_CYAN    0x0700  // ÇàÀ¶É«
+#define BK_MAGENTA 0x0600  // Magenta ç´«çº¢è‰²
+#define BK_CYAN    0x0700  // é’è“è‰²
 #define BK_WHITE   0x0800 
-#define BK_DEFAULT 0x0900  // Ä¬ÈÏ±³¾°É«
+#define BK_DEFAULT 0x0900  // é»˜è®¤èƒŒæ™¯è‰²
 
 
 void fmt_print(char* str,...);
@@ -64,36 +64,36 @@ void fm_print(char* str, unsigned int ulFormat);
 
 
 
-#define FMT_ALL_NORMAL    "0"  // ÖØĞÂÉèÖÃÊôĞÔµ½È±Ê¡ÉèÖÃ
-#define FMT_BOLD          "1"  // ´ÖÌå 
-#define FMT_HALF_BRIGHT   "2"  // ÉèÖÃÒ»°ëÁÁ¶È 
+#define FMT_ALL_NORMAL    "0"  // é‡æ–°è®¾ç½®å±æ€§åˆ°ç¼ºçœè®¾ç½®
+#define FMT_BOLD          "1"  // ç²—ä½“ 
+#define FMT_HALF_BRIGHT   "2"  // è®¾ç½®ä¸€åŠäº®åº¦ 
 #define FMT_UNDERLINE     "4"
-#define FMT_FLASH         "5"  // ÉÁË¸
-#define FMT_RES_WHITE     "7"  // ·´°×ÏÔÊ¾
-#define FMT_IN_VISIBLE    "8"  // ²»¿É¼û
+#define FMT_FLASH         "5"  // é—ªçƒ
+#define FMT_RES_WHITE     "7"  // åç™½æ˜¾ç¤º
+#define FMT_IN_VISIBLE    "8"  // ä¸å¯è§
 
-// Ç°¾°É«
+// å‰æ™¯è‰²
 #define FR_COLOR_BLACK   "30"  
 #define FR_COLOR_RED     "31"
 #define FR_COLOR_GREEN   "32"
 #define FR_COLOR_YELLOW  "33"
 #define FR_COLOR_BLUE    "34"
-#define FR_COLOR_MAGENTA "35"   // Magenta ×ÏºìÉ«
-#define FR_COLOR_CYAN    "36"   // ÇàÀ¶É«
+#define FR_COLOR_MAGENTA "35"   // Magenta ç´«çº¢è‰²
+#define FR_COLOR_CYAN    "36"   // é’è“è‰²
 #define FR_COLOR_WHITE   "37"  
-#define FR_COLOR_SET_UNDERLINE "38"   // Ä¬ÈÏÇ°¾°É«¼ÓÏÂ»®Ïß
+#define FR_COLOR_SET_UNDERLINE "38"   // é»˜è®¤å‰æ™¯è‰²åŠ ä¸‹åˆ’çº¿
 #define FR_COLOR_RMV_UNDERLINE "39"
 
-// ±³¾°É«
+// èƒŒæ™¯è‰²
 #define BK_COLOR_BLACK   "40"
 #define BK_COLOR_RED     "41"
 #define BK_COLOR_GREEN   "42"
 #define BK_COLOR_YELLOW  "43"
 #define BK_COLOR_BLUE    "44"
-#define BK_COLOR_MAGENTA "45"  // Magenta ×ÏºìÉ«
-#define BK_COLOR_CYAN    "46"   // ÇàÀ¶É«
+#define BK_COLOR_MAGENTA "45"  // Magenta ç´«çº¢è‰²
+#define BK_COLOR_CYAN    "46"   // é’è“è‰²
 #define BK_COLOR_WHITE   "47" 
-#define BK_COLOR_DEFAULT "49"   // Ä¬ÈÏ±³¾°É«
+#define BK_COLOR_DEFAULT "49"   // é»˜è®¤èƒŒæ™¯è‰²
 
 
 
@@ -109,7 +109,7 @@ void fm_print(char* str, unsigned int ulFormat);
 
 /*
 |---------------|---------------|---------------|---------------|
-     Ç°¾°É«           ±³¾°É«        ÌØÊâÑùÊ½        ¹â±ê¿ØÖÆ
+     å‰æ™¯è‰²           èƒŒæ™¯è‰²        ç‰¹æ®Šæ ·å¼        å…‰æ ‡æ§åˆ¶
 |---------------|---------------|---------------|---------------|
 
 
@@ -140,13 +140,13 @@ typedef enum
 
 typedef enum
 {
-    EFMT_ALL_NORMAL,   // 0  ÖØĞÂÉèÖÃÊôĞÔµ½È±Ê¡ÉèÖÃ
-    EFMT_BOLD,         // 1  ´ÖÌå 
-    EFMT_HALF_BRIGHT,  // 2  ÉèÖÃÒ»°ëÁÁ¶È 
+    EFMT_ALL_NORMAL,   // 0  é‡æ–°è®¾ç½®å±æ€§åˆ°ç¼ºçœè®¾ç½®
+    EFMT_BOLD,         // 1  ç²—ä½“ 
+    EFMT_HALF_BRIGHT,  // 2  è®¾ç½®ä¸€åŠäº®åº¦ 
     EFMT_UNDERLINE,    // 4
-    EFMT_FLASH,        // 5  ÉÁË¸
-    EFMT_RES_WHITE,    // 7  ·´°×ÏÔÊ¾
-    EFMT_IN_VISIBLE,   // 8  ²»¿É¼û
+    EFMT_FLASH,        // 5  é—ªçƒ
+    EFMT_RES_WHITE,    // 7  åç™½æ˜¾ç¤º
+    EFMT_IN_VISIBLE,   // 8  ä¸å¯è§
     
 }eEffect;
 

@@ -1,19 +1,19 @@
 /******************************************************************************
 
-                  °æÈ¨ËùÓĞ (C), 2001-2011, ¹úÍøµç¿ÆÔºÍ¨ĞÅÓëÓÃµç¼¼Êõ·Ö¹«Ë¾
+                  ç‰ˆæƒæ‰€æœ‰ (C), 2001-2011, å›½ç½‘ç”µç§‘é™¢é€šä¿¡ä¸ç”¨ç”µæŠ€æœ¯åˆ†å…¬å¸
                   
  ******************************************************************************
-  ÎÄ ¼ş Ãû   : main.c
-  °æ ±¾ ºÅ   : ³õ¸å
-  ×÷    Õß   : liming
-  Éú³ÉÈÕÆÚ   : 2013Äê4ÔÂ17ÈÕ ĞÇÆÚÈı
-  ×î½üĞŞ¸Ä   :
-  ¹¦ÄÜÃèÊö   : 3761ºÍĞ­ÒéÊÊÅä²ã²âÊÔ´úÂë
-  º¯ÊıÁĞ±í   :
-  ĞŞ¸ÄÀúÊ·   :
-  1.ÈÕ    ÆÚ   : 2013Äê4ÔÂ17ÈÕ ĞÇÆÚÈı
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ´´½¨ÎÄ¼ş
+  æ–‡ ä»¶ å   : main.c
+  ç‰ˆ æœ¬ å·   : åˆç¨¿
+  ä½œ    è€…   : liming
+  ç”Ÿæˆæ—¥æœŸ   : 2013å¹´4æœˆ17æ—¥ æ˜ŸæœŸä¸‰
+  æœ€è¿‘ä¿®æ”¹   :
+  åŠŸèƒ½æè¿°   : 3761å’Œåè®®é€‚é…å±‚æµ‹è¯•ä»£ç 
+  å‡½æ•°åˆ—è¡¨   :
+  ä¿®æ”¹å†å²   :
+  1.æ—¥    æœŸ   : 2013å¹´4æœˆ17æ—¥ æ˜ŸæœŸä¸‰
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : åˆ›å»ºæ–‡ä»¶
 
 ******************************************************************************/
 #include <stdio.h>
@@ -30,10 +30,10 @@
 #define OUT_BUF_LEN    10240
 
 #define BUF_LEN_MAX   (1024*1024*50)
-UINT8 g_ucPackMem[PACK_MEM_SIZE] = {0}; // ²âÊÔ·â×°ÃüÁîµÄ²ÎÊıµÄÄÚ´æ¿Õ¼ä
-UINT8 g_ucOutBuf[OUT_BUF_LEN]    = {0}; // ´æ·ÅÊä³ö±¨ÎÄ
+UINT8 g_ucPackMem[PACK_MEM_SIZE] = {0}; // æµ‹è¯•å°è£…å‘½ä»¤çš„å‚æ•°çš„å†…å­˜ç©ºé—´
+UINT8 g_ucOutBuf[OUT_BUF_LEN]    = {0}; // å­˜æ”¾è¾“å‡ºæŠ¥æ–‡
 UINT8 g_ucInBuf[OUT_BUF_LEN]     = {0};
-UINT8 g_ucOutBufColor[OUT_BUF_LEN]    = {0}; // ´æ·ÅÊä³ö±¨ÎÄ
+UINT8 g_ucOutBufColor[OUT_BUF_LEN]    = {0}; // å­˜æ”¾è¾“å‡ºæŠ¥æ–‡
 
 smtPack * getSmtPackPoint()
 {
@@ -96,19 +96,19 @@ void printf_buffer_color(char * pBuf, UINT16 usBufLen)
 }
 
 /*****************************************************************************
- º¯ Êı Ãû  : print_buffer
- ¹¦ÄÜÃèÊö  : ´òÓ¡±¨ÎÄ
- ÊäÈë²ÎÊı  : UINT8 * pBuf      
+ å‡½ æ•° å  : print_buffer
+ åŠŸèƒ½æè¿°  : æ‰“å°æŠ¥æ–‡
+ è¾“å…¥å‚æ•°  : UINT8 * pBuf      
              UINT16* usBufLen  
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê4ÔÂ22ÈÕ ĞÇÆÚÒ»
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´4æœˆ22æ—¥ æ˜ŸæœŸä¸€
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 void print_buffer(UINT8 * pBuf, UINT16* pusBufLen)
@@ -145,55 +145,55 @@ void show_mt_error(eMtErr eErr)
     switch(eErr)
     {
         case MT_OK:
-        str = "MT_OK ÎŞ´íÎó";
+        str = "MT_OK æ— é”™è¯¯";
         break;
 
         case MT_ERR_NULL:
-        str = "MT_NULL Ö¸ÕëÎª¿Õ";
+        str = "MT_NULL æŒ‡é’ˆä¸ºç©º";
         break;
         
         case MT_ERR_OUTRNG:
-        str = "MT_OUT_RNG ²ÎÊıÔ½½ç";
+        str = "MT_OUT_RNG å‚æ•°è¶Šç•Œ";
         break;
 
         case MT_ERR_NONE:
-        str = "MT_NONE ²»´æÔÚ,Ã»ÓĞÕÒµ½";
+        str = "MT_NONE ä¸å­˜åœ¨,æ²¡æœ‰æ‰¾åˆ°";
         break;
 
         case MT_ERR_IO:
-        str = "MT_ERR_IO IO´íÎó";
+        str = "MT_ERR_IO IOé”™è¯¯";
         break;
 
         case MT_ERR_RES:
-        str = "MT_ERR_RES ×ÊÔ´²»×ã";
+        str = "MT_ERR_RES èµ„æºä¸è¶³";
         break;
 
         case MT_ERR_INIT:
-        str = "MT_ERR_INIT Ã»ÓĞ³õÊ¼»¯";
+        str = "MT_ERR_INIT æ²¡æœ‰åˆå§‹åŒ–";
         break;
         
         case MT_ERR_PARA:
-        str = "MT_ERR_PARA ²ÎÊı´íÎó";
+        str = "MT_ERR_PARA å‚æ•°é”™è¯¯";
         break;
 
         case MT_ERR_FN:
-        str = "MT_ERR_FN Ö¸¶¨Afn ÖĞ²»Ö§³ÖµÄ Fn";
+        str = "MT_ERR_FN æŒ‡å®šAfn ä¸­ä¸æ”¯æŒçš„ Fn";
         break;
 
         case MT_ERR_PN:
-        str = "MT_ERR_PN Ö¸¶¨Afn Fn ÖĞ²»Ö§³ÖµÄ Pn";
+        str = "MT_ERR_PN æŒ‡å®šAfn Fn ä¸­ä¸æ”¯æŒçš„ Pn";
         break;
 
         case MT_ERR_ADDR:
-        str = "MT_ERR_ADDR ÎŞĞ§µØÖ·";
+        str = "MT_ERR_ADDR æ— æ•ˆåœ°å€";
         break;
         
         case MT_ERR_CTRL:
-        str = "MT_ERR_CTRL ¿ØÖÆÓò´íÎó";
+        str = "MT_ERR_CTRL æ§åˆ¶åŸŸé”™è¯¯";
         break;
 
         case MT_ERR_SEQ:
-        str = "MT_ERR_SEQ SEQÓò´íÎó";
+        str = "MT_ERR_SEQ SEQåŸŸé”™è¯¯";
         break;
         
         case MT_ERR_SEQ2CS:
@@ -201,57 +201,57 @@ void show_mt_error(eMtErr eErr)
         break;
 
         case MT_ERR_AFN:
-        str = "MT_ERR_AFN AFN ´íÎó";
+        str = "MT_ERR_AFN AFN é”™è¯¯";
         break;
 
         case MT_ERR_UNCOMP:
-        str = "MT_ERR_UNCOMP ²»ÍêÕûµÄĞ­Òé°ü";
+        str = "MT_ERR_UNCOMP ä¸å®Œæ•´çš„åè®®åŒ…";
         break;
 
         case MT_ERR_0x68:
-        str = "MT_ERR_0x68 ´íÎóµÄ±¨ÎÄÆğÊ¼";
+        str = "MT_ERR_0x68 é”™è¯¯çš„æŠ¥æ–‡èµ·å§‹";
         break;
         
         case MT_ERR_PROTO:
-        str = "MT_ERR_PROTO ´íÎóµÄĞ­Òé±êÊ¶";
+        str = "MT_ERR_PROTO é”™è¯¯çš„åè®®æ ‡è¯†";
         break;
         
         case MT_ERR_CS:
-        str = "MT_ERR_CS ´íÎóµÄ¼ì²âºÍ";
+        str = "MT_ERR_CS é”™è¯¯çš„æ£€æµ‹å’Œ";
         break;
 
         case MT_ERR_0x16:
-        str = "MT_ERR_0x16 ´íÎóµÄ½áÎ²·û";
+        str = "MT_ERR_0x16 é”™è¯¯çš„ç»“å°¾ç¬¦";
         break;
 
         case MT_ERR_LOGIC:
-        str = "MT_ERR_LOGIC ´íÎóµÄ´¦ÀíÂß¼­";
+        str = "MT_ERR_LOGIC é”™è¯¯çš„å¤„ç†é€»è¾‘";
         break;
         
         case MT_ERR_PACK:
-        str = "MT_ERR_PACK ²»ÊÇÒ»¸öÓĞĞ§µÄ°ü";
+        str = "MT_ERR_PACK ä¸æ˜¯ä¸€ä¸ªæœ‰æ•ˆçš„åŒ…";
         break;
         case MT_ERR_PFC:
-            str = "ĞòÁĞºÅ²»¶ÔÓ¦";
+            str = "åºåˆ—å·ä¸å¯¹åº”";
             break;
         case MT_ERR_TIMEOUT:
-            str = "±¨ÎÄ³¬Ê±";
+            str = "æŠ¥æ–‡è¶…æ—¶";
             break;
         case MT_ERR_PRM:
-            str = "Æô¶¯·½Ïò´íÎó";
+            str = "å¯åŠ¨æ–¹å‘é”™è¯¯";
             break;
 
        case MT_ERR_TEAM:
-            str = "²»ÊôÓÚÍ¬Ò»×é";
+            str = "ä¸å±äºåŒä¸€ç»„";
             break;
         case MT_ERR_ENCRYPT:
-            str = "¼ÓÃÜ´íÎó";
+            str = "åŠ å¯†é”™è¯¯";
             break;
         case MT_ERR_DECRYPT:
-            str = "½âÃÜ´íÎó";
+            str = "è§£å¯†é”™è¯¯";
             break;
         default:
-        str = "Î´Öª´íÎó";
+        str = "æœªçŸ¥é”™è¯¯";
         break;
         
     }
@@ -264,18 +264,18 @@ void show_mt_error(eMtErr eErr)
 
 
 /*****************************************************************************
- º¯ Êı Ãû  : test_pack_1
- ¹¦ÄÜÃèÊö  : ²âÊÔÀı1
- ÊäÈë²ÎÊı  : ÎŞ
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : test_pack_1
+ åŠŸèƒ½æè¿°  : æµ‹è¯•ä¾‹1
+ è¾“å…¥å‚æ•°  : æ— 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê4ÔÂ22ÈÕ ĞÇÆÚÒ»
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´4æœˆ22æ—¥ æ˜ŸæœŸä¸€
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 eMtErr test_pack_0001()
@@ -292,7 +292,7 @@ eMtErr test_pack_0001_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -300,14 +300,14 @@ eMtErr test_pack_0001_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "0123456789ABCDEF";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -328,7 +328,7 @@ eMtErr test_pack_0001_m2s()
     pscmPacket->sData[0].usPN  = 0;
 
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -336,7 +336,7 @@ eMtErr test_pack_0001_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
     return MT_OK;
 
@@ -345,24 +345,24 @@ eMtErr test_pack_0001_m2s()
 #if 0
 
 /*****************************************************************************
- º¯ Êı Ãû  : test_pack_1
- ¹¦ÄÜÃèÊö  : ²âÊÔÀı1
- ÊäÈë²ÎÊı  : ÎŞ
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : test_pack_1
+ åŠŸèƒ½æè¿°  : æµ‹è¯•ä¾‹1
+ è¾“å…¥å‚æ•°  : æ— 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê4ÔÂ22ÈÕ ĞÇÆÚÒ»
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´4æœˆ22æ—¥ æ˜ŸæœŸä¸€
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 eMtErr test_pack_0001()
 {
 
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eMtErr eRet = MT_OK;
     smtPack *psPack = NULL;
     sMtProtoInit sProtoInit = {0};
@@ -371,7 +371,7 @@ eMtErr test_pack_0001()
     psPack = getSmtPackPoint();
 
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sProtoInit.eRole = MT_ROLE_CONTOR;
     sProtoInit.ucPermitDelayMinutes = 0;
     memcpy(sProtoInit.aucPw,"1234567890abcde",16);
@@ -383,7 +383,7 @@ eMtErr test_pack_0001()
         return eRet;
     }
 
-    // È·¶¨±¨ÎÄµÄ´«ËÍ·½Ïò
+    // ç¡®å®šæŠ¥æ–‡çš„ä¼ é€æ–¹å‘
     if(sProtoInit.eRole == MT_ROLE_CONTOR)
     {
         eDir = MT_DIR_S2M;
@@ -394,7 +394,7 @@ eMtErr test_pack_0001()
     }
 
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
 
     // address
     UINT8 strRegionCode[5] = "1100"; 
@@ -417,7 +417,7 @@ eMtErr test_pack_0001()
     psPack->sSub[0].usPN      =  0;
     psPack->sSub[0].usLen     =  0;
 
-    /* 4 µ÷ÓÃº¯Êı */ 
+    /* 4 è°ƒç”¨å‡½æ•° */ 
     eRet = emtPack(psPack, &usBuflen, (UINT8 *)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -425,7 +425,7 @@ eMtErr test_pack_0001()
         return eRet;
     }
 
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
  return MT_OK;
@@ -434,24 +434,24 @@ eMtErr test_pack_0001()
 
 
 /*****************************************************************************
- º¯ Êı Ãû  : test_pack_0002
- ¹¦ÄÜÃèÊö  : ²âÊÔÀı0002 È«²¿·ñÈÏ
- ÊäÈë²ÎÊı  : ÎŞ
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : test_pack_0002
+ åŠŸèƒ½æè¿°  : æµ‹è¯•ä¾‹0002 å…¨éƒ¨å¦è®¤
+ è¾“å…¥å‚æ•°  : æ— 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê4ÔÂ22ÈÕ ĞÇÆÚÒ»
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´4æœˆ22æ—¥ æ˜ŸæœŸä¸€
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 eMtErr test_pack_0002()
 {
 
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eMtErr eRet = MT_OK;
     smtPack *psPack = NULL;
     sMtProtoInit sProtoInit = {0};
@@ -460,7 +460,7 @@ eMtErr test_pack_0002()
     psPack = getSmtPackPoint();
 
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sProtoInit.eRole = MT_ROLE_CONTOR;
     sProtoInit.ucPermitDelayMinutes = 0;
     
@@ -471,7 +471,7 @@ eMtErr test_pack_0002()
         return eRet;
     }
 
-    // È·¶¨±¨ÎÄµÄ´«ËÍ·½Ïò
+    // ç¡®å®šæŠ¥æ–‡çš„ä¼ é€æ–¹å‘
     if(sProtoInit.eRole == MT_ROLE_CONTOR)
     {
         eDir = MT_DIR_S2M;
@@ -482,7 +482,7 @@ eMtErr test_pack_0002()
     }
 
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
 
     // address
     UINT8 strRegionCode[5] = "1100"; 
@@ -504,7 +504,7 @@ eMtErr test_pack_0002()
     psPack->sSub[0].usPN      =  0;
     psPack->sSub[0].usLen     =  0;
 
-    /* 4 µ÷ÓÃº¯Êı */ 
+    /* 4 è°ƒç”¨å‡½æ•° */ 
     eRet = emtPack(psPack, &usBuflen, (UINT8 *)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -512,7 +512,7 @@ eMtErr test_pack_0002()
         return eRet;
     }
 
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
     return MT_OK;
  
@@ -528,24 +528,24 @@ eMtErr test_pack_0002()
 
 
 /*****************************************************************************
- º¯ Êı Ãû  : test_pack_0101
- ¹¦ÄÜÃèÊö  : ²âÊÔÀı1
- ÊäÈë²ÎÊı  : ÎŞ
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : test_pack_0101
+ åŠŸèƒ½æè¿°  : æµ‹è¯•ä¾‹1
+ è¾“å…¥å‚æ•°  : æ— 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê4ÔÂ22ÈÕ ĞÇÆÚÒ»
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´4æœˆ22æ—¥ æ˜ŸæœŸä¸€
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 eMtErr test_pack_0101()
 {
 
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eMtErr eRet = MT_OK;
     smtPack *psPack = NULL;
     sMtProtoInit sProtoInit = {0};
@@ -554,8 +554,8 @@ eMtErr test_pack_0101()
     psPack = getSmtPackPoint();
 
 
-    /* 2 »·¾³³õÊ¼»¯ */
-    sProtoInit.eRole = MT_ROLE_MASTER;                          // (1)ÕâÀïĞèÒªĞŞ¸Ä
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
+    sProtoInit.eRole = MT_ROLE_MASTER;                          // (1)è¿™é‡Œéœ€è¦ä¿®æ”¹
     sProtoInit.ucPermitDelayMinutes = 0;
     
     eRet = eMtProtoInit(&sProtoInit);
@@ -565,7 +565,7 @@ eMtErr test_pack_0101()
         return eRet;
     }
 
-    // È·¶¨±¨ÎÄµÄ´«ËÍ·½Ïò
+    // ç¡®å®šæŠ¥æ–‡çš„ä¼ é€æ–¹å‘
     if(sProtoInit.eRole == MT_ROLE_CONTOR)
     {
         eDir = MT_DIR_S2M;
@@ -576,7 +576,7 @@ eMtErr test_pack_0101()
     }
 
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
 
     // address
     UINT8 strRegionCode[5] = "1100"; 
@@ -586,7 +586,7 @@ eMtErr test_pack_0101()
     psPack->sAddress.bTeamAddr = FALSE;
 
     // main_code 
-    psPack->eMainCmd = AFN_01_RSET;                              // (2)ÕâÀïĞèÒªĞŞ¸Ä
+    psPack->eMainCmd = AFN_01_RSET;                              // (2)è¿™é‡Œéœ€è¦ä¿®æ”¹
     psPack->sCtrl.eRPM = MT_PRM_ACTIVE;
     // ctrl_filed
     eRet = eMtGetCtrl(psPack->eMainCmd, eDir,MT_PRM_ACTIVE, &(psPack->sCtrl));
@@ -594,13 +594,13 @@ eMtErr test_pack_0101()
 
     // subCode
     psPack->ucSubNum = 1;
-    psPack->sSub[0].eSubCmd   =  CMD_AFN_1_FN_1_HARD_INIT;      // (3)ÕâÀïĞèÒªĞŞ¸Ä
+    psPack->sSub[0].eSubCmd   =  CMD_AFN_1_FN_1_HARD_INIT;      // (3)è¿™é‡Œéœ€è¦ä¿®æ”¹
     psPack->sSub[0].usPN      =  0;
     psPack->sSub[0].usLen     =  0;
 
 
-    // app_data                                                  // (4)ÕâÀïĞèÒªĞŞ¸Ä
-    #if 0   // ÎŞÓ¦ÓÃÊı¾İ
+    // app_data                                                  // (4)è¿™é‡Œéœ€è¦ä¿®æ”¹
+    #if 0   // æ— åº”ç”¨æ•°æ®
     psPack->sSub[0].uAppData.sAfn04F1_ConUpPortPara.ucRTS = 0x12;
     psPack->sSub[0].uAppData.sAfn04F1_ConUpPortPara.ucRTM = 0x23;
     psPack->sSub[0].uAppData.sAfn04F1_ConUpPortPara.ucReSendTimes = 0x34;
@@ -614,7 +614,7 @@ eMtErr test_pack_0101()
 
 
 
-    /* 4 µ÷ÓÃº¯Êı */ 
+    /* 4 è°ƒç”¨å‡½æ•° */ 
     eRet = emtPack(psPack, &usBuflen, (UINT8 *)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -622,7 +622,7 @@ eMtErr test_pack_0101()
         return eRet;
     }
 
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color(g_ucOutBuf, usBuflen);
     return MT_OK;
  
@@ -641,24 +641,24 @@ eMtErr test_pack_0101()
 
 
 /*****************************************************************************
- º¯ Êı Ãû  : test_pack_0101
- ¹¦ÄÜÃèÊö  : ²âÊÔÀı1
- ÊäÈë²ÎÊı  : ÎŞ
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : test_pack_0101
+ åŠŸèƒ½æè¿°  : æµ‹è¯•ä¾‹1
+ è¾“å…¥å‚æ•°  : æ— 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê4ÔÂ22ÈÕ ĞÇÆÚÒ»
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´4æœˆ22æ—¥ æ˜ŸæœŸä¸€
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 eMtErr test_pack_0102()
 {
 
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eMtErr eRet = MT_OK;
     smtPack *psPack = NULL;
     sMtProtoInit sProtoInit = {0};
@@ -667,8 +667,8 @@ eMtErr test_pack_0102()
     psPack = getSmtPackPoint();
 
 
-    /* 2 »·¾³³õÊ¼»¯ */
-    sProtoInit.eRole = MT_ROLE_MASTER;                          // (1)ÕâÀïĞèÒªĞŞ¸Ä
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
+    sProtoInit.eRole = MT_ROLE_MASTER;                          // (1)è¿™é‡Œéœ€è¦ä¿®æ”¹
     sProtoInit.ucPermitDelayMinutes = 0;
     
     eRet = eMtProtoInit(&sProtoInit);
@@ -678,7 +678,7 @@ eMtErr test_pack_0102()
         return eRet;
     }
 
-    // È·¶¨±¨ÎÄµÄ´«ËÍ·½Ïò
+    // ç¡®å®šæŠ¥æ–‡çš„ä¼ é€æ–¹å‘
     if(sProtoInit.eRole == MT_ROLE_CONTOR)
     {
         eDir = MT_DIR_S2M;
@@ -689,7 +689,7 @@ eMtErr test_pack_0102()
     }
 
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
 
     // address
     UINT8 strRegionCode[5] = "1100"; 
@@ -699,7 +699,7 @@ eMtErr test_pack_0102()
     psPack->sAddress.bTeamAddr = FALSE;
 
     // main_code 
-    psPack->eMainCmd = AFN_01_RSET;                              // (2)ÕâÀïĞèÒªĞŞ¸Ä
+    psPack->eMainCmd = AFN_01_RSET;                              // (2)è¿™é‡Œéœ€è¦ä¿®æ”¹
     psPack->sCtrl.eRPM = MT_PRM_ACTIVE;
     // ctrl_filed
     eRet = eMtGetCtrl(psPack->eMainCmd, eDir,psPack->sCtrl.eRPM, &(psPack->sCtrl));
@@ -707,13 +707,13 @@ eMtErr test_pack_0102()
 
     // subCode
     psPack->ucSubNum = 1;
-    psPack->sSub[0].eSubCmd   =  CMD_AFN_1_FN_2_DATA_INIT;      // (3)ÕâÀïĞèÒªĞŞ¸Ä
+    psPack->sSub[0].eSubCmd   =  CMD_AFN_1_FN_2_DATA_INIT;      // (3)è¿™é‡Œéœ€è¦ä¿®æ”¹
     psPack->sSub[0].usPN      =  0;
     psPack->sSub[0].usLen     =  0;
 
 
-    // app_data                                                  // (4)ÕâÀïĞèÒªĞŞ¸Ä
-    #if 0   // ÎŞÓ¦ÓÃÊı¾İ
+    // app_data                                                  // (4)è¿™é‡Œéœ€è¦ä¿®æ”¹
+    #if 0   // æ— åº”ç”¨æ•°æ®
     psPack->sSub[0].uAppData.sAfn04F1_ConUpPortPara.ucRTS = 0x12;
     psPack->sSub[0].uAppData.sAfn04F1_ConUpPortPara.ucRTM = 0x23;
     psPack->sSub[0].uAppData.sAfn04F1_ConUpPortPara.ucReSendTimes = 0x34;
@@ -729,7 +729,7 @@ eMtErr test_pack_0102()
 
 
 
-    /* 4 µ÷ÓÃº¯Êı */ 
+    /* 4 è°ƒç”¨å‡½æ•° */ 
     eRet = emtPack(psPack, &usBuflen, (UINT8 *)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -737,7 +737,7 @@ eMtErr test_pack_0102()
         return eRet;
     }
 
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color(g_ucOutBuf, usBuflen);
 
      return MT_OK;
@@ -746,24 +746,24 @@ eMtErr test_pack_0102()
 
 
 /*****************************************************************************
- º¯ Êı Ãû  : test_pack_0101
- ¹¦ÄÜÃèÊö  : ²âÊÔÀı1
- ÊäÈë²ÎÊı  : ÎŞ
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : test_pack_0101
+ åŠŸèƒ½æè¿°  : æµ‹è¯•ä¾‹1
+ è¾“å…¥å‚æ•°  : æ— 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê4ÔÂ22ÈÕ ĞÇÆÚÒ»
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´4æœˆ22æ—¥ æ˜ŸæœŸä¸€
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 eMtErr test_pack_0103()
 {
 
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eMtErr eRet = MT_OK;
     smtPack *psPack = NULL;
     sMtProtoInit sProtoInit = {0};
@@ -772,8 +772,8 @@ eMtErr test_pack_0103()
     psPack = getSmtPackPoint();
 
 
-    /* 2 »·¾³³õÊ¼»¯ */
-    sProtoInit.eRole = MT_ROLE_MASTER;                          // (1)ÕâÀïĞèÒªĞŞ¸Ä
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
+    sProtoInit.eRole = MT_ROLE_MASTER;                          // (1)è¿™é‡Œéœ€è¦ä¿®æ”¹
     sProtoInit.ucPermitDelayMinutes = 0;
     
     eRet = eMtProtoInit(&sProtoInit);
@@ -783,7 +783,7 @@ eMtErr test_pack_0103()
         return eRet;
     }
 
-    // È·¶¨±¨ÎÄµÄ´«ËÍ·½Ïò
+    // ç¡®å®šæŠ¥æ–‡çš„ä¼ é€æ–¹å‘
     if(sProtoInit.eRole == MT_ROLE_CONTOR)
     {
         eDir = MT_DIR_S2M;
@@ -794,7 +794,7 @@ eMtErr test_pack_0103()
     }
 
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
 
     // address
     UINT8 strRegionCode[5] = "1100"; 
@@ -804,7 +804,7 @@ eMtErr test_pack_0103()
     psPack->sAddress.bTeamAddr = FALSE;
 
     // main_code 
-    psPack->eMainCmd = AFN_01_RSET;                              // (2)ÕâÀïĞèÒªĞŞ¸Ä
+    psPack->eMainCmd = AFN_01_RSET;                              // (2)è¿™é‡Œéœ€è¦ä¿®æ”¹
     psPack->sCtrl.eRPM = MT_PRM_ACTIVE;
     // ctrl_filed
     eRet = eMtGetCtrl(psPack->eMainCmd, eDir,MT_PRM_PASIVE, &(psPack->sCtrl));
@@ -812,13 +812,13 @@ eMtErr test_pack_0103()
 
     // subCode
     psPack->ucSubNum = 1;
-    psPack->sSub[0].eSubCmd   =  CMD_AFN_1_FN_3_FACTORY_RESET;      // (3)ÕâÀïĞèÒªĞŞ¸Ä
+    psPack->sSub[0].eSubCmd   =  CMD_AFN_1_FN_3_FACTORY_RESET;      // (3)è¿™é‡Œéœ€è¦ä¿®æ”¹
     psPack->sSub[0].usPN      =  0;
     psPack->sSub[0].usLen     =  0;
 
 
-    // app_data                                                  // (4)ÕâÀïĞèÒªĞŞ¸Ä
-    #if 0   // ÎŞÓ¦ÓÃÊı¾İ
+    // app_data                                                  // (4)è¿™é‡Œéœ€è¦ä¿®æ”¹
+    #if 0   // æ— åº”ç”¨æ•°æ®
     psPack->sSub[0].uAppData.sAfn04F1_ConUpPortPara.ucRTS = 0x12;
     psPack->sSub[0].uAppData.sAfn04F1_ConUpPortPara.ucRTM = 0x23;
     psPack->sSub[0].uAppData.sAfn04F1_ConUpPortPara.ucReSendTimes = 0x34;
@@ -834,7 +834,7 @@ eMtErr test_pack_0103()
 
 
 
-    /* 4 µ÷ÓÃº¯Êı */ 
+    /* 4 è°ƒç”¨å‡½æ•° */ 
     eRet = emtPack(psPack, &usBuflen, (UINT8 *)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -842,7 +842,7 @@ eMtErr test_pack_0103()
         return eRet;
     }
 
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color(g_ucOutBuf, usBuflen);
 
      return MT_OK;
@@ -850,24 +850,24 @@ eMtErr test_pack_0103()
 
 
 /*****************************************************************************
- º¯ Êı Ãû  : test_pack_0101
- ¹¦ÄÜÃèÊö  : ²âÊÔÀı1
- ÊäÈë²ÎÊı  : ÎŞ
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : test_pack_0101
+ åŠŸèƒ½æè¿°  : æµ‹è¯•ä¾‹1
+ è¾“å…¥å‚æ•°  : æ— 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê4ÔÂ22ÈÕ ĞÇÆÚÒ»
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´4æœˆ22æ—¥ æ˜ŸæœŸä¸€
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 eMtErr test_pack_0104()
 {
 
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eMtErr eRet = MT_OK;
     smtPack *psPack = NULL;
     sMtProtoInit sProtoInit = {0};
@@ -876,8 +876,8 @@ eMtErr test_pack_0104()
     psPack = getSmtPackPoint();
 
 
-    /* 2 »·¾³³õÊ¼»¯ */
-    sProtoInit.eRole = MT_ROLE_MASTER;                          // (1)ÕâÀïĞèÒªĞŞ¸Ä
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
+    sProtoInit.eRole = MT_ROLE_MASTER;                          // (1)è¿™é‡Œéœ€è¦ä¿®æ”¹
     sProtoInit.ucPermitDelayMinutes = 0;
     
     eRet = eMtProtoInit(&sProtoInit);
@@ -887,7 +887,7 @@ eMtErr test_pack_0104()
         return eRet;
     }
 
-    // È·¶¨±¨ÎÄµÄ´«ËÍ·½Ïò
+    // ç¡®å®šæŠ¥æ–‡çš„ä¼ é€æ–¹å‘
     if(sProtoInit.eRole == MT_ROLE_CONTOR)
     {
         eDir = MT_DIR_S2M;
@@ -898,7 +898,7 @@ eMtErr test_pack_0104()
     }
 
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
 
     // address
     UINT8 strRegionCode[5] = "1100"; 
@@ -908,7 +908,7 @@ eMtErr test_pack_0104()
     psPack->sAddress.bTeamAddr = FALSE;
 
     // main_code 
-    psPack->eMainCmd = AFN_01_RSET;                              // (2)ÕâÀïĞèÒªĞŞ¸Ä
+    psPack->eMainCmd = AFN_01_RSET;                              // (2)è¿™é‡Œéœ€è¦ä¿®æ”¹
     psPack->sCtrl.eRPM = MT_PRM_ACTIVE;
     // ctrl_filed
     eRet = eMtGetCtrl(psPack->eMainCmd, eDir,MT_PRM_PASIVE, &(psPack->sCtrl));
@@ -916,13 +916,13 @@ eMtErr test_pack_0104()
 
     // subCode
     psPack->ucSubNum = 1;
-    psPack->sSub[0].eSubCmd   =  CMD_AFN_1_FN_1_HARD_INIT;      // (3)ÕâÀïĞèÒªĞŞ¸Ä
+    psPack->sSub[0].eSubCmd   =  CMD_AFN_1_FN_1_HARD_INIT;      // (3)è¿™é‡Œéœ€è¦ä¿®æ”¹
     psPack->sSub[0].usPN      =  0;
     psPack->sSub[0].usLen     =  0;
 
 
     
-    // app_data                                                  // (4)ÕâÀïĞèÒªĞŞ¸Ä
+    // app_data                                                  // (4)è¿™é‡Œéœ€è¦ä¿®æ”¹
     #if 0
     psPack->sSub[0].uAppData.sAfn04F1_ConUpPortPara.ucRTS = 0x12;
     psPack->sSub[0].uAppData.sAfn04F1_ConUpPortPara.ucRTM = 0x23;
@@ -937,7 +937,7 @@ eMtErr test_pack_0104()
 
 
 
-    /* 4 µ÷ÓÃº¯Êı */ 
+    /* 4 è°ƒç”¨å‡½æ•° */ 
     eRet = emtPack(psPack, &usBuflen, (UINT8 *)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -945,7 +945,7 @@ eMtErr test_pack_0104()
         return eRet;
     }
 
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color(g_ucOutBuf, usBuflen);
     return MT_OK;
  
@@ -955,24 +955,24 @@ eMtErr test_pack_0104()
 
 
 /*****************************************************************************
- º¯ Êı Ãû  : test_pack_0201
- ¹¦ÄÜÃèÊö  : ²âÊÔÀı
- ÊäÈë²ÎÊı  : ÎŞ
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : test_pack_0201
+ åŠŸèƒ½æè¿°  : æµ‹è¯•ä¾‹
+ è¾“å…¥å‚æ•°  : æ— 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê4ÔÂ22ÈÕ ĞÇÆÚÒ»
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´4æœˆ22æ—¥ æ˜ŸæœŸä¸€
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 eMtErr test_pack_0201()
 {
 
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eMtErr eRet = MT_OK;
     smtPack *psPack = NULL;
     sMtProtoInit sProtoInit = {0};
@@ -981,8 +981,8 @@ eMtErr test_pack_0201()
     psPack = getSmtPackPoint();
 
 
-    /* 2 »·¾³³õÊ¼»¯ */
-    sProtoInit.eRole = MT_ROLE_CONTOR;                          // (1)ÕâÀïĞèÒªĞŞ¸Ä
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
+    sProtoInit.eRole = MT_ROLE_CONTOR;                          // (1)è¿™é‡Œéœ€è¦ä¿®æ”¹
     sProtoInit.ucPermitDelayMinutes = 0;
     
     eRet = eMtProtoInit(&sProtoInit);
@@ -992,7 +992,7 @@ eMtErr test_pack_0201()
         return eRet;
     }
 
-    // È·¶¨±¨ÎÄµÄ´«ËÍ·½Ïò
+    // ç¡®å®šæŠ¥æ–‡çš„ä¼ é€æ–¹å‘
     if(sProtoInit.eRole == MT_ROLE_CONTOR)
     {
         eDir = MT_DIR_S2M;
@@ -1003,7 +1003,7 @@ eMtErr test_pack_0201()
     }
 
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
 
     // address
     UINT8 strRegionCode[5] = "1100"; 
@@ -1013,7 +1013,7 @@ eMtErr test_pack_0201()
     psPack->sAddress.bTeamAddr = FALSE;
 
     // main_code 
-    psPack->eMainCmd = AFN_02_LINK;                              // (2)ÕâÀïĞèÒªĞŞ¸Ä
+    psPack->eMainCmd = AFN_02_LINK;                              // (2)è¿™é‡Œéœ€è¦ä¿®æ”¹
     psPack->sCtrl.eRPM = MT_PRM_ACTIVE;
     // ctrl_filed
     eRet = eMtGetCtrl(psPack->eMainCmd, eDir,psPack->sCtrl.eRPM, &(psPack->sCtrl));
@@ -1021,13 +1021,13 @@ eMtErr test_pack_0201()
 
     // subCode
     psPack->ucSubNum = 1;
-    psPack->sSub[0].eSubCmd   =  CMD_AFN_2_FN_1_LOG_IN;      // (3)ÕâÀïĞèÒªĞŞ¸Ä
+    psPack->sSub[0].eSubCmd   =  CMD_AFN_2_FN_1_LOG_IN;      // (3)è¿™é‡Œéœ€è¦ä¿®æ”¹
     psPack->sSub[0].usPN      =  0;
     psPack->sSub[0].usLen     =  0;
 
 
     
-    // app_data                                                  // (4)ÕâÀïĞèÒªĞŞ¸Ä
+    // app_data                                                  // (4)è¿™é‡Œéœ€è¦ä¿®æ”¹
     #if 0
     psPack->sSub[0].uAppData.sAfn04F1_ConUpPortPara.ucRTS = 0x12;
     psPack->sSub[0].uAppData.sAfn04F1_ConUpPortPara.ucRTM = 0x23;
@@ -1042,7 +1042,7 @@ eMtErr test_pack_0201()
 
 
 
-    /* 4 µ÷ÓÃº¯Êı */ 
+    /* 4 è°ƒç”¨å‡½æ•° */ 
     eRet = emtPack(psPack, &usBuflen, (UINT8 *)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -1050,7 +1050,7 @@ eMtErr test_pack_0201()
         return eRet;
     }
 
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color(g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -1061,24 +1061,24 @@ eMtErr test_pack_0201()
 
 
 /*****************************************************************************
- º¯ Êı Ãû  : test_pack_0202
- ¹¦ÄÜÃèÊö  : ²âÊÔÀı
- ÊäÈë²ÎÊı  : ÎŞ
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : test_pack_0202
+ åŠŸèƒ½æè¿°  : æµ‹è¯•ä¾‹
+ è¾“å…¥å‚æ•°  : æ— 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê4ÔÂ22ÈÕ ĞÇÆÚÒ»
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´4æœˆ22æ—¥ æ˜ŸæœŸä¸€
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 eMtErr test_pack_0202()
 {
 
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eMtErr eRet = MT_OK;
     smtPack *psPack = NULL;
     sMtProtoInit sProtoInit = {0};
@@ -1087,8 +1087,8 @@ eMtErr test_pack_0202()
     psPack = getSmtPackPoint();
 
 
-    /* 2 »·¾³³õÊ¼»¯ */
-    sProtoInit.eRole = MT_ROLE_CONTOR;                          // (1)ÕâÀïĞèÒªĞŞ¸Ä
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
+    sProtoInit.eRole = MT_ROLE_CONTOR;                          // (1)è¿™é‡Œéœ€è¦ä¿®æ”¹
     sProtoInit.ucPermitDelayMinutes = 0;
     
     eRet = eMtProtoInit(&sProtoInit);
@@ -1098,7 +1098,7 @@ eMtErr test_pack_0202()
         return eRet;
     }
 
-    // È·¶¨±¨ÎÄµÄ´«ËÍ·½Ïò
+    // ç¡®å®šæŠ¥æ–‡çš„ä¼ é€æ–¹å‘
     if(sProtoInit.eRole == MT_ROLE_CONTOR)
     {
         eDir = MT_DIR_S2M;
@@ -1109,7 +1109,7 @@ eMtErr test_pack_0202()
     }
 
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
 
     // address
     UINT8 strRegionCode[5] = "1100"; 
@@ -1119,7 +1119,7 @@ eMtErr test_pack_0202()
     psPack->sAddress.bTeamAddr = FALSE;
 
     // main_code 
-    psPack->eMainCmd = AFN_02_LINK;                              // (2)ÕâÀïĞèÒªĞŞ¸Ä
+    psPack->eMainCmd = AFN_02_LINK;                              // (2)è¿™é‡Œéœ€è¦ä¿®æ”¹
     psPack->sCtrl.eRPM = MT_PRM_ACTIVE;
     // ctrl_filed
     eRet = eMtGetCtrl(psPack->eMainCmd, eDir,psPack->sCtrl.eRPM, &(psPack->sCtrl));
@@ -1127,13 +1127,13 @@ eMtErr test_pack_0202()
 
     // subCode
     psPack->ucSubNum = 1;
-    psPack->sSub[0].eSubCmd   =  CMD_AFN_2_FN_2_LOG_OUT;      // (3)ÕâÀïĞèÒªĞŞ¸Ä
+    psPack->sSub[0].eSubCmd   =  CMD_AFN_2_FN_2_LOG_OUT;      // (3)è¿™é‡Œéœ€è¦ä¿®æ”¹
     psPack->sSub[0].usPN      =  0;
     psPack->sSub[0].usLen     =  0;
 
 
     
-    // app_data                                                  // (4)ÕâÀïĞèÒªĞŞ¸Ä
+    // app_data                                                  // (4)è¿™é‡Œéœ€è¦ä¿®æ”¹
     #if 0
     psPack->sSub[0].uAppData.sAfn04F1_ConUpPortPara.ucRTS = 0x12;
     psPack->sSub[0].uAppData.sAfn04F1_ConUpPortPara.ucRTM = 0x23;
@@ -1148,7 +1148,7 @@ eMtErr test_pack_0202()
 
 
 
-    /* 4 µ÷ÓÃº¯Êı */ 
+    /* 4 è°ƒç”¨å‡½æ•° */ 
     eRet = emtPack(psPack, &usBuflen, (UINT8 *)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -1156,7 +1156,7 @@ eMtErr test_pack_0202()
         return eRet;
     }
 
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color(g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -1166,24 +1166,24 @@ eMtErr test_pack_0202()
 
 
 /*****************************************************************************
- º¯ Êı Ãû  : test_pack_0203
- ¹¦ÄÜÃèÊö  : ²âÊÔÀı
- ÊäÈë²ÎÊı  : ÎŞ
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : test_pack_0203
+ åŠŸèƒ½æè¿°  : æµ‹è¯•ä¾‹
+ è¾“å…¥å‚æ•°  : æ— 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê4ÔÂ22ÈÕ ĞÇÆÚÒ»
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´4æœˆ22æ—¥ æ˜ŸæœŸä¸€
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 eMtErr test_pack_0203()
 {
 
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eMtErr eRet = MT_OK;
     smtPack *psPack = NULL;
     sMtProtoInit sProtoInit = {0};
@@ -1192,8 +1192,8 @@ eMtErr test_pack_0203()
     psPack = getSmtPackPoint();
 
 
-    /* 2 »·¾³³õÊ¼»¯ */
-    sProtoInit.eRole = MT_ROLE_CONTOR;                          // (1)ÕâÀïĞèÒªĞŞ¸Ä
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
+    sProtoInit.eRole = MT_ROLE_CONTOR;                          // (1)è¿™é‡Œéœ€è¦ä¿®æ”¹
     sProtoInit.ucPermitDelayMinutes = 0;
     
     eRet = eMtProtoInit(&sProtoInit);
@@ -1203,7 +1203,7 @@ eMtErr test_pack_0203()
         return eRet;
     }
 
-    // È·¶¨±¨ÎÄµÄ´«ËÍ·½Ïò
+    // ç¡®å®šæŠ¥æ–‡çš„ä¼ é€æ–¹å‘
     if(sProtoInit.eRole == MT_ROLE_CONTOR)
     {
         eDir = MT_DIR_S2M;
@@ -1214,7 +1214,7 @@ eMtErr test_pack_0203()
     }
 
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
 
     // address
     UINT8 strRegionCode[5] = "1100"; 
@@ -1224,7 +1224,7 @@ eMtErr test_pack_0203()
     psPack->sAddress.bTeamAddr = FALSE;
 
     // main_code 
-    psPack->eMainCmd = AFN_02_LINK;                              // (2)ÕâÀïĞèÒªĞŞ¸Ä
+    psPack->eMainCmd = AFN_02_LINK;                              // (2)è¿™é‡Œéœ€è¦ä¿®æ”¹
     psPack->sCtrl.eRPM = MT_PRM_ACTIVE;
     // ctrl_filed
     eRet = eMtGetCtrl(psPack->eMainCmd, eDir,psPack->sCtrl.eRPM, &(psPack->sCtrl));
@@ -1232,13 +1232,13 @@ eMtErr test_pack_0203()
 
     // subCode
     psPack->ucSubNum = 1;
-    psPack->sSub[0].eSubCmd   =  CMD_AFN_2_FN_3_HEART_BEAT;      // (3)ÕâÀïĞèÒªĞŞ¸Ä
+    psPack->sSub[0].eSubCmd   =  CMD_AFN_2_FN_3_HEART_BEAT;      // (3)è¿™é‡Œéœ€è¦ä¿®æ”¹
     psPack->sSub[0].usPN      =  0;
     psPack->sSub[0].usLen     =  0;
 
 
     
-    // app_data                                                  // (4)ÕâÀïĞèÒªĞŞ¸Ä
+    // app_data                                                  // (4)è¿™é‡Œéœ€è¦ä¿®æ”¹
     #if 0
     psPack->sSub[0].uAppData.sAfn04F1_ConUpPortPara.ucRTS = 0x12;
     psPack->sSub[0].uAppData.sAfn04F1_ConUpPortPara.ucRTM = 0x23;
@@ -1253,7 +1253,7 @@ eMtErr test_pack_0203()
 
 
 
-    /* 4 µ÷ÓÃº¯Êı */ 
+    /* 4 è°ƒç”¨å‡½æ•° */ 
     eRet = emtPack(psPack, &usBuflen, (UINT8 *)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -1261,31 +1261,31 @@ eMtErr test_pack_0203()
         return eRet;
     }
 
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color(g_ucOutBuf, usBuflen);
 
     return MT_OK;
 }
 
 /*****************************************************************************
- º¯ Êı Ãû  : test_pack_1
- ¹¦ÄÜÃèÊö  : ²âÊÔÀı1
- ÊäÈë²ÎÊı  : ÎŞ
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : test_pack_1
+ åŠŸèƒ½æè¿°  : æµ‹è¯•ä¾‹1
+ è¾“å…¥å‚æ•°  : æ— 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê4ÔÂ22ÈÕ ĞÇÆÚÒ»
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´4æœˆ22æ—¥ æ˜ŸæœŸä¸€
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 eMtErr test_pack_0401()
 {
 
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eMtErr eRet = MT_OK;
     smtPack *psPack = NULL;
     sMtProtoInit sProtoInit = {0};
@@ -1294,8 +1294,8 @@ eMtErr test_pack_0401()
     psPack = getSmtPackPoint();
 
 
-    /* 2 »·¾³³õÊ¼»¯ */
-    sProtoInit.eRole = MT_ROLE_MASTER;                          // (1)ÕâÀïĞèÒªĞŞ¸Ä
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
+    sProtoInit.eRole = MT_ROLE_MASTER;                          // (1)è¿™é‡Œéœ€è¦ä¿®æ”¹
     sProtoInit.ucPermitDelayMinutes = 0;
     
     eRet = eMtProtoInit(&sProtoInit);
@@ -1305,7 +1305,7 @@ eMtErr test_pack_0401()
         return eRet;
     }
 
-    // È·¶¨±¨ÎÄµÄ´«ËÍ·½Ïò
+    // ç¡®å®šæŠ¥æ–‡çš„ä¼ é€æ–¹å‘
     if(sProtoInit.eRole == MT_ROLE_CONTOR)
     {
         eDir = MT_DIR_S2M;
@@ -1316,7 +1316,7 @@ eMtErr test_pack_0401()
     }
 
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
 
     // address
     UINT8 strRegionCode[5] = "1100"; 
@@ -1326,7 +1326,7 @@ eMtErr test_pack_0401()
     psPack->sAddress.bTeamAddr = FALSE;
 
     // main_code 
-    psPack->eMainCmd = AFN_04_SETP;                              // (2)ÕâÀïĞèÒªĞŞ¸Ä
+    psPack->eMainCmd = AFN_04_SETP;                              // (2)è¿™é‡Œéœ€è¦ä¿®æ”¹
 
     
     // ctrl_filed
@@ -1336,12 +1336,12 @@ eMtErr test_pack_0401()
 
     // subCode
     psPack->ucSubNum = 1;
-    psPack->sSub[0].eSubCmd   =  CMD_AFN_4_FN_1_CON_UP_CFG;      // (3)ÕâÀïĞèÒªĞŞ¸Ä
+    psPack->sSub[0].eSubCmd   =  CMD_AFN_4_FN_1_CON_UP_CFG;      // (3)è¿™é‡Œéœ€è¦ä¿®æ”¹
     psPack->sSub[0].usPN      =  0;
     psPack->sSub[0].usLen     =  0;
 
 
-    // app_data                                                  // (4)ÕâÀïĞèÒªĞŞ¸Ä
+    // app_data                                                  // (4)è¿™é‡Œéœ€è¦ä¿®æ”¹
     psPack->sSub[0].uAppData.sAfn04F1_ConUpPortPara.ucRTS = 0x12;
     psPack->sSub[0].uAppData.sAfn04F1_ConUpPortPara.ucRTM = 0x23;
     psPack->sSub[0].uAppData.sAfn04F1_ConUpPortPara.ucReSendTimes = 0x34;
@@ -1355,7 +1355,7 @@ eMtErr test_pack_0401()
 
 
 
-    /* 4 µ÷ÓÃº¯Êı */ 
+    /* 4 è°ƒç”¨å‡½æ•° */ 
     eRet = emtPack(psPack, &usBuflen, (UINT8 *)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -1363,7 +1363,7 @@ eMtErr test_pack_0401()
         return eRet;
     }
 
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color(g_ucOutBuf, usBuflen);
 
 
@@ -1374,24 +1374,24 @@ eMtErr test_pack_0401()
 
 
 /*****************************************************************************
- º¯ Êı Ãû  : test_pack_1
- ¹¦ÄÜÃèÊö  : ²âÊÔÀı1
- ÊäÈë²ÎÊı  : ÎŞ
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : test_pack_1
+ åŠŸèƒ½æè¿°  : æµ‹è¯•ä¾‹1
+ è¾“å…¥å‚æ•°  : æ— 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê4ÔÂ22ÈÕ ĞÇÆÚÒ»
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´4æœˆ22æ—¥ æ˜ŸæœŸä¸€
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 eMtErr test_pack_0402()
 {
 
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eMtErr eRet = MT_OK;
     smtPack *psPack = NULL;
     sMtProtoInit sProtoInit = {0};
@@ -1400,8 +1400,8 @@ eMtErr test_pack_0402()
     psPack = getSmtPackPoint();
 
 
-    /* 2 »·¾³³õÊ¼»¯ */
-    sProtoInit.eRole = MT_ROLE_MASTER;                          // (1)ÕâÀïĞèÒªĞŞ¸Ä
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
+    sProtoInit.eRole = MT_ROLE_MASTER;                          // (1)è¿™é‡Œéœ€è¦ä¿®æ”¹
     sProtoInit.ucPermitDelayMinutes = 0;
     
     eRet = eMtProtoInit(&sProtoInit);
@@ -1411,7 +1411,7 @@ eMtErr test_pack_0402()
         return eRet;
     }
 
-    // È·¶¨±¨ÎÄµÄ´«ËÍ·½Ïò
+    // ç¡®å®šæŠ¥æ–‡çš„ä¼ é€æ–¹å‘
     if(sProtoInit.eRole == MT_ROLE_CONTOR)
     {
         eDir = MT_DIR_S2M;
@@ -1422,7 +1422,7 @@ eMtErr test_pack_0402()
     }
 
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
 
     // address
     UINT8 strRegionCode[5] = "1100"; 
@@ -1432,7 +1432,7 @@ eMtErr test_pack_0402()
     psPack->sAddress.bTeamAddr = FALSE;
 
     // main_code 
-    psPack->eMainCmd = AFN_04_SETP;                              // (2)ÕâÀïĞèÒªĞŞ¸Ä
+    psPack->eMainCmd = AFN_04_SETP;                              // (2)è¿™é‡Œéœ€è¦ä¿®æ”¹
 
     
     // ctrl_filed
@@ -1442,12 +1442,12 @@ eMtErr test_pack_0402()
 
     // subCode
     psPack->ucSubNum = 1;
-    psPack->sSub[0].eSubCmd   =  CMD_AFN_4_FN_2_CON_UP_WAY_ETH;      // (3)ÕâÀïĞèÒªĞŞ¸Ä
+    psPack->sSub[0].eSubCmd   =  CMD_AFN_4_FN_2_CON_UP_WAY_ETH;      // (3)è¿™é‡Œéœ€è¦ä¿®æ”¹
     psPack->sSub[0].usPN      =  0;
     psPack->sSub[0].usLen     =  0;
 
 
-    // app_data                                                  // (4)ÕâÀïĞèÒªĞŞ¸Ä
+    // app_data                                                  // (4)è¿™é‡Œéœ€è¦ä¿®æ”¹
     int Num = 16;
     int i = 0;
     
@@ -1462,7 +1462,7 @@ eMtErr test_pack_0402()
   
 
 
-    /* 4 µ÷ÓÃº¯Êı */ 
+    /* 4 è°ƒç”¨å‡½æ•° */ 
     eRet = emtPack(psPack, &usBuflen, (UINT8 *)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -1470,7 +1470,7 @@ eMtErr test_pack_0402()
         return eRet;
     }
 
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color(g_ucOutBuf, usBuflen);
 
 
@@ -1484,24 +1484,24 @@ eMtErr test_pack_0402()
 
 
 /*****************************************************************************
- º¯ Êı Ãû  : test_pack_0403
- ¹¦ÄÜÃèÊö  : ²âÊÔÀı1
- ÊäÈë²ÎÊı  : ÎŞ
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : test_pack_0403
+ åŠŸèƒ½æè¿°  : æµ‹è¯•ä¾‹1
+ è¾“å…¥å‚æ•°  : æ— 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê4ÔÂ22ÈÕ ĞÇÆÚÒ»
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´4æœˆ22æ—¥ æ˜ŸæœŸä¸€
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 eMtErr test_pack_0403()
 {
 
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eMtErr eRet = MT_OK;
     smtPack *psPack = NULL;
     sMtProtoInit sProtoInit = {0};
@@ -1510,8 +1510,8 @@ eMtErr test_pack_0403()
     psPack = getSmtPackPoint();
 
 
-    /* 2 »·¾³³õÊ¼»¯ */
-    sProtoInit.eRole = MT_ROLE_MASTER;                          // (1)ÕâÀïĞèÒªĞŞ¸Ä
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
+    sProtoInit.eRole = MT_ROLE_MASTER;                          // (1)è¿™é‡Œéœ€è¦ä¿®æ”¹
     sProtoInit.ucPermitDelayMinutes = 0;
     
     eRet = eMtProtoInit(&sProtoInit);
@@ -1521,7 +1521,7 @@ eMtErr test_pack_0403()
         return eRet;
     }
 
-    // È·¶¨±¨ÎÄµÄ´«ËÍ·½Ïò
+    // ç¡®å®šæŠ¥æ–‡çš„ä¼ é€æ–¹å‘
     if(sProtoInit.eRole == MT_ROLE_CONTOR)
     {
         eDir = MT_DIR_S2M;
@@ -1532,7 +1532,7 @@ eMtErr test_pack_0403()
     }
 
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
 
     // address
     UINT8 strRegionCode[5] = "1100"; 
@@ -1542,7 +1542,7 @@ eMtErr test_pack_0403()
     psPack->sAddress.bTeamAddr = FALSE;
 
     // main_code 
-    psPack->eMainCmd = AFN_04_SETP;                              // (2)ÕâÀïĞèÒªĞŞ¸Ä
+    psPack->eMainCmd = AFN_04_SETP;                              // (2)è¿™é‡Œéœ€è¦ä¿®æ”¹
 
     
     // ctrl_filed
@@ -1552,12 +1552,12 @@ eMtErr test_pack_0403()
 
     // subCode
     psPack->ucSubNum = 1;
-    psPack->sSub[0].eSubCmd   =  CMD_AFN_4_FN_3_MST_IP_PORT;      // (3)ÕâÀïĞèÒªĞŞ¸Ä
+    psPack->sSub[0].eSubCmd   =  CMD_AFN_4_FN_3_MST_IP_PORT;      // (3)è¿™é‡Œéœ€è¦ä¿®æ”¹
     psPack->sSub[0].usPN      =  0;
     psPack->sSub[0].usLen     =  0;
 
 
-    // app_data                                                  // (4)ÕâÀïĞèÒªĞŞ¸Ä
+    // app_data                                                  // (4)è¿™é‡Œéœ€è¦ä¿®æ”¹
 
     
     psPack->sSub[0].uAppData.sAfn04F3_MasterIpPort.ulMainIP   = 0x12345678;
@@ -1568,7 +1568,7 @@ eMtErr test_pack_0403()
     memcpy((void*)(psPack->sSub[0].uAppData.sAfn04F3_MasterIpPort.ucascAPN), "1234567890abcdef",16);
 
 
-    /* 4 µ÷ÓÃº¯Êı */ 
+    /* 4 è°ƒç”¨å‡½æ•° */ 
     eRet = emtPack(psPack, &usBuflen, (UINT8 *)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -1576,7 +1576,7 @@ eMtErr test_pack_0403()
         return eRet;
     }
 
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color(g_ucOutBuf, usBuflen);
 
 
@@ -1586,24 +1586,24 @@ eMtErr test_pack_0403()
 
 
 /*****************************************************************************
- º¯ Êı Ãû  : test_pack_0403
- ¹¦ÄÜÃèÊö  : ²âÊÔÀı1
- ÊäÈë²ÎÊı  : ÎŞ
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : test_pack_0403
+ åŠŸèƒ½æè¿°  : æµ‹è¯•ä¾‹1
+ è¾“å…¥å‚æ•°  : æ— 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê4ÔÂ22ÈÕ ĞÇÆÚÒ»
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´4æœˆ22æ—¥ æ˜ŸæœŸä¸€
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 eMtErr test_pack_0404()
 {
 
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eMtErr eRet = MT_OK;
     smtPack *psPack = NULL;
     sMtProtoInit sProtoInit = {0};
@@ -1612,8 +1612,8 @@ eMtErr test_pack_0404()
     psPack = getSmtPackPoint();
 
 
-    /* 2 »·¾³³õÊ¼»¯ */
-    sProtoInit.eRole = MT_ROLE_MASTER;                          // (1)ÕâÀïĞèÒªĞŞ¸Ä
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
+    sProtoInit.eRole = MT_ROLE_MASTER;                          // (1)è¿™é‡Œéœ€è¦ä¿®æ”¹
     sProtoInit.ucPermitDelayMinutes = 0;
     
     eRet = eMtProtoInit(&sProtoInit);
@@ -1623,7 +1623,7 @@ eMtErr test_pack_0404()
         return eRet;
     }
 
-    // È·¶¨±¨ÎÄµÄ´«ËÍ·½Ïò
+    // ç¡®å®šæŠ¥æ–‡çš„ä¼ é€æ–¹å‘
     if(sProtoInit.eRole == MT_ROLE_CONTOR)
     {
         eDir = MT_DIR_S2M;
@@ -1634,7 +1634,7 @@ eMtErr test_pack_0404()
     }
 
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
 
     // address
     UINT8 strRegionCode[5] = "1100"; 
@@ -1644,7 +1644,7 @@ eMtErr test_pack_0404()
     psPack->sAddress.bTeamAddr = FALSE;
 
     // main_code 
-    psPack->eMainCmd = AFN_04_SETP;                              // (2)ÕâÀïĞèÒªĞŞ¸Ä
+    psPack->eMainCmd = AFN_04_SETP;                              // (2)è¿™é‡Œéœ€è¦ä¿®æ”¹
 
     
     // ctrl_filed
@@ -1654,12 +1654,12 @@ eMtErr test_pack_0404()
 
     // subCode
     psPack->ucSubNum = 1;
-    psPack->sSub[0].eSubCmd   =  CMD_AFN_4_FN_3_MST_IP_PORT;      // (3)ÕâÀïĞèÒªĞŞ¸Ä
+    psPack->sSub[0].eSubCmd   =  CMD_AFN_4_FN_3_MST_IP_PORT;      // (3)è¿™é‡Œéœ€è¦ä¿®æ”¹
     psPack->sSub[0].usPN      =  0;
     psPack->sSub[0].usLen     =  0;
 
 
-    // app_data                                                  // (4)ÕâÀïĞèÒªĞŞ¸Ä
+    // app_data                                                  // (4)è¿™é‡Œéœ€è¦ä¿®æ”¹
 
     
     psPack->sSub[0].uAppData.sAfn04F3_MasterIpPort.ulMainIP   = 0x12345678;
@@ -1670,7 +1670,7 @@ eMtErr test_pack_0404()
     memcpy((void*)(psPack->sSub[0].uAppData.sAfn04F3_MasterIpPort.ucascAPN), "1234567890abcdef",16);
 
 
-    /* 4 µ÷ÓÃº¯Êı */ 
+    /* 4 è°ƒç”¨å‡½æ•° */ 
     eRet = emtPack(psPack, &usBuflen, (UINT8 *)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -1678,7 +1678,7 @@ eMtErr test_pack_0404()
         return eRet;
     }
 
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color(g_ucOutBuf, usBuflen);
 
 
@@ -1690,24 +1690,24 @@ eMtErr test_pack_0404()
 
 
 /*****************************************************************************
- º¯ Êı Ãû  : test_pack_0501
- ¹¦ÄÜÃèÊö  : ²âÊÔÀı1
- ÊäÈë²ÎÊı  : ÎŞ
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : test_pack_0501
+ åŠŸèƒ½æè¿°  : æµ‹è¯•ä¾‹1
+ è¾“å…¥å‚æ•°  : æ— 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê4ÔÂ22ÈÕ ĞÇÆÚÒ»
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´4æœˆ22æ—¥ æ˜ŸæœŸä¸€
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 eMtErr test_pack_0501()
 {
 
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eMtErr eRet = MT_OK;
     smtPack *psPack = NULL;
     sMtProtoInit sProtoInit = {0};
@@ -1716,8 +1716,8 @@ eMtErr test_pack_0501()
     psPack = getSmtPackPoint();
 
 
-    /* 2 »·¾³³õÊ¼»¯ */
-    sProtoInit.eRole = MT_ROLE_MASTER;                          // (1)ÕâÀïĞèÒªĞŞ¸Ä
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
+    sProtoInit.eRole = MT_ROLE_MASTER;                          // (1)è¿™é‡Œéœ€è¦ä¿®æ”¹
     sProtoInit.ucPermitDelayMinutes = 0;
     memcpy(sProtoInit.aucPw,"1234567890abcde",16);
       
@@ -1728,7 +1728,7 @@ eMtErr test_pack_0501()
         return eRet;
     }
 
-    // È·¶¨±¨ÎÄµÄ´«ËÍ·½Ïò
+    // ç¡®å®šæŠ¥æ–‡çš„ä¼ é€æ–¹å‘
     if(sProtoInit.eRole == MT_ROLE_CONTOR)
     {
         eDir = MT_DIR_S2M;
@@ -1739,7 +1739,7 @@ eMtErr test_pack_0501()
     }
 
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
 
     // address
     UINT8 strRegionCode[5] = "1100"; 
@@ -1749,7 +1749,7 @@ eMtErr test_pack_0501()
     psPack->sAddress.bTeamAddr = FALSE;
 
     // main_code 
-    psPack->eMainCmd = AFN_05_CTRL;                              // (2)ÕâÀïĞèÒªĞŞ¸Ä
+    psPack->eMainCmd = AFN_05_CTRL;                              // (2)è¿™é‡Œéœ€è¦ä¿®æ”¹
 
     
     // ctrl_filed
@@ -1759,7 +1759,7 @@ eMtErr test_pack_0501()
 
     // subCode
     psPack->ucSubNum = 1;
-    psPack->sSub[0].eSubCmd   =  CMD_AFN_5_FN_1_REMOTE_SWITCH_OFF;      // (3)ÕâÀïĞèÒªĞŞ¸Ä
+    psPack->sSub[0].eSubCmd   =  CMD_AFN_5_FN_1_REMOTE_SWITCH_OFF;      // (3)è¿™é‡Œéœ€è¦ä¿®æ”¹
     psPack->sSub[0].usPN      =  1024;
     psPack->sSub[0].usLen     =  0;
 
@@ -1767,11 +1767,11 @@ eMtErr test_pack_0501()
     // pw
     memcpy(psPack->aucPW, "1234567890abcde", 15);
     
-    // app_data                                                  // (4)ÕâÀïĞèÒªĞŞ¸Ä
+    // app_data                                                  // (4)è¿™é‡Œéœ€è¦ä¿®æ”¹
     psPack->sSub[0].uAppData.sAfn05F1_RemoteCtrlTrip.ucLimitPowerTime = 15;
     psPack->sSub[0].uAppData.sAfn05F1_RemoteCtrlTrip.ucHoldAlarmTime  = 15; 
 
-    /* 4 µ÷ÓÃº¯Êı */ 
+    /* 4 è°ƒç”¨å‡½æ•° */ 
     eRet = emtPack(psPack, &usBuflen, (UINT8 *)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -1779,7 +1779,7 @@ eMtErr test_pack_0501()
         return eRet;
     }
 
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color(g_ucOutBuf, usBuflen);
 
 
@@ -1790,24 +1790,24 @@ eMtErr test_pack_0501()
 
 
 /*****************************************************************************
- º¯ Êı Ãû  : test_pack_0601
- ¹¦ÄÜÃèÊö  : ²âÊÔÀı
- ÊäÈë²ÎÊı  : ÎŞ
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : test_pack_0601
+ åŠŸèƒ½æè¿°  : æµ‹è¯•ä¾‹
+ è¾“å…¥å‚æ•°  : æ— 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê4ÔÂ22ÈÕ ĞÇÆÚÒ»
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´4æœˆ22æ—¥ æ˜ŸæœŸä¸€
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 eMtErr test_pack_0601()
 {
 
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eMtErr eRet = MT_OK;
     smtPack *psPack = NULL;
     sMtProtoInit sProtoInit = {0};
@@ -1816,8 +1816,8 @@ eMtErr test_pack_0601()
     psPack = getSmtPackPoint();
 
 
-    /* 2 »·¾³³õÊ¼»¯ */
-    sProtoInit.eRole = MT_ROLE_MASTER;                          // (1)ÕâÀïĞèÒªĞŞ¸Ä
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
+    sProtoInit.eRole = MT_ROLE_MASTER;                          // (1)è¿™é‡Œéœ€è¦ä¿®æ”¹
     sProtoInit.ucPermitDelayMinutes = 0;
     memcpy(sProtoInit.aucPw,"1234567890abcde",16);
       
@@ -1828,7 +1828,7 @@ eMtErr test_pack_0601()
         return eRet;
     }
 
-    // È·¶¨±¨ÎÄµÄ´«ËÍ·½Ïò
+    // ç¡®å®šæŠ¥æ–‡çš„ä¼ é€æ–¹å‘
     if(sProtoInit.eRole == MT_ROLE_CONTOR)
     {
         eDir = MT_DIR_S2M;
@@ -1839,7 +1839,7 @@ eMtErr test_pack_0601()
     }
 
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
 
     // address
     UINT8 strRegionCode[5] = "1100"; 
@@ -1849,7 +1849,7 @@ eMtErr test_pack_0601()
     psPack->sAddress.bTeamAddr = FALSE;
 
     // main_code 
-    psPack->eMainCmd = AFN_06_AUTH;                              // (2)ÕâÀïĞèÒªĞŞ¸Ä
+    psPack->eMainCmd = AFN_06_AUTH;                              // (2)è¿™é‡Œéœ€è¦ä¿®æ”¹
 
     
     // ctrl_filed
@@ -1859,7 +1859,7 @@ eMtErr test_pack_0601()
 
     // subCode
     psPack->ucSubNum = 1;
-    psPack->sSub[0].eSubCmd   =  CMD_AFN_6_FN_1_ID_AUTH_Q;      // (3)ÕâÀïĞèÒªĞŞ¸Ä
+    psPack->sSub[0].eSubCmd   =  CMD_AFN_6_FN_1_ID_AUTH_Q;      // (3)è¿™é‡Œéœ€è¦ä¿®æ”¹
     psPack->sSub[0].usPN      =  0;
     psPack->sSub[0].usLen     =  0;
 
@@ -1868,12 +1868,12 @@ eMtErr test_pack_0601()
     //memcpy(psPack->aucPW, "1234567890abcde", 15);
 
     char *strCiphertext = "abcdef1234567890";
-    // app_data                                                  // (4)ÕâÀïĞèÒªĞŞ¸Ä
+    // app_data                                                  // (4)è¿™é‡Œéœ€è¦ä¿®æ”¹
     memcpy(psPack->sSub[0].uAppData.sAfn06F1_IdAuthQ.aCiphertext, strCiphertext, 16);
 
 
     
-    /* 4 µ÷ÓÃº¯Êı */ 
+    /* 4 è°ƒç”¨å‡½æ•° */ 
     eRet = emtPack(psPack, &usBuflen, (UINT8 *)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -1881,7 +1881,7 @@ eMtErr test_pack_0601()
         return eRet;
     }
 
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color(g_ucOutBuf, usBuflen);
 
 
@@ -1893,24 +1893,24 @@ eMtErr test_pack_0601()
 
 
 /*****************************************************************************
- º¯ Êı Ãû  : test_pack_0602
- ¹¦ÄÜÃèÊö  : ²âÊÔÀı1
- ÊäÈë²ÎÊı  : ÎŞ
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : test_pack_0602
+ åŠŸèƒ½æè¿°  : æµ‹è¯•ä¾‹1
+ è¾“å…¥å‚æ•°  : æ— 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê4ÔÂ22ÈÕ ĞÇÆÚÒ»
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´4æœˆ22æ—¥ æ˜ŸæœŸä¸€
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 eMtErr test_pack_0602()
 {
 
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eMtErr eRet = MT_OK;
     smtPack *psPack = NULL;
     sMtProtoInit sProtoInit = {0};
@@ -1919,8 +1919,8 @@ eMtErr test_pack_0602()
     psPack = getSmtPackPoint();
 
 
-    /* 2 »·¾³³õÊ¼»¯ */
-    sProtoInit.eRole = MT_ROLE_CONTOR;                          // (1)ÕâÀïĞèÒªĞŞ¸Ä
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
+    sProtoInit.eRole = MT_ROLE_CONTOR;                          // (1)è¿™é‡Œéœ€è¦ä¿®æ”¹
     sProtoInit.ucPermitDelayMinutes = 0;
     memcpy(sProtoInit.aucPw,"1234567890abcde",16);
       
@@ -1931,7 +1931,7 @@ eMtErr test_pack_0602()
         return eRet;
     }
 
-    // È·¶¨±¨ÎÄµÄ´«ËÍ·½Ïò
+    // ç¡®å®šæŠ¥æ–‡çš„ä¼ é€æ–¹å‘
     if(sProtoInit.eRole == MT_ROLE_CONTOR)
     {
         eDir = MT_DIR_S2M;
@@ -1942,7 +1942,7 @@ eMtErr test_pack_0602()
     }
 
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
 
     // address
     UINT8 strRegionCode[5] = "1100"; 
@@ -1952,7 +1952,7 @@ eMtErr test_pack_0602()
     psPack->sAddress.bTeamAddr = FALSE;
 
     // main_code 
-    psPack->eMainCmd = AFN_06_AUTH;                              // (2)ÕâÀïĞèÒªĞŞ¸Ä
+    psPack->eMainCmd = AFN_06_AUTH;                              // (2)è¿™é‡Œéœ€è¦ä¿®æ”¹
 
     
     // ctrl_filed
@@ -1962,7 +1962,7 @@ eMtErr test_pack_0602()
 
     // subCode
     psPack->ucSubNum = 1;
-    psPack->sSub[0].eSubCmd   =  CMD_AFN_6_FN_2_ID_AUTH_A;      // (3)ÕâÀïĞèÒªĞŞ¸Ä
+    psPack->sSub[0].eSubCmd   =  CMD_AFN_6_FN_2_ID_AUTH_A;      // (3)è¿™é‡Œéœ€è¦ä¿®æ”¹
     psPack->sSub[0].usPN      =  0;
     psPack->sSub[0].usLen     =  0;
 
@@ -1971,12 +1971,12 @@ eMtErr test_pack_0602()
     //memcpy(psPack->aucPW, "1234567890abcde", 15);
 
     char *strCiphertext = "abcdef1234567890";
-    // app_data                                                  // (4)ÕâÀïĞèÒªĞŞ¸Ä
+    // app_data                                                  // (4)è¿™é‡Œéœ€è¦ä¿®æ”¹
     memcpy(psPack->sSub[0].uAppData.sAfn06F2_IdAuthA.aCiphertext, strCiphertext, 16);
 
 
     
-    /* 4 µ÷ÓÃº¯Êı */ 
+    /* 4 è°ƒç”¨å‡½æ•° */ 
     eRet = emtPack(psPack, &usBuflen, (UINT8 *)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -1984,7 +1984,7 @@ eMtErr test_pack_0602()
         return eRet;
     }
 
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color(g_ucOutBuf, usBuflen);
 
 
@@ -1996,24 +1996,24 @@ eMtErr test_pack_0602()
 
 
 /*****************************************************************************
- º¯ Êı Ãû  : test_pack_0603
- ¹¦ÄÜÃèÊö  : ²âÊÔÀı1
- ÊäÈë²ÎÊı  : ÎŞ
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : test_pack_0603
+ åŠŸèƒ½æè¿°  : æµ‹è¯•ä¾‹1
+ è¾“å…¥å‚æ•°  : æ— 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê4ÔÂ22ÈÕ ĞÇÆÚÒ»
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´4æœˆ22æ—¥ æ˜ŸæœŸä¸€
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 eMtErr test_pack_0603()
 {
 
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eMtErr eRet = MT_OK;
     smtPack *psPack = NULL;
     sMtProtoInit sProtoInit = {0};
@@ -2022,8 +2022,8 @@ eMtErr test_pack_0603()
     psPack = getSmtPackPoint();
 
 
-    /* 2 »·¾³³õÊ¼»¯ */
-    sProtoInit.eRole = MT_ROLE_CONTOR;                          // (1)ÕâÀïĞèÒªĞŞ¸Ä
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
+    sProtoInit.eRole = MT_ROLE_CONTOR;                          // (1)è¿™é‡Œéœ€è¦ä¿®æ”¹
     sProtoInit.ucPermitDelayMinutes = 0;
     memcpy(sProtoInit.aucPw,"1234567890abcde",16);
       
@@ -2034,7 +2034,7 @@ eMtErr test_pack_0603()
         return eRet;
     }
 
-    // È·¶¨±¨ÎÄµÄ´«ËÍ·½Ïò
+    // ç¡®å®šæŠ¥æ–‡çš„ä¼ é€æ–¹å‘
     if(sProtoInit.eRole == MT_ROLE_CONTOR)
     {
         eDir = MT_DIR_S2M;
@@ -2045,7 +2045,7 @@ eMtErr test_pack_0603()
     }
 
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
 
     // address
     UINT8 strRegionCode[5] = "1100"; 
@@ -2055,7 +2055,7 @@ eMtErr test_pack_0603()
     psPack->sAddress.bTeamAddr = FALSE;
 
     // main_code 
-    psPack->eMainCmd = AFN_06_AUTH;                              // (2)ÕâÀïĞèÒªĞŞ¸Ä
+    psPack->eMainCmd = AFN_06_AUTH;                              // (2)è¿™é‡Œéœ€è¦ä¿®æ”¹
 
     
     // ctrl_filed
@@ -2065,7 +2065,7 @@ eMtErr test_pack_0603()
 
     // subCode
     psPack->ucSubNum = 1;
-    psPack->sSub[0].eSubCmd   =  CMD_AFN_6_FN_3_RAND_Q;      // (3)ÕâÀïĞèÒªĞŞ¸Ä
+    psPack->sSub[0].eSubCmd   =  CMD_AFN_6_FN_3_RAND_Q;      // (3)è¿™é‡Œéœ€è¦ä¿®æ”¹
     psPack->sSub[0].usPN      =  0;
     psPack->sSub[0].usLen     =  0;
 
@@ -2074,12 +2074,12 @@ eMtErr test_pack_0603()
     //memcpy(psPack->aucPW, "1234567890abcde", 15);
 
     char *strCiphertext = "abcdef1234567890";
-    // app_data                                                  // (4)ÕâÀïĞèÒªĞŞ¸Ä
+    // app_data                                                  // (4)è¿™é‡Œéœ€è¦ä¿®æ”¹
     memcpy(psPack->sSub[0].uAppData.sAfn06F2_IdAuthA.aCiphertext, strCiphertext, 16);
 
 
     
-    /* 4 µ÷ÓÃº¯Êı */ 
+    /* 4 è°ƒç”¨å‡½æ•° */ 
     eRet = emtPack(psPack, &usBuflen, (UINT8 *)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -2087,7 +2087,7 @@ eMtErr test_pack_0603()
         return eRet;
     }
 
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color(g_ucOutBuf, usBuflen);
 
 
@@ -2100,24 +2100,24 @@ eMtErr test_pack_0603()
 
 
 /*****************************************************************************
- º¯ Êı Ãû  : test_pack_0604
- ¹¦ÄÜÃèÊö  : ²âÊÔÀı1
- ÊäÈë²ÎÊı  : ÎŞ
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : test_pack_0604
+ åŠŸèƒ½æè¿°  : æµ‹è¯•ä¾‹1
+ è¾“å…¥å‚æ•°  : æ— 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê4ÔÂ22ÈÕ ĞÇÆÚÒ»
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´4æœˆ22æ—¥ æ˜ŸæœŸä¸€
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 eMtErr test_pack_0604()
 {
 
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eMtErr eRet = MT_OK;
     smtPack *psPack = NULL;
     sMtProtoInit sProtoInit = {0};
@@ -2126,8 +2126,8 @@ eMtErr test_pack_0604()
     psPack = getSmtPackPoint();
 
 
-    /* 2 »·¾³³õÊ¼»¯ */
-    sProtoInit.eRole = MT_ROLE_CONTOR;                          // (1)ÕâÀïĞèÒªĞŞ¸Ä
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
+    sProtoInit.eRole = MT_ROLE_CONTOR;                          // (1)è¿™é‡Œéœ€è¦ä¿®æ”¹
     sProtoInit.ucPermitDelayMinutes = 0;
     memcpy(sProtoInit.aucPw,"1234567890abcde",16);
       
@@ -2138,7 +2138,7 @@ eMtErr test_pack_0604()
         return eRet;
     }
 
-    // È·¶¨±¨ÎÄµÄ´«ËÍ·½Ïò
+    // ç¡®å®šæŠ¥æ–‡çš„ä¼ é€æ–¹å‘
     if(sProtoInit.eRole == MT_ROLE_CONTOR)
     {
         eDir = MT_DIR_S2M;
@@ -2149,7 +2149,7 @@ eMtErr test_pack_0604()
     }
 
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
 
     // address
     UINT8 strRegionCode[5] = "1100"; 
@@ -2159,7 +2159,7 @@ eMtErr test_pack_0604()
     psPack->sAddress.bTeamAddr = FALSE;
 
     // main_code 
-    psPack->eMainCmd = AFN_06_AUTH;                              // (2)ÕâÀïĞèÒªĞŞ¸Ä
+    psPack->eMainCmd = AFN_06_AUTH;                              // (2)è¿™é‡Œéœ€è¦ä¿®æ”¹
 
     
     // ctrl_filed
@@ -2169,7 +2169,7 @@ eMtErr test_pack_0604()
 
     // subCode
     psPack->ucSubNum = 1;
-    psPack->sSub[0].eSubCmd   =  CMD_AFN_6_FN_4_RAND_A;      // (3)ÕâÀïĞèÒªĞŞ¸Ä
+    psPack->sSub[0].eSubCmd   =  CMD_AFN_6_FN_4_RAND_A;      // (3)è¿™é‡Œéœ€è¦ä¿®æ”¹
     psPack->sSub[0].usPN      =  0;
     psPack->sSub[0].usLen     =  0;
 
@@ -2178,12 +2178,12 @@ eMtErr test_pack_0604()
     //memcpy(psPack->aucPW, "1234567890abcde", 15);
 
     char *strCiphertext = "abcdef1234567890";
-    // app_data                                                  // (4)ÕâÀïĞèÒªĞŞ¸Ä
+    // app_data                                                  // (4)è¿™é‡Œéœ€è¦ä¿®æ”¹
     memcpy(psPack->sSub[0].uAppData.sAfn06F2_IdAuthA.aCiphertext, strCiphertext, 16);
 
 
     
-    /* 4 µ÷ÓÃº¯Êı */ 
+    /* 4 è°ƒç”¨å‡½æ•° */ 
     eRet = emtPack(psPack, &usBuflen, (UINT8 *)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -2191,7 +2191,7 @@ eMtErr test_pack_0604()
         return eRet;
     }
 
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color(g_ucOutBuf, usBuflen);
 
 
@@ -2203,45 +2203,45 @@ eMtErr test_pack_0604()
 
 
 /*****************************************************************************
- º¯ Êı Ãû  : test_pack_0433
- ¹¦ÄÜÃèÊö  : ²âÊÔÉèÖÃ·ÇµçÆøÁ¿·â×°º¯Êı
- ÊäÈë²ÎÊı  : ÎŞ
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : test_pack_0433
+ åŠŸèƒ½æè¿°  : æµ‹è¯•è®¾ç½®éç”µæ°”é‡å°è£…å‡½æ•°
+ è¾“å…¥å‚æ•°  : æ— 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê5ÔÂ30ÈÕ
-    ×÷    Õß   : ÀîÃ÷
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´5æœˆ30æ—¥
+    ä½œ    è€…   : ææ˜
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 eMtErr test_pack_0421()
 {
 
 #if 0
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
    eCmErr eRet;
    UINT16 usBuflen = 0;
    sCmPacket *pscmPacket = (sCmPacket*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     sInit.ucPermitDelayMinutes = 255;
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return;
     }
     char *str = "1234567890";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 12345678;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -2257,7 +2257,7 @@ eMtErr test_pack_0421()
     pscmPacket->sCmdData[0].uAppData.sCfgNotElec.dMin  = -99999.99;
     pscmPacket->sCmdData[0].uAppData.sCfgNotElec.dMax  = 99999.99;
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = ecm_3761_pack(pscmPacket, (UINT8*)g_ucOutBuf, &usBuflen);
     if(eRet != MT_OK)
     {
@@ -2267,7 +2267,7 @@ eMtErr test_pack_0421()
     
 
 
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
 #endif
@@ -2276,18 +2276,18 @@ eMtErr test_pack_0421()
 
 
 /*****************************************************************************
- º¯ Êı Ãû  : test_pack_afn05_f90
- ¹¦ÄÜÃèÊö  : ²âÊÔÉèÖÃ·ÇµçÆøÁ¿·â×°º¯Êı
- ÊäÈë²ÎÊı  : ÎŞ
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : test_pack_afn05_f90
+ åŠŸèƒ½æè¿°  : æµ‹è¯•è®¾ç½®éç”µæ°”é‡å°è£…å‡½æ•°
+ è¾“å…¥å‚æ•°  : æ— 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê5ÔÂ30ÈÕ
-    ×÷    Õß   : ÀîÃ÷
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´5æœˆ30æ—¥
+    ä½œ    è€…   : ææ˜
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 eMtErr test_pack_afn05_f90()
@@ -2295,13 +2295,13 @@ eMtErr test_pack_afn05_f90()
 
 #if 0
 
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
    eCmErr eRet;
    UINT16 usBuflen = 0;
    sCmPacket *pscmPacket = (sCmPacket*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     //sInit.eRole = MT_ROLE_MASTER;
     sInit.eRole = MT_ROLE_CONTOR;
@@ -2309,14 +2309,14 @@ eMtErr test_pack_afn05_f90()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return;
     }
     char *str = "1234567890";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 12345678;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -2332,7 +2332,7 @@ eMtErr test_pack_afn05_f90()
     pscmPacket->sCmdData[0].uAppData.sNotElecVale.dValue= 123.456;
 
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = ecm_3761_pack(pscmPacket, (UINT8*)g_ucOutBuf, &usBuflen);
     if(eRet != MT_OK)
     {
@@ -2340,7 +2340,7 @@ eMtErr test_pack_afn05_f90()
         return;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
     
     #endif
@@ -2349,29 +2349,29 @@ eMtErr test_pack_afn05_f90()
 
 
 /*****************************************************************************
- º¯ Êı Ãû  : test_pack_afn00_f3
- ¹¦ÄÜÃèÊö  : ²âÊÔÖğ¸öÈ·ÈÏºÍ·ñÈÏ
- ÊäÈë²ÎÊı  : ÎŞ
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : test_pack_afn00_f3
+ åŠŸèƒ½æè¿°  : æµ‹è¯•é€ä¸ªç¡®è®¤å’Œå¦è®¤
+ è¾“å…¥å‚æ•°  : æ— 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê6ÔÂ9ÈÕ
-    ×÷    Õß   : ÀîÃ÷
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´6æœˆ9æ—¥
+    ä½œ    è€…   : ææ˜
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 eMtErr test_pack_afn00_f3()
 {
-   /* 1 ¶¨Òå±äÁ¿ */ 
+   /* 1 å®šä¹‰å˜é‡ */ 
    eCmErr eRet;
    UINT16 usBuflen = 0;
    sCmPacket *pscmPacket = (sCmPacket*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     //sInit.eRole = MT_ROLE_MASTER;
     sInit.eRole = MT_ROLE_CONTOR;
@@ -2379,7 +2379,7 @@ eMtErr test_pack_afn00_f3()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
 
@@ -2387,7 +2387,7 @@ eMtErr test_pack_afn00_f3()
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -2451,7 +2451,7 @@ eMtErr test_pack_afn00_f3()
     pscmPacket->sCmdData[0].uAppData.scmOneByOne.sOne[11].bOk  = TRUE;
 
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = ecm_3761_pack(pscmPacket, (UINT8*)g_ucOutBuf, &usBuflen);
     if(eRet != MT_OK)
     {
@@ -2459,7 +2459,7 @@ eMtErr test_pack_afn00_f3()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
 
@@ -2468,29 +2468,29 @@ eMtErr test_pack_afn00_f3()
 
 
 /*****************************************************************************
- º¯ Êı Ãû  : test_pack_afn02f1
- ¹¦ÄÜÃèÊö  : ²âÊÔ·â×°µÇÂ¼ÃüÁî
- ÊäÈë²ÎÊı  : ÎŞ
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : test_pack_afn02f1
+ åŠŸèƒ½æè¿°  : æµ‹è¯•å°è£…ç™»å½•å‘½ä»¤
+ è¾“å…¥å‚æ•°  : æ— 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê8ÔÂ14ÈÕ ĞÇÆÚÈı
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´8æœˆ14æ—¥ æ˜ŸæœŸä¸‰
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 eMtErr test_pack_afn02f1()
 {
-   /* 1 ¶¨Òå±äÁ¿ */ 
+   /* 1 å®šä¹‰å˜é‡ */ 
    eCmErr eRet;
    UINT16 usBuflen = 0;
    sCmPacket *pscmPacket = (sCmPacket*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     //sInit.eRole = MT_ROLE_MASTER;
     sInit.eRole = MT_ROLE_CONTOR;
@@ -2498,14 +2498,14 @@ eMtErr test_pack_afn02f1()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -2517,7 +2517,7 @@ eMtErr test_pack_afn02f1()
     pscmPacket->sCmdData[0].bApp  = FALSE;
     pscmPacket->sCmdData[0].usPN  = 0;
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = ecm_3761_pack(pscmPacket, (UINT8*)g_ucOutBuf, &usBuflen);
     if(eRet != MT_OK)
     {
@@ -2525,7 +2525,7 @@ eMtErr test_pack_afn02f1()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
     return MT_OK;
 
@@ -2534,29 +2534,29 @@ eMtErr test_pack_afn02f1()
 
 
 /*****************************************************************************
- º¯ Êı Ãû  : test_pack_afn04f1
- ¹¦ÄÜÃèÊö  : ²âÊÔ·â×°µÇÂ¼ÃüÁî
- ÊäÈë²ÎÊı  : ÎŞ
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : test_pack_afn04f1
+ åŠŸèƒ½æè¿°  : æµ‹è¯•å°è£…ç™»å½•å‘½ä»¤
+ è¾“å…¥å‚æ•°  : æ— 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê8ÔÂ14ÈÕ ĞÇÆÚÈı
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´8æœˆ14æ—¥ æ˜ŸæœŸä¸‰
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 eMtErr test_pack_afn04f1()
 {
-   /* 1 ¶¨Òå±äÁ¿ */ 
+   /* 1 å®šä¹‰å˜é‡ */ 
    eCmErr eRet;
    UINT16 usBuflen = 0;
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -2564,14 +2564,14 @@ eMtErr test_pack_afn04f1()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890123456";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -2600,7 +2600,7 @@ eMtErr test_pack_afn04f1()
     pscmPacket->sData[0].uApp.sTmlUpCfg.ucHeartBeat = 1;
     pscmPacket->sData[0].uApp.sTmlUpCfg.usTmWaitTimeoutS = 1;
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -2608,7 +2608,7 @@ eMtErr test_pack_afn04f1()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
     return MT_OK;
 
@@ -2616,18 +2616,18 @@ eMtErr test_pack_afn04f1()
 
 
 /*****************************************************************************
- º¯ Êı Ãû  : test_pack_afn04f10
- ¹¦ÄÜÃèÊö  : ²âÊÔ·â×°µÇÂ¼ÃüÁî
- ÊäÈë²ÎÊı  : ÎŞ
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : test_pack_afn04f10
+ åŠŸèƒ½æè¿°  : æµ‹è¯•å°è£…ç™»å½•å‘½ä»¤
+ è¾“å…¥å‚æ•°  : æ— 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê8ÔÂ14ÈÕ ĞÇÆÚÈı
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´8æœˆ14æ—¥ æ˜ŸæœŸä¸‰
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 eMtErr test_pack_afn04f10()
@@ -2637,7 +2637,7 @@ eMtErr test_pack_afn04f10()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -2645,14 +2645,14 @@ eMtErr test_pack_afn04f10()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890123456";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -2669,7 +2669,7 @@ eMtErr test_pack_afn04f10()
 
     pscmPacket->usDataNum = 1;
 
-    // Êı¾İ1
+    // æ•°æ®1
     pscmPacket->sData[0].eCmd  = CMD_AFN_4_F10_TML_POWER_CFG;
     pscmPacket->sData[0].bApp  = TRUE;
     pscmPacket->sData[0].usPN  = 1;
@@ -2706,7 +2706,7 @@ eMtErr test_pack_afn04f10()
     pscmPacket->sData[0].bApp  = TRUE;
     pscmPacket->sData[0].usPN  = 1;
     
-    // Êı¾İ2
+    // æ•°æ®2
     pscmPacket->sData[0].uApp.sTmlPowerCfg.sOne[1].busMeterID = TRUE;
     pscmPacket->sData[0].uApp.sTmlPowerCfg.sOne[1].busPn = TRUE;
     pscmPacket->sData[0].uApp.sTmlPowerCfg.sOne[1].bsBaudPort = TRUE;
@@ -2734,7 +2734,7 @@ eMtErr test_pack_afn04f10()
     pscmPacket->sData[0].uApp.sTmlPowerCfg.sOne[1].sUserClass.ucBig = 12;
     pscmPacket->sData[0].uApp.sTmlPowerCfg.sOne[1].sUserClass.ucSmall = 12;
 
-    // Êı¾İ2
+    // æ•°æ®2
     /*
     pscmPacket->sData[1].eCmd  = CMD_AFN_4_F1_TML_UP_CFG;
     pscmPacket->sData[1].bApp  = TRUE;
@@ -2751,7 +2751,7 @@ eMtErr test_pack_afn04f10()
     pscmPacket->sData[1].uApp.sTmlUpCfg.usTmWaitTimeoutS = 1;
 */
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -2759,36 +2759,36 @@ eMtErr test_pack_afn04f10()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
     return MT_OK;
 
 }
 
 /*****************************************************************************
- º¯ Êı Ãû  : test_pack_afn04f10_s2m_auto
- ¹¦ÄÜÃèÊö  : Ö÷¶¯ÉÏ±¨
- ÊäÈë²ÎÊı  : ÎŞ
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : test_pack_afn04f10_s2m_auto
+ åŠŸèƒ½æè¿°  : ä¸»åŠ¨ä¸ŠæŠ¥
+ è¾“å…¥å‚æ•°  : æ— 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê8ÔÂ14ÈÕ ĞÇÆÚÈı
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´8æœˆ14æ—¥ æ˜ŸæœŸä¸‰
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 eMtErr test_pack_afn04f10_s2m_auto()
 {
-   /* 1 ¶¨Òå±äÁ¿ */ 
+   /* 1 å®šä¹‰å˜é‡ */ 
    eCmErr eRet;
    UINT16 usBuflen = 0;
    sCmPacket *pscmPacket = (sCmPacket*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     //sInit.eRole = MT_ROLE_MASTER;
     sInit.eRole = MT_ROLE_CONTOR;
@@ -2796,14 +2796,14 @@ eMtErr test_pack_afn04f10_s2m_auto()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890ABCDEF";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -2842,7 +2842,7 @@ eMtErr test_pack_afn04f10_s2m_auto()
     pscmPacket->sCmdData[0].uAppData.sCurPQUI.bfSb = TRUE;
     pscmPacket->sCmdData[0].uAppData.sCurPQUI.bfSc = TRUE;
 
-    // Êı¾İ
+    // æ•°æ®
     pscmPacket->sCmdData[0].uAppData.sCurPQUI.sReadTime.ucYY = 12;
     pscmPacket->sCmdData[0].uAppData.sCurPQUI.sReadTime.ucMM = 12;
     pscmPacket->sCmdData[0].uAppData.sCurPQUI.sReadTime.ucDD = 12;
@@ -2878,7 +2878,7 @@ eMtErr test_pack_afn04f10_s2m_auto()
     pscmPacket->sCmdData[0].uAppData.sCurPQUI.fSa  = -12.3456;
     pscmPacket->sCmdData[0].uAppData.sCurPQUI.fSb  = -12.3456;
     pscmPacket->sCmdData[0].uAppData.sCurPQUI.fSc  = -12.3456;
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = ecm_3761_pack(pscmPacket, (UINT8*)g_ucOutBuf, &usBuflen);
     if(eRet != MT_OK)
     {
@@ -2886,7 +2886,7 @@ eMtErr test_pack_afn04f10_s2m_auto()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
 
@@ -2894,29 +2894,29 @@ eMtErr test_pack_afn04f10_s2m_auto()
 }
 
 /*****************************************************************************
- º¯ Êı Ãû  : test_pack_afn0cf25_s2m_auto
- ¹¦ÄÜÃèÊö  : Ö÷¶¯ÉÏ±¨
- ÊäÈë²ÎÊı  : ÎŞ
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : test_pack_afn0cf25_s2m_auto
+ åŠŸèƒ½æè¿°  : ä¸»åŠ¨ä¸ŠæŠ¥
+ è¾“å…¥å‚æ•°  : æ— 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê8ÔÂ14ÈÕ ĞÇÆÚÈı
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´8æœˆ14æ—¥ æ˜ŸæœŸä¸‰
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 eMtErr test_pack_afn0cf25_s2m_auto()
 {
-   /* 1 ¶¨Òå±äÁ¿ */ 
+   /* 1 å®šä¹‰å˜é‡ */ 
    eCmErr eRet;
    UINT16 usBuflen = 0;
    sCmPacket *pscmPacket = (sCmPacket*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     //sInit.eRole = MT_ROLE_MASTER;
     sInit.eRole = MT_ROLE_CONTOR;
@@ -2924,14 +2924,14 @@ eMtErr test_pack_afn0cf25_s2m_auto()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890ABCDEF";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -2970,7 +2970,7 @@ eMtErr test_pack_afn0cf25_s2m_auto()
     pscmPacket->sCmdData[0].uAppData.sCurPQUI.bfSb = TRUE;
     pscmPacket->sCmdData[0].uAppData.sCurPQUI.bfSc = TRUE;
 
-    // Êı¾İ
+    // æ•°æ®
     pscmPacket->sCmdData[0].uAppData.sCurPQUI.sReadTime.ucYY = 12;
     pscmPacket->sCmdData[0].uAppData.sCurPQUI.sReadTime.ucMM = 12;
     pscmPacket->sCmdData[0].uAppData.sCurPQUI.sReadTime.ucDD = 12;
@@ -3006,7 +3006,7 @@ eMtErr test_pack_afn0cf25_s2m_auto()
     pscmPacket->sCmdData[0].uAppData.sCurPQUI.fSa  = -12.3456;
     pscmPacket->sCmdData[0].uAppData.sCurPQUI.fSb  = -12.3456;
     pscmPacket->sCmdData[0].uAppData.sCurPQUI.fSc  = -12.3456;
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = ecm_3761_pack(pscmPacket, (UINT8*)g_ucOutBuf, &usBuflen);
     if(eRet != MT_OK)
     {
@@ -3014,7 +3014,7 @@ eMtErr test_pack_afn0cf25_s2m_auto()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
 
@@ -3023,29 +3023,29 @@ eMtErr test_pack_afn0cf25_s2m_auto()
 
 
 /*****************************************************************************
- º¯ Êı Ãû  : test_pack_afn04f38_s2m
- ¹¦ÄÜÃèÊö  : ²âÊÔ·â×°µÇÂ¼ÃüÁî
- ÊäÈë²ÎÊı  : ÎŞ
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : test_pack_afn04f38_s2m
+ åŠŸèƒ½æè¿°  : æµ‹è¯•å°è£…ç™»å½•å‘½ä»¤
+ è¾“å…¥å‚æ•°  : æ— 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê8ÔÂ14ÈÕ ĞÇÆÚÈı
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´8æœˆ14æ—¥ æ˜ŸæœŸä¸‰
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 eMtErr test_pack_afn0af38_s2m()
 {
-   /* 1 ¶¨Òå±äÁ¿ */ 
+   /* 1 å®šä¹‰å˜é‡ */ 
    eCmErr eRet;
    UINT16 usBuflen = 0;
    sCmPacket *pscmPacket = (sCmPacket*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     //sInit.eRole = MT_ROLE_MASTER;
     sInit.eRole = MT_ROLE_CONTOR;
@@ -3053,14 +3053,14 @@ eMtErr test_pack_afn0af38_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890ABCDEF";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -3081,7 +3081,7 @@ eMtErr test_pack_afn0af38_s2m()
     pscmPacket->sCmdData[0].uAppData.sAsk1Cfg.sOne[0].eCmd[1] = CMD_TML_CLOCK;
   
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = ecm_3761_pack(pscmPacket, (UINT8*)g_ucOutBuf, &usBuflen);
     if(eRet != MT_OK)
     {
@@ -3089,7 +3089,7 @@ eMtErr test_pack_afn0af38_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
 
@@ -3097,29 +3097,29 @@ eMtErr test_pack_afn0af38_s2m()
 }
 
 /*****************************************************************************
- º¯ Êı Ãû  : test_pack_afn0af39_s2m
- ¹¦ÄÜÃèÊö  : ²âÊÔ·â×°µÇÂ¼ÃüÁî
- ÊäÈë²ÎÊı  : ÎŞ
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : test_pack_afn0af39_s2m
+ åŠŸèƒ½æè¿°  : æµ‹è¯•å°è£…ç™»å½•å‘½ä»¤
+ è¾“å…¥å‚æ•°  : æ— 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê8ÔÂ14ÈÕ ĞÇÆÚÈı
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´8æœˆ14æ—¥ æ˜ŸæœŸä¸‰
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 eMtErr test_pack_afn0af39_s2m()
 {
-   /* 1 ¶¨Òå±äÁ¿ */ 
+   /* 1 å®šä¹‰å˜é‡ */ 
    eCmErr eRet;
    UINT16 usBuflen = 0;
    sCmPacket *pscmPacket = (sCmPacket*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     //sInit.eRole = MT_ROLE_MASTER;
     sInit.eRole = MT_ROLE_CONTOR;
@@ -3127,14 +3127,14 @@ eMtErr test_pack_afn0af39_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890ABCDEF";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -3155,7 +3155,7 @@ eMtErr test_pack_afn0af39_s2m()
     pscmPacket->sCmdData[0].uAppData.sAsk1Cfg.sOne[0].eCmd[1] = CMD_TML_CLOCK;
   
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = ecm_3761_pack(pscmPacket, (UINT8*)g_ucOutBuf, &usBuflen);
     if(eRet != MT_OK)
     {
@@ -3163,7 +3163,7 @@ eMtErr test_pack_afn0af39_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
 
@@ -3171,29 +3171,29 @@ eMtErr test_pack_afn0af39_s2m()
 }
 
 /*****************************************************************************
- º¯ Êı Ãû  : test_pack_afn0af65_s2m
- ¹¦ÄÜÃèÊö  : ²âÊÔ·â×°µÇÂ¼ÃüÁî
- ÊäÈë²ÎÊı  : ÎŞ
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : test_pack_afn0af65_s2m
+ åŠŸèƒ½æè¿°  : æµ‹è¯•å°è£…ç™»å½•å‘½ä»¤
+ è¾“å…¥å‚æ•°  : æ— 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê8ÔÂ14ÈÕ ĞÇÆÚÈı
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´8æœˆ14æ—¥ æ˜ŸæœŸä¸‰
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 eMtErr test_pack_afn0af65_s2m()
 {
-   /* 1 ¶¨Òå±äÁ¿ */ 
+   /* 1 å®šä¹‰å˜é‡ */ 
    eCmErr eRet;
    UINT16 usBuflen = 0;
    sCmPacket *pscmPacket = (sCmPacket*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     //sInit.eRole = MT_ROLE_MASTER;
     sInit.eRole = MT_ROLE_CONTOR;
@@ -3201,14 +3201,14 @@ eMtErr test_pack_afn0af65_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890ABCDEF";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -3241,7 +3241,7 @@ eMtErr test_pack_afn0af65_s2m()
     pscmPacket->sCmdData[0].uAppData.sCfgAuto_1.sCmdPn[1].usPn = 0;
 
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = ecm_3761_pack(pscmPacket, (UINT8*)g_ucOutBuf, &usBuflen);
     if(eRet != MT_OK)
     {
@@ -3249,7 +3249,7 @@ eMtErr test_pack_afn0af65_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
 
@@ -3257,29 +3257,29 @@ eMtErr test_pack_afn0af65_s2m()
 }
 
 /*****************************************************************************
- º¯ Êı Ãû  : test_pack_afn0af66_s2m
- ¹¦ÄÜÃèÊö  : ²âÊÔ·â×°µÇÂ¼ÃüÁî
- ÊäÈë²ÎÊı  : ÎŞ
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : test_pack_afn0af66_s2m
+ åŠŸèƒ½æè¿°  : æµ‹è¯•å°è£…ç™»å½•å‘½ä»¤
+ è¾“å…¥å‚æ•°  : æ— 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê8ÔÂ14ÈÕ ĞÇÆÚÈı
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´8æœˆ14æ—¥ æ˜ŸæœŸä¸‰
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 eMtErr test_pack_afn0af66_s2m()
 {
-   /* 1 ¶¨Òå±äÁ¿ */ 
+   /* 1 å®šä¹‰å˜é‡ */ 
    eCmErr eRet;
    UINT16 usBuflen = 0;
    sCmPacket *pscmPacket = (sCmPacket*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     //sInit.eRole = MT_ROLE_MASTER;
     sInit.eRole = MT_ROLE_CONTOR;
@@ -3287,14 +3287,14 @@ eMtErr test_pack_afn0af66_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890ABCDEF";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -3327,7 +3327,7 @@ eMtErr test_pack_afn0af66_s2m()
     pscmPacket->sCmdData[0].uAppData.sCfgAuto_1.sCmdPn[1].usPn = 0;
 
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = ecm_3761_pack(pscmPacket, (UINT8*)g_ucOutBuf, &usBuflen);
     if(eRet != MT_OK)
     {
@@ -3335,7 +3335,7 @@ eMtErr test_pack_afn0af66_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
 
@@ -3343,29 +3343,29 @@ eMtErr test_pack_afn0af66_s2m()
 }
 
 /*****************************************************************************
- º¯ Êı Ãû  : test_pack_afn0af67_s2m
- ¹¦ÄÜÃèÊö  : 
- ÊäÈë²ÎÊı  : ÎŞ
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : test_pack_afn0af67_s2m
+ åŠŸèƒ½æè¿°  : 
+ è¾“å…¥å‚æ•°  : æ— 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê8ÔÂ14ÈÕ ĞÇÆÚÈı
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´8æœˆ14æ—¥ æ˜ŸæœŸä¸‰
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 eMtErr test_pack_afn0af67_s2m()
 {
-   /* 1 ¶¨Òå±äÁ¿ */ 
+   /* 1 å®šä¹‰å˜é‡ */ 
    eCmErr eRet;
    UINT16 usBuflen = 0;
    sCmPacket *pscmPacket = (sCmPacket*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     //sInit.eRole = MT_ROLE_MASTER;
     sInit.eRole = MT_ROLE_CONTOR;
@@ -3373,14 +3373,14 @@ eMtErr test_pack_afn0af67_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890ABCDEF";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -3397,7 +3397,7 @@ eMtErr test_pack_afn0af67_s2m()
    
 
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = ecm_3761_pack(pscmPacket, (UINT8*)g_ucOutBuf, &usBuflen);
     if(eRet != MT_OK)
     {
@@ -3405,7 +3405,7 @@ eMtErr test_pack_afn0af67_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
 
@@ -3414,29 +3414,29 @@ eMtErr test_pack_afn0af67_s2m()
 
 
 /*****************************************************************************
- º¯ Êı Ãû  : test_pack_afn0af68_s2m
- ¹¦ÄÜÃèÊö  : 
- ÊäÈë²ÎÊı  : ÎŞ
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : test_pack_afn0af68_s2m
+ åŠŸèƒ½æè¿°  : 
+ è¾“å…¥å‚æ•°  : æ— 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê8ÔÂ14ÈÕ ĞÇÆÚÈı
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´8æœˆ14æ—¥ æ˜ŸæœŸä¸‰
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 eMtErr test_pack_afn0af68_s2m()
 {
-   /* 1 ¶¨Òå±äÁ¿ */ 
+   /* 1 å®šä¹‰å˜é‡ */ 
    eCmErr eRet;
    UINT16 usBuflen = 0;
    sCmPacket *pscmPacket = (sCmPacket*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     //sInit.eRole = MT_ROLE_MASTER;
     sInit.eRole = MT_ROLE_CONTOR;
@@ -3444,14 +3444,14 @@ eMtErr test_pack_afn0af68_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890ABCDEF";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -3468,7 +3468,7 @@ eMtErr test_pack_afn0af68_s2m()
    
 
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = ecm_3761_pack(pscmPacket, (UINT8*)g_ucOutBuf, &usBuflen);
     if(eRet != MT_OK)
     {
@@ -3476,7 +3476,7 @@ eMtErr test_pack_afn0af68_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
 
@@ -3487,18 +3487,18 @@ eMtErr test_pack_afn0af68_s2m()
 
 
 /*****************************************************************************
- º¯ Êı Ãû  : test_pack_afn04f38_m2s
- ¹¦ÄÜÃèÊö  : F38£º1ÀàÊı¾İÅäÖÃÉèÖÃ £¨ÔÚÖÕ¶ËÖ§³ÖµÄ1ÀàÊı¾İÅäÖÃÄÚ£©
- ÊäÈë²ÎÊı  : ÎŞ
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : test_pack_afn04f38_m2s
+ åŠŸèƒ½æè¿°  : F38ï¼š1ç±»æ•°æ®é…ç½®è®¾ç½® ï¼ˆåœ¨ç»ˆç«¯æ”¯æŒçš„1ç±»æ•°æ®é…ç½®å†…ï¼‰
+ è¾“å…¥å‚æ•°  : æ— 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê8ÔÂ14ÈÕ ĞÇÆÚÈı
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´8æœˆ14æ—¥ æ˜ŸæœŸä¸‰
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 eMtErr test_pack_afn04f38_m2s()
@@ -3508,7 +3508,7 @@ eMtErr test_pack_afn04f38_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -3516,14 +3516,14 @@ eMtErr test_pack_afn04f38_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "0123456789ABCDEF";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -3552,7 +3552,7 @@ eMtErr test_pack_afn04f38_m2s()
     pscmPacket->sData[0].uApp.sAsk1Cfg.sOne[0].eCmd[1] = CMD_AFN_C_F2_TML_CLOCK;
     pscmPacket->sData[0].uApp.sAsk1Cfg.sOne[0].eCmd[2] = CMD_AFN_C_F3_TML_PARA_STATE;
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -3560,25 +3560,25 @@ eMtErr test_pack_afn04f38_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
     return MT_OK;
 
 }
 
 /*****************************************************************************
- º¯ Êı Ãû  : test_pack_afn04f39_m2s
- ¹¦ÄÜÃèÊö  : F38£º1ÀàÊı¾İÅäÖÃÉèÖÃ £¨ÔÚÖÕ¶ËÖ§³ÖµÄ1ÀàÊı¾İÅäÖÃÄÚ£©
- ÊäÈë²ÎÊı  : ÎŞ
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : test_pack_afn04f39_m2s
+ åŠŸèƒ½æè¿°  : F38ï¼š1ç±»æ•°æ®é…ç½®è®¾ç½® ï¼ˆåœ¨ç»ˆç«¯æ”¯æŒçš„1ç±»æ•°æ®é…ç½®å†…ï¼‰
+ è¾“å…¥å‚æ•°  : æ— 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê8ÔÂ14ÈÕ ĞÇÆÚÈı
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´8æœˆ14æ—¥ æ˜ŸæœŸä¸‰
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 eMtErr test_pack_afn04f39_m2s()
@@ -3588,7 +3588,7 @@ eMtErr test_pack_afn04f39_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -3596,14 +3596,14 @@ eMtErr test_pack_afn04f39_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "0123456789ABCDEF";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -3632,7 +3632,7 @@ eMtErr test_pack_afn04f39_m2s()
     pscmPacket->sData[0].uApp.sAsk1Cfg.sOne[0].eCmd[1] = CMD_AFN_D_F39_LOAD_RATE_M;
     pscmPacket->sData[0].uApp.sAsk1Cfg.sOne[0].eCmd[2] = CMD_AFN_D_F46_COPR_IRON_M;
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -3640,25 +3640,25 @@ eMtErr test_pack_afn04f39_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
     return MT_OK;
 
 }
 
 /*****************************************************************************
- º¯ Êı Ãû  : test_pack_afn04f62_m2s
- ¹¦ÄÜÃèÊö  : F65£º¶¨Ê±ÉÏ±¨1ÀàÊı¾İÈÎÎñÉèÖÃ
- ÊäÈë²ÎÊı  : ÎŞ
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : test_pack_afn04f62_m2s
+ åŠŸèƒ½æè¿°  : F65ï¼šå®šæ—¶ä¸ŠæŠ¥1ç±»æ•°æ®ä»»åŠ¡è®¾ç½®
+ è¾“å…¥å‚æ•°  : æ— 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê8ÔÂ14ÈÕ ĞÇÆÚÈı
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´8æœˆ14æ—¥ æ˜ŸæœŸä¸‰
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 eMtErr test_pack_afn04f62_m2s()
@@ -3668,7 +3668,7 @@ eMtErr test_pack_afn04f62_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -3676,14 +3676,14 @@ eMtErr test_pack_afn04f62_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "0123456789ABCDEF";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -3712,7 +3712,7 @@ eMtErr test_pack_afn04f62_m2s()
     pscmPacket->sData[0].uApp.sAsk1Cfg.sOne[0].eCmd[1] = CMD_AFN_D_F39_LOAD_RATE_M;
     pscmPacket->sData[0].uApp.sAsk1Cfg.sOne[0].eCmd[2] = CMD_AFN_D_F46_COPR_IRON_M;
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -3720,25 +3720,25 @@ eMtErr test_pack_afn04f62_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
     return MT_OK;
 
 }
 
 /*****************************************************************************
- º¯ Êı Ãû  : test_pack_afn04f65_m2s
- ¹¦ÄÜÃèÊö  : F65£º¶¨Ê±ÉÏ±¨1ÀàÊı¾İÈÎÎñÉèÖÃ
- ÊäÈë²ÎÊı  : ÎŞ
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : test_pack_afn04f65_m2s
+ åŠŸèƒ½æè¿°  : F65ï¼šå®šæ—¶ä¸ŠæŠ¥1ç±»æ•°æ®ä»»åŠ¡è®¾ç½®
+ è¾“å…¥å‚æ•°  : æ— 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê8ÔÂ14ÈÕ ĞÇÆÚÈı
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´8æœˆ14æ—¥ æ˜ŸæœŸä¸‰
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 eMtErr test_pack_afn04f65_m2s()
@@ -3748,7 +3748,7 @@ eMtErr test_pack_afn04f65_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -3756,14 +3756,14 @@ eMtErr test_pack_afn04f65_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "0123456789ABCDEF";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -3781,7 +3781,7 @@ eMtErr test_pack_afn04f65_m2s()
     pscmPacket->usDataNum = 1;
     pscmPacket->sData[0].eCmd  = CMD_AFN_4_F65_CFG_AUTO_1;
     pscmPacket->sData[0].bApp  = TRUE;
-    pscmPacket->sData[0].usPN  = 1; // ÈÎÎñºÅ
+    pscmPacket->sData[0].usPN  = 1; // ä»»åŠ¡å·
 
     pscmPacket->sData[0].uApp.sCfgAuto_1.eUnit = MT_RPT_mm;
     pscmPacket->sData[0].uApp.sCfgAuto_1.ucPeriod = 3;
@@ -3805,7 +3805,7 @@ eMtErr test_pack_afn04f65_m2s()
     pscmPacket->sData[0].uApp.sCfgAuto_1.sCmdPn[1].usPn = 0;
 
  
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -3813,25 +3813,25 @@ eMtErr test_pack_afn04f65_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
     return MT_OK;
 
 }
 
 /*****************************************************************************
- º¯ Êı Ãû  : test_pack_afn04f66_m2s
- ¹¦ÄÜÃèÊö  : F66£º¶¨Ê±ÉÏ±¨2ÀàÊı¾İÈÎÎñÉèÖÃ
- ÊäÈë²ÎÊı  : ÎŞ
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : test_pack_afn04f66_m2s
+ åŠŸèƒ½æè¿°  : F66ï¼šå®šæ—¶ä¸ŠæŠ¥2ç±»æ•°æ®ä»»åŠ¡è®¾ç½®
+ è¾“å…¥å‚æ•°  : æ— 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê8ÔÂ14ÈÕ ĞÇÆÚÈı
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´8æœˆ14æ—¥ æ˜ŸæœŸä¸‰
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 eMtErr test_pack_afn04f66_m2s()
@@ -3841,7 +3841,7 @@ eMtErr test_pack_afn04f66_m2s()
     smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -3849,14 +3849,14 @@ eMtErr test_pack_afn04f66_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "0123456789ABCDEF";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -3874,7 +3874,7 @@ eMtErr test_pack_afn04f66_m2s()
     pscmPacket->usDataNum = 1;
     pscmPacket->sData[0].eCmd  = CMD_AFN_4_F66_CFG_AUTO_2;
     pscmPacket->sData[0].bApp  = TRUE;
-    pscmPacket->sData[0].usPN  = 1; // ÈÎÎñºÅ
+    pscmPacket->sData[0].usPN  = 1; // ä»»åŠ¡å·
 
     pscmPacket->sData[0].uApp.sCfgAuto_1.eUnit = MT_RPT_mm;
     pscmPacket->sData[0].uApp.sCfgAuto_1.ucPeriod = 3;
@@ -3900,7 +3900,7 @@ eMtErr test_pack_afn04f66_m2s()
     pscmPacket->sData[0].uApp.sCfgAuto_1.sCmdPn[2].eCmd = CMD_AFN_D_F53_TML_FLOW_D;
     pscmPacket->sData[0].uApp.sCfgAuto_1.sCmdPn[2].usPn = 3;
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -3908,25 +3908,25 @@ eMtErr test_pack_afn04f66_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
     return MT_OK;
 
 }
 
 /*****************************************************************************
- º¯ Êı Ãû  : test_pack_afn04f67_m2s
- ¹¦ÄÜÃèÊö  : F67£º¶¨Ê±ÉÏ±¨1ÀàÊı¾İÈÎÎñÆô¶¯/Í£Ö¹ÉèÖÃ
- ÊäÈë²ÎÊı  : ÎŞ
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : test_pack_afn04f67_m2s
+ åŠŸèƒ½æè¿°  : F67ï¼šå®šæ—¶ä¸ŠæŠ¥1ç±»æ•°æ®ä»»åŠ¡å¯åŠ¨/åœæ­¢è®¾ç½®
+ è¾“å…¥å‚æ•°  : æ— 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê8ÔÂ14ÈÕ ĞÇÆÚÈı
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´8æœˆ14æ—¥ æ˜ŸæœŸä¸‰
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 eMtErr test_pack_afn04f67_m2s()
@@ -3936,7 +3936,7 @@ eMtErr test_pack_afn04f67_m2s()
     smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -3944,14 +3944,14 @@ eMtErr test_pack_afn04f67_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "0123456789ABCDEF";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -3969,11 +3969,11 @@ eMtErr test_pack_afn04f67_m2s()
     pscmPacket->usDataNum = 1;
     pscmPacket->sData[0].eCmd  = CMD_AFN_4_F67_GOP_AUTO_1;
     pscmPacket->sData[0].bApp  = TRUE;
-    pscmPacket->sData[0].usPN  = 1; // ÈÎÎñºÅ
+    pscmPacket->sData[0].usPN  = 1; // ä»»åŠ¡å·
 
     pscmPacket->sData[0].uApp.sGopAuto_1.eGo = MT_AUTO_GO;
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -3981,25 +3981,25 @@ eMtErr test_pack_afn04f67_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
     return MT_OK;
 
 }
 
 /*****************************************************************************
- º¯ Êı Ãû  : test_pack_afn04f68_m2s
- ¹¦ÄÜÃèÊö  : F68£º¶¨Ê±ÉÏ±¨2ÀàÊı¾İÈÎÎñÆô¶¯/Í£Ö¹ÉèÖÃ
- ÊäÈë²ÎÊı  : ÎŞ
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : test_pack_afn04f68_m2s
+ åŠŸèƒ½æè¿°  : F68ï¼šå®šæ—¶ä¸ŠæŠ¥2ç±»æ•°æ®ä»»åŠ¡å¯åŠ¨/åœæ­¢è®¾ç½®
+ è¾“å…¥å‚æ•°  : æ— 
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê8ÔÂ14ÈÕ ĞÇÆÚÈı
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´8æœˆ14æ—¥ æ˜ŸæœŸä¸‰
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 eMtErr test_pack_afn04f68_m2s()
@@ -4009,7 +4009,7 @@ eMtErr test_pack_afn04f68_m2s()
     smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -4017,14 +4017,14 @@ eMtErr test_pack_afn04f68_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "0123456789ABCDEF";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -4042,11 +4042,11 @@ eMtErr test_pack_afn04f68_m2s()
     pscmPacket->usDataNum = 1;
     pscmPacket->sData[0].eCmd  = CMD_AFN_4_F68_GOP_AUTO_2;
     pscmPacket->sData[0].bApp  = TRUE;
-    pscmPacket->sData[0].usPN  = 1; // ÈÎÎñºÅ
+    pscmPacket->sData[0].usPN  = 1; // ä»»åŠ¡å·
 
     pscmPacket->sData[0].uApp.sGopAuto_1.eGo = MT_AUTO_STOP;
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -4054,7 +4054,7 @@ eMtErr test_pack_afn04f68_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
     return MT_OK;
 
@@ -4062,13 +4062,13 @@ eMtErr test_pack_afn04f68_m2s()
 
 eMtErr test_pack_afn0cf25_S2M()
 {
-   /* 1 ¶¨Òå±äÁ¿ */ 
+   /* 1 å®šä¹‰å˜é‡ */ 
    eCmErr eRet;
    UINT16 usBuflen = 0;
    sCmPacket *pscmPacket = (sCmPacket*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     //sInit.eRole = MT_ROLE_MASTER;
     sInit.eRole = MT_ROLE_CONTOR;
@@ -4076,14 +4076,14 @@ eMtErr test_pack_afn0cf25_S2M()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -4120,7 +4120,7 @@ eMtErr test_pack_afn0cf25_S2M()
     pscmPacket->sCmdData[0].uAppData.sCurPQUI.bfSb = TRUE;
     pscmPacket->sCmdData[0].uAppData.sCurPQUI.bfSc = TRUE;
 
-    // Êı¾İ
+    // æ•°æ®
     pscmPacket->sCmdData[0].uAppData.sCurPQUI.sReadTime.ucYY = 12;
     pscmPacket->sCmdData[0].uAppData.sCurPQUI.sReadTime.ucMM = 12;
     pscmPacket->sCmdData[0].uAppData.sCurPQUI.sReadTime.ucDD = 12;
@@ -4159,7 +4159,7 @@ eMtErr test_pack_afn0cf25_S2M()
 
     
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = ecm_3761_pack(pscmPacket, (UINT8*)g_ucOutBuf, &usBuflen);
     if(eRet != MT_OK)
     {
@@ -4167,7 +4167,7 @@ eMtErr test_pack_afn0cf25_S2M()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
 
@@ -4181,7 +4181,7 @@ eMtErr test_pack_afn05f31()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -4189,14 +4189,14 @@ eMtErr test_pack_afn05f31()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890123456";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -4224,7 +4224,7 @@ eMtErr test_pack_afn05f31()
     pscmPacket->sData[0].uApp.sCheckTime.ucSecond = 15;
 
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -4232,7 +4232,7 @@ eMtErr test_pack_afn05f31()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -4246,7 +4246,7 @@ eMtErr test_pack_afn05f27()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -4254,14 +4254,14 @@ eMtErr test_pack_afn05f27()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890123456";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -4283,7 +4283,7 @@ eMtErr test_pack_afn05f27()
 
 
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -4291,7 +4291,7 @@ eMtErr test_pack_afn05f27()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -4305,7 +4305,7 @@ eMtErr test_pack_afn05f29()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -4313,14 +4313,14 @@ eMtErr test_pack_afn05f29()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890123456";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -4342,7 +4342,7 @@ eMtErr test_pack_afn05f29()
 
 
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -4350,7 +4350,7 @@ eMtErr test_pack_afn05f29()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -4364,7 +4364,7 @@ eMtErr test_pack_afn05f35()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -4372,14 +4372,14 @@ eMtErr test_pack_afn05f35()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890123456";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -4401,7 +4401,7 @@ eMtErr test_pack_afn05f35()
 
 
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -4409,7 +4409,7 @@ eMtErr test_pack_afn05f35()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -4419,13 +4419,13 @@ eMtErr test_pack_afn05f35()
 
 eMtErr test_pack_afn09f1_s2m()
 {
-   /* 1 ¶¨Òå±äÁ¿ */ 
+   /* 1 å®šä¹‰å˜é‡ */ 
    eCmErr eRet;
    UINT16 usBuflen = 0;
    sCmPacket *pscmPacket = (sCmPacket*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     //sInit.eRole = MT_ROLE_MASTER;
     sInit.eRole = MT_ROLE_CONTOR;
@@ -4433,14 +4433,14 @@ eMtErr test_pack_afn09f1_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -4505,7 +4505,7 @@ eMtErr test_pack_afn09f1_s2m()
     pscmPacket->sCmdData[1].uAppData.sTmlInputOut.sPort[0].usSendBuf = 12345;
     #endif
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = ecm_3761_pack(pscmPacket, (UINT8*)g_ucOutBuf, &usBuflen);
     if(eRet != MT_OK)
     {
@@ -4513,7 +4513,7 @@ eMtErr test_pack_afn09f1_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
 
@@ -4522,13 +4522,13 @@ eMtErr test_pack_afn09f1_s2m()
 
 eMtErr test_pack_afn09f2_s2m()
 {
-   /* 1 ¶¨Òå±äÁ¿ */ 
+   /* 1 å®šä¹‰å˜é‡ */ 
    eCmErr eRet;
    UINT16 usBuflen = 0;
    sCmPacket *pscmPacket = (sCmPacket*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     //sInit.eRole = MT_ROLE_MASTER;
     sInit.eRole = MT_ROLE_CONTOR;
@@ -4536,14 +4536,14 @@ eMtErr test_pack_afn09f2_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -4585,7 +4585,7 @@ eMtErr test_pack_afn09f2_s2m()
 
 
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = ecm_3761_pack(pscmPacket, (UINT8*)g_ucOutBuf, &usBuflen);
     if(eRet != MT_OK)
     {
@@ -4593,7 +4593,7 @@ eMtErr test_pack_afn09f2_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
 
@@ -4602,13 +4602,13 @@ eMtErr test_pack_afn09f2_s2m()
 
 eMtErr test_pack_afn09f3_s2m()
 {
-   /* 1 ¶¨Òå±äÁ¿ */ 
+   /* 1 å®šä¹‰å˜é‡ */ 
    eCmErr eRet;
    UINT16 usBuflen = 0;
    sCmPacket *pscmPacket = (sCmPacket*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     //sInit.eRole = MT_ROLE_MASTER;
     sInit.eRole = MT_ROLE_CONTOR;
@@ -4616,14 +4616,14 @@ eMtErr test_pack_afn09f3_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -4669,7 +4669,7 @@ eMtErr test_pack_afn09f3_s2m()
 
 
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = ecm_3761_pack(pscmPacket, (UINT8*)g_ucOutBuf, &usBuflen);
     if(eRet != MT_OK)
     {
@@ -4677,7 +4677,7 @@ eMtErr test_pack_afn09f3_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
 
@@ -4686,13 +4686,13 @@ eMtErr test_pack_afn09f3_s2m()
 
 eMtErr test_pack_afn09f4_s2m()
 {
-   /* 1 ¶¨Òå±äÁ¿ */ 
+   /* 1 å®šä¹‰å˜é‡ */ 
    eCmErr eRet;
    UINT16 usBuflen = 0;
    sCmPacket *pscmPacket = (sCmPacket*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     //sInit.eRole = MT_ROLE_MASTER;
     sInit.eRole = MT_ROLE_CONTOR;
@@ -4700,14 +4700,14 @@ eMtErr test_pack_afn09f4_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -4727,7 +4727,7 @@ eMtErr test_pack_afn09f4_s2m()
 
 
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = ecm_3761_pack(pscmPacket, (UINT8*)g_ucOutBuf, &usBuflen);
     if(eRet != MT_OK)
     {
@@ -4735,7 +4735,7 @@ eMtErr test_pack_afn09f4_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
 
@@ -4744,13 +4744,13 @@ eMtErr test_pack_afn09f4_s2m()
 
 eMtErr test_pack_afn09f5_s2m()
 {
-   /* 1 ¶¨Òå±äÁ¿ */ 
+   /* 1 å®šä¹‰å˜é‡ */ 
    eCmErr eRet;
    UINT16 usBuflen = 0;
    sCmPacket *pscmPacket = (sCmPacket*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     //sInit.eRole = MT_ROLE_MASTER;
     sInit.eRole = MT_ROLE_CONTOR;
@@ -4758,14 +4758,14 @@ eMtErr test_pack_afn09f5_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -4791,7 +4791,7 @@ eMtErr test_pack_afn09f5_s2m()
 
 
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = ecm_3761_pack(pscmPacket, (UINT8*)g_ucOutBuf, &usBuflen);
     if(eRet != MT_OK)
     {
@@ -4799,7 +4799,7 @@ eMtErr test_pack_afn09f5_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
 
@@ -4808,13 +4808,13 @@ eMtErr test_pack_afn09f5_s2m()
 
 eMtErr test_pack_afn09f6_s2m()
 {
-   /* 1 ¶¨Òå±äÁ¿ */ 
+   /* 1 å®šä¹‰å˜é‡ */ 
    eCmErr eRet;
    UINT16 usBuflen = 0;
    sCmPacket *pscmPacket = (sCmPacket*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     //sInit.eRole = MT_ROLE_MASTER;
     sInit.eRole = MT_ROLE_CONTOR;
@@ -4822,14 +4822,14 @@ eMtErr test_pack_afn09f6_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -4849,7 +4849,7 @@ eMtErr test_pack_afn09f6_s2m()
 
 
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = ecm_3761_pack(pscmPacket, (UINT8*)g_ucOutBuf, &usBuflen);
     if(eRet != MT_OK)
     {
@@ -4857,7 +4857,7 @@ eMtErr test_pack_afn09f6_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
 
@@ -4867,13 +4867,13 @@ eMtErr test_pack_afn09f6_s2m()
 
 eMtErr test_pack_afn09f7_s2m()
 {
-   /* 1 ¶¨Òå±äÁ¿ */ 
+   /* 1 å®šä¹‰å˜é‡ */ 
    eCmErr eRet;
    UINT16 usBuflen = 0;
    sCmPacket *pscmPacket = (sCmPacket*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     //sInit.eRole = MT_ROLE_MASTER;
     sInit.eRole = MT_ROLE_CONTOR;
@@ -4881,14 +4881,14 @@ eMtErr test_pack_afn09f7_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -4914,7 +4914,7 @@ eMtErr test_pack_afn09f7_s2m()
 
 
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = ecm_3761_pack(pscmPacket, (UINT8*)g_ucOutBuf, &usBuflen);
     if(eRet != MT_OK)
     {
@@ -4922,7 +4922,7 @@ eMtErr test_pack_afn09f7_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
 
@@ -4932,13 +4932,13 @@ eMtErr test_pack_afn09f7_s2m()
 
 eMtErr test_pack_afn09f8_s2m()
 {
-   /* 1 ¶¨Òå±äÁ¿ */ 
+   /* 1 å®šä¹‰å˜é‡ */ 
    eCmErr eRet;
    UINT16 usBuflen = 0;
    sCmPacket *pscmPacket = (sCmPacket*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     //sInit.eRole = MT_ROLE_MASTER;
     sInit.eRole = MT_ROLE_CONTOR;
@@ -4946,14 +4946,14 @@ eMtErr test_pack_afn09f8_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -4979,7 +4979,7 @@ eMtErr test_pack_afn09f8_s2m()
 
 
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = ecm_3761_pack(pscmPacket, (UINT8*)g_ucOutBuf, &usBuflen);
     if(eRet != MT_OK)
     {
@@ -4987,7 +4987,7 @@ eMtErr test_pack_afn09f8_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
 
@@ -4996,13 +4996,13 @@ eMtErr test_pack_afn09f8_s2m()
 
 eMtErr test_pack_afn0cf02_s2m_auto()
 {
-   /* 1 ¶¨Òå±äÁ¿ */ 
+   /* 1 å®šä¹‰å˜é‡ */ 
    eCmErr eRet;
    UINT16 usBuflen = 0;
    sCmPacket *pscmPacket = (sCmPacket*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     //sInit.eRole = MT_ROLE_MASTER;
     sInit.eRole = MT_ROLE_CONTOR;
@@ -5010,14 +5010,14 @@ eMtErr test_pack_afn0cf02_s2m_auto()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -5043,7 +5043,7 @@ eMtErr test_pack_afn0cf02_s2m_auto()
 
 
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = ecm_3761_pack(pscmPacket, (UINT8*)g_ucOutBuf, &usBuflen);
     if(eRet != MT_OK)
     {
@@ -5051,7 +5051,7 @@ eMtErr test_pack_afn0cf02_s2m_auto()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
 
@@ -5060,13 +5060,13 @@ eMtErr test_pack_afn0cf02_s2m_auto()
 
 eMtErr test_pack_afn0cf02_s2m()
 {
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
    eCmErr eRet;
    UINT16 usBuflen = 0;
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_CONTOR;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -5074,11 +5074,11 @@ eMtErr test_pack_afn0cf02_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -5106,7 +5106,7 @@ eMtErr test_pack_afn0cf02_s2m()
     pscmPacket->sData[0].uApp.sTmlClock.ucMinute = 45;
     pscmPacket->sData[0].uApp.sTmlClock.ucSecond = 12;
    
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -5114,20 +5114,20 @@ eMtErr test_pack_afn0cf02_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
     return MT_OK;
 }
 
 eMtErr test_pack_afn0cf03_s2m()
 {
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eCmErr eRet;
     UINT16 usBuflen = 0;
     smtPack *pscmPacket = (smtPack*)g_ucPackMem;
     //UINT16  i;
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_CONTOR;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -5135,11 +5135,11 @@ eMtErr test_pack_afn0cf03_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -5167,7 +5167,7 @@ eMtErr test_pack_afn0cf03_s2m()
     pscmPacket->sData[0].uApp.sTmlParaStat.bParaStatus[220] = 1;
     pscmPacket->sData[0].uApp.sTmlParaStat.bParaStatus[231] = 1;
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -5175,20 +5175,20 @@ eMtErr test_pack_afn0cf03_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
     return MT_OK;
 }
 
 eMtErr test_pack_afn0cf04_s2m()
 {
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eCmErr eRet;
     UINT16 usBuflen = 0;
     smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    // UINT16  i;
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_CONTOR;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -5196,11 +5196,11 @@ eMtErr test_pack_afn0cf04_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -5223,7 +5223,7 @@ eMtErr test_pack_afn0cf04_s2m()
     pscmPacket->sData[0].uApp.sTmlUpComStat.bCom = TRUE;
     pscmPacket->sData[0].uApp.sTmlUpComStat.bUp  = TRUE;
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -5231,20 +5231,20 @@ eMtErr test_pack_afn0cf04_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
     return MT_OK;
 }
 
 eMtErr test_pack_afn0cf05_s2m()
 {
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eCmErr eRet;
     UINT16 usBuflen = 0;
     smtPack *pscmPacket = (smtPack*)g_ucPackMem;
     INT32 i;
   
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_CONTOR;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -5252,11 +5252,11 @@ eMtErr test_pack_afn0cf05_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -5344,7 +5344,7 @@ eMtErr test_pack_afn0cf05_s2m()
     pscmPacket->sData[0].uApp.sTmlCtrlStat.sGroup[7].bElecTimeSta[3] = TRUE;
     pscmPacket->sData[0].uApp.sTmlCtrlStat.sGroup[7].bElecTimeSta[4] = TRUE;
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -5352,20 +5352,20 @@ eMtErr test_pack_afn0cf05_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
     return MT_OK;
 }
 
 eMtErr test_pack_afn0cf06_s2m()
 {
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eCmErr eRet;
     UINT16 usBuflen = 0;
     smtPack *pscmPacket = (smtPack*)g_ucPackMem;
     INT32 i;
   
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_CONTOR;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -5373,11 +5373,11 @@ eMtErr test_pack_afn0cf06_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -5483,7 +5483,7 @@ eMtErr test_pack_afn0cf06_s2m()
     
     pscmPacket->sData[0].uApp.sTmlCurCtrlStat.sGroup[7].bMonthCtrlSta = 0;
     pscmPacket->sData[0].uApp.sTmlCurCtrlStat.sGroup[7].bBuyCtrlSta = MT_AFN0CF06_BUY_CTRL_STAT;
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -5491,19 +5491,19 @@ eMtErr test_pack_afn0cf06_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
     return MT_OK;
 }
 
 eMtErr test_pack_afn0cf07_s2m()
 {
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eCmErr eRet;
     UINT16 usBuflen = 0;
     smtPack *pscmPacket = (smtPack*)g_ucPackMem;
   
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_CONTOR;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -5511,11 +5511,11 @@ eMtErr test_pack_afn0cf07_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -5538,7 +5538,7 @@ eMtErr test_pack_afn0cf07_s2m()
     pscmPacket->sData[0].uApp.sTmlEcValue.ucEc1 = 22;
     pscmPacket->sData[0].uApp.sTmlEcValue.ucEc2 = 55;
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -5546,20 +5546,20 @@ eMtErr test_pack_afn0cf07_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
     return MT_OK;
 }
 
 eMtErr test_pack_afn0cf08_s2m()
 {
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eCmErr eRet;
     UINT16 usBuflen = 0;
     smtPack *pscmPacket = (smtPack*)g_ucPackMem;
     INT32 i;
   
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_CONTOR;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -5567,11 +5567,11 @@ eMtErr test_pack_afn0cf08_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -5602,7 +5602,7 @@ eMtErr test_pack_afn0cf08_s2m()
     pscmPacket->sData[0].uApp.sTmlErcSta.bErc[19] = TRUE;
     pscmPacket->sData[0].uApp.sTmlErcSta.bErc[0]  = TRUE;
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -5610,20 +5610,20 @@ eMtErr test_pack_afn0cf08_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
     return MT_OK;
 }
 
 eMtErr test_pack_afn0cf17_s2m()
 {
-   /* 1 ¶¨Òå±äÁ¿ */ 
+   /* 1 å®šä¹‰å˜é‡ */ 
    eCmErr eRet;
    UINT16 usBuflen = 0;
    sCmPacket *pscmPacket = (sCmPacket*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     //sInit.eRole = MT_ROLE_MASTER;
     sInit.eRole = MT_ROLE_CONTOR;
@@ -5631,14 +5631,14 @@ eMtErr test_pack_afn0cf17_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -5655,7 +5655,7 @@ eMtErr test_pack_afn0cf17_s2m()
    
 
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = ecm_3761_pack(pscmPacket, (UINT8*)g_ucOutBuf, &usBuflen);
     if(eRet != MT_OK)
     {
@@ -5663,7 +5663,7 @@ eMtErr test_pack_afn0cf17_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
 
@@ -5672,13 +5672,13 @@ eMtErr test_pack_afn0cf17_s2m()
 
 eMtErr test_pack_afn0cf18_s2m()
 {
-   /* 1 ¶¨Òå±äÁ¿ */ 
+   /* 1 å®šä¹‰å˜é‡ */ 
    eCmErr eRet;
    UINT16 usBuflen = 0;
    sCmPacket *pscmPacket = (sCmPacket*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     //sInit.eRole = MT_ROLE_MASTER;
     sInit.eRole = MT_ROLE_CONTOR;
@@ -5686,14 +5686,14 @@ eMtErr test_pack_afn0cf18_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -5710,7 +5710,7 @@ eMtErr test_pack_afn0cf18_s2m()
    
 
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = ecm_3761_pack(pscmPacket, (UINT8*)g_ucOutBuf, &usBuflen);
     if(eRet != MT_OK)
     {
@@ -5718,7 +5718,7 @@ eMtErr test_pack_afn0cf18_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
 
@@ -5727,12 +5727,12 @@ eMtErr test_pack_afn0cf18_s2m()
 
 eMtErr test_pack_afn0cf31_s2m()
 {
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eCmErr eRet;
     UINT16 usBuflen = 0;
     smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_CONTOR;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -5740,11 +5740,11 @@ eMtErr test_pack_afn0cf31_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -5854,7 +5854,7 @@ eMtErr test_pack_afn0cf31_s2m()
     
   #endif  
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -5862,19 +5862,19 @@ eMtErr test_pack_afn0cf31_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
     return MT_OK;
 }
 
 eMtErr test_pack_afn0cf57_s2m()
 {
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eCmErr eRet;
     UINT16 usBuflen = 0;
     smtPack *pscmPacket = (smtPack*)g_ucPackMem;
     
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_CONTOR;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -5882,11 +5882,11 @@ eMtErr test_pack_afn0cf57_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -5957,7 +5957,7 @@ eMtErr test_pack_afn0cf57_s2m()
 
 
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -5965,19 +5965,19 @@ eMtErr test_pack_afn0cf57_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
     return MT_OK;
 }
 
 eMtErr test_pack_afn0cf58_s2m()
 {
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eCmErr eRet;
     UINT16 usBuflen = 0;
     smtPack *pscmPacket = (smtPack*)g_ucPackMem;
     
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_CONTOR;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -5985,11 +5985,11 @@ eMtErr test_pack_afn0cf58_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -6070,7 +6070,7 @@ eMtErr test_pack_afn0cf58_s2m()
     pscmPacket->sData[0].uApp.sTmlCurtHarmRate.sIc.fsXXX_X[2]   = 56.1;
 
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -6078,20 +6078,20 @@ eMtErr test_pack_afn0cf58_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
     return MT_OK;
 }
 
 eMtErr test_pack_afn0cf73_s2m()
 {
-   /* 1 ¶¨Òå±äÁ¿ */ 
+   /* 1 å®šä¹‰å˜é‡ */ 
    eCmErr eRet;
    UINT16 usBuflen = 0;
    sCmPacket *pscmPacket = (sCmPacket*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     //sInit.eRole = MT_ROLE_MASTER;
     sInit.eRole = MT_ROLE_CONTOR;
@@ -6099,14 +6099,14 @@ eMtErr test_pack_afn0cf73_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890ABCDEF";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -6123,7 +6123,7 @@ eMtErr test_pack_afn0cf73_s2m()
    
 
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = ecm_3761_pack(pscmPacket, (UINT8*)g_ucOutBuf, &usBuflen);
     if(eRet != MT_OK)
     {
@@ -6131,7 +6131,7 @@ eMtErr test_pack_afn0cf73_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
 
@@ -6140,12 +6140,12 @@ eMtErr test_pack_afn0cf73_s2m()
 
 eMtErr test_pack_afn0cf129_s2m()
 {
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eCmErr eRet;
     UINT16 usBuflen = 0;
     smtPack *pscmPacket = (smtPack*)g_ucPackMem;
     
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_CONTOR;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -6153,11 +6153,11 @@ eMtErr test_pack_afn0cf129_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -6190,7 +6190,7 @@ eMtErr test_pack_afn0cf129_s2m()
 
 
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -6198,19 +6198,19 @@ eMtErr test_pack_afn0cf129_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
     return MT_OK;
 }
 
 eMtErr test_pack_afn0cf130_s2m()
 {
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eCmErr eRet;
     UINT16 usBuflen = 0;
     smtPack *pscmPacket = (smtPack*)g_ucPackMem;
     
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_CONTOR;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -6218,11 +6218,11 @@ eMtErr test_pack_afn0cf130_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -6255,7 +6255,7 @@ eMtErr test_pack_afn0cf130_s2m()
 
 
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -6263,19 +6263,19 @@ eMtErr test_pack_afn0cf130_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
     return MT_OK;
 }
 
 eMtErr test_pack_afn0cf166_s2m()
 {
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eCmErr eRet;
     UINT16 usBuflen = 0;
     smtPack *pscmPacket = (smtPack*)g_ucPackMem;
     
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_CONTOR;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -6283,11 +6283,11 @@ eMtErr test_pack_afn0cf166_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -6326,7 +6326,7 @@ eMtErr test_pack_afn0cf166_s2m()
     pscmPacket->sData[0].uApp.sTmlMetrModifyRecd.sOther.sClock.ucmm = 9;
 
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -6334,19 +6334,19 @@ eMtErr test_pack_afn0cf166_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
     return MT_OK;
 }
 
 eMtErr test_pack_afn0cf167_s2m()
 {
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eCmErr eRet;
     UINT16 usBuflen = 0;
     smtPack *pscmPacket = (smtPack*)g_ucPackMem;
     
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_CONTOR;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -6354,11 +6354,11 @@ eMtErr test_pack_afn0cf167_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -6393,7 +6393,7 @@ eMtErr test_pack_afn0cf167_s2m()
     pscmPacket->sData[0].uApp.sTmlMetrBuyUse.dElecFault = 888888.66;
     
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -6401,19 +6401,19 @@ eMtErr test_pack_afn0cf167_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
     return MT_OK;
 }
 
 eMtErr test_pack_afn0df97_s2m()
 {
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eCmErr eRet;
     UINT16 usBuflen = 0;
     smtPack *pscmPacket = (smtPack*)g_ucPackMem;
     
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_CONTOR;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -6421,11 +6421,11 @@ eMtErr test_pack_afn0df97_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -6460,7 +6460,7 @@ eMtErr test_pack_afn0df97_s2m()
     pscmPacket->sData[0].uApp.sTmlCurvePower.dEnergy[4] = 8523.9874;
     pscmPacket->sData[0].uApp.sTmlCurvePower.dEnergy[5] = 3000.0;
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -6468,19 +6468,19 @@ eMtErr test_pack_afn0df97_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
     return MT_OK;
 }
 
 eMtErr test_pack_afn0df101_s2m()
 {
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eCmErr eRet;
     UINT16 usBuflen = 0;
     smtPack *pscmPacket = (smtPack*)g_ucPackMem;
     
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_CONTOR;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -6488,11 +6488,11 @@ eMtErr test_pack_afn0df101_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -6527,7 +6527,7 @@ eMtErr test_pack_afn0df101_s2m()
     pscmPacket->sData[0].uApp.sTmlCurveValue.dValue[4] = 8523.98;
     pscmPacket->sData[0].uApp.sTmlCurveValue.dValue[5] = 3000.0;
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -6535,19 +6535,19 @@ eMtErr test_pack_afn0df101_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
     return MT_OK;
 }
 
 eMtErr test_pack_afn0df105_s2m()
 {
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eCmErr eRet;
     UINT16 usBuflen = 0;
     smtPack *pscmPacket = (smtPack*)g_ucPackMem;
     
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_CONTOR;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -6555,11 +6555,11 @@ eMtErr test_pack_afn0df105_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -6594,7 +6594,7 @@ eMtErr test_pack_afn0df105_s2m()
     pscmPacket->sData[0].uApp.sTmlCurveFactor.fFactor[4] = 123.4;
     pscmPacket->sData[0].uApp.sTmlCurveFactor.fFactor[5] = 567.8;
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -6602,19 +6602,19 @@ eMtErr test_pack_afn0df105_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
     return MT_OK;
 }
 
 eMtErr test_pack_afn0df109_s2m()
 {
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eCmErr eRet;
     UINT16 usBuflen = 0;
     smtPack *pscmPacket = (smtPack*)g_ucPackMem;
     
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_CONTOR;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -6622,11 +6622,11 @@ eMtErr test_pack_afn0df109_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -6678,7 +6678,7 @@ eMtErr test_pack_afn0df109_s2m()
     pscmPacket->sData[0].uApp.sTmlCurvePhase.sPhase[5].fPhaseB = 567.8;
     pscmPacket->sData[0].uApp.sTmlCurvePhase.sPhase[5].fPhaseC = 567.8;
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -6686,19 +6686,19 @@ eMtErr test_pack_afn0df109_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
     return MT_OK;
 }
 
 eMtErr test_pack_afn0df113_s2m()
 {
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eCmErr eRet;
     UINT16 usBuflen = 0;
     smtPack *pscmPacket = (smtPack*)g_ucPackMem;
     
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_CONTOR;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -6706,11 +6706,11 @@ eMtErr test_pack_afn0df113_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -6747,7 +6747,7 @@ eMtErr test_pack_afn0df113_s2m()
     pscmPacket->sData[0].uApp.sTmlIHarmTime.sHarmTime[17].sTime.ucHH = 23;
     pscmPacket->sData[0].uApp.sTmlIHarmTime.sHarmTime[17].sTime.ucmm = 59;
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -6755,19 +6755,19 @@ eMtErr test_pack_afn0df113_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
     return MT_OK;
 }
 
 eMtErr test_pack_afn0df116_s2m()
 {
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eCmErr eRet;
     UINT16 usBuflen = 0;
     smtPack *pscmPacket = (smtPack*)g_ucPackMem;
     
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_CONTOR;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -6775,11 +6775,11 @@ eMtErr test_pack_afn0df116_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -6816,7 +6816,7 @@ eMtErr test_pack_afn0df116_s2m()
     pscmPacket->sData[0].uApp.sTmlUHarmTime.sHarmTime[17].sTime.ucHH = 23;
     pscmPacket->sData[0].uApp.sTmlUHarmTime.sHarmTime[17].sTime.ucmm = 59;
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -6824,19 +6824,19 @@ eMtErr test_pack_afn0df116_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
     return MT_OK;
 }
 
 eMtErr test_pack_afn0df121_s2m()
 {
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eCmErr eRet;
     UINT16 usBuflen = 0;
     smtPack *pscmPacket = (smtPack*)g_ucPackMem;
     
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_CONTOR;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -6844,11 +6844,11 @@ eMtErr test_pack_afn0df121_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -6885,7 +6885,7 @@ eMtErr test_pack_afn0df121_s2m()
     pscmPacket->sData[0].uApp.sTmlHarmOver.usIHarm[2] = 9;
     
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -6893,19 +6893,19 @@ eMtErr test_pack_afn0df121_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
     return MT_OK;
 }
 
 eMtErr test_pack_afn0df169_s2m()
 {
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eCmErr eRet;
     UINT16 usBuflen = 0;
     smtPack *pscmPacket = (smtPack*)g_ucPackMem;
     
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_CONTOR;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -6913,11 +6913,11 @@ eMtErr test_pack_afn0df169_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -6950,7 +6950,7 @@ eMtErr test_pack_afn0df169_s2m()
     pscmPacket->sData[0].uApp.sTmlValue.dValueB = 123456.7890;
     pscmPacket->sData[0].uApp.sTmlValue.dValueC = 0.0001;
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -6958,19 +6958,19 @@ eMtErr test_pack_afn0df169_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
     return MT_OK;
 }
 
 eMtErr test_pack_afn0df170_s2m()
 {
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eCmErr eRet;
     UINT16 usBuflen = 0;
     smtPack *pscmPacket = (smtPack*)g_ucPackMem;
     
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_CONTOR;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -6978,11 +6978,11 @@ eMtErr test_pack_afn0df170_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -7018,7 +7018,7 @@ eMtErr test_pack_afn0df170_s2m()
     pscmPacket->sData[0].uApp.sTmlReactiveValue.dValue[1] = 123456.90;
     pscmPacket->sData[0].uApp.sTmlReactiveValue.dValue[2] = 0.01;
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -7026,19 +7026,19 @@ eMtErr test_pack_afn0df170_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
     return MT_OK;
 }
 
 eMtErr test_pack_afn0df171_s2m()
 {
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eCmErr eRet;
     UINT16 usBuflen = 0;
     smtPack *pscmPacket = (smtPack*)g_ucPackMem;
     
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_CONTOR;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -7046,11 +7046,11 @@ eMtErr test_pack_afn0df171_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -7086,7 +7086,7 @@ eMtErr test_pack_afn0df171_s2m()
     pscmPacket->sData[0].uApp.sTmlActiveValue.dValue[1] = 123456.9001;
     pscmPacket->sData[0].uApp.sTmlActiveValue.dValue[2] = 0.0001;
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -7094,19 +7094,19 @@ eMtErr test_pack_afn0df171_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
     return MT_OK;
 }
 
 eMtErr test_pack_afn0df177_s2m()
 {
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eCmErr eRet;
     UINT16 usBuflen = 0;
     smtPack *pscmPacket = (smtPack*)g_ucPackMem;
     
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_CONTOR;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -7114,11 +7114,11 @@ eMtErr test_pack_afn0df177_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -7153,7 +7153,7 @@ eMtErr test_pack_afn0df177_s2m()
     pscmPacket->sData[0].uApp.sTmlActiveValueM.dValue[1] = 123456.9001;
     pscmPacket->sData[0].uApp.sTmlActiveValueM.dValue[2] = 0.0001;
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -7161,19 +7161,19 @@ eMtErr test_pack_afn0df177_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
     return MT_OK;
 }
 
 eMtErr test_pack_afn0df178_s2m()
 {
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eCmErr eRet;
     UINT16 usBuflen = 0;
     smtPack *pscmPacket = (smtPack*)g_ucPackMem;
     
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_CONTOR;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -7181,11 +7181,11 @@ eMtErr test_pack_afn0df178_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -7220,7 +7220,7 @@ eMtErr test_pack_afn0df178_s2m()
     pscmPacket->sData[0].uApp.sTmlReactiveValueM.dValue[1] = 123456.90;
     pscmPacket->sData[0].uApp.sTmlReactiveValueM.dValue[2] = 0.01;
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -7228,19 +7228,19 @@ eMtErr test_pack_afn0df178_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
     return MT_OK;
 }
 
 eMtErr test_pack_afn0df185_s2m()
 {
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eCmErr eRet;
     UINT16 usBuflen = 0;
     smtPack *pscmPacket = (smtPack*)g_ucPackMem;
     
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_CONTOR;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -7248,11 +7248,11 @@ eMtErr test_pack_afn0df185_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -7300,7 +7300,7 @@ eMtErr test_pack_afn0df185_s2m()
     pscmPacket->sData[0].uApp.sTmlMaxTime.sMaxClock[2].sClock.ucHH = 11;
     pscmPacket->sData[0].uApp.sTmlMaxTime.sMaxClock[2].sClock.ucmm = 32;    
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -7308,19 +7308,19 @@ eMtErr test_pack_afn0df185_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
     return MT_OK;
 }
 
 eMtErr test_pack_afn0df215_s2m()
 {
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eCmErr eRet;
     UINT16 usBuflen = 0;
     smtPack *pscmPacket = (smtPack*)g_ucPackMem;
     
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_CONTOR;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -7328,11 +7328,11 @@ eMtErr test_pack_afn0df215_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -7372,7 +7372,7 @@ eMtErr test_pack_afn0df215_s2m()
     pscmPacket->sData[0].uApp.sTmlMeterInfo.dKilowattFault = 111111.11;    
      
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -7380,19 +7380,19 @@ eMtErr test_pack_afn0df215_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
     return MT_OK;
 }
 
 eMtErr test_pack_afn0df216_s2m()
 {
-    /* 1 ¶¨Òå±äÁ¿ */ 
+    /* 1 å®šä¹‰å˜é‡ */ 
     eCmErr eRet;
     UINT16 usBuflen = 0;
     smtPack *pscmPacket = (smtPack*)g_ucPackMem;
     
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_CONTOR;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -7400,11 +7400,11 @@ eMtErr test_pack_afn0df216_s2m()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -7448,7 +7448,7 @@ eMtErr test_pack_afn0df216_s2m()
     pscmPacket->sData[0].uApp.sTmlBalanceInfo.dFault = 0.0;
      
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -7456,7 +7456,7 @@ eMtErr test_pack_afn0df216_s2m()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
     return MT_OK;
 }
@@ -7468,7 +7468,7 @@ eMtErr test_pack_afn05f37()
     smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -7476,14 +7476,14 @@ eMtErr test_pack_afn05f37()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890123456";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -7505,7 +7505,7 @@ eMtErr test_pack_afn05f37()
 
 
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -7513,7 +7513,7 @@ eMtErr test_pack_afn05f37()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -7528,7 +7528,7 @@ eMtErr test_pack_afn05f38()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -7536,14 +7536,14 @@ eMtErr test_pack_afn05f38()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890123456";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -7565,7 +7565,7 @@ eMtErr test_pack_afn05f38()
 
 
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -7573,7 +7573,7 @@ eMtErr test_pack_afn05f38()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -7587,7 +7587,7 @@ eMtErr test_pack_afn09f1_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -7595,14 +7595,14 @@ eMtErr test_pack_afn09f1_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890123456";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -7624,7 +7624,7 @@ eMtErr test_pack_afn09f1_m2s()
 
 
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -7632,7 +7632,7 @@ eMtErr test_pack_afn09f1_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -7646,7 +7646,7 @@ eMtErr test_pack_afn09f2_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -7654,14 +7654,14 @@ eMtErr test_pack_afn09f2_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890123456";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -7685,7 +7685,7 @@ eMtErr test_pack_afn09f2_m2s()
 
 
     /*
-      Á½¸öÃüÁîºÏÔÚÒ»Æğ  
+      ä¸¤ä¸ªå‘½ä»¤åˆåœ¨ä¸€èµ·  
 
       
     */
@@ -7702,7 +7702,7 @@ eMtErr test_pack_afn09f2_m2s()
 #endif
 
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -7710,7 +7710,7 @@ eMtErr test_pack_afn09f2_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -7724,7 +7724,7 @@ eMtErr test_pack_afn09f3_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -7732,14 +7732,14 @@ eMtErr test_pack_afn09f3_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890123456";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -7763,7 +7763,7 @@ eMtErr test_pack_afn09f3_m2s()
 
 
     /*
-      Á½¸öÃüÁîºÏÔÚÒ»Æğ  
+      ä¸¤ä¸ªå‘½ä»¤åˆåœ¨ä¸€èµ·  
 
       
     */
@@ -7780,7 +7780,7 @@ eMtErr test_pack_afn09f3_m2s()
 #endif
 
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -7788,7 +7788,7 @@ eMtErr test_pack_afn09f3_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -7802,7 +7802,7 @@ eMtErr test_pack_afn09f4_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -7810,14 +7810,14 @@ eMtErr test_pack_afn09f4_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890123456";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -7842,7 +7842,7 @@ eMtErr test_pack_afn09f4_m2s()
 
 
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -7850,7 +7850,7 @@ eMtErr test_pack_afn09f4_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -7864,7 +7864,7 @@ eMtErr test_pack_afn09f5_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -7872,14 +7872,14 @@ eMtErr test_pack_afn09f5_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890123456";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -7900,7 +7900,7 @@ eMtErr test_pack_afn09f5_m2s()
     pscmPacket->sData[0].usPN  = 0;
 
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -7908,7 +7908,7 @@ eMtErr test_pack_afn09f5_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -7922,7 +7922,7 @@ eMtErr test_pack_afn09f6_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -7930,14 +7930,14 @@ eMtErr test_pack_afn09f6_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890123456";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -7958,7 +7958,7 @@ eMtErr test_pack_afn09f6_m2s()
     pscmPacket->sData[0].usPN  = 0;
 
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -7966,7 +7966,7 @@ eMtErr test_pack_afn09f6_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -7979,7 +7979,7 @@ eMtErr test_pack_afn09f7_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -7987,14 +7987,14 @@ eMtErr test_pack_afn09f7_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890123456";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -8015,7 +8015,7 @@ eMtErr test_pack_afn09f7_m2s()
     pscmPacket->sData[0].usPN  = 0;
 
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -8023,7 +8023,7 @@ eMtErr test_pack_afn09f7_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -8037,7 +8037,7 @@ eMtErr test_pack_afn09f8_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -8045,14 +8045,14 @@ eMtErr test_pack_afn09f8_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890123456";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -8073,7 +8073,7 @@ eMtErr test_pack_afn09f8_m2s()
     pscmPacket->sData[0].usPN  = 0;
 
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -8081,7 +8081,7 @@ eMtErr test_pack_afn09f8_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -8165,7 +8165,7 @@ eMtErr test_pack_afn0af38_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -8173,14 +8173,14 @@ eMtErr test_pack_afn0af38_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890123456";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -8223,7 +8223,7 @@ eMtErr test_pack_afn0af38_m2s()
    
 
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -8231,7 +8231,7 @@ eMtErr test_pack_afn0af38_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -8245,7 +8245,7 @@ eMtErr test_pack_afn0af39_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -8253,14 +8253,14 @@ eMtErr test_pack_afn0af39_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890123456";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -8298,7 +8298,7 @@ eMtErr test_pack_afn0af39_m2s()
     pscmPacket->sData[0].uApp.sAsk1Cfg_Q.ucSmall[14] = 15;
     pscmPacket->sData[0].uApp.sAsk1Cfg_Q.ucSmall[15] = 16;
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -8306,7 +8306,7 @@ eMtErr test_pack_afn0af39_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -8320,7 +8320,7 @@ eMtErr test_pack_afn0af65_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -8328,14 +8328,14 @@ eMtErr test_pack_afn0af65_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890123456";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -8356,7 +8356,7 @@ eMtErr test_pack_afn0af65_m2s()
     pscmPacket->sData[0].usPN  = 123;
 
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -8364,7 +8364,7 @@ eMtErr test_pack_afn0af65_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -8378,7 +8378,7 @@ eMtErr test_pack_afn0af66_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -8386,14 +8386,14 @@ eMtErr test_pack_afn0af66_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890123456";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -8414,7 +8414,7 @@ eMtErr test_pack_afn0af66_m2s()
     pscmPacket->sData[0].usPN  = 123;
 
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -8422,7 +8422,7 @@ eMtErr test_pack_afn0af66_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -8436,7 +8436,7 @@ eMtErr test_pack_afn0af67_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -8444,14 +8444,14 @@ eMtErr test_pack_afn0af67_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890123456";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -8472,7 +8472,7 @@ eMtErr test_pack_afn0af67_m2s()
     pscmPacket->sData[0].usPN  = 123;
 
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -8480,7 +8480,7 @@ eMtErr test_pack_afn0af67_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -8494,7 +8494,7 @@ eMtErr test_pack_afn0af68_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -8502,14 +8502,14 @@ eMtErr test_pack_afn0af68_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890123456";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -8530,7 +8530,7 @@ eMtErr test_pack_afn0af68_m2s()
     pscmPacket->sData[0].usPN  = 123;
 
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -8538,7 +8538,7 @@ eMtErr test_pack_afn0af68_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -8551,7 +8551,7 @@ eMtErr test_pack_afn05f39()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -8559,14 +8559,14 @@ eMtErr test_pack_afn05f39()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890123456";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -8588,7 +8588,7 @@ eMtErr test_pack_afn05f39()
 
 
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -8596,7 +8596,7 @@ eMtErr test_pack_afn05f39()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -8610,7 +8610,7 @@ eMtErr test_pack_afn0cf02_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -8618,11 +8618,11 @@ eMtErr test_pack_afn0cf02_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -8642,7 +8642,7 @@ eMtErr test_pack_afn0cf02_m2s()
     pscmPacket->sData[0].usPN  = 0;
 
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -8650,7 +8650,7 @@ eMtErr test_pack_afn0cf02_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -8664,7 +8664,7 @@ eMtErr test_pack_afn0cf03_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -8672,11 +8672,11 @@ eMtErr test_pack_afn0cf03_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -8696,7 +8696,7 @@ eMtErr test_pack_afn0cf03_m2s()
     pscmPacket->sData[0].usPN  = 0;
 
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -8704,7 +8704,7 @@ eMtErr test_pack_afn0cf03_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -8718,7 +8718,7 @@ eMtErr test_pack_afn0cf04_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -8726,11 +8726,11 @@ eMtErr test_pack_afn0cf04_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -8750,7 +8750,7 @@ eMtErr test_pack_afn0cf04_m2s()
     pscmPacket->sData[0].usPN  = 0;
 
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -8758,7 +8758,7 @@ eMtErr test_pack_afn0cf04_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -8772,7 +8772,7 @@ eMtErr test_pack_afn0cf05_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -8780,11 +8780,11 @@ eMtErr test_pack_afn0cf05_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -8804,7 +8804,7 @@ eMtErr test_pack_afn0cf05_m2s()
     pscmPacket->sData[0].usPN  = 0;
 
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -8812,7 +8812,7 @@ eMtErr test_pack_afn0cf05_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -8826,7 +8826,7 @@ eMtErr test_pack_afn0cf06_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -8834,11 +8834,11 @@ eMtErr test_pack_afn0cf06_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -8858,7 +8858,7 @@ eMtErr test_pack_afn0cf06_m2s()
     pscmPacket->sData[0].usPN  = 0;
 
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -8866,7 +8866,7 @@ eMtErr test_pack_afn0cf06_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -8880,7 +8880,7 @@ eMtErr test_pack_afn0cf07_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -8888,11 +8888,11 @@ eMtErr test_pack_afn0cf07_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -8912,7 +8912,7 @@ eMtErr test_pack_afn0cf07_m2s()
     pscmPacket->sData[0].usPN  = 0;
 
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -8920,7 +8920,7 @@ eMtErr test_pack_afn0cf07_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -8934,7 +8934,7 @@ eMtErr test_pack_afn0cf08_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -8942,11 +8942,11 @@ eMtErr test_pack_afn0cf08_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -8966,7 +8966,7 @@ eMtErr test_pack_afn0cf08_m2s()
     pscmPacket->sData[0].usPN  = 0;
 
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -8974,7 +8974,7 @@ eMtErr test_pack_afn0cf08_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -8988,7 +8988,7 @@ eMtErr test_pack_afn0cf25()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -8996,14 +8996,14 @@ eMtErr test_pack_afn0cf25()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     char *str = "1234567890123456";
     bCmSetPw(str);
   
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -9044,7 +9044,7 @@ eMtErr test_pack_afn0cf25()
     pscmPacket->sData[5].usPN  = 58;
     
 
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -9052,7 +9052,7 @@ eMtErr test_pack_afn0cf25()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -9066,7 +9066,7 @@ eMtErr test_pack_afn0cf31_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -9074,11 +9074,11 @@ eMtErr test_pack_afn0cf31_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -9098,7 +9098,7 @@ eMtErr test_pack_afn0cf31_m2s()
     pscmPacket->sData[0].usPN  = 1;
      
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -9106,7 +9106,7 @@ eMtErr test_pack_afn0cf31_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -9120,7 +9120,7 @@ eMtErr test_pack_afn0cf57_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -9128,11 +9128,11 @@ eMtErr test_pack_afn0cf57_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -9152,7 +9152,7 @@ eMtErr test_pack_afn0cf57_m2s()
     pscmPacket->sData[0].usPN  = 1;
      
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -9160,7 +9160,7 @@ eMtErr test_pack_afn0cf57_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -9174,7 +9174,7 @@ eMtErr test_pack_afn0cf58_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -9182,11 +9182,11 @@ eMtErr test_pack_afn0cf58_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -9206,7 +9206,7 @@ eMtErr test_pack_afn0cf58_m2s()
     pscmPacket->sData[0].usPN  = 1;
      
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -9214,7 +9214,7 @@ eMtErr test_pack_afn0cf58_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -9228,7 +9228,7 @@ eMtErr test_pack_afn0cf73_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -9236,11 +9236,11 @@ eMtErr test_pack_afn0cf73_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -9260,7 +9260,7 @@ eMtErr test_pack_afn0cf73_m2s()
     pscmPacket->sData[0].usPN  = 1;
      
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -9268,7 +9268,7 @@ eMtErr test_pack_afn0cf73_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -9281,7 +9281,7 @@ eMtErr test_pack_afn0cf129_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -9289,11 +9289,11 @@ eMtErr test_pack_afn0cf129_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -9313,7 +9313,7 @@ eMtErr test_pack_afn0cf129_m2s()
     pscmPacket->sData[0].usPN  = 1;
      
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -9321,7 +9321,7 @@ eMtErr test_pack_afn0cf129_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -9335,7 +9335,7 @@ eMtErr test_pack_afn0cf130_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -9343,11 +9343,11 @@ eMtErr test_pack_afn0cf130_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -9367,7 +9367,7 @@ eMtErr test_pack_afn0cf130_m2s()
     pscmPacket->sData[0].usPN  = 1;
      
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -9375,7 +9375,7 @@ eMtErr test_pack_afn0cf130_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -9389,7 +9389,7 @@ eMtErr test_pack_afn0cf166_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -9397,11 +9397,11 @@ eMtErr test_pack_afn0cf166_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -9421,7 +9421,7 @@ eMtErr test_pack_afn0cf166_m2s()
     pscmPacket->sData[0].usPN  = 1;
      
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -9429,7 +9429,7 @@ eMtErr test_pack_afn0cf166_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -9443,7 +9443,7 @@ eMtErr test_pack_afn0cf167_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -9451,11 +9451,11 @@ eMtErr test_pack_afn0cf167_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -9475,7 +9475,7 @@ eMtErr test_pack_afn0cf167_m2s()
     pscmPacket->sData[0].usPN  = 1;
      
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -9483,7 +9483,7 @@ eMtErr test_pack_afn0cf167_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -9497,7 +9497,7 @@ eMtErr test_pack_afn0df28_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -9505,11 +9505,11 @@ eMtErr test_pack_afn0df28_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -9533,7 +9533,7 @@ eMtErr test_pack_afn0df28_m2s()
     
      
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -9541,7 +9541,7 @@ eMtErr test_pack_afn0df28_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -9555,7 +9555,7 @@ eMtErr test_pack_afn0df36_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -9563,11 +9563,11 @@ eMtErr test_pack_afn0df36_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -9587,7 +9587,7 @@ eMtErr test_pack_afn0df36_m2s()
     pscmPacket->sData[0].usPN  = 1;
      
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -9595,7 +9595,7 @@ eMtErr test_pack_afn0df36_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -9608,7 +9608,7 @@ eMtErr test_pack_afn0df97_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -9616,11 +9616,11 @@ eMtErr test_pack_afn0df97_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -9640,7 +9640,7 @@ eMtErr test_pack_afn0df97_m2s()
     pscmPacket->sData[0].usPN  = 1;
      
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -9648,7 +9648,7 @@ eMtErr test_pack_afn0df97_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -9662,7 +9662,7 @@ eMtErr test_pack_afn0df101_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -9670,11 +9670,11 @@ eMtErr test_pack_afn0df101_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -9694,7 +9694,7 @@ eMtErr test_pack_afn0df101_m2s()
     pscmPacket->sData[0].usPN  = 1;
      
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -9702,7 +9702,7 @@ eMtErr test_pack_afn0df101_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -9716,7 +9716,7 @@ eMtErr test_pack_afn0df105_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -9724,11 +9724,11 @@ eMtErr test_pack_afn0df105_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -9748,7 +9748,7 @@ eMtErr test_pack_afn0df105_m2s()
     pscmPacket->sData[0].usPN  = 1;
      
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -9756,7 +9756,7 @@ eMtErr test_pack_afn0df105_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -9770,7 +9770,7 @@ eMtErr test_pack_afn0df109_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -9778,11 +9778,11 @@ eMtErr test_pack_afn0df109_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -9802,7 +9802,7 @@ eMtErr test_pack_afn0df109_m2s()
     pscmPacket->sData[0].usPN  = 1;
      
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -9810,7 +9810,7 @@ eMtErr test_pack_afn0df109_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -9824,7 +9824,7 @@ eMtErr test_pack_afn0df113_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -9832,11 +9832,11 @@ eMtErr test_pack_afn0df113_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -9856,7 +9856,7 @@ eMtErr test_pack_afn0df113_m2s()
     pscmPacket->sData[0].usPN  = 1;
      
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -9864,7 +9864,7 @@ eMtErr test_pack_afn0df113_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -9878,7 +9878,7 @@ eMtErr test_pack_afn0df116_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -9886,11 +9886,11 @@ eMtErr test_pack_afn0df116_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -9910,7 +9910,7 @@ eMtErr test_pack_afn0df116_m2s()
     pscmPacket->sData[0].usPN  = 1;
      
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -9918,7 +9918,7 @@ eMtErr test_pack_afn0df116_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -9932,7 +9932,7 @@ eMtErr test_pack_afn0df121_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -9940,11 +9940,11 @@ eMtErr test_pack_afn0df121_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -9964,7 +9964,7 @@ eMtErr test_pack_afn0df121_m2s()
     pscmPacket->sData[0].usPN  = 1;
      
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -9972,7 +9972,7 @@ eMtErr test_pack_afn0df121_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -9985,7 +9985,7 @@ eMtErr test_pack_afn0df169_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -9993,11 +9993,11 @@ eMtErr test_pack_afn0df169_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -10017,7 +10017,7 @@ eMtErr test_pack_afn0df169_m2s()
     pscmPacket->sData[0].usPN  = 1;
      
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -10025,7 +10025,7 @@ eMtErr test_pack_afn0df169_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -10038,7 +10038,7 @@ eMtErr test_pack_afn0df170_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -10046,11 +10046,11 @@ eMtErr test_pack_afn0df170_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -10070,7 +10070,7 @@ eMtErr test_pack_afn0df170_m2s()
     pscmPacket->sData[0].usPN  = 1;
      
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -10078,7 +10078,7 @@ eMtErr test_pack_afn0df170_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -10091,7 +10091,7 @@ eMtErr test_pack_afn0df171_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -10099,11 +10099,11 @@ eMtErr test_pack_afn0df171_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -10123,7 +10123,7 @@ eMtErr test_pack_afn0df171_m2s()
     pscmPacket->sData[0].usPN  = 1;
      
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -10131,7 +10131,7 @@ eMtErr test_pack_afn0df171_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -10144,7 +10144,7 @@ eMtErr test_pack_afn0df177_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -10152,11 +10152,11 @@ eMtErr test_pack_afn0df177_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -10176,7 +10176,7 @@ eMtErr test_pack_afn0df177_m2s()
     pscmPacket->sData[0].usPN  = 1;
      
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -10184,7 +10184,7 @@ eMtErr test_pack_afn0df177_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -10197,7 +10197,7 @@ eMtErr test_pack_afn0df178_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -10205,11 +10205,11 @@ eMtErr test_pack_afn0df178_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -10229,7 +10229,7 @@ eMtErr test_pack_afn0df178_m2s()
     pscmPacket->sData[0].usPN  = 1;
      
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -10237,7 +10237,7 @@ eMtErr test_pack_afn0df178_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -10250,7 +10250,7 @@ eMtErr test_pack_afn0df185_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -10258,11 +10258,11 @@ eMtErr test_pack_afn0df185_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -10282,7 +10282,7 @@ eMtErr test_pack_afn0df185_m2s()
     pscmPacket->sData[0].usPN  = 1;
      
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -10290,7 +10290,7 @@ eMtErr test_pack_afn0df185_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -10303,7 +10303,7 @@ eMtErr test_pack_afn0df215_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -10311,11 +10311,11 @@ eMtErr test_pack_afn0df215_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -10335,7 +10335,7 @@ eMtErr test_pack_afn0df215_m2s()
     pscmPacket->sData[0].usPN  = 1;
      
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -10343,7 +10343,7 @@ eMtErr test_pack_afn0df215_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -10356,7 +10356,7 @@ eMtErr test_pack_afn0df216_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -10364,11 +10364,11 @@ eMtErr test_pack_afn0df216_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -10388,7 +10388,7 @@ eMtErr test_pack_afn0df216_m2s()
     pscmPacket->sData[0].usPN  = 1;
      
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -10396,14 +10396,14 @@ eMtErr test_pack_afn0df216_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
 }
 
 
-// ÇëÇóÒ»°ãÊÂ¼ş ÃüÁî²âÊÔÀı
+// è¯·æ±‚ä¸€èˆ¬äº‹ä»¶ å‘½ä»¤æµ‹è¯•ä¾‹
 
 eMtErr test_pack_afn0ef1_m2s()
 {
@@ -10412,7 +10412,7 @@ eMtErr test_pack_afn0ef1_m2s()
    smtPack *pscmPacket = (smtPack*)g_ucPackMem;
    
 
-    /* 2 »·¾³³õÊ¼»¯ */
+    /* 2 ç¯å¢ƒåˆå§‹åŒ– */
     sCmInit  sInit;
     sInit.eRole = MT_ROLE_MASTER;
     //sInit.eRole = MT_ROLE_CONTOR;
@@ -10420,11 +10420,11 @@ eMtErr test_pack_afn0ef1_m2s()
     eRet = ecm_3761_init(&sInit);
     if(eRet != MT_OK)
     {
-        printf("³õÊ¼»¯Ê§°Ü\n");
+        printf("åˆå§‹åŒ–å¤±è´¥\n");
         return eRet;
     }
     
-    /* 3 ·â×°²ÎÊı */
+    /* 3 å°è£…å‚æ•° */
     memcpy(pscmPacket->sAddress.acRegionCode, "1100", 4);
     pscmPacket->sAddress.usTAddress = 1;
     pscmPacket->sAddress.bTeamAddr  = FALSE;
@@ -10444,7 +10444,7 @@ eMtErr test_pack_afn0ef1_m2s()
     pscmPacket->sData[0].usPN  = 1;
      
     
-    /* 4 µ÷ÓÃº¯Êı */
+    /* 4 è°ƒç”¨å‡½æ•° */
     eRet = emtPack(pscmPacket, &usBuflen, (UINT8*)g_ucOutBuf);
     if(eRet != MT_OK)
     {
@@ -10452,7 +10452,7 @@ eMtErr test_pack_afn0ef1_m2s()
         return eRet;
     }
     
-    /* 5 Êä³ö½á¹û */ 
+    /* 5 è¾“å‡ºç»“æœ */ 
     printf_buffer_color((char*)g_ucOutBuf, usBuflen);
 
     return MT_OK;
@@ -10470,7 +10470,7 @@ typedef struct
 }sTestPack;
 
 
-// ÏÂĞĞ²âÊÔÀı±í
+// ä¸‹è¡Œæµ‹è¯•ä¾‹è¡¨
 sTestPack  g_test_pack_down[] = 
 {   
     {CMD_AFN_0_F1_ALL_OK,          test_pack_0001_m2s},
@@ -10547,7 +10547,7 @@ sTestPack  g_test_pack_down[] =
     {CMD_AFN_D_F28_UBLN_OVER_D,       test_pack_afn0df28_m2s},
     {CMD_AFN_D_F36_UBLN_OVER_M,       test_pack_afn0df36_m2s},
 
-    // ÊÂ¼ş
+    // äº‹ä»¶
     {CMD_AFN_E_F1_EVENT_1,            test_pack_afn0ef1_m2s},
 
 
@@ -10555,7 +10555,7 @@ sTestPack  g_test_pack_down[] =
     
 };
 
-// ÉÏĞĞ²âÊÔÀı±í
+// ä¸Šè¡Œæµ‹è¯•ä¾‹è¡¨
 sTestPack  g_test_pack[] = 
 {
 
@@ -10598,8 +10598,8 @@ sTestPack  g_test_pack[] =
         
 
     
-   // {CMD_AFN_C_F2_TML_CLOCK,          test_pack_afn0cf02_s2m},   // ±»¶¯Ó¦´ğ
-    {CMD_AFN_C_F2_TML_CLOCK,          test_pack_afn0cf02_s2m_auto}, // Ö÷¶¯ÉÏ±¨
+   // {CMD_AFN_C_F2_TML_CLOCK,          test_pack_afn0cf02_s2m},   // è¢«åŠ¨åº”ç­”
+    {CMD_AFN_C_F2_TML_CLOCK,          test_pack_afn0cf02_s2m_auto}, // ä¸»åŠ¨ä¸ŠæŠ¥
    
     {CMD_AFN_C_F3_TML_PARA_STATE,     test_pack_afn0cf03_s2m},
     {CMD_AFN_C_F4_TML_UPCOM_STATE,    test_pack_afn0cf04_s2m},
@@ -10644,18 +10644,18 @@ sTestPack  g_test_pack[] =
 };
 
 /*****************************************************************************
- º¯ Êı Ãû  : test_pack
- ¹¦ÄÜÃèÊö  : ²âÊÔ·â×°Ö¡¹¦ÄÜ-²âÊÔÀı Èë¿Ú ÉÏĞĞ
- ÊäÈë²ÎÊı  : int i  
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : test_pack
+ åŠŸèƒ½æè¿°  : æµ‹è¯•å°è£…å¸§åŠŸèƒ½-æµ‹è¯•ä¾‹ å…¥å£ ä¸Šè¡Œ
+ è¾“å…¥å‚æ•°  : int i  
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê4ÔÂ22ÈÕ ĞÇÆÚÒ»
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´4æœˆ22æ—¥ æ˜ŸæœŸä¸€
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 void test_pack(int iTest)
@@ -10686,22 +10686,22 @@ void test_pack(int iTest)
         }
     }
    
-  show_error("ÉĞ²»Ö§³ÖµÄÃüÁî\n");
+  show_error("å°šä¸æ”¯æŒçš„å‘½ä»¤\n");
 }
 
 /*****************************************************************************
- º¯ Êı Ãû  : test_pack_down
- ¹¦ÄÜÃèÊö  : ²âÊÔ·â×°Ö¡¹¦ÄÜ-²âÊÔÀı Èë¿Ú ÏÂĞĞ
- ÊäÈë²ÎÊı  : int i  
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : test_pack_down
+ åŠŸèƒ½æè¿°  : æµ‹è¯•å°è£…å¸§åŠŸèƒ½-æµ‹è¯•ä¾‹ å…¥å£ ä¸‹è¡Œ
+ è¾“å…¥å‚æ•°  : int i  
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê4ÔÂ22ÈÕ ĞÇÆÚÒ»
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´4æœˆ22æ—¥ æ˜ŸæœŸä¸€
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 void test_pack_down(int iTest)
@@ -10732,7 +10732,7 @@ void test_pack_down(int iTest)
         }
     }
    
-    show_error("ÉĞ²»Ö§³ÖµÄÃüÁî\n");
+    show_error("å°šä¸æ”¯æŒçš„å‘½ä»¤\n");
 }
 
 void print_td_d(sMtTd_d *psTd_d)
@@ -10768,7 +10768,7 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
             for(i = 0; i < psOnebyOne->ucNum; i++)
             {
                 printf("%d:\n", i+1);
-                printf("È·ÈÏÃüÁî  = %04X ", psOnebyOne->sOne[i].eCmd);
+                printf("ç¡®è®¤å‘½ä»¤  = %04X ", psOnebyOne->sOne[i].eCmd);
                 eRet = eMtGetCmdInfor(psOnebyOne->sOne[i].eCmd, MT_DIR_S2M, &sCmdInfo);
                 
                 
@@ -10785,15 +10785,15 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
                     }
                     else
                     {
-                        pStr = "Î´ÖªÃüÁî";
+                        pStr = "æœªçŸ¥å‘½ä»¤";
                     }
                 }
 
                 show_item_value(pStr);
                 //printf("%s\n", pStr);
 
-                printf("\n²âÁ¿µãºÅ  = %d\n", psOnebyOne->sOne[i].usPn);
-                printf("È·ÈÏ½á¹û  = %s\n", psOnebyOne->sOne[i].bOk == TRUE ? "È·ÈÏ" : "·ñÈÏ");
+                printf("\næµ‹é‡ç‚¹å·  = %d\n", psOnebyOne->sOne[i].usPn);
+                printf("ç¡®è®¤ç»“æœ  = %s\n", psOnebyOne->sOne[i].bOk == TRUE ? "ç¡®è®¤" : "å¦è®¤");
             }
             
             
@@ -10963,19 +10963,19 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
             switch(pData->eUnit)
             {
                 case MT_RPT_mm:
-                   pStr = "MT_RPT_mm ·ÖÖÓ";
+                   pStr = "MT_RPT_mm åˆ†é’Ÿ";
                    break;
                case MT_RPT_HH:
-                   pStr = "MT_RPT_HH Ğ¡Ê±";
+                   pStr = "MT_RPT_HH å°æ—¶";
                     break;
                 case MT_RPT_DD:
-                   pStr = "MT_RPT_DD Ìì";
+                   pStr = "MT_RPT_DD å¤©";
                    break;
                case MT_RPT_MM:
-                   pStr = "MT_RPT_MM ÔÂ";
+                   pStr = "MT_RPT_MM æœˆ";
                     break;    
                 default:
-                    pStr = "MT_RPT_UNKOWN ²»Öª";
+                    pStr = "MT_RPT_UNKOWN ä¸çŸ¥";
                             break;
             }
 
@@ -10983,7 +10983,7 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
 
             printf("eUnit    = %s\n", pStr);
             printf("ucPeriod = %d\n", pData->ucPeriod);
-            printf("sTime    = %02dÄê%02dÔÂ%02dÈÕ ĞÇÆÚ%02d %02d:%02d:%02d\n", 
+            printf("sTime    = %02då¹´%02dæœˆ%02dæ—¥ æ˜ŸæœŸ%02d %02d:%02d:%02d\n", 
                     pData->sTime.ucYear,
                     pData->sTime.ucMonth,
                     pData->sTime.ucDay, 
@@ -11021,14 +11021,14 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
             switch(pData->eGo)
             {
                 case MT_AUTO_GO:
-                   pStr = "Æô¶¯";
+                   pStr = "å¯åŠ¨";
                    break;
                case MT_AUTO_STOP:
-                   pStr = "Í£Ö¹";
+                   pStr = "åœæ­¢";
                     break;
              
                 default:
-                    pStr = " ²»Öª";
+                    pStr = " ä¸çŸ¥";
                             break;
             }
 
@@ -11164,12 +11164,12 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
             printf("ucHardWareID = %s\n", buf);
 
             printf("sDateSoftware:\n");
-            printf("%dÄê%dÔÂ%dÈÕ\n", pData->sDateSoftware.ucYY,
+            printf("%då¹´%dæœˆ%dæ—¥\n", pData->sDateSoftware.ucYY,
                                      pData->sDateSoftware.ucMM,
                                      pData->sDateSoftware.ucDD);
 
             printf("sDateHardware:\n");
-            printf("%dÄê%dÔÂ%dÈÕ\n", pData->sDateHardware.ucYY,
+            printf("%då¹´%dæœˆ%dæ—¥\n", pData->sDateHardware.ucYY,
                                       pData->sDateHardware.ucMM,
                                       pData->sDateHardware.ucDD);
             
@@ -11312,7 +11312,7 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
                     }
                     else
                     {
-                       printf("´íÎóµÄÃüÁî×Ö\n");
+                       printf("é”™è¯¯çš„å‘½ä»¤å­—\n");
                     }
 
                 }
@@ -11336,7 +11336,7 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
                     }
                     else
                     {
-                       printf("´íÎóµÄÃüÁî×Ö\n");
+                       printf("é”™è¯¯çš„å‘½ä»¤å­—\n");
                     }
                 }
             }
@@ -11358,7 +11358,7 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
                     }
                     else
                     {
-                       printf("´íÎóµÄÃüÁî×Ö\n");
+                       printf("é”™è¯¯çš„å‘½ä»¤å­—\n");
                     }
                 }
             }
@@ -11380,7 +11380,7 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
                     }
                     else
                     {
-                       printf("´íÎóµÄÃüÁî×Ö\n");
+                       printf("é”™è¯¯çš„å‘½ä»¤å­—\n");
                     }
                 }
             }
@@ -11398,149 +11398,149 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
                         switch(pData->eErc[i])
                         {
                             case MT_ERC_1_INIT:
-                                pStr = "ERC1£ºÊı¾İ³õÊ¼»¯ºÍ°æ±¾±ä¸ü¼ÇÂ¼";
+                                pStr = "ERC1ï¼šæ•°æ®åˆå§‹åŒ–å’Œç‰ˆæœ¬å˜æ›´è®°å½•";
                                 break;
 
                             case MT_ERC_2_PARA_LOSS:
-                                pStr = "ERC2£º²ÎÊı¶ªÊ§¼ÇÂ¼";
+                                pStr = "ERC2ï¼šå‚æ•°ä¸¢å¤±è®°å½•";
                                 break;
 
 
                             case MT_ERC_3_PARA_MODIFY:
-                                pStr = "ERC3£º²ÎÊı±ä¸ü¼ÇÂ¼";
+                                pStr = "ERC3ï¼šå‚æ•°å˜æ›´è®°å½•";
                                 break;
 
                             case MT_ERC_4_STATE_CHANGE:
-                                pStr = "ERC4£º×´Ì¬Á¿±äÎ»¼ÇÂ¼";
+                                pStr = "ERC4ï¼šçŠ¶æ€é‡å˜ä½è®°å½•";
                                 break;
 
                             case MT_ERC_5_REMOTE_SWITCH:
-                                pStr = "ERC5£ºÒ£¿ØÌøÕ¢¼ÇÂ¼";
+                                pStr = "ERC5ï¼šé¥æ§è·³é—¸è®°å½•";
                                 break;
 
                             case MT_ERC_6_PCTRL_SWITCH:
-                                pStr = "ERC6£º¹¦¿ØÌøÕ¢¼ÇÂ¼";
+                                pStr = "ERC6ï¼šåŠŸæ§è·³é—¸è®°å½•";
                                 break;
                                 
                             case MT_ERC_7_ECTRL_SWITCH:
-                                pStr = "ERC7£ºµç¿ØÌøÕ¢¼ÇÂ¼";
+                                pStr = "ERC7ï¼šç”µæ§è·³é—¸è®°å½•";
                                 break;
 
                             case MT_ERC_8_METER_CHANGE:
-                                pStr = "ERC8£ºµçÄÜ±í²ÎÊı±ä¸ü";
+                                pStr = "ERC8ï¼šç”µèƒ½è¡¨å‚æ•°å˜æ›´";
                                 break;                    
 
                             case MT_ERC_9_ELEC_EXCP:
-                                pStr = "ERC9£ºµçÁ÷»ØÂ·Òì³£";
+                                pStr = "ERC9ï¼šç”µæµå›è·¯å¼‚å¸¸";
                                 break;
 
                             case MT_ERC_10_VOLT_EXCP:
-                                pStr = "ERC10£ºµçÑ¹»ØÂ·Òì³£";
+                                pStr = "ERC10ï¼šç”µå‹å›è·¯å¼‚å¸¸";
                                 break;
 
                             case MT_ERC_11_PHASE_EXCP:
-                                pStr = "ERC11£ºÏàĞòÒì³£";
+                                pStr = "ERC11ï¼šç›¸åºå¼‚å¸¸";
                                 break;
 
                             case MT_ERC_12_METER_TIME:
-                                pStr = "ERC12£ºµçÄÜ±íÊ±¼ä³¬²î";
+                                pStr = "ERC12ï¼šç”µèƒ½è¡¨æ—¶é—´è¶…å·®";
                                 break;
 
                             case MT_ERC_13_METER_FAULT:
-                                pStr = "ERC13£ºµç±í¹ÊÕÏĞÅÏ¢";
+                                pStr = "ERC13ï¼šç”µè¡¨æ•…éšœä¿¡æ¯";
                                 break;
 
                             case MT_ERC_14_TML_ON_OFF:
-                                pStr = "ERC14£ºÖÕ¶ËÍ£/ÉÏµçÊÂ¼ş";
+                                pStr = "ERC14ï¼šç»ˆç«¯åœ/ä¸Šç”µäº‹ä»¶";
                                 break;
 
                             case MT_ERC_15_HARM_OVER:
-                                pStr = "ERC15£ºĞ³²¨Ô½ÏŞ¸æ¾¯";
+                                pStr = "ERC15ï¼šè°æ³¢è¶Šé™å‘Šè­¦";
                                 break;
 
                             case MT_ERC_16_DC_OVER:
-                                pStr = "ERC16£ºÖ±Á÷Ä£ÄâÁ¿Ô½ÏŞ¼ÇÂ¼";
+                                pStr = "ERC16ï¼šç›´æµæ¨¡æ‹Ÿé‡è¶Šé™è®°å½•";
                                 break;
 
                             case MT_ERC_17_UNBL_OVER:
-                                pStr = "ERC17£ºµçÑ¹/µçÁ÷²»Æ½ºâ¶ÈÔ½ÏŞ¼ÇÂ¼";
+                                pStr = "ERC17ï¼šç”µå‹/ç”µæµä¸å¹³è¡¡åº¦è¶Šé™è®°å½•";
                                 break;
 
                             case MT_ERC_18_CAPA_LOCK:
-                                pStr = "ERC18£ºµçÈİÆ÷Í¶ÇĞ×ÔËø¼ÇÂ¼";
+                                pStr = "ERC18ï¼šç”µå®¹å™¨æŠ•åˆ‡è‡ªé”è®°å½•";
                                 break;
 
                             case MT_ERC_19_BUY_PARA:
-                                pStr = "ERC19£º¹ºµç²ÎÊıÉèÖÃ¼ÇÂ¼";
+                                pStr = "ERC19ï¼šè´­ç”µå‚æ•°è®¾ç½®è®°å½•";
                                 break;
 
                             case MT_ERC_20_AUTH_ERROR:
-                                pStr = "ERC20£ºÏûÏ¢ÈÏÖ¤´íÎó¼ÇÂ¼";
+                                pStr = "ERC20ï¼šæ¶ˆæ¯è®¤è¯é”™è¯¯è®°å½•";
                                 break;
                                 
                             case MT_ERC_21_TML_FAULT:
-                                pStr = "ERC21£ºÖÕ¶Ë¹ÊÕÏ¼ÇÂ¼";
+                                pStr = "ERC21ï¼šç»ˆç«¯æ•…éšœè®°å½•";
                                 break;
 
                             case MT_ERC_22_HAVE_OVER:
-                                pStr = "ERC22£ºÓĞ¹¦×ÜµçÄÜÁ¿²î¶¯Ô½ÏŞÊÂ¼ş¼ÇÂ¼";
+                                pStr = "ERC22ï¼šæœ‰åŠŸæ€»ç”µèƒ½é‡å·®åŠ¨è¶Šé™äº‹ä»¶è®°å½•";
                                 break;
 
                             case MT_ERC_23_ECTRL_WARN:
-                                pStr = "ERC23£ºµç¿Ø¸æ¾¯ÊÂ¼ş¼ÇÂ¼";
+                                pStr = "ERC23ï¼šç”µæ§å‘Šè­¦äº‹ä»¶è®°å½•";
                                 break;
 
                             case MT_ERC_24_VOLT_OVER:
-                                pStr = "ERC24£ºµçÑ¹Ô½ÏŞ¼ÇÂ¼";
+                                pStr = "ERC24ï¼šç”µå‹è¶Šé™è®°å½•";
                                 break;
 
                             case MT_ERC_25_ELEC_OVER:
-                                pStr = "ERC25£ºµçÁ÷Ô½ÏŞ¼ÇÂ¼";
+                                pStr = "ERC25ï¼šç”µæµè¶Šé™è®°å½•";
                                 break;
 
                             case MT_ERC_26_SP_OVER:
-                                pStr = "ERC26£ºÊÓÔÚ¹¦ÂÊÔ½ÏŞ¼ÇÂ¼";
+                                pStr = "ERC26ï¼šè§†åœ¨åŠŸç‡è¶Šé™è®°å½•";
                                 break;
                                 
                             case MT_ERC_27_POWER_DOWN:
-                                pStr = "ERC27£ºµçÄÜ±íÊ¾¶ÈÏÂ½µ¼ÇÂ¼";
+                                pStr = "ERC27ï¼šç”µèƒ½è¡¨ç¤ºåº¦ä¸‹é™è®°å½•";
                                 break;
 
                             case MT_ERC_28_POWER_OVER:
-                                pStr = "ERC28£ºµçÄÜÁ¿³¬²î¼ÇÂ¼";
+                                pStr = "ERC28ï¼šç”µèƒ½é‡è¶…å·®è®°å½•";
                                 break;
 
                             case MT_ERC_29_METER_FLY:
-                                pStr = "ERC29£ºµçÄÜ±í·É×ß¼ÇÂ¼";
+                                pStr = "ERC29ï¼šç”µèƒ½è¡¨é£èµ°è®°å½•";
                                 break;
 
                             case MT_ERC_30_METER_STOP:
-                                pStr = "ERC30£ºµçÄÜ±íÍ£×ß¼ÇÂ¼";
+                                pStr = "ERC30ï¼šç”µèƒ½è¡¨åœèµ°è®°å½•";
                                 break;
 
                             case MT_ERC_31_READ_FAULT:
-                                pStr = "ERC31£ºÖÕ¶Ë485³­±íÊ§°ÜÊÂ¼ş¼ÇÂ¼";
+                                pStr = "ERC31ï¼šç»ˆç«¯485æŠ„è¡¨å¤±è´¥äº‹ä»¶è®°å½•";
                                 break;
                                 
                             case MT_ERC_32_FLOW_OVER:
-                                pStr = "ERC32£ºÖÕ¶ËÓëÖ÷Õ¾Í¨ĞÅÁ÷Á¿³¬ÃÅÏŞÊÂ¼ş¼ÇÂ¼";
+                                pStr = "ERC32ï¼šç»ˆç«¯ä¸ä¸»ç«™é€šä¿¡æµé‡è¶…é—¨é™äº‹ä»¶è®°å½•";
                                 break;      
 
 
                             case MT_ERC_33_METER_WORD:
-                                pStr = "ERC33£ºµçÄÜ±íÔËĞĞ×´Ì¬×Ö±äÎ»ÊÂ¼ş¼ÇÂ¼";
+                                pStr = "ERC33ï¼šç”µèƒ½è¡¨è¿è¡ŒçŠ¶æ€å­—å˜ä½äº‹ä»¶è®°å½•";
                                 break;
 
                             case MT_ERC_34_CT_EXCP:
-                                pStr = "ERC34£ºCTÒì³£ÊÂ¼ş¼ÇÂ¼";
+                                pStr = "ERC34ï¼šCTå¼‚å¸¸äº‹ä»¶è®°å½•";
                                 break;
                                 
                             case MT_ERC_35_UNKOWN:
-                                pStr = "ERC35£º·¢ÏÖÎ´Öªµç±íÊÂ¼ş¼ÇÂ¼";
+                                pStr = "ERC35ï¼šå‘ç°æœªçŸ¥ç”µè¡¨äº‹ä»¶è®°å½•";
                                 break;      
 
                         default:
-                            pStr = "´íÎóµÄÊÂ¼ş¼ÇÂ¼ÀàĞÍ";
+                            pStr = "é”™è¯¯çš„äº‹ä»¶è®°å½•ç±»å‹";
                             break;
 
                         }
@@ -11554,9 +11554,9 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
             case CMD_AFN_C_F2_TML_CLOCK:
             {
                 sMtUserClock * psTmlClock = (sMtUserClock*)puAppData;
-                printf("%dÄê%dÔÂ%dÈÕ\n",psTmlClock->ucYear,psTmlClock->ucMonth,psTmlClock->ucDay);
-                printf("ĞÇÆÚ %d \n",psTmlClock->ucWeek);
-                printf("%dÊ±%d·Ö%dÃë\n",psTmlClock->ucHour,psTmlClock->ucMinute,psTmlClock->ucSecond);
+                printf("%då¹´%dæœˆ%dæ—¥\n",psTmlClock->ucYear,psTmlClock->ucMonth,psTmlClock->ucDay);
+                printf("æ˜ŸæœŸ %d \n",psTmlClock->ucWeek);
+                printf("%dæ—¶%dåˆ†%dç§’\n",psTmlClock->ucHour,psTmlClock->ucMinute,psTmlClock->ucSecond);
             }
             break;
             
@@ -11574,8 +11574,8 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
             case CMD_AFN_C_F4_TML_UPCOM_STATE:
             {
                 sMtAfn0cF04 * psUpComStat = (sMtAfn0cF04*)puAppData;
-                printf("Ö÷¶¯ÉÏ±¨: %s\n",psUpComStat->bUp ? "ÔÊĞí" : "½ûÖ¹");
-                printf("Í¨»°: %s\n",psUpComStat->bCom ? "ÔÊĞí" : "½ûÖ¹");
+                printf("ä¸»åŠ¨ä¸ŠæŠ¥: %s\n",psUpComStat->bUp ? "å…è®¸" : "ç¦æ­¢");
+                printf("é€šè¯: %s\n",psUpComStat->bCom ? "å…è®¸" : "ç¦æ­¢");
             }
             break;
             
@@ -11583,39 +11583,39 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
             {
                 sMtAfn0cF05 * psCtrlSet = (sMtAfn0cF05*)puAppData;
                 INT32   i,j;
-                printf("±£µçÍ¶Èë×´Ì¬: %s\n",psCtrlSet->bRemain ? "ÔÊĞí" : "½ûÖ¹");
-                printf("ÌŞ³ıÍ¶Èë×´Ì¬: %s\n",psCtrlSet->bDelete ? "ÔÊĞí" : "½ûÖ¹");
-                printf("´ß·ÑÍ¶Èë×´Ì¬: %s\n",psCtrlSet->bPayWarn ? "ÔÊĞí" : "½ûÖ¹");
+                printf("ä¿ç”µæŠ•å…¥çŠ¶æ€: %s\n",psCtrlSet->bRemain ? "å…è®¸" : "ç¦æ­¢");
+                printf("å‰”é™¤æŠ•å…¥çŠ¶æ€: %s\n",psCtrlSet->bDelete ? "å…è®¸" : "ç¦æ­¢");
+                printf("å‚¬è´¹æŠ•å…¥çŠ¶æ€: %s\n",psCtrlSet->bPayWarn ? "å…è®¸" : "ç¦æ­¢");
 
                 for ( i = 0 ;i < MT_AFN0CF05_MAXGROUPS;i++)
                 {
                     printf("***********************************************************\n");
-                    printf("×Ü¼Ó×é%d: %s\n",i+1,psCtrlSet->bGroup[i] ? "ÓĞĞ§" : "ÎŞĞ§");
+                    printf("æ€»åŠ ç»„%d: %s\n",i+1,psCtrlSet->bGroup[i] ? "æœ‰æ•ˆ" : "æ— æ•ˆ");
                     if (psCtrlSet->bGroup[i])
                     {
-                        printf("×Ü¼Ó×é%d: ¹¦ÄÜ¶¨Öµ·½°¸ºÅ %d\n\n",i+1,psCtrlSet->sGroup[i].ucScheme);
+                        printf("æ€»åŠ ç»„%d: åŠŸèƒ½å®šå€¼æ–¹æ¡ˆå· %d\n\n",i+1,psCtrlSet->sGroup[i].ucScheme);
                         for (j = 0; j < 8;j++)
                         {
-                            printf("×Ü¼Ó×é%d: ¹¦ÄÜÊ±¶Î %d %s\n",i+1,j+1,psCtrlSet->sGroup[i].bPowerCtrl[j] ? 
-                            "ÓĞĞ§":"ÎŞĞ§");
+                            printf("æ€»åŠ ç»„%d: åŠŸèƒ½æ—¶æ®µ %d %s\n",i+1,j+1,psCtrlSet->sGroup[i].bPowerCtrl[j] ? 
+                            "æœ‰æ•ˆ":"æ— æ•ˆ");
                         }
                         printf("\n");
-                        printf("×Ü¼Ó×é%d: Ê±¶Î¿Ø %s\n",i+1,psCtrlSet->sGroup[i].bTimeCtrl ? "ÓĞĞ§":"ÎŞĞ§");
-                        printf("×Ü¼Ó×é%d: ³§Ğİ¿Ø %s\n",i+1,psCtrlSet->sGroup[i].bRestCtrl ? "ÓĞĞ§":"ÎŞĞ§");
-                        printf("×Ü¼Ó×é%d: ÓªÒµ±¨Í£¿Ø %s\n",i+1,psCtrlSet->sGroup[i].bStopCtrl ? "ÓĞĞ§":"ÎŞĞ§");
-                        printf("×Ü¼Ó×é%d: µ±Ç°¹¦ÂÊÏÂ¸¡¿Ø %s\n\n",i+1,psCtrlSet->sGroup[i].bDownCtrl ? "ÓĞĞ§":"ÎŞĞ§");
-                        printf("×Ü¼Ó×é%d: ÔÂµç¿Ø %s\n",i+1,psCtrlSet->sGroup[i].bMonthCtrl ? "ÓĞĞ§":"ÎŞĞ§");
-                        printf("×Ü¼Ó×é%d: ¹ºµç¿Ø %s\n\n",i+1,psCtrlSet->sGroup[i].bBuyCtrl ? "ÓĞĞ§":"ÎŞĞ§");
+                        printf("æ€»åŠ ç»„%d: æ—¶æ®µæ§ %s\n",i+1,psCtrlSet->sGroup[i].bTimeCtrl ? "æœ‰æ•ˆ":"æ— æ•ˆ");
+                        printf("æ€»åŠ ç»„%d: å‚ä¼‘æ§ %s\n",i+1,psCtrlSet->sGroup[i].bRestCtrl ? "æœ‰æ•ˆ":"æ— æ•ˆ");
+                        printf("æ€»åŠ ç»„%d: è¥ä¸šæŠ¥åœæ§ %s\n",i+1,psCtrlSet->sGroup[i].bStopCtrl ? "æœ‰æ•ˆ":"æ— æ•ˆ");
+                        printf("æ€»åŠ ç»„%d: å½“å‰åŠŸç‡ä¸‹æµ®æ§ %s\n\n",i+1,psCtrlSet->sGroup[i].bDownCtrl ? "æœ‰æ•ˆ":"æ— æ•ˆ");
+                        printf("æ€»åŠ ç»„%d: æœˆç”µæ§ %s\n",i+1,psCtrlSet->sGroup[i].bMonthCtrl ? "æœ‰æ•ˆ":"æ— æ•ˆ");
+                        printf("æ€»åŠ ç»„%d: è´­ç”µæ§ %s\n\n",i+1,psCtrlSet->sGroup[i].bBuyCtrl ? "æœ‰æ•ˆ":"æ— æ•ˆ");
                         for (j = 0; j < 8;j++)
                         {
-                            printf("×Ü¼Ó×é%d: ¹¦ÂÊÂÖ´Î %d %s\n",i+1,j+1,psCtrlSet->sGroup[i].bPowerTimeSta[j] ? 
-                            "ÊÜ¿Ø":"²»ÊÜ¿Ø");
+                            printf("æ€»åŠ ç»„%d: åŠŸç‡è½®æ¬¡ %d %s\n",i+1,j+1,psCtrlSet->sGroup[i].bPowerTimeSta[j] ? 
+                            "å—æ§":"ä¸å—æ§");
                         }
                         printf("\n");
                         for (j = 0; j < 8;j++)
                         {
-                            printf("×Ü¼Ó×é%d: µç¿ØÂÖ´Î %d %s\n",i+1,j+1,psCtrlSet->sGroup[i].bElecTimeSta[j] ? 
-                            "ÊÜ¿Ø":"²»ÊÜ¿Ø");
+                            printf("æ€»åŠ ç»„%d: ç”µæ§è½®æ¬¡ %d %s\n",i+1,j+1,psCtrlSet->sGroup[i].bElecTimeSta[j] ? 
+                            "å—æ§":"ä¸å—æ§");
                         }
                     }
                 }
@@ -11629,59 +11629,59 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
 
                 for ( i = 8; i < 8; i++)
                 {
-                    printf("ÖÕ¶Ë %d: %s×´Ì¬\n",i+1,psAfn0cF06->bTrip[i] ? "ÌøÕ¢" : "ºÏÕ¢");
+                    printf("ç»ˆç«¯ %d: %sçŠ¶æ€\n",i+1,psAfn0cF06->bTrip[i] ? "è·³é—¸" : "åˆé—¸");
                 }
                 printf("\n");
-                printf("µ±Ç°ÖÕ¶Ë %s´ß·Ñ¸æ¾¯×´Ì¬\n\n",(psAfn0cF06->ucPayWarn == MT_AFN0CF06_PAYWARNING_ENABLE) ? "´¦ÓÚ" : "Î´´¦ÓÚ");
+                printf("å½“å‰ç»ˆç«¯ %så‚¬è´¹å‘Šè­¦çŠ¶æ€\n\n",(psAfn0cF06->ucPayWarn == MT_AFN0CF06_PAYWARNING_ENABLE) ? "å¤„äº" : "æœªå¤„äº");
                 
                 for ( i = 0 ;i < 8;i++)
                 {
                     printf("***********************************************************\n");
-                    printf("×Ü¼Ó×é%d: %s\n",i+1,psAfn0cF06->bGroup[i] ? "ÓĞĞ§" : "ÎŞĞ§");
+                    printf("æ€»åŠ ç»„%d: %s\n",i+1,psAfn0cF06->bGroup[i] ? "æœ‰æ•ˆ" : "æ— æ•ˆ");
                     if (psAfn0cF06->bGroup[i])
                     {
-                        printf("µ±Ç°¹¦ÂÊ¶¨Öµ: %0.1f\n\n",psAfn0cF06->sGroup[i].fCurPower);
+                        printf("å½“å‰åŠŸç‡å®šå€¼: %0.1f\n\n",psAfn0cF06->sGroup[i].fCurPower);
 
-                        printf("¸¡¶¯·½Ïò:");
+                        printf("æµ®åŠ¨æ–¹å‘:");
                         switch(psAfn0cF06->sGroup[i].sPowerDrift.eDir)
                         {
                         case MT_FLOAT_DIR_UP:
-                            printf(" ÉÏ¸¡\n\n");
+                            printf(" ä¸Šæµ®\n\n");
                             break;
                         case MT_FLOAT_DIR_DOWN:
-                            printf(" ÏÂ¸¡\n\n");
+                            printf(" ä¸‹æµ®\n\n");
                             break;
                         case MT_FLOAT_DIR_UNKOWN:
-                            printf(" Î´Öª¸¡¶¯·½Ïò\n\n");
+                            printf(" æœªçŸ¥æµ®åŠ¨æ–¹å‘\n\n");
                             break;
                         default:
-                            printf(" ÊıÖµ´íÎó\n\n"); 
+                            printf(" æ•°å€¼é”™è¯¯\n\n"); 
                         }
 
-                        printf("¸¡¶¯ÏµÊı:%d\n",psAfn0cF06->sGroup[i].sPowerDrift.ucValue);
+                        printf("æµ®åŠ¨ç³»æ•°:%d\n",psAfn0cF06->sGroup[i].sPowerDrift.ucValue);
                         printf("________________________________________________________\n");
                         for(j = 0; j < 8;j++ )
                         {
-                            printf("ÖÕ¶Ë %d: %s¹¦¿ØÌøÕ¢×´Ì¬\n\n",j+1,psAfn0cF06->sGroup[i].bPowerOutSta[j] ? "´¦ÓÚ" : "Î´´¦ÓÚ");
+                            printf("ç»ˆç«¯ %d: %såŠŸæ§è·³é—¸çŠ¶æ€\n\n",j+1,psAfn0cF06->sGroup[i].bPowerOutSta[j] ? "å¤„äº" : "æœªå¤„äº");
                         }
                         printf("________________________________________________________\n");
                         for(j = 0; j < 8;j++ )
                         {
-                            printf("ÖÕ¶Ë %d: %sÔÂµç¿ØÌøÕ¢×´Ì¬\n\n",j+1,psAfn0cF06->sGroup[i].bMonthElecOutSta[j] ? "´¦ÓÚ" : "Î´´¦ÓÚ");
+                            printf("ç»ˆç«¯ %d: %sæœˆç”µæ§è·³é—¸çŠ¶æ€\n\n",j+1,psAfn0cF06->sGroup[i].bMonthElecOutSta[j] ? "å¤„äº" : "æœªå¤„äº");
                         }
                         printf("________________________________________________________\n");
                         for(j = 0; j < 8;j++ )
                         {
-                            printf("ÖÕ¶Ë %d: %s¹ºµç¿ØÌøÕ¢×´Ì¬\n\n",j+1,psAfn0cF06->sGroup[i].bBuyElecOutSta[j] ? "´¦ÓÚ" : "Î´´¦ÓÚ");
+                            printf("ç»ˆç«¯ %d: %sè´­ç”µæ§è·³é—¸çŠ¶æ€\n\n",j+1,psAfn0cF06->sGroup[i].bBuyElecOutSta[j] ? "å¤„äº" : "æœªå¤„äº");
                         }
                         printf("________________________________________________________\n");
-                        printf("ÖÕ¶Ë%sÊ±¶Î¿ØÔ½ÏŞ¸æ¾¯×´Ì¬\n\n",psAfn0cF06->sGroup[i].bTimeCtrlSta ? "´¦ÓÚ":"Î´´¦ÓÚ");
-                        printf("ÖÕ¶Ë%s³§Ğİ¿ØÔ½ÏŞ¸æ¾¯×´Ì¬\n\n",psAfn0cF06->sGroup[i].bRestCtrlSta ? "´¦ÓÚ":"Î´´¦ÓÚ");
-                        printf("ÖÕ¶Ë%sÓªÒµ±¨Í£¿ØÔ½ÏŞ¸æ¾¯×´Ì¬\n\n",psAfn0cF06->sGroup[i].bStopCtrlSta ? "´¦ÓÚ":"Î´´¦ÓÚ");
-                        printf("ÖÕ¶Ë%sµ±Ç°¹¦ÂÊÏÂ¸¡¿ØÔ½ÏŞ¸æ¾¯×´Ì¬\n\n",psAfn0cF06->sGroup[i].bDownCtrlSta ? "´¦ÓÚ":"Î´´¦ÓÚ");
+                        printf("ç»ˆç«¯%sæ—¶æ®µæ§è¶Šé™å‘Šè­¦çŠ¶æ€\n\n",psAfn0cF06->sGroup[i].bTimeCtrlSta ? "å¤„äº":"æœªå¤„äº");
+                        printf("ç»ˆç«¯%så‚ä¼‘æ§è¶Šé™å‘Šè­¦çŠ¶æ€\n\n",psAfn0cF06->sGroup[i].bRestCtrlSta ? "å¤„äº":"æœªå¤„äº");
+                        printf("ç»ˆç«¯%sè¥ä¸šæŠ¥åœæ§è¶Šé™å‘Šè­¦çŠ¶æ€\n\n",psAfn0cF06->sGroup[i].bStopCtrlSta ? "å¤„äº":"æœªå¤„äº");
+                        printf("ç»ˆç«¯%så½“å‰åŠŸç‡ä¸‹æµ®æ§è¶Šé™å‘Šè­¦çŠ¶æ€\n\n",psAfn0cF06->sGroup[i].bDownCtrlSta ? "å¤„äº":"æœªå¤„äº");
                         printf("________________________________________________________\n");
-                        printf("ÖÕ¶Ë%sÔÂµç¿ØÔ½ÏŞ¸æ¾¯×´Ì¬\n\n",psAfn0cF06->sGroup[i].bMonthCtrlSta ? "´¦ÓÚ":"Î´´¦ÓÚ");
-                        printf("ÖÕ¶Ë%s¹ºµç¿ØÔ½ÏŞ¸æ¾¯×´Ì¬\n\n",psAfn0cF06->sGroup[i].bBuyCtrlSta ? "´¦ÓÚ":"Î´´¦ÓÚ");
+                        printf("ç»ˆç«¯%sæœˆç”µæ§è¶Šé™å‘Šè­¦çŠ¶æ€\n\n",psAfn0cF06->sGroup[i].bMonthCtrlSta ? "å¤„äº":"æœªå¤„äº");
+                        printf("ç»ˆç«¯%sè´­ç”µæ§è¶Šé™å‘Šè­¦çŠ¶æ€\n\n",psAfn0cF06->sGroup[i].bBuyCtrlSta ? "å¤„äº":"æœªå¤„äº");
                     }
                 }
             }
@@ -11690,8 +11690,8 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
             case CMD_AFN_C_F7_TML_EC_VALUE:
             {
                 sMtAfn0cF07 * psAfn0cF07 = (sMtAfn0cF07*)puAppData;
-                printf("ÖØÒªÊÂ¼ş¼ÆÊıÆ÷EC1: %d\n",psAfn0cF07->ucEc1);
-                printf("Ò»°ãÊÂ¼ş¼ÆÊıÆ÷EC2: %d\n",psAfn0cF07->ucEc2);
+                printf("é‡è¦äº‹ä»¶è®¡æ•°å™¨EC1: %d\n",psAfn0cF07->ucEc1);
+                printf("ä¸€èˆ¬äº‹ä»¶è®¡æ•°å™¨EC2: %d\n",psAfn0cF07->ucEc2);
             }
             break;
 
@@ -11708,153 +11708,153 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
                         switch(i+1)
                         {
                             case MT_ERC_1_INIT:
-                                pStr = "ERC1£ºÊı¾İ³õÊ¼»¯ºÍ°æ±¾±ä¸ü¼ÇÂ¼";
+                                pStr = "ERC1ï¼šæ•°æ®åˆå§‹åŒ–å’Œç‰ˆæœ¬å˜æ›´è®°å½•";
                                 break;
 
                             case MT_ERC_2_PARA_LOSS:
-                                pStr = "ERC2£º²ÎÊı¶ªÊ§¼ÇÂ¼";
+                                pStr = "ERC2ï¼šå‚æ•°ä¸¢å¤±è®°å½•";
                                 break;
 
 
                             case MT_ERC_3_PARA_MODIFY:
-                                pStr = "ERC3£º²ÎÊı±ä¸ü¼ÇÂ¼";
+                                pStr = "ERC3ï¼šå‚æ•°å˜æ›´è®°å½•";
                                 break;
 
                             case MT_ERC_4_STATE_CHANGE:
-                                pStr = "ERC4£º×´Ì¬Á¿±äÎ»¼ÇÂ¼";
+                                pStr = "ERC4ï¼šçŠ¶æ€é‡å˜ä½è®°å½•";
                                 break;
 
                             case MT_ERC_5_REMOTE_SWITCH:
-                                pStr = "ERC5£ºÒ£¿ØÌøÕ¢¼ÇÂ¼";
+                                pStr = "ERC5ï¼šé¥æ§è·³é—¸è®°å½•";
                                 break;
 
                             case MT_ERC_6_PCTRL_SWITCH:
-                                pStr = "ERC6£º¹¦¿ØÌøÕ¢¼ÇÂ¼";
+                                pStr = "ERC6ï¼šåŠŸæ§è·³é—¸è®°å½•";
                                 break;
                                 
                             case MT_ERC_7_ECTRL_SWITCH:
-                                pStr = "ERC7£ºµç¿ØÌøÕ¢¼ÇÂ¼";
+                                pStr = "ERC7ï¼šç”µæ§è·³é—¸è®°å½•";
                                 break;
 
                             case MT_ERC_8_METER_CHANGE:
-                                pStr = "ERC8£ºµçÄÜ±í²ÎÊı±ä¸ü";
+                                pStr = "ERC8ï¼šç”µèƒ½è¡¨å‚æ•°å˜æ›´";
                                 break;                    
 
                             case MT_ERC_9_ELEC_EXCP:
-                                pStr = "ERC9£ºµçÁ÷»ØÂ·Òì³£";
+                                pStr = "ERC9ï¼šç”µæµå›è·¯å¼‚å¸¸";
                                 break;
 
                             case MT_ERC_10_VOLT_EXCP:
-                                pStr = "ERC10£ºµçÑ¹»ØÂ·Òì³£";
+                                pStr = "ERC10ï¼šç”µå‹å›è·¯å¼‚å¸¸";
                                 break;
 
                             case MT_ERC_11_PHASE_EXCP:
-                                pStr = "ERC11£ºÏàĞòÒì³£";
+                                pStr = "ERC11ï¼šç›¸åºå¼‚å¸¸";
                                 break;
 
                             case MT_ERC_12_METER_TIME:
-                                pStr = "ERC12£ºµçÄÜ±íÊ±¼ä³¬²î";
+                                pStr = "ERC12ï¼šç”µèƒ½è¡¨æ—¶é—´è¶…å·®";
                                 break;
 
                             case MT_ERC_13_METER_FAULT:
-                                pStr = "ERC13£ºµç±í¹ÊÕÏĞÅÏ¢";
+                                pStr = "ERC13ï¼šç”µè¡¨æ•…éšœä¿¡æ¯";
                                 break;
 
                             case MT_ERC_14_TML_ON_OFF:
-                                pStr = "ERC14£ºÖÕ¶ËÍ£/ÉÏµçÊÂ¼ş";
+                                pStr = "ERC14ï¼šç»ˆç«¯åœ/ä¸Šç”µäº‹ä»¶";
                                 break;
 
                             case MT_ERC_15_HARM_OVER:
-                                pStr = "ERC15£ºĞ³²¨Ô½ÏŞ¸æ¾¯";
+                                pStr = "ERC15ï¼šè°æ³¢è¶Šé™å‘Šè­¦";
                                 break;
 
                             case MT_ERC_16_DC_OVER:
-                                pStr = "ERC16£ºÖ±Á÷Ä£ÄâÁ¿Ô½ÏŞ¼ÇÂ¼";
+                                pStr = "ERC16ï¼šç›´æµæ¨¡æ‹Ÿé‡è¶Šé™è®°å½•";
                                 break;
 
                             case MT_ERC_17_UNBL_OVER:
-                                pStr = "ERC17£ºµçÑ¹/µçÁ÷²»Æ½ºâ¶ÈÔ½ÏŞ¼ÇÂ¼";
+                                pStr = "ERC17ï¼šç”µå‹/ç”µæµä¸å¹³è¡¡åº¦è¶Šé™è®°å½•";
                                 break;
 
                             case MT_ERC_18_CAPA_LOCK:
-                                pStr = "ERC18£ºµçÈİÆ÷Í¶ÇĞ×ÔËø¼ÇÂ¼";
+                                pStr = "ERC18ï¼šç”µå®¹å™¨æŠ•åˆ‡è‡ªé”è®°å½•";
                                 break;
 
                             case MT_ERC_19_BUY_PARA:
-                                pStr = "ERC19£º¹ºµç²ÎÊıÉèÖÃ¼ÇÂ¼";
+                                pStr = "ERC19ï¼šè´­ç”µå‚æ•°è®¾ç½®è®°å½•";
                                 break;
 
                             case MT_ERC_20_AUTH_ERROR:
-                                pStr = "ERC20£ºÏûÏ¢ÈÏÖ¤´íÎó¼ÇÂ¼";
+                                pStr = "ERC20ï¼šæ¶ˆæ¯è®¤è¯é”™è¯¯è®°å½•";
                                 break;
                                 
                             case MT_ERC_21_TML_FAULT:
-                                pStr = "ERC21£ºÖÕ¶Ë¹ÊÕÏ¼ÇÂ¼";
+                                pStr = "ERC21ï¼šç»ˆç«¯æ•…éšœè®°å½•";
                                 break;
 
                             case MT_ERC_22_HAVE_OVER:
-                                pStr = "ERC22£ºÓĞ¹¦×ÜµçÄÜÁ¿²î¶¯Ô½ÏŞÊÂ¼ş¼ÇÂ¼";
+                                pStr = "ERC22ï¼šæœ‰åŠŸæ€»ç”µèƒ½é‡å·®åŠ¨è¶Šé™äº‹ä»¶è®°å½•";
                                 break;
 
                             case MT_ERC_23_ECTRL_WARN:
-                                pStr = "ERC23£ºµç¿Ø¸æ¾¯ÊÂ¼ş¼ÇÂ¼";
+                                pStr = "ERC23ï¼šç”µæ§å‘Šè­¦äº‹ä»¶è®°å½•";
                                 break;
 
                             case MT_ERC_24_VOLT_OVER:
-                                pStr = "ERC24£ºµçÑ¹Ô½ÏŞ¼ÇÂ¼";
+                                pStr = "ERC24ï¼šç”µå‹è¶Šé™è®°å½•";
                                 break;
 
                             case MT_ERC_25_ELEC_OVER:
-                                pStr = "ERC25£ºµçÁ÷Ô½ÏŞ¼ÇÂ¼";
+                                pStr = "ERC25ï¼šç”µæµè¶Šé™è®°å½•";
                                 break;
 
                             case MT_ERC_26_SP_OVER:
-                                pStr = "ERC26£ºÊÓÔÚ¹¦ÂÊÔ½ÏŞ¼ÇÂ¼";
+                                pStr = "ERC26ï¼šè§†åœ¨åŠŸç‡è¶Šé™è®°å½•";
                                 break;
                                 
                             case MT_ERC_27_POWER_DOWN:
-                                pStr = "ERC27£ºµçÄÜ±íÊ¾¶ÈÏÂ½µ¼ÇÂ¼";
+                                pStr = "ERC27ï¼šç”µèƒ½è¡¨ç¤ºåº¦ä¸‹é™è®°å½•";
                                 break;
 
                             case MT_ERC_28_POWER_OVER:
-                                pStr = "ERC28£ºµçÄÜÁ¿³¬²î¼ÇÂ¼";
+                                pStr = "ERC28ï¼šç”µèƒ½é‡è¶…å·®è®°å½•";
                                 break;
 
                             case MT_ERC_29_METER_FLY:
-                                pStr = "ERC29£ºµçÄÜ±í·É×ß¼ÇÂ¼";
+                                pStr = "ERC29ï¼šç”µèƒ½è¡¨é£èµ°è®°å½•";
                                 break;
 
                             case MT_ERC_30_METER_STOP:
-                                pStr = "ERC30£ºµçÄÜ±íÍ£×ß¼ÇÂ¼";
+                                pStr = "ERC30ï¼šç”µèƒ½è¡¨åœèµ°è®°å½•";
                                 break;
 
                             case MT_ERC_31_READ_FAULT:
-                                pStr = "ERC31£ºÖÕ¶Ë485³­±íÊ§°ÜÊÂ¼ş¼ÇÂ¼";
+                                pStr = "ERC31ï¼šç»ˆç«¯485æŠ„è¡¨å¤±è´¥äº‹ä»¶è®°å½•";
                                 break;
                                 
                             case MT_ERC_32_FLOW_OVER:
-                                pStr = "ERC32£ºÖÕ¶ËÓëÖ÷Õ¾Í¨ĞÅÁ÷Á¿³¬ÃÅÏŞÊÂ¼ş¼ÇÂ¼";
+                                pStr = "ERC32ï¼šç»ˆç«¯ä¸ä¸»ç«™é€šä¿¡æµé‡è¶…é—¨é™äº‹ä»¶è®°å½•";
                                 break;      
 
 
                             case MT_ERC_33_METER_WORD:
-                                pStr = "ERC33£ºµçÄÜ±íÔËĞĞ×´Ì¬×Ö±äÎ»ÊÂ¼ş¼ÇÂ¼";
+                                pStr = "ERC33ï¼šç”µèƒ½è¡¨è¿è¡ŒçŠ¶æ€å­—å˜ä½äº‹ä»¶è®°å½•";
                                 break;
 
                             case MT_ERC_34_CT_EXCP:
-                                pStr = "ERC34£ºCTÒì³£ÊÂ¼ş¼ÇÂ¼";
+                                pStr = "ERC34ï¼šCTå¼‚å¸¸äº‹ä»¶è®°å½•";
                                 break;
                                 
                             case MT_ERC_35_UNKOWN:
-                                pStr = "ERC35£º·¢ÏÖÎ´Öªµç±íÊÂ¼ş¼ÇÂ¼";
+                                pStr = "ERC35ï¼šå‘ç°æœªçŸ¥ç”µè¡¨äº‹ä»¶è®°å½•";
                                 break;      
 
                         default:
-                            pStr = "´íÎóµÄÊÂ¼ş¼ÇÂ¼ÀàĞÍ";
+                            pStr = "é”™è¯¯çš„äº‹ä»¶è®°å½•ç±»å‹";
                             break;
 
                         }
-                        printf("%s: ÓĞÊÂ¼ş\n",pStr);
+                        printf("%s: æœ‰äº‹ä»¶\n",pStr);
                     }
                 }
                 
@@ -11864,16 +11864,16 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
             case CMD_AFN_C_F17_TOTAL_POWER_HAVE:
             {
                 sMtTotalPowerHave * psU = (sMtTotalPowerHave*)puAppData;
-                printf("µ±Ç°×Ü¼ÓÓĞ¹¦¹¦ÂÊ %f\n",psU->fsXXX);             
-                printf("¸ÃÃüÁî±»ÔİÊ±µ±³ÉµÄÎÂ¶È\n");  
+                printf("å½“å‰æ€»åŠ æœ‰åŠŸåŠŸç‡ %f\n",psU->fsXXX);             
+                printf("è¯¥å‘½ä»¤è¢«æš‚æ—¶å½“æˆçš„æ¸©åº¦\n");  
             }
             break;
 
             case CMD_AFN_C_F18_TOTAL_POWER_NONE:
             {
                 sMtTotalPowerNone * psU = (sMtTotalPowerNone*)puAppData;
-                printf("µ±Ç°×Ü¼ÓÎŞ¹¦¹¦ÂÊ %f\n",psU->fsXXX);             
-                printf("¸ÃÃüÁî±»ÔİÊ±µ±³ÉµÄÊª¶È\n");  
+                printf("å½“å‰æ€»åŠ æ— åŠŸåŠŸç‡ %f\n",psU->fsXXX);             
+                printf("è¯¥å‘½ä»¤è¢«æš‚æ—¶å½“æˆçš„æ¹¿åº¦\n");  
             }
             break;
 
@@ -11881,30 +11881,30 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
             case CMD_AFN_C_F31_POWER_CUR:
             {
                 sMtAfn0cf31 * psAfn0cF31 = (sMtAfn0cf31*)puAppData;
-                printf("³­±íÊ±¼ä %dÄê%dÔÂ%dÈÕ %dÊ±%d·Ö\n",psAfn0cF31->sTime.ucYY
+                printf("æŠ„è¡¨æ—¶é—´ %då¹´%dæœˆ%dæ—¥ %dæ—¶%dåˆ†\n",psAfn0cF31->sTime.ucYY
                                                          ,psAfn0cF31->sTime.ucMM
                                                          ,psAfn0cF31->sTime.ucDD
                                                          ,psAfn0cF31->sTime.ucHH
                                                          ,psAfn0cF31->sTime.ucmm);
 
-                printf("AÏà:\n\n");
-                printf("ÕıÏòÓĞ¹¦µçÄÜÊ¾Öµ: %.4f\n",psAfn0cF31->sPhaseA.dFrthHavePower);
-                printf("·´ÏòÓĞ¹¦µçÄÜÊ¾Öµ: %.4f\n",psAfn0cF31->sPhaseA.dBackHavePower);
-                printf("×éºÏÎŞ¹¦1µçÄÜÊ¾Öµ: %.2f\n",psAfn0cF31->sPhaseA.fComNonePower1);
-                printf("×éºÏÎŞ¹¦2µçÄÜÊ¾Öµ: %.2f\n",psAfn0cF31->sPhaseA.fComNonePower2);
+                printf("Aç›¸:\n\n");
+                printf("æ­£å‘æœ‰åŠŸç”µèƒ½ç¤ºå€¼: %.4f\n",psAfn0cF31->sPhaseA.dFrthHavePower);
+                printf("åå‘æœ‰åŠŸç”µèƒ½ç¤ºå€¼: %.4f\n",psAfn0cF31->sPhaseA.dBackHavePower);
+                printf("ç»„åˆæ— åŠŸ1ç”µèƒ½ç¤ºå€¼: %.2f\n",psAfn0cF31->sPhaseA.fComNonePower1);
+                printf("ç»„åˆæ— åŠŸ2ç”µèƒ½ç¤ºå€¼: %.2f\n",psAfn0cF31->sPhaseA.fComNonePower2);
 
-                printf("BÏà:\n\n");
-                printf("ÕıÏòÓĞ¹¦µçÄÜÊ¾Öµ: %.4f\n",psAfn0cF31->sPhaseB.dFrthHavePower);
-                printf("·´ÏòÓĞ¹¦µçÄÜÊ¾Öµ: %.4f\n",psAfn0cF31->sPhaseB.dBackHavePower);
-                printf("×éºÏÎŞ¹¦1µçÄÜÊ¾Öµ: %.2f\n",psAfn0cF31->sPhaseB.fComNonePower1);
-                printf("×éºÏÎŞ¹¦2µçÄÜÊ¾Öµ: %.2f\n",psAfn0cF31->sPhaseB.fComNonePower2);
+                printf("Bç›¸:\n\n");
+                printf("æ­£å‘æœ‰åŠŸç”µèƒ½ç¤ºå€¼: %.4f\n",psAfn0cF31->sPhaseB.dFrthHavePower);
+                printf("åå‘æœ‰åŠŸç”µèƒ½ç¤ºå€¼: %.4f\n",psAfn0cF31->sPhaseB.dBackHavePower);
+                printf("ç»„åˆæ— åŠŸ1ç”µèƒ½ç¤ºå€¼: %.2f\n",psAfn0cF31->sPhaseB.fComNonePower1);
+                printf("ç»„åˆæ— åŠŸ2ç”µèƒ½ç¤ºå€¼: %.2f\n",psAfn0cF31->sPhaseB.fComNonePower2);
 
 
-                printf("CÏà:\n\n");
-                printf("ÕıÏòÓĞ¹¦µçÄÜÊ¾Öµ: %.4f\n",psAfn0cF31->sPhaseC.dFrthHavePower);
-                printf("·´ÏòÓĞ¹¦µçÄÜÊ¾Öµ: %.4f\n",psAfn0cF31->sPhaseC.dBackHavePower);
-                printf("×éºÏÎŞ¹¦1µçÄÜÊ¾Öµ: %.2f\n",psAfn0cF31->sPhaseC.fComNonePower1);
-                printf("×éºÏÎŞ¹¦2µçÄÜÊ¾Öµ: %.2f\n",psAfn0cF31->sPhaseC.fComNonePower2);  
+                printf("Cç›¸:\n\n");
+                printf("æ­£å‘æœ‰åŠŸç”µèƒ½ç¤ºå€¼: %.4f\n",psAfn0cF31->sPhaseC.dFrthHavePower);
+                printf("åå‘æœ‰åŠŸç”µèƒ½ç¤ºå€¼: %.4f\n",psAfn0cF31->sPhaseC.dBackHavePower);
+                printf("ç»„åˆæ— åŠŸ1ç”µèƒ½ç¤ºå€¼: %.2f\n",psAfn0cF31->sPhaseC.fComNonePower1);
+                printf("ç»„åˆæ— åŠŸ2ç”µèƒ½ç¤ºå€¼: %.2f\n",psAfn0cF31->sPhaseC.fComNonePower2);  
             }
             break;
 
@@ -11912,78 +11912,78 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
             {
                 sMtAfn0cF57 * psAfn0cF57 = (sMtAfn0cF57*)puAppData;
                 UINT32  i;
-                printf("Ğ³²¨´ÎÊı:  %d\n",psAfn0cF57->ucN);
+                printf("è°æ³¢æ¬¡æ•°:  %d\n",psAfn0cF57->ucN);
                                                          
-                printf("AÏàĞ³²¨µçÑ¹:\n\n");
+                printf("Aç›¸è°æ³¢ç”µå‹:\n\n");
                 for ( i = 0; i < psAfn0cF57->ucN - 1;i++)
                 {
                     if( TRUE == psAfn0cF57->sUa.bfXXX_X[i] )
                     {
-                        printf("%d´ÎĞ³²¨µçÑ¹ÓĞĞ§Öµ: %.1f\n",i+2,psAfn0cF57->sUa.fXXX_X[i]);
+                        printf("%dæ¬¡è°æ³¢ç”µå‹æœ‰æ•ˆå€¼: %.1f\n",i+2,psAfn0cF57->sUa.fXXX_X[i]);
                     }else
                     {
-                        printf("%d´ÎĞ³²¨µçÑ¹ÓĞĞ§Öµ: ÎŞ\n",i+2);
+                        printf("%dæ¬¡è°æ³¢ç”µå‹æœ‰æ•ˆå€¼: æ— \n",i+2);
                     }
                 }
                 printf("*****************************************************\n");
 
-                printf("\nBÏàĞ³²¨µçÑ¹:\n\n");
+                printf("\nBç›¸è°æ³¢ç”µå‹:\n\n");
                 for ( i = 0; i < psAfn0cF57->ucN - 1;i++)
                 {
                     if( TRUE == psAfn0cF57->sUb.bfXXX_X[i] )
                     {
-                        printf("%d´ÎĞ³²¨µçÑ¹ÓĞĞ§Öµ: %.2f\n",i+2,psAfn0cF57->sUb.fXXX_X[i]);
+                        printf("%dæ¬¡è°æ³¢ç”µå‹æœ‰æ•ˆå€¼: %.2f\n",i+2,psAfn0cF57->sUb.fXXX_X[i]);
                     }else
                     {
-                        printf("%d´ÎĞ³²¨µçÑ¹ÓĞĞ§Öµ: ÎŞ\n",i+2);
+                        printf("%dæ¬¡è°æ³¢ç”µå‹æœ‰æ•ˆå€¼: æ— \n",i+2);
                     }
                 }
                 printf("*****************************************************\n");
-                printf("\nCÏàĞ³²¨µçÑ¹:\n\n");
+                printf("\nCç›¸è°æ³¢ç”µå‹:\n\n");
                 for ( i = 0; i < psAfn0cF57->ucN - 1;i++)
                 {
                     if( TRUE == psAfn0cF57->sUc.bfXXX_X[i] )
                     {
-                        printf("%d´ÎĞ³²¨µçÑ¹ÓĞĞ§Öµ: %.2f\n",i+2,psAfn0cF57->sUc.fXXX_X[i]);
+                        printf("%dæ¬¡è°æ³¢ç”µå‹æœ‰æ•ˆå€¼: %.2f\n",i+2,psAfn0cF57->sUc.fXXX_X[i]);
                     }else
                     {
-                        printf("%d´ÎĞ³²¨µçÑ¹ÓĞĞ§Öµ: ÎŞ\n",i+2);
+                        printf("%dæ¬¡è°æ³¢ç”µå‹æœ‰æ•ˆå€¼: æ— \n",i+2);
                     }
                 }
                 printf("*****************************************************\n");
-                printf("\nAÏàĞ³²¨µçÁ÷:\n\n");
+                printf("\nAç›¸è°æ³¢ç”µæµ:\n\n");
                 for ( i = 0; i < psAfn0cF57->ucN - 1;i++)
                 {
                     if( TRUE == psAfn0cF57->sIa.bfsXX_XX[i] )
                     {
-                        printf("%d´ÎĞ³²¨µçÁ÷ÓĞĞ§Öµ: %.2f\n",i+2,psAfn0cF57->sIa.fsXX_XX[i]);
+                        printf("%dæ¬¡è°æ³¢ç”µæµæœ‰æ•ˆå€¼: %.2f\n",i+2,psAfn0cF57->sIa.fsXX_XX[i]);
                     }else
                     {
-                        printf("%d´ÎĞ³²¨µçÁ÷: ÎŞ\n",i+2);
+                        printf("%dæ¬¡è°æ³¢ç”µæµ: æ— \n",i+2);
                     }
                 }
                 printf("*****************************************************\n");
-                printf("\nBÏàĞ³²¨µçÁ÷:\n\n");
+                printf("\nBç›¸è°æ³¢ç”µæµ:\n\n");
                 for ( i = 0; i < psAfn0cF57->ucN - 1;i++)
                 {
                     if( TRUE == psAfn0cF57->sIb.bfsXX_XX[i] )
                     {
-                        printf("%d´ÎĞ³²¨µçÁ÷ÓĞĞ§Öµ: %.2f\n",i+2,psAfn0cF57->sIb.fsXX_XX[i]);
+                        printf("%dæ¬¡è°æ³¢ç”µæµæœ‰æ•ˆå€¼: %.2f\n",i+2,psAfn0cF57->sIb.fsXX_XX[i]);
                     }else
                     {
-                        printf("%d´ÎĞ³²¨µçÁ÷: ÎŞ\n",i+2);
+                        printf("%dæ¬¡è°æ³¢ç”µæµ: æ— \n",i+2);
                     }
                 }
                 printf("*****************************************************\n");
-                printf("\nCÏàĞ³²¨µçÁ÷:\n\n");
+                printf("\nCç›¸è°æ³¢ç”µæµ:\n\n");
                 for ( i = 0; i < psAfn0cF57->ucN - 1;i++)
                 {
                     if( TRUE == psAfn0cF57->sIc.bfsXX_XX[i] )
                     {
-                        printf("%d´ÎĞ³²¨µçÁ÷ÓĞĞ§Öµ: %.2f\n",i+2,psAfn0cF57->sIc.fsXX_XX[i]);
+                        printf("%dæ¬¡è°æ³¢ç”µæµæœ‰æ•ˆå€¼: %.2f\n",i+2,psAfn0cF57->sIc.fsXX_XX[i]);
                     }else
                     {
-                        printf("%d´ÎĞ³²¨µçÁ÷: ÎŞ\n",i+2);
+                        printf("%dæ¬¡è°æ³¢ç”µæµ: æ— \n",i+2);
                     }
                 }  
             }
@@ -11993,121 +11993,121 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
             {
                 sMtAfn0cF58 * psAfn0cF58 = (sMtAfn0cF58*)puAppData;
                 UINT32  i;
-                printf("Ğ³²¨´ÎÊı:  %d\n",psAfn0cF58->ucN);
+                printf("è°æ³¢æ¬¡æ•°:  %d\n",psAfn0cF58->ucN);
                                                          
-                printf("AÏàĞ³²¨µçÑ¹:\n\n");
+                printf("Aç›¸è°æ³¢ç”µå‹:\n\n");
                 if( TRUE == psAfn0cF58->sUa.sTotal.bfsXXX_X )
                 {
-                    printf("×ÜĞ³²¨µçÑ¹º¬ÓĞÂÊ: %.1f\n",psAfn0cF58->sUa.sTotal.fsXXX_X);
+                    printf("æ€»è°æ³¢ç”µå‹å«æœ‰ç‡: %.1f\n",psAfn0cF58->sUa.sTotal.fsXXX_X);
                 }else
                 {
-                    printf("×ÜĞ³²¨µçÑ¹º¬ÓĞÂÊ: ÎŞ\n");
+                    printf("æ€»è°æ³¢ç”µå‹å«æœ‰ç‡: æ— \n");
                 }
                 for ( i = 0; i < psAfn0cF58->ucN - 1;i++)
                 {
                     if( TRUE == psAfn0cF58->sUa.bfsXXX_X[i] )
                     {
-                        printf("%d´ÎĞ³²¨µçÑ¹º¬ÓĞÂÊ: %.1f\n",i+2,psAfn0cF58->sUa.fsXXX_X[i]);
+                        printf("%dæ¬¡è°æ³¢ç”µå‹å«æœ‰ç‡: %.1f\n",i+2,psAfn0cF58->sUa.fsXXX_X[i]);
                     }else
                     {
-                        printf("%d´ÎĞ³²¨µçÑ¹º¬ÓĞÂÊ: ÎŞ\n",i+2);
+                        printf("%dæ¬¡è°æ³¢ç”µå‹å«æœ‰ç‡: æ— \n",i+2);
                     }
                 }
                 printf("*****************************************************\n");
 
-                printf("\nBÏàĞ³²¨µçÑ¹:\n\n");
+                printf("\nBç›¸è°æ³¢ç”µå‹:\n\n");
                 if( TRUE == psAfn0cF58->sUb.sTotal.bfsXXX_X )
                 {
-                    printf("×ÜĞ³²¨µçÑ¹º¬ÓĞÂÊ: %.1f\n",psAfn0cF58->sUb.sTotal.fsXXX_X);
+                    printf("æ€»è°æ³¢ç”µå‹å«æœ‰ç‡: %.1f\n",psAfn0cF58->sUb.sTotal.fsXXX_X);
                 }else
                 {
-                    printf("×ÜĞ³²¨µçÑ¹º¬ÓĞÂÊ: ÎŞ\n");
+                    printf("æ€»è°æ³¢ç”µå‹å«æœ‰ç‡: æ— \n");
                 }
                 for ( i = 0; i < psAfn0cF58->ucN - 1;i++)
                 {
                     if( TRUE == psAfn0cF58->sUb.bfsXXX_X[i] )
                     {
-                        printf("%d´ÎĞ³²¨µçÑ¹º¬ÓĞÂÊ: %.2f\n",i+2,psAfn0cF58->sUb.fsXXX_X[i]);
+                        printf("%dæ¬¡è°æ³¢ç”µå‹å«æœ‰ç‡: %.2f\n",i+2,psAfn0cF58->sUb.fsXXX_X[i]);
                     }else
                     {
-                        printf("%d´ÎĞ³²¨µçÑ¹º¬ÓĞÂÊ: ÎŞ\n",i+2);
+                        printf("%dæ¬¡è°æ³¢ç”µå‹å«æœ‰ç‡: æ— \n",i+2);
                     }
                 }
                 printf("*****************************************************\n");
-                printf("\nCÏàĞ³²¨µçÑ¹:\n\n");
+                printf("\nCç›¸è°æ³¢ç”µå‹:\n\n");
                 if( TRUE == psAfn0cF58->sUc.sTotal.bfsXXX_X )
                 {
-                    printf("×ÜĞ³²¨µçÑ¹º¬ÓĞÂÊ: %.1f\n",psAfn0cF58->sUc.sTotal.fsXXX_X);
+                    printf("æ€»è°æ³¢ç”µå‹å«æœ‰ç‡: %.1f\n",psAfn0cF58->sUc.sTotal.fsXXX_X);
                 }else
                 {
-                    printf("×ÜĞ³²¨µçÑ¹º¬ÓĞÂÊ: ÎŞ\n");
+                    printf("æ€»è°æ³¢ç”µå‹å«æœ‰ç‡: æ— \n");
                 }                
                 for ( i = 0; i < psAfn0cF58->ucN - 1;i++)
                 {
                     if( TRUE == psAfn0cF58->sUc.bfsXXX_X[i] )
                     {
-                        printf("%d´ÎĞ³²¨µçÑ¹º¬ÓĞÂÊ: %.2f\n",i+2,psAfn0cF58->sUc.fsXXX_X[i]);
+                        printf("%dæ¬¡è°æ³¢ç”µå‹å«æœ‰ç‡: %.2f\n",i+2,psAfn0cF58->sUc.fsXXX_X[i]);
                     }else
                     {
-                        printf("%d´ÎĞ³²¨µçÑ¹º¬ÓĞÂÊ: ÎŞ\n",i+2);
+                        printf("%dæ¬¡è°æ³¢ç”µå‹å«æœ‰ç‡: æ— \n",i+2);
                     }
                 }
                 printf("*****************************************************\n");
-                printf("\nAÏàĞ³²¨µçÁ÷:\n\n");
+                printf("\nAç›¸è°æ³¢ç”µæµ:\n\n");
                 if( TRUE == psAfn0cF58->sIa.sTotal.bfsXXX_X )
                 {
-                    printf("×ÜĞ³²¨µçÑ¹º¬ÓĞÂÊ: %.1f\n",psAfn0cF58->sIa.sTotal.fsXXX_X);
+                    printf("æ€»è°æ³¢ç”µå‹å«æœ‰ç‡: %.1f\n",psAfn0cF58->sIa.sTotal.fsXXX_X);
                 }else
                 {
-                    printf("×ÜĞ³²¨µçÑ¹º¬ÓĞÂÊ: ÎŞ\n");
+                    printf("æ€»è°æ³¢ç”µå‹å«æœ‰ç‡: æ— \n");
                 }                
                 for ( i = 0; i < psAfn0cF58->ucN - 1;i++)
                 {
                     if( TRUE == psAfn0cF58->sIa.bfsXXX_X[i] )
                     {
-                        printf("%d´ÎĞ³²¨µçÁ÷º¬ÓĞÂÊ: %.2f\n",i+2,psAfn0cF58->sIa.fsXXX_X[i]);
+                        printf("%dæ¬¡è°æ³¢ç”µæµå«æœ‰ç‡: %.2f\n",i+2,psAfn0cF58->sIa.fsXXX_X[i]);
                     }else
                     {
-                        printf("%d´ÎĞ³²¨µçÁ÷º¬ÓĞÂÊ: ÎŞ\n",i+2);
+                        printf("%dæ¬¡è°æ³¢ç”µæµå«æœ‰ç‡: æ— \n",i+2);
                     }
                 }
                 printf("*****************************************************\n");
-                printf("\nBÏàĞ³²¨µçÁ÷:\n\n");
+                printf("\nBç›¸è°æ³¢ç”µæµ:\n\n");
                 if( TRUE == psAfn0cF58->sIb.sTotal.bfsXXX_X )
                 {
-                    printf("×ÜĞ³²¨µçÑ¹º¬ÓĞÂÊ: %.1f\n",psAfn0cF58->sIb.sTotal.fsXXX_X);
+                    printf("æ€»è°æ³¢ç”µå‹å«æœ‰ç‡: %.1f\n",psAfn0cF58->sIb.sTotal.fsXXX_X);
                 }else
                 {
-                    printf("×ÜĞ³²¨µçÑ¹º¬ÓĞÂÊ: ÎŞ\n");
+                    printf("æ€»è°æ³¢ç”µå‹å«æœ‰ç‡: æ— \n");
                 }                
                 for ( i = 0; i < psAfn0cF58->ucN - 1;i++)
                 {
                     if( TRUE == psAfn0cF58->sIb.bfsXXX_X[i] )
                     {
-                        printf("%d´ÎĞ³²¨µçÁ÷º¬ÓĞÂÊ: %.2f\n",i+2,psAfn0cF58->sIb.fsXXX_X[i]);
+                        printf("%dæ¬¡è°æ³¢ç”µæµå«æœ‰ç‡: %.2f\n",i+2,psAfn0cF58->sIb.fsXXX_X[i]);
                     }else
                     {
-                        printf("%d´ÎĞ³²¨µçÁ÷º¬ÓĞÂÊ: ÎŞ\n",i+2);
+                        printf("%dæ¬¡è°æ³¢ç”µæµå«æœ‰ç‡: æ— \n",i+2);
                     }
                 }
                 printf("*****************************************************\n");
            
-                printf("\nCÏàĞ³²¨µçÁ÷:\n\n");
+                printf("\nCç›¸è°æ³¢ç”µæµ:\n\n");
                 if( TRUE == psAfn0cF58->sIc.sTotal.bfsXXX_X )
                 {
-                    printf("×ÜĞ³²¨µçÑ¹º¬ÓĞÂÊ: %.1f\n",psAfn0cF58->sIc.sTotal.fsXXX_X);
+                    printf("æ€»è°æ³¢ç”µå‹å«æœ‰ç‡: %.1f\n",psAfn0cF58->sIc.sTotal.fsXXX_X);
                 }else
                 {
-                    printf("×ÜĞ³²¨µçÑ¹º¬ÓĞÂÊ: ÎŞ\n");
+                    printf("æ€»è°æ³¢ç”µå‹å«æœ‰ç‡: æ— \n");
                 }     
                 for ( i = 0; i < psAfn0cF58->ucN - 1;i++)
                 {
                     if( TRUE == psAfn0cF58->sIc.bfsXXX_X[i] )
                     {
-                        printf("%d´ÎĞ³²¨µçÁ÷º¬ÓĞÂÊ: %.2f\n",i+2,psAfn0cF58->sIc.fsXXX_X[i]);
+                        printf("%dæ¬¡è°æ³¢ç”µæµå«æœ‰ç‡: %.2f\n",i+2,psAfn0cF58->sIc.fsXXX_X[i]);
                     }else
                     {
-                        printf("%d´ÎĞ³²¨µçÁ÷º¬ÓĞÂÊ: ÎŞ\n",i+2);
+                        printf("%dæ¬¡è°æ³¢ç”µæµå«æœ‰ç‡: æ— \n",i+2);
                     }
                 }  
             }
@@ -12123,17 +12123,17 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
             {
                 sMtAfn0cf129 * psAfn0cF129 = (sMtAfn0cf129*)puAppData;
                 UINT8 i;
-                printf("³­±íÊ±¼ä %dÄê%dÔÂ%dÈÕ %dÊ±%d·Ö\n",psAfn0cF129->sTime.ucYY
+                printf("æŠ„è¡¨æ—¶é—´ %då¹´%dæœˆ%dæ—¥ %dæ—¶%dåˆ†\n",psAfn0cF129->sTime.ucYY
                                                          ,psAfn0cF129->sTime.ucMM
                                                          ,psAfn0cF129->sTime.ucDD
                                                          ,psAfn0cF129->sTime.ucHH
                                                          ,psAfn0cF129->sTime.ucmm);
 
-                printf("·ÑÂÊÊı: %d\n",psAfn0cF129->ucM);
-                printf("ÕıÏòÓĞ¹¦×ÜµçÄÜÊ¾Öµ: %.4f\n",psAfn0cF129->dTotalValue);
+                printf("è´¹ç‡æ•°: %d\n",psAfn0cF129->ucM);
+                printf("æ­£å‘æœ‰åŠŸæ€»ç”µèƒ½ç¤ºå€¼: %.4f\n",psAfn0cF129->dTotalValue);
                 for (i = 0; i < psAfn0cF129->ucM;i++)
                 {
-                    printf("·ÑÂÊ %d ÕıÏòÓĞ¹¦×ÜµçÄÜÊ¾Öµ: %.4f\n",i+1,psAfn0cF129->dValueItem[i]);
+                    printf("è´¹ç‡ %d æ­£å‘æœ‰åŠŸæ€»ç”µèƒ½ç¤ºå€¼: %.4f\n",i+1,psAfn0cF129->dValueItem[i]);
                 }
             }
             break;
@@ -12142,17 +12142,17 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
             {
                 sMtAfn0cf130 * psAfn0cF130 = (sMtAfn0cf130*)puAppData;
                 UINT8 i;
-                printf("³­±íÊ±¼ä %dÄê%dÔÂ%dÈÕ %dÊ±%d·Ö\n",psAfn0cF130->sTime.ucYY
+                printf("æŠ„è¡¨æ—¶é—´ %då¹´%dæœˆ%dæ—¥ %dæ—¶%dåˆ†\n",psAfn0cF130->sTime.ucYY
                                                          ,psAfn0cF130->sTime.ucMM
                                                          ,psAfn0cF130->sTime.ucDD
                                                          ,psAfn0cF130->sTime.ucHH
                                                          ,psAfn0cF130->sTime.ucmm);
 
-                printf("·ÑÂÊÊı: %d\n",psAfn0cF130->ucM);
-                printf("ÕıÏòÎŞ¹¦×ÜµçÄÜÊ¾Öµ: %.2f\n",psAfn0cF130->dTotalValue);
+                printf("è´¹ç‡æ•°: %d\n",psAfn0cF130->ucM);
+                printf("æ­£å‘æ— åŠŸæ€»ç”µèƒ½ç¤ºå€¼: %.2f\n",psAfn0cF130->dTotalValue);
                 for (i = 0; i < psAfn0cF130->ucM;i++)
                 {
-                    printf("·ÑÂÊ %d ÕıÏòÎŞ¹¦×ÜµçÄÜÊ¾Öµ: %.2f\n",i+1,psAfn0cF130->dValueItem[i]);
+                    printf("è´¹ç‡ %d æ­£å‘æ— åŠŸæ€»ç”µèƒ½ç¤ºå€¼: %.2f\n",i+1,psAfn0cF130->dValueItem[i]);
                 }
             }
             break;
@@ -12161,21 +12161,21 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
             {
                 sMtAfn0cf166 * psAfn0cF166 = (sMtAfn0cf166*)puAppData;
                
-                printf("³­±íÊ±¼ä %dÄê%dÔÂ%dÈÕ %dÊ±%d·Ö\n",psAfn0cF166->sTime.ucYY
+                printf("æŠ„è¡¨æ—¶é—´ %då¹´%dæœˆ%dæ—¥ %dæ—¶%dåˆ†\n",psAfn0cF166->sTime.ucYY
                                                          ,psAfn0cF166->sTime.ucMM
                                                          ,psAfn0cF166->sTime.ucDD
                                                          ,psAfn0cF166->sTime.ucHH
                                                          ,psAfn0cF166->sTime.ucmm);
 
-               printf("µçÄÜ±íÊ±ÖÓĞŞ¸Ä´ÎÊı %d\n",psAfn0cF166->sOne.usTimes);
-               printf("µçÄÜ±í×î½üÒ»´ÎÊ±ÖÓĞŞ¸ÄÊ±¼ä %dÄê%dÔÂ%dÈÕ %dÊ±%d·Ö\n",psAfn0cF166->sOne.sClock.ucYY
+               printf("ç”µèƒ½è¡¨æ—¶é’Ÿä¿®æ”¹æ¬¡æ•° %d\n",psAfn0cF166->sOne.usTimes);
+               printf("ç”µèƒ½è¡¨æœ€è¿‘ä¸€æ¬¡æ—¶é’Ÿä¿®æ”¹æ—¶é—´ %då¹´%dæœˆ%dæ—¥ %dæ—¶%dåˆ†\n",psAfn0cF166->sOne.sClock.ucYY
                                                                           ,psAfn0cF166->sOne.sClock.ucMM
                                                                           ,psAfn0cF166->sOne.sClock.ucDD
                                                                           ,psAfn0cF166->sOne.sClock.ucHH
                                                                           ,psAfn0cF166->sOne.sClock.ucmm);
 
-               printf("µçÄÜ±íÊ±¶Î²ÎÊıĞŞ¸Ä´ÎÊı %d\n",psAfn0cF166->sOther.usTimes);
-               printf("µçÄÜ±í×î½üÒ»´ÎÊ±¶Î²ÎÊıĞŞ¸ÄÊ±¼ä %dÄê%dÔÂ%dÈÕ %dÊ±%d·Ö\n",psAfn0cF166->sOther.sClock.ucYY
+               printf("ç”µèƒ½è¡¨æ—¶æ®µå‚æ•°ä¿®æ”¹æ¬¡æ•° %d\n",psAfn0cF166->sOther.usTimes);
+               printf("ç”µèƒ½è¡¨æœ€è¿‘ä¸€æ¬¡æ—¶æ®µå‚æ•°ä¿®æ”¹æ—¶é—´ %då¹´%dæœˆ%dæ—¥ %dæ—¶%dåˆ†\n",psAfn0cF166->sOther.sClock.ucYY
                                                                               ,psAfn0cF166->sOther.sClock.ucMM
                                                                               ,psAfn0cF166->sOther.sClock.ucDD
                                                                               ,psAfn0cF166->sOther.sClock.ucHH
@@ -12187,21 +12187,21 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
             {
                 sMtAfn0cf167 * psAfn0cF167 = (sMtAfn0cf167*)puAppData;
      
-                printf("³­±íÊ±¼ä %dÄê%dÔÂ%dÈÕ %dÊ±%d·Ö\n",psAfn0cF167->sTime.ucYY
+                printf("æŠ„è¡¨æ—¶é—´ %då¹´%dæœˆ%dæ—¥ %dæ—¶%dåˆ†\n",psAfn0cF167->sTime.ucYY
                                                          ,psAfn0cF167->sTime.ucMM
                                                          ,psAfn0cF167->sTime.ucDD
                                                          ,psAfn0cF167->sTime.ucHH
                                                          ,psAfn0cF167->sTime.ucmm);
 
-               printf("¹ºµç´ÎÊı %d\n",psAfn0cF167->usBuyTimes);
-               printf("Ê£Óà½ğ¶î %.04f\n",psAfn0cF167->dCashLeft);
-               printf("ÀÛ¼Æ¹ºµç½ğ¶î %.04f\n",psAfn0cF167->dCashTotal);
-               printf("Ê£ÓàµçÁ¿ %.02f\n",psAfn0cF167->dElecLeft);
-               printf("Í¸Ö§µçÁ¿ %.02f\n",psAfn0cF167->dElecOut);
-               printf("ÀÛ¼Æ¹ºµçÁ¿ %.02f\n",psAfn0cF167->dElecTotal);
-               printf("ÉŞÇ·ÃÅÏŞµçÁ¿ %.02f\n",psAfn0cF167->dElecLimit);
-               printf("±¨¾¯µçÁ¿ %.02f\n",psAfn0cF167->dElecWarn);
-               printf("¹ÊÕÏµçÁ¿ %.02f\n",psAfn0cF167->dElecFault);
+               printf("è´­ç”µæ¬¡æ•° %d\n",psAfn0cF167->usBuyTimes);
+               printf("å‰©ä½™é‡‘é¢ %.04f\n",psAfn0cF167->dCashLeft);
+               printf("ç´¯è®¡è´­ç”µé‡‘é¢ %.04f\n",psAfn0cF167->dCashTotal);
+               printf("å‰©ä½™ç”µé‡ %.02f\n",psAfn0cF167->dElecLeft);
+               printf("é€æ”¯ç”µé‡ %.02f\n",psAfn0cF167->dElecOut);
+               printf("ç´¯è®¡è´­ç”µé‡ %.02f\n",psAfn0cF167->dElecTotal);
+               printf("èµŠæ¬ é—¨é™ç”µé‡ %.02f\n",psAfn0cF167->dElecLimit);
+               printf("æŠ¥è­¦ç”µé‡ %.02f\n",psAfn0cF167->dElecWarn);
+               printf("æ•…éšœç”µé‡ %.02f\n",psAfn0cF167->dElecFault);
              }
             break;  
 
@@ -12209,7 +12209,7 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
             {
                 sMtAfn0dF97 *psU = (sMtAfn0dF97*)puAppData;
                 UINT8       i;
-                printf("³­±íÊ±¼ä %dÄê%dÔÂ%dÈÕ %dÊ±%d·Ö\n",psU->sTd_c.sT.ucYY
+                printf("æŠ„è¡¨æ—¶é—´ %då¹´%dæœˆ%dæ—¥ %dæ—¶%dåˆ†\n",psU->sTd_c.sT.ucYY
                                                          ,psU->sTd_c.sT.ucMM
                                                          ,psU->sTd_c.sT.ucDD
                                                          ,psU->sTd_c.sT.ucHH
@@ -12217,7 +12217,7 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
 
                 for (i = 0; i < psU->sTd_c.ucN;i++)
                 {
-                    printf("ÓĞ¹¦µçÄÜÁ¿%d  = %0.4f\n",i+1,psU->dEnergy[i]);
+                    printf("æœ‰åŠŸç”µèƒ½é‡%d  = %0.4f\n",i+1,psU->dEnergy[i]);
                 }
             }
             break;
@@ -12225,7 +12225,7 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
             case CMD_AFN_D_F101_CURVE_FRTH_HAVE:
             {
                 sMtAfn0dF101 *psU = (sMtAfn0dF101*)puAppData;
-                printf("³­±íÊ±¼ä %dÄê%dÔÂ%dÈÕ %dÊ±%d·Ö\n",psU->sTd_c.sT.ucYY
+                printf("æŠ„è¡¨æ—¶é—´ %då¹´%dæœˆ%dæ—¥ %dæ—¶%dåˆ†\n",psU->sTd_c.sT.ucYY
                                                          ,psU->sTd_c.sT.ucMM
                                                          ,psU->sTd_c.sT.ucDD
                                                          ,psU->sTd_c.sT.ucHH
@@ -12233,7 +12233,7 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
 
                 for (i = 0; i < psU->sTd_c.ucN;i++)
                 {
-                    printf("ÓĞ¹¦µçÄÜÁ¿%d  = %0.2f\n",i+1,psU->dValue[i]);
+                    printf("æœ‰åŠŸç”µèƒ½é‡%d  = %0.2f\n",i+1,psU->dValue[i]);
                 }
             }
             break;
@@ -12241,7 +12241,7 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
             case CMD_AFN_D_F105_CURVE_FACTOR_T:
             {
                 sMtAfn0dF105 *psU = (sMtAfn0dF105*)puAppData;
-                printf("³­±íÊ±¼ä %dÄê%dÔÂ%dÈÕ %dÊ±%d·Ö\n",psU->sTd_c.sT.ucYY
+                printf("æŠ„è¡¨æ—¶é—´ %då¹´%dæœˆ%dæ—¥ %dæ—¶%dåˆ†\n",psU->sTd_c.sT.ucYY
                                                          ,psU->sTd_c.sT.ucMM
                                                          ,psU->sTd_c.sT.ucDD
                                                          ,psU->sTd_c.sT.ucHH
@@ -12249,7 +12249,7 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
 
                 for (i = 0; i < psU->sTd_c.ucN;i++)
                 {
-                    printf("²âÊÔµã¹¦ÂÊÒòÊı%d  = %0.1f\n",i+1,psU->fFactor[i]);
+                    printf("æµ‹è¯•ç‚¹åŠŸç‡å› æ•°%d  = %0.1f\n",i+1,psU->fFactor[i]);
                 }
             }
             break;
@@ -12258,7 +12258,7 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
             {
                 sMtAfn0dF109 *psU = (sMtAfn0dF109*)puAppData;
                 UINT8       i;
-                printf("³­±íÊ±¼ä %dÄê%dÔÂ%dÈÕ %dÊ±%d·Ö\n",psU->sTd_c.sT.ucYY
+                printf("æŠ„è¡¨æ—¶é—´ %då¹´%dæœˆ%dæ—¥ %dæ—¶%dåˆ†\n",psU->sTd_c.sT.ucYY
                                                          ,psU->sTd_c.sT.ucMM
                                                          ,psU->sTd_c.sT.ucDD
                                                          ,psU->sTd_c.sT.ucHH
@@ -12266,9 +12266,9 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
 
                 for (i = 0; i < psU->sTd_c.ucN;i++)
                 {
-                    printf("ÏàÎ»½Ç%d A = %0.1f\n",i+1,psU->sPhase[i].fPhaseA);
-                    printf("ÏàÎ»½Ç%d B = %0.1f\n",i+1,psU->sPhase[i].fPhaseA);
-                    printf("ÏàÎ»½Ç%d C = %0.1f\n",i+1,psU->sPhase[i].fPhaseA);
+                    printf("ç›¸ä½è§’%d A = %0.1f\n",i+1,psU->sPhase[i].fPhaseA);
+                    printf("ç›¸ä½è§’%d B = %0.1f\n",i+1,psU->sPhase[i].fPhaseA);
+                    printf("ç›¸ä½è§’%d C = %0.1f\n",i+1,psU->sPhase[i].fPhaseA);
                 }
             }
             break;
@@ -12276,14 +12276,14 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
             case CMD_AFN_D_F113_ELEC_HARM_TIME_A:
             {
                 sMtAfn0dF113 *psU = (sMtAfn0dF113*)puAppData;
-                printf("³­±íÊ±¼ä %dÄê%dÔÂ%dÈÕ\n" ,psU->sTd_d.sT.ucYY
+                printf("æŠ„è¡¨æ—¶é—´ %då¹´%dæœˆ%dæ—¥\n" ,psU->sTd_d.sT.ucYY
                                              ,psU->sTd_d.sT.ucMM
                                              ,psU->sTd_d.sT.ucDD);
 
                 for (i = 0; i < MT_AFN0DF113_COUNT - 1;i++)
                 {
-                    printf("AÏà %d´ÎĞ³²¨µçÁ÷ÈÕ×î´óÖµ %.2f\n",i+2,psU->sHarmTime[i].fHarmI);
-                    printf("AÏà %d´ÎĞ³²¨µçÁ÷·¢ÉúÔÚ %dÔÂ%dÈÕ  %dÊ±%d·Ö\n",i+2
+                    printf("Aç›¸ %dæ¬¡è°æ³¢ç”µæµæ—¥æœ€å¤§å€¼ %.2f\n",i+2,psU->sHarmTime[i].fHarmI);
+                    printf("Aç›¸ %dæ¬¡è°æ³¢ç”µæµå‘ç”Ÿåœ¨ %dæœˆ%dæ—¥  %dæ—¶%dåˆ†\n",i+2
                                                                         ,psU->sHarmTime[i].sTime.ucMM
                                                                         ,psU->sHarmTime[i].sTime.ucDD
                                                                         ,psU->sHarmTime[i].sTime.ucHH
@@ -12291,8 +12291,8 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
                     
                 }
 
-                 printf("AÏà×Ü»û±äµçÁ÷ÈÕ×î´óÖµ %.2f\n",psU->sHarmTime[i].fHarmI);
-                 printf("AÏà×Ü»û±äµçÁ÷·¢ÉúÔÚ %dÔÂ%dÈÕ  %dÊ±%d·Ö\n" ,psU->sHarmTime[i].sTime.ucMM
+                 printf("Aç›¸æ€»ç•¸å˜ç”µæµæ—¥æœ€å¤§å€¼ %.2f\n",psU->sHarmTime[i].fHarmI);
+                 printf("Aç›¸æ€»ç•¸å˜ç”µæµå‘ç”Ÿåœ¨ %dæœˆ%dæ—¥  %dæ—¶%dåˆ†\n" ,psU->sHarmTime[i].sTime.ucMM
                                                                    ,psU->sHarmTime[i].sTime.ucDD
                                                                    ,psU->sHarmTime[i].sTime.ucHH
                                                                    ,psU->sHarmTime[i].sTime.ucmm);
@@ -12302,14 +12302,14 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
             case CMD_AFN_D_F116_VOLT_HARM_TIME_A:
             {
                 sMtAfn0dF116 *psU = (sMtAfn0dF116*)puAppData;
-                printf("³­±íÊ±¼ä %dÄê%dÔÂ%dÈÕ\n" ,psU->sTd_d.sT.ucYY
+                printf("æŠ„è¡¨æ—¶é—´ %då¹´%dæœˆ%dæ—¥\n" ,psU->sTd_d.sT.ucYY
                                              ,psU->sTd_d.sT.ucMM
                                              ,psU->sTd_d.sT.ucDD);
 
                 for (i = 0; i < MT_AFN0DF113_COUNT - 1;i++)
                 {
-                    printf("AÏà %d´ÎĞ³²¨µçÑ¹ÈÕ×î´óÖµ %.1f\n",i+2,psU->sHarmTime[i].fHarmU);
-                    printf("AÏà %d´ÎĞ³²¨µçÑ¹·¢ÉúÔÚ %dÔÂ%dÈÕ  %dÊ±%d·Ö\n",i+2
+                    printf("Aç›¸ %dæ¬¡è°æ³¢ç”µå‹æ—¥æœ€å¤§å€¼ %.1f\n",i+2,psU->sHarmTime[i].fHarmU);
+                    printf("Aç›¸ %dæ¬¡è°æ³¢ç”µå‹å‘ç”Ÿåœ¨ %dæœˆ%dæ—¥  %dæ—¶%dåˆ†\n",i+2
                                                                         ,psU->sHarmTime[i].sTime.ucMM
                                                                         ,psU->sHarmTime[i].sTime.ucDD
                                                                         ,psU->sHarmTime[i].sTime.ucHH
@@ -12317,8 +12317,8 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
                     
                 }
 
-                 printf("AÏà×Ü»û±äµçÑ¹ÈÕ×î´óÖµ %.1f\n",psU->sHarmTime[i].fHarmU);
-                 printf("AÏà×Ü»û±äµçÑ¹·¢ÉúÔÚ %dÔÂ%dÈÕ  %dÊ±%d·Ö\n" ,psU->sHarmTime[i].sTime.ucMM
+                 printf("Aç›¸æ€»ç•¸å˜ç”µå‹æ—¥æœ€å¤§å€¼ %.1f\n",psU->sHarmTime[i].fHarmU);
+                 printf("Aç›¸æ€»ç•¸å˜ç”µå‹å‘ç”Ÿåœ¨ %dæœˆ%dæ—¥  %dæ—¶%dåˆ†\n" ,psU->sHarmTime[i].sTime.ucMM
                                                                    ,psU->sHarmTime[i].sTime.ucDD
                                                                    ,psU->sHarmTime[i].sTime.ucHH
                                                                    ,psU->sHarmTime[i].sTime.ucmm);
@@ -12328,23 +12328,23 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
             case CMD_AFN_D_F121_HARM_OVER_A:
             {
                 sMtAfn0dF121 *psU = (sMtAfn0dF121*)puAppData;
-                printf("³­±íÊ±¼ä %dÄê%dÔÂ%dÈÕ\n" ,psU->sTd_d.sT.ucYY
+                printf("æŠ„è¡¨æ—¶é—´ %då¹´%dæœˆ%dæ—¥\n" ,psU->sTd_d.sT.ucYY
                                              ,psU->sTd_d.sT.ucMM
                                              ,psU->sTd_d.sT.ucDD);
                                              
 
-                printf("Ğ³²¨´ÎÊı %d\n",psU->ucN);
+                printf("è°æ³¢æ¬¡æ•° %d\n",psU->ucN);
                 printf("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n");        
-                printf("×Ü»û±äµçÑ¹º¬ÓĞÂÊÔ½ÏŞÈÕÀÛ¼ÆÊ±¼ä %d\n",psU->usUAbnormal);
+                printf("æ€»ç•¸å˜ç”µå‹å«æœ‰ç‡è¶Šé™æ—¥ç´¯è®¡æ—¶é—´ %d\n",psU->usUAbnormal);
                 for(i = 0; i < psU->ucN;i++)
                 {
-                    printf("%d ´ÎĞ³²¨µçÑ¹º¬ÓĞÂÊÔ½ÏŞÈÕÀÛ¼ÆÊ±¼ä %d\n",i+2,psU->usUHarm[i]);
+                    printf("%d æ¬¡è°æ³¢ç”µå‹å«æœ‰ç‡è¶Šé™æ—¥ç´¯è®¡æ—¶é—´ %d\n",i+2,psU->usUHarm[i]);
                 }
                 
-                printf("\n×Ü»û±äµçÁ÷º¬ÓĞÂÊÔ½ÏŞÈÕÀÛ¼ÆÊ±¼ä %d\n",psU->usIAbnormal);
+                printf("\næ€»ç•¸å˜ç”µæµå«æœ‰ç‡è¶Šé™æ—¥ç´¯è®¡æ—¶é—´ %d\n",psU->usIAbnormal);
                 for(i = 0; i < psU->ucN;i++)
                 {
-                    printf("%d ´ÎĞ³²¨µçÁ÷º¬ÓĞÂÊÔ½ÏŞÈÕÀÛ¼ÆÊ±¼ä %d\n",i+2,psU->usIHarm[i]);
+                    printf("%d æ¬¡è°æ³¢ç”µæµå«æœ‰ç‡è¶Šé™æ—¥ç´¯è®¡æ—¶é—´ %d\n",i+2,psU->usIHarm[i]);
                 }
             }
             break;
@@ -12352,19 +12352,19 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
             case CMD_AFN_D_F169_HAVE_FRTH_R:
             {
                 sMtAfn0dF169 *psU = (sMtAfn0dF169*)puAppData;
-                printf("¶³½áÊ±±ê %dÄê%dÔÂ\n" ,psU->sTd_m.sT.ucYY
+                printf("å†»ç»“æ—¶æ ‡ %då¹´%dæœˆ\n" ,psU->sTd_m.sT.ucYY
                                              ,psU->sTd_m.sT.ucMM);
                                              
 
-                printf("³­±íÊ±¼ä %dÄê%dÔÂ%dÈÕ %dÊ±%d·Ö\n",psU->sTime.ucYY
+                printf("æŠ„è¡¨æ—¶é—´ %då¹´%dæœˆ%dæ—¥ %dæ—¶%dåˆ†\n",psU->sTime.ucYY
                                                          ,psU->sTime.ucMM
                                                          ,psU->sTime.ucDD
                                                          ,psU->sTime.ucHH
                                                          ,psU->sTime.ucmm);
                                                          
-                printf("AÏàÕıÏòÓĞ¹¦µçÄÜÊ¾Öµ %.4f\n",psU->dValueA);
-                printf("BÏàÕıÏòÓĞ¹¦µçÄÜÊ¾Öµ %.4f\n",psU->dValueB);
-                printf("CÏàÕıÏòÓĞ¹¦µçÄÜÊ¾Öµ %.4f\n",psU->dValueC);
+                printf("Aç›¸æ­£å‘æœ‰åŠŸç”µèƒ½ç¤ºå€¼ %.4f\n",psU->dValueA);
+                printf("Bç›¸æ­£å‘æœ‰åŠŸç”µèƒ½ç¤ºå€¼ %.4f\n",psU->dValueB);
+                printf("Cç›¸æ­£å‘æœ‰åŠŸç”µèƒ½ç¤ºå€¼ %.4f\n",psU->dValueC);
                 
             }
             break;
@@ -12372,20 +12372,20 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
             case CMD_AFN_D_F170_NONE_FRTM_R:
             {
                 sMtAfn0dF170 *psU = (sMtAfn0dF170*)puAppData;
-                printf("¶³½áÊ±±ê %dÄê%dÔÂ%dÈÕ\n" ,psU->sTd_d.sT.ucYY
+                printf("å†»ç»“æ—¶æ ‡ %då¹´%dæœˆ%dæ—¥\n" ,psU->sTd_d.sT.ucYY
                                                  ,psU->sTd_d.sT.ucMM
                                                  ,psU->sTd_d.sT.ucDD);
                                              
 
-                printf("³­±íÊ±¼ä %dÄê%dÔÂ%dÈÕ %dÊ±%d·Ö\n",psU->sTime.ucYY
+                printf("æŠ„è¡¨æ—¶é—´ %då¹´%dæœˆ%dæ—¥ %dæ—¶%dåˆ†\n",psU->sTime.ucYY
                                                          ,psU->sTime.ucMM
                                                          ,psU->sTime.ucDD
                                                          ,psU->sTime.ucHH
                                                          ,psU->sTime.ucmm);
-                printf("·ÑÂÊÊı %d\n",psU->ucM);
+                printf("è´¹ç‡æ•° %d\n",psU->ucM);
                 for(i = 0; i < psU->ucM; i++)
                 {
-                    printf("·ÑÂÊ %d ÕıÏòÎŞ¹¦(×éºÏÎŞ¹¦)µçÄÜÊ¾Öµ %.2f\n",i+1,psU->dValue[i]);
+                    printf("è´¹ç‡ %d æ­£å‘æ— åŠŸ(ç»„åˆæ— åŠŸ)ç”µèƒ½ç¤ºå€¼ %.2f\n",i+1,psU->dValue[i]);
                 }
             }
             break;
@@ -12393,20 +12393,20 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
             case CMD_AFN_D_F171_HAVE_BACK_R:
             {
                 sMtAfn0dF171 *psU = (sMtAfn0dF171*)puAppData;
-                printf("¶³½áÊ±±ê %dÄê%dÔÂ%dÈÕ\n" ,psU->sTd_d.sT.ucYY
+                printf("å†»ç»“æ—¶æ ‡ %då¹´%dæœˆ%dæ—¥\n" ,psU->sTd_d.sT.ucYY
                                                  ,psU->sTd_d.sT.ucMM
                                                  ,psU->sTd_d.sT.ucDD);
                                              
 
-                printf("³­±íÊ±¼ä %dÄê%dÔÂ%dÈÕ %dÊ±%d·Ö\n",psU->sTime.ucYY
+                printf("æŠ„è¡¨æ—¶é—´ %då¹´%dæœˆ%dæ—¥ %dæ—¶%dåˆ†\n",psU->sTime.ucYY
                                                          ,psU->sTime.ucMM
                                                          ,psU->sTime.ucDD
                                                          ,psU->sTime.ucHH
                                                          ,psU->sTime.ucmm);
-                printf("·ÑÂÊÊı %d\n",psU->ucM);
+                printf("è´¹ç‡æ•° %d\n",psU->ucM);
                 for(i = 0; i < psU->ucM; i++)
                 {
-                    printf("·ÑÂÊ %d ÓĞ¹¦µçÄÜÊ¾Öµ %.4f\n",i+1,psU->dValue[i]);
+                    printf("è´¹ç‡ %d æœ‰åŠŸç”µèƒ½ç¤ºå€¼ %.4f\n",i+1,psU->dValue[i]);
                 }
             }
             break;
@@ -12414,19 +12414,19 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
             case CMD_AFN_D_F177_HAVE_FRTH_M:
             {
                 sMtAfn0dF177 *psU = (sMtAfn0dF177*)puAppData;
-                printf("¶³½áÊ±±ê %dÄê%dÔÂ\n" ,psU->sTd_m.sT.ucYY
+                printf("å†»ç»“æ—¶æ ‡ %då¹´%dæœˆ\n" ,psU->sTd_m.sT.ucYY
                                              ,psU->sTd_m.sT.ucMM);
                                              
 
-                printf("³­±íÊ±¼ä %dÄê%dÔÂ%dÈÕ %dÊ±%d·Ö\n",psU->sTime.ucYY
+                printf("æŠ„è¡¨æ—¶é—´ %då¹´%dæœˆ%dæ—¥ %dæ—¶%dåˆ†\n",psU->sTime.ucYY
                                                          ,psU->sTime.ucMM
                                                          ,psU->sTime.ucDD
                                                          ,psU->sTime.ucHH
                                                          ,psU->sTime.ucmm);
-                printf("·ÑÂÊÊı %d\n",psU->ucM);
+                printf("è´¹ç‡æ•° %d\n",psU->ucM);
                 for(i = 0; i < psU->ucM; i++)
                 {
-                    printf("·ÑÂÊ %d ÓĞ¹¦µçÄÜÊ¾Öµ %.4f\n",i+1,psU->dValue[i]);
+                    printf("è´¹ç‡ %d æœ‰åŠŸç”µèƒ½ç¤ºå€¼ %.4f\n",i+1,psU->dValue[i]);
                 }
             }
             break;
@@ -12435,19 +12435,19 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
             {
                 sMtAfn0dF178 *psU = (sMtAfn0dF178*)puAppData;
                 UINT8       i;
-                printf("¶³½áÊ±±ê %dÄê%dÔÂ\n" ,psU->sTd_m.sT.ucYY
+                printf("å†»ç»“æ—¶æ ‡ %då¹´%dæœˆ\n" ,psU->sTd_m.sT.ucYY
                                              ,psU->sTd_m.sT.ucMM);
                                              
 
-                printf("³­±íÊ±¼ä %dÄê%dÔÂ%dÈÕ %dÊ±%d·Ö\n",psU->sTime.ucYY
+                printf("æŠ„è¡¨æ—¶é—´ %då¹´%dæœˆ%dæ—¥ %dæ—¶%dåˆ†\n",psU->sTime.ucYY
                                                          ,psU->sTime.ucMM
                                                          ,psU->sTime.ucDD
                                                          ,psU->sTime.ucHH
                                                          ,psU->sTime.ucmm);
-                printf("·ÑÂÊÊı %d\n",psU->ucM);
+                printf("è´¹ç‡æ•° %d\n",psU->ucM);
                 for(i = 0; i < psU->ucM; i++)
                 {
-                    printf("·ÑÂÊ %d ÎŞ¹¦(×éºÏÎŞ¹¦1)µçÄÜÊ¾Öµ %.2f\n",i+1,psU->dValue[i]);
+                    printf("è´¹ç‡ %d æ— åŠŸ(ç»„åˆæ— åŠŸ1)ç”µèƒ½ç¤ºå€¼ %.2f\n",i+1,psU->dValue[i]);
                 }
             }
             break;
@@ -12455,21 +12455,21 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
             case CMD_AFN_D_F185_HAVE_DMND_FRTH_D:
             {
                 sMtAfn0dF185 *psU = (sMtAfn0dF185*)puAppData;
-                printf("¶³½áÊ±±ê %dÄê%dÔÂ%dÈÕ\n" ,psU->sTd_d.sT.ucYY
+                printf("å†»ç»“æ—¶æ ‡ %då¹´%dæœˆ%dæ—¥\n" ,psU->sTd_d.sT.ucYY
                                                  ,psU->sTd_d.sT.ucMM
                                                  ,psU->sTd_d.sT.ucDD);
                                              
 
-                printf("³­±íÊ±¼ä %dÄê%dÔÂ%dÈÕ %dÊ±%d·Ö\n",psU->sTime.ucYY
+                printf("æŠ„è¡¨æ—¶é—´ %då¹´%dæœˆ%dæ—¥ %dæ—¶%dåˆ†\n",psU->sTime.ucYY
                                                          ,psU->sTime.ucMM
                                                          ,psU->sTime.ucDD
                                                          ,psU->sTime.ucHH
                                                          ,psU->sTime.ucmm);
-                printf("·ÑÂÊÊı %d\n",psU->ucM);
+                printf("è´¹ç‡æ•° %d\n",psU->ucM);
                 for(i = 0; i < psU->ucM + 1; i++)
                 {
-                    printf("×î´óĞèÁ¿ %.4f\n",psU->sMaxClock[i].fMax);
-                    printf("×î´óĞèÁ¿·¢ÉúÊ±¼ä %dÔÂ%dÈÕ%dÊ±%d·Ö\n",psU->sMaxClock[i].sClock.ucMM
+                    printf("æœ€å¤§éœ€é‡ %.4f\n",psU->sMaxClock[i].fMax);
+                    printf("æœ€å¤§éœ€é‡å‘ç”Ÿæ—¶é—´ %dæœˆ%dæ—¥%dæ—¶%dåˆ†\n",psU->sMaxClock[i].sClock.ucMM
                                                                 ,psU->sMaxClock[i].sClock.ucDD
                                                                 ,psU->sMaxClock[i].sClock.ucHH
                                                                 ,psU->sMaxClock[i].sClock.ucmm);
@@ -12481,24 +12481,24 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
             case CMD_AFN_D_F215_METR_BUY_USR:
             {
                 sMtAfn0dF215 *psU = (sMtAfn0dF215*)puAppData;
-                printf("¶³½áÊ±±ê %dÄê%dÔÂ\n" ,psU->sTd_m.sT.ucYY
+                printf("å†»ç»“æ—¶æ ‡ %då¹´%dæœˆ\n" ,psU->sTd_m.sT.ucYY
                                              ,psU->sTd_m.sT.ucMM);
                                              
 
-                printf("³­±íÊ±¼ä %dÄê%dÔÂ%dÈÕ %dÊ±%d·Ö\n",psU->sTime.ucYY
+                printf("æŠ„è¡¨æ—¶é—´ %då¹´%dæœˆ%dæ—¥ %dæ—¶%dåˆ†\n",psU->sTime.ucYY
                                                          ,psU->sTime.ucMM
                                                          ,psU->sTime.ucDD
                                                          ,psU->sTime.ucHH
                                                          ,psU->sTime.ucmm);
-                printf("¹ºµç´ÎÊı %d\n",psU->usBuyTimes);
-                printf("Ê£Óà½ğ¶î %0.4f\n",psU->dCashLeft);
-                printf("ÀÛ¼Æ¹ºµç½ğ¶î %0.4f\n",psU->dCashTotal);
-                printf("Ê£ÓàµçÁ¿ %0.2f\n",psU->dKilowattLeft);
-                printf("Í¸Ö§µçÁ¿ %0.2f\n",psU->dKilowattOver);
-                printf("ÀÛ¼ÆµçÁ¿ %0.2f\n",psU->dKilowattTotal);
-                printf("ÉŞÇ·ÃÅµçÁ¿ %0.2f\n",psU->dKilowattDebit);
-                printf("¸æ¾¯µçÁ¿ %0.2f\n",psU->dKilowattWarn);
-                printf("¹ÊÕÏµçÁ¿ %0.2f\n",psU->dKilowattFault);
+                printf("è´­ç”µæ¬¡æ•° %d\n",psU->usBuyTimes);
+                printf("å‰©ä½™é‡‘é¢ %0.4f\n",psU->dCashLeft);
+                printf("ç´¯è®¡è´­ç”µé‡‘é¢ %0.4f\n",psU->dCashTotal);
+                printf("å‰©ä½™ç”µé‡ %0.2f\n",psU->dKilowattLeft);
+                printf("é€æ”¯ç”µé‡ %0.2f\n",psU->dKilowattOver);
+                printf("ç´¯è®¡ç”µé‡ %0.2f\n",psU->dKilowattTotal);
+                printf("èµŠæ¬ é—¨ç”µé‡ %0.2f\n",psU->dKilowattDebit);
+                printf("å‘Šè­¦ç”µé‡ %0.2f\n",psU->dKilowattWarn);
+                printf("æ•…éšœç”µé‡ %0.2f\n",psU->dKilowattFault);
                 
             }
             break;
@@ -12506,28 +12506,28 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
             case CMD_AFN_D_F216_METR_BALANCE:
             {
                 sMtAfn0dF216 *psU = (sMtAfn0dF216*)puAppData;
-                printf("¶³½áÊ±±ê %dÄê%dÔÂ\n" ,psU->sTd_m.sT.ucYY
+                printf("å†»ç»“æ—¶æ ‡ %då¹´%dæœˆ\n" ,psU->sTd_m.sT.ucYY
                                              ,psU->sTd_m.sT.ucMM);
                                              
 
-                printf("³­±íÊ±¼ä %dÄê%dÔÂ%dÈÕ %dÊ±%d·Ö\n",psU->sTime.ucYY
+                printf("æŠ„è¡¨æ—¶é—´ %då¹´%dæœˆ%dæ—¥ %dæ—¶%dåˆ†\n",psU->sTime.ucYY
                                                          ,psU->sTime.ucMM
                                                          ,psU->sTime.ucDD
                                                          ,psU->sTime.ucHH
                                                          ,psU->sTime.ucmm);
-                printf("ÒÑ½áÓĞ¹¦¹¦ÂÊ×ÜµçÄÜ %0.4f\n",psU->dTotalBalance);
+                printf("å·²ç»“æœ‰åŠŸåŠŸç‡æ€»ç”µèƒ½ %0.4f\n",psU->dTotalBalance);
                 for(i = 0;i < psU->ucM;i++)
                 {
-                    printf("ÒÑ½á·ÑÂÊ %dÓĞ¹¦¹¦ÂÊ×ÜµçÄÜ %0.4f\n",i+1,psU->dBalance[i]); 
+                    printf("å·²ç»“è´¹ç‡ %dæœ‰åŠŸåŠŸç‡æ€»ç”µèƒ½ %0.4f\n",i+1,psU->dBalance[i]); 
                 }
                 
-                printf("\nÎ´½áÓĞ¹¦¹¦ÂÊ×ÜµçÄÜ %0.4f\n",psU->dTotalNoBalance);
+                printf("\næœªç»“æœ‰åŠŸåŠŸç‡æ€»ç”µèƒ½ %0.4f\n",psU->dTotalNoBalance);
                 for(i = 0;i < psU->ucM;i++)
                 {
-                    printf("Î´½á·ÑÂÊ %dÓĞ¹¦¹¦ÂÊ×ÜµçÄÜ %0.4f\n",i+1,psU->dNoBalance[i]); 
+                    printf("æœªç»“è´¹ç‡ %dæœ‰åŠŸåŠŸç‡æ€»ç”µèƒ½ %0.4f\n",i+1,psU->dNoBalance[i]); 
                 }
                 
-                printf("\n¹ÊÕÏµçÁ¿ %0.4f\n",psU->dFault);
+                printf("\næ•…éšœç”µé‡ %0.4f\n",psU->dFault);
             }
             break;
 
@@ -12571,28 +12571,28 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
                 switch(psUser->eType)
                 {
                     case MT_NELEC_TEMP:
-                        pStr = "MT_NELEC_TEMP ÎÂ¶È";
+                        pStr = "MT_NELEC_TEMP æ¸©åº¦";
                         break;
                     case MT_NELEC_FLOW:
-                        pStr = "MT_NELEC_FLOW Á÷Á¿";
+                        pStr = "MT_NELEC_FLOW æµé‡";
                         break;
                     case MT_NELEC_FLOW_V:
-                        pStr = "MT_NELEC_FLOW_V Á÷ËÙ";
+                        pStr = "MT_NELEC_FLOW_V æµé€Ÿ";
                         break;
                     case MT_NELEC_PRESS:
-                        pStr = "MT_NELEC_PRESS Ñ¹Á¦";
+                        pStr = "MT_NELEC_PRESS å‹åŠ›";
                         break;
                     case MT_NELEC_HUMID:
-                        pStr = "MT_NELEC_HUMID Êª¶È";
+                        pStr = "MT_NELEC_HUMID æ¹¿åº¦";
                         break;
                     case MT_NELEC_ILLUM:
-                        pStr = "MT_NELEC_ILLUM ÕÕ¶È";
+                        pStr = "MT_NELEC_ILLUM ç…§åº¦";
                         break;
                     case MT_NELEC_ROTATE:
-                        pStr = "MT_NELEC_ROTATE ×ªËÙ";
+                        pStr = "MT_NELEC_ROTATE è½¬é€Ÿ";
                         break;
                     default:
-                        pStr = "Î´ÖªÀàĞÍ";
+                        pStr = "æœªçŸ¥ç±»å‹";
                         break;
                 }
     
@@ -12608,28 +12608,28 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
                     switch(psUser->eType)
                     {
                         case MT_NELEC_TEMP:
-                            pStr = "MT_NELEC_TEMP ÎÂ¶È";
+                            pStr = "MT_NELEC_TEMP æ¸©åº¦";
                             break;
                         case MT_NELEC_FLOW:
-                            pStr = "MT_NELEC_FLOW Á÷Á¿";
+                            pStr = "MT_NELEC_FLOW æµé‡";
                             break;
                         case MT_NELEC_FLOW_V:
-                            pStr = "MT_NELEC_FLOW_V Á÷ËÙ";
+                            pStr = "MT_NELEC_FLOW_V æµé€Ÿ";
                             break;
                         case MT_NELEC_PRESS:
-                            pStr = "MT_NELEC_PRESS Ñ¹Á¦";
+                            pStr = "MT_NELEC_PRESS å‹åŠ›";
                             break;
                         case MT_NELEC_HUMID:
-                            pStr = "MT_NELEC_HUMID Êª¶È";
+                            pStr = "MT_NELEC_HUMID æ¹¿åº¦";
                             break;
                         case MT_NELEC_ILLUM:
-                            pStr = "MT_NELEC_ILLUM ÕÕ¶È";
+                            pStr = "MT_NELEC_ILLUM ç…§åº¦";
                             break;
                         case MT_NELEC_ROTATE:
-                            pStr = "MT_NELEC_ROTATE ×ªËÙ";
+                            pStr = "MT_NELEC_ROTATE è½¬é€Ÿ";
                             break;
                         default:
-                            pStr = "Î´ÖªÀàĞÍ";
+                            pStr = "æœªçŸ¥ç±»å‹";
                             break;
                     }
     
@@ -12646,7 +12646,7 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
 
             default:
             {
-                show_error("Ã»ÓĞÊı¾İÓò,»òÎ´ÊµÏÖÏÔÊ¾\n");
+                show_error("æ²¡æœ‰æ•°æ®åŸŸ,æˆ–æœªå®ç°æ˜¾ç¤º\n");
             }
 
             break;
@@ -12658,18 +12658,18 @@ void show_app_sub_data(eMtDir eDir,eMtCmd emtCmd, uMtApp *puAppData)
     }
 }
 /*****************************************************************************
- º¯ Êı Ãû  : show_app_data
- ¹¦ÄÜÃèÊö  : ÏÔÊ¾Ó¦ÓÃ²ãÊı¾İ
- ÊäÈë²ÎÊı  : smtSub *pSub  
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : show_app_data
+ åŠŸèƒ½æè¿°  : æ˜¾ç¤ºåº”ç”¨å±‚æ•°æ®
+ è¾“å…¥å‚æ•°  : smtSub *pSub  
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê4ÔÂ27ÈÕ ĞÇÆÚÁù
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´4æœˆ27æ—¥ æ˜ŸæœŸå…­
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 void show_app_data_adp(eMtDir eDir, sCmSub *pSub)
@@ -12690,11 +12690,11 @@ void show_app_data_adp(eMtDir eDir, sCmSub *pSub)
    emtCmd =  eGetMtCmd(pSub->eCmd);
    // sub cmd
    printf("sCmd  = %04X\t", emtCmd);
-   show_sub_name("×ÓÃüÁîID\t");
+   show_sub_name("å­å‘½ä»¤ID\t");
    eRet = eMtGetCmdInfor(emtCmd, eDir, &sCmdInfor);
    if(eRet != MT_OK)
    {
-        show_error("´íÎóµÄÃüÁîÀàĞÍ!");
+        show_error("é”™è¯¯çš„å‘½ä»¤ç±»å‹!");
         return;
    }
    else
@@ -12705,52 +12705,52 @@ void show_app_data_adp(eMtDir eDir, sCmSub *pSub)
 
    //pn 
    printf("usPN  = %d\t", pSub->usPN);
-   show_sub_name("ĞÅÏ¢µãPN\t");
+   show_sub_name("ä¿¡æ¯ç‚¹PN\t");
    switch(sCmdInfor.ePn)
    {
        case MT_PN_P0:
-        show_item_value("PNÎŞ¹Ø");
+        show_item_value("PNæ— å…³");
         break;
        case MT_PN_TM:
-        show_item_value("ÖÕ¶ËºÅ");
+        show_item_value("ç»ˆç«¯å·");
         break;
        case MT_PN_MP:
-        show_item_value("²âÁ¿µãºÅ");
+        show_item_value("æµ‹é‡ç‚¹å·");
         break;
        case MT_PN_GT:
-        show_item_value("×Ü¼Ó×éºÅ");
+        show_item_value("æ€»åŠ ç»„å·");
         break;
        case MT_PN_CT:
-        show_item_value("¿ØÖÆÂÖ´Î");
+        show_item_value("æ§åˆ¶è½®æ¬¡");
         break;
        case MT_PN_TK:
-        show_item_value("ÈÎÎñºÅ");
+        show_item_value("ä»»åŠ¡å·");
         break;
        case MT_PN_DP:
-        show_item_value("Ö±Á÷Ä£ÄâÁ¿¶Ë¿ÚºÅ");
+        show_item_value("ç›´æµæ¨¡æ‹Ÿé‡ç«¯å£å·");
         break;
         
        default:
-        show_error("Î´ÖªPN ÀàĞÍ");
+        show_error("æœªçŸ¥PN ç±»å‹");
         break;
    }
 
     if( pSub->bApp != TRUE)
     {
-        show_sub_name("\nÎŞÊı¾İµ¥Ôª\t");
+        show_sub_name("\næ— æ•°æ®å•å…ƒ\t");
     }
   
     
-    // Ó¦ÓÃ²ãÊı¾İ
+    // åº”ç”¨å±‚æ•°æ®
     if(sCmdInfor.pFunc == NULL)
     {
-       show_item_value("ÎŞÊı¾İµ¥Ôª\n");
+       show_item_value("æ— æ•°æ®å•å…ƒ\n");
        return;
 
     }
 
-    show_main_name("\nÊı¾İµ¥Ôª:\n");
-    // ÓĞÓ¦ÓÃ²ãÊı¾İ
+    show_main_name("\næ•°æ®å•å…ƒ:\n");
+    // æœ‰åº”ç”¨å±‚æ•°æ®
 
     char buf[1024] = {0};
     uMtApp *pmtAppData = (uMtApp *)buf;
@@ -12763,18 +12763,18 @@ void show_app_data_adp(eMtDir eDir, sCmSub *pSub)
 
 
 /*****************************************************************************
- º¯ Êı Ãû  : show_app_data
- ¹¦ÄÜÃèÊö  : ÏÔÊ¾Ó¦ÓÃ²ãÊı¾İ
- ÊäÈë²ÎÊı  : smtSub *pSub  
- Êä³ö²ÎÊı  : ÎŞ
- ·µ »Ø Öµ  : 
- µ÷ÓÃº¯Êı  : 
- ±»µ÷º¯Êı  : 
+ å‡½ æ•° å  : show_app_data
+ åŠŸèƒ½æè¿°  : æ˜¾ç¤ºåº”ç”¨å±‚æ•°æ®
+ è¾“å…¥å‚æ•°  : smtSub *pSub  
+ è¾“å‡ºå‚æ•°  : æ— 
+ è¿” å› å€¼  : 
+ è°ƒç”¨å‡½æ•°  : 
+ è¢«è°ƒå‡½æ•°  : 
  
- ĞŞ¸ÄÀúÊ·      :
-  1.ÈÕ    ÆÚ   : 2013Äê4ÔÂ27ÈÕ ĞÇÆÚÁù
-    ×÷    Õß   : liming
-    ĞŞ¸ÄÄÚÈİ   : ĞÂÉú³Éº¯Êı
+ ä¿®æ”¹å†å²      :
+  1.æ—¥    æœŸ   : 2013å¹´4æœˆ27æ—¥ æ˜ŸæœŸå…­
+    ä½œ    è€…   : liming
+    ä¿®æ”¹å†…å®¹   : æ–°ç”Ÿæˆå‡½æ•°
 
 *****************************************************************************/
 void show_app_data(eMtDir eDir, sMtData *pSub)
@@ -12793,11 +12793,11 @@ void show_app_data(eMtDir eDir, sMtData *pSub)
    
    // sub cmd
    printf("sCmd  = %04X\t", pSub->eCmd);
-   show_sub_name("×ÓÃüÁîID\t");
+   show_sub_name("å­å‘½ä»¤ID\t");
    eRet = eMtGetCmdInfor(pSub->eCmd, eDir, &sCmdInfor);
    if(eRet != MT_OK)
    {
-        show_error("´íÎóµÄÃüÁîÀàĞÍ!");
+        show_error("é”™è¯¯çš„å‘½ä»¤ç±»å‹!");
         return;
    }
    else
@@ -12808,55 +12808,55 @@ void show_app_data(eMtDir eDir, sMtData *pSub)
 
    //pn 
    printf("usPN  = %d\t", pSub->usPN);
-   show_sub_name("ĞÅÏ¢µãPN\t");
+   show_sub_name("ä¿¡æ¯ç‚¹PN\t");
    switch(sCmdInfor.ePn)
    {
        case MT_PN_P0:
-        show_item_value("PNÎŞ¹Ø");
+        show_item_value("PNæ— å…³");
         break;
        case MT_PN_TM:
-        show_item_value("ÖÕ¶ËºÅ");
+        show_item_value("ç»ˆç«¯å·");
         break;
        case MT_PN_MP:
-        show_item_value("²âÁ¿µãºÅ");
+        show_item_value("æµ‹é‡ç‚¹å·");
         break;
        case MT_PN_GT:
-        show_item_value("×Ü¼Ó×éºÅ");
+        show_item_value("æ€»åŠ ç»„å·");
         break;
        case MT_PN_CT:
-        show_item_value("¿ØÖÆÂÖ´Î");
+        show_item_value("æ§åˆ¶è½®æ¬¡");
         break;
        case MT_PN_TK:
-        show_item_value("ÈÎÎñºÅ");
+        show_item_value("ä»»åŠ¡å·");
         break;
        case MT_PN_DP:
-        show_item_value("Ö±Á÷Ä£ÄâÁ¿¶Ë¿ÚºÅ");
+        show_item_value("ç›´æµæ¨¡æ‹Ÿé‡ç«¯å£å·");
         break;
         
        default:
-        show_error("Î´ÖªPN ÀàĞÍ");
+        show_error("æœªçŸ¥PN ç±»å‹");
         break;
    }
    
 
-      // Ó¦ÓÃ²ãÊı¾İ
+      // åº”ç”¨å±‚æ•°æ®
     if(sCmdInfor.pFunc == NULL)
     {
-       show_item_value("ÎŞÊı¾İµ¥Ôª\n");
+       show_item_value("æ— æ•°æ®å•å…ƒ\n");
        return;
 
     }
     
-    // Ó¦ÓÃ²ãÊı¾İ
+    // åº”ç”¨å±‚æ•°æ®
     if(sCmdInfor.pFunc == NULL)
     {
-       show_item_value("ÎŞÊı¾İµ¥Ôª\n");
+       show_item_value("æ— æ•°æ®å•å…ƒ\n");
        return;
 
     }
 
-    show_main_name("\nÊı¾İµ¥Ôª:\n");
-    // ÓĞÓ¦ÓÃ²ãÊı¾İ
+    show_main_name("\næ•°æ®å•å…ƒ:\n");
+    // æœ‰åº”ç”¨å±‚æ•°æ®
     show_app_sub_data(eDir, pSub->eCmd, &(pSub->uApp));
     
 }
@@ -12878,7 +12878,7 @@ void show_pack_adp(sCmPacket * psUnpack)
     int nSubNum = 0;
     eMtDir eDir = MT_DIR_M2S;
 
-    // Êä³öµØÖ·ĞÅÏ¢
+    // è¾“å‡ºåœ°å€ä¿¡æ¯
     show_main_name("address:\n");
     memcpy(str_reg,psUnpack->sAddress.acRegionCode, 4);
     /*
@@ -12889,25 +12889,25 @@ void show_pack_adp(sCmPacket * psUnpack)
             psUnpack->sAddress.acRegionCode[3]);
             */
     printf("reg  = %s\t", str_reg);
-    show_sub_name("ÇøÓòÂë\n");
+    show_sub_name("åŒºåŸŸç \n");
 
     printf("mst  = %d\t",    psUnpack->sAddress.ucMAddress);
-    show_sub_name("Ö÷Õ¾µØÖ·\n");
+    show_sub_name("ä¸»ç«™åœ°å€\n");
     printf("tml  = %d\t",    psUnpack->sAddress.usTAddress);
-    show_sub_name("ÖÕ¶ËµØÖ·\n");
+    show_sub_name("ç»ˆç«¯åœ°å€\n");
     printf("team = %s\t",    psUnpack->sAddress.bTeamAddr == TRUE ? "true" : "flase");
-    show_sub_name("ÊÇ·ñÎª×éµØÖ·\t");
-    (psUnpack->sAddress.bTeamAddr == TRUE ) ? show_item_value("ÊÇ") : show_item_value("·ñ");
+    show_sub_name("æ˜¯å¦ä¸ºç»„åœ°å€\t");
+    (psUnpack->sAddress.bTeamAddr == TRUE ) ? show_item_value("æ˜¯") : show_item_value("å¦");
 
    
     
 
     
-    // Ó¦ÓÃ²ãÊı¾İ
-    show_main_name("\nÓ¦ÓÃ²ãÊı¾İ:\n");
+    // åº”ç”¨å±‚æ•°æ®
+    show_main_name("\nåº”ç”¨å±‚æ•°æ®:\n");
     nSubNum = psUnpack->ucCmdNum;
     printf("subNum = %d\t", nSubNum);
-    show_sub_name("×ÓÃüÁî¸öÊı\n");
+    show_sub_name("å­å‘½ä»¤ä¸ªæ•°\n");
 
     for(i = 0; i < nSubNum; i++)
     {
@@ -12940,7 +12940,7 @@ void show_pack(smtPack *psUnpack)
     int nSubNum = 0;
     eMtDir eDir;
 
-    // Êä³öµØÖ·ĞÅÏ¢
+    // è¾“å‡ºåœ°å€ä¿¡æ¯
     show_main_name("address:\n");
     memcpy(str_reg,psUnpack->sAddress.acRegionCode, 4);
     /*
@@ -12951,102 +12951,102 @@ void show_pack(smtPack *psUnpack)
             psUnpack->sAddress.acRegionCode[3]);
             */
     printf("reg  = %s\t", str_reg);
-    show_sub_name("ÇøÓòÂë\n");
+    show_sub_name("åŒºåŸŸç \n");
 
     printf("mst  = %d\t",    psUnpack->sAddress.ucMAddress);
-    show_sub_name("Ö÷Õ¾µØÖ·\n");
+    show_sub_name("ä¸»ç«™åœ°å€\n");
     printf("tml  = %d\t",    psUnpack->sAddress.usTAddress);
-    show_sub_name("ÖÕ¶ËµØÖ·\n");
+    show_sub_name("ç»ˆç«¯åœ°å€\n");
     printf("team = %s\t",    psUnpack->sAddress.bTeamAddr == TRUE ? "true" : "flase");
-    show_sub_name("ÊÇ·ñÎª×éµØÖ·\t");
-    (psUnpack->sAddress.bTeamAddr == TRUE ) ? show_item_value("ÊÇ") : show_item_value("·ñ");
+    show_sub_name("æ˜¯å¦ä¸ºç»„åœ°å€\t");
+    (psUnpack->sAddress.bTeamAddr == TRUE ) ? show_item_value("æ˜¯") : show_item_value("å¦");
 
-    // Ö÷¹¦ÄÜÂë
+    // ä¸»åŠŸèƒ½ç 
     show_main_name("\nmain_code:\n");
     fm_print("AFN  = ",0);
     printf("%02X\t", psUnpack->eAFN);
     switch(psUnpack->eAFN)
     {
         case AFN_00_CONF:
-            str = "È·ÈÏ·ñÈÏ";
+            str = "ç¡®è®¤å¦è®¤";
             break;
         case AFN_01_RSET:
-            str = "¸´Î»";
+            str = "å¤ä½";
             break;
         case AFN_02_LINK:
-            str = "½Ó¿Ú¼ì²â";
+            str = "æ¥å£æ£€æµ‹";
             break;
         case AFN_03_RELY:
-            str = "ÖĞ¼ÌÕ¾ÃüÁî";
+            str = "ä¸­ç»§ç«™å‘½ä»¤";
             break;
         case AFN_04_SETP:
-            str = "ÉèÖÃ²ÎÊı";
+            str = "è®¾ç½®å‚æ•°";
             break;
         case AFN_05_CTRL:
-            str = "¿ØÖÆÃüÁî";
+            str = "æ§åˆ¶å‘½ä»¤";
             break;
          case AFN_06_AUTH:
-            str = "Éí·İÈÏÖ¤";
+            str = "èº«ä»½è®¤è¯";
             break;
          case AFN_08_CASC:
-            str = "ÇëÇó±»¼¶ÁªÖÕ¶ËÖ÷¶¯ÉÏ±¨";
+            str = "è¯·æ±‚è¢«çº§è”ç»ˆç«¯ä¸»åŠ¨ä¸ŠæŠ¥";
             break;
         case AFN_09_CFIG:
-            str = "ÇëÇóÖÕ¶ËÅäÖÃ";
+            str = "è¯·æ±‚ç»ˆç«¯é…ç½®";
             break;
         case AFN_0A_GETP:
-            str = "²éÑ¯²ÎÊı";
+            str = "æŸ¥è¯¢å‚æ•°";
             break;
          case AFN_0B_ASKT:
-            str = "ÇëÇóÈÎÎñÊı¾İ";
+            str = "è¯·æ±‚ä»»åŠ¡æ•°æ®";
             break;
          case AFN_0C_ASK1:
-            str = "ÇëÇó1ÀàÊı¾İ ÊµÊ±Êı¾İ";
+            str = "è¯·æ±‚1ç±»æ•°æ® å®æ—¶æ•°æ®";
             break;
 
         case AFN_0D_ASK2:
-            str = "ÇëÇó2ÀàÊı¾İ ÀúÊ·Êı¾İ";
+            str = "è¯·æ±‚2ç±»æ•°æ® å†å²æ•°æ®";
             break;
         case AFN_0E_ASK3:
-            str = "ÇëÇó3ÀàÊı¾İ ÊÂ¼şÊı¾İ";
+            str = "è¯·æ±‚3ç±»æ•°æ® äº‹ä»¶æ•°æ®";
             break;
          case AFN_0F_FILE:
-            str = "ÎÄ¼ş´«Êä";
+            str = "æ–‡ä»¶ä¼ è¾“";
             break;
          case AFN_10_DATA:
-            str = "Êı¾İ×ª·¢";
+            str = "æ•°æ®è½¬å‘";
             break;
 
         default:
-            str = "Î´ÖªÃüÁî";
+            str = "æœªçŸ¥å‘½ä»¤";
             break;
 
     }
 
-    show_sub_name("Ö÷¹¦ÄÜÂë\t");
+    show_sub_name("ä¸»åŠŸèƒ½ç \t");
     show_item_value(str);
 
-    //¿ØÖÆÓò
+    //æ§åˆ¶åŸŸ
     show_main_name("\nctrl_field:\n");
     printf("eDir = %d\t", psUnpack->eDir);
     eDir = psUnpack->eDir;
     switch(eDir)
     {
         case MT_DIR_UNKOWN:
-            str = "Î´Öª±¨ÎÄ·½Ïò";
+            str = "æœªçŸ¥æŠ¥æ–‡æ–¹å‘";
             break;
         case MT_DIR_M2S:
-            str = "´ÓÖ÷µ½µ½¼¯ÖĞÆ÷ ÏÂĞĞ";
+            str = "ä»ä¸»åˆ°åˆ°é›†ä¸­å™¨ ä¸‹è¡Œ";
             break;
         case MT_DIR_S2M:
-            str = "´Ó¼¯ÖĞÆ÷µ½Ö÷Õ¾ ÉÏĞĞ";
+            str = "ä»é›†ä¸­å™¨åˆ°ä¸»ç«™ ä¸Šè¡Œ";
             break;
         default:
-            str = "Î´Öª±¨ÎÄ·½Ïò";
+            str = "æœªçŸ¥æŠ¥æ–‡æ–¹å‘";
             break;
     }
     
-    show_sub_name("±¨ÎÄ´«Êä·½Ïò\t");
+    show_sub_name("æŠ¥æ–‡ä¼ è¾“æ–¹å‘\t");
     show_item_value(str); 
 
     // ctrl erpm
@@ -13054,90 +13054,90 @@ void show_pack(smtPack *psUnpack)
     switch(psUnpack->ePRM)
     {
         case MT_PRM_ACTIVE:
-            str = "À´×ÔÆô¶¯Õ¾";
+            str = "æ¥è‡ªå¯åŠ¨ç«™";
             break;
         case MT_PRM_PASIVE:
-            str = "À´×Ô´Ó¶¯Õ¾";
+            str = "æ¥è‡ªä»åŠ¨ç«™";
             break;
         default:
-            str = "´ÓÖ÷¶¯Õ¾Î´Öª";
+            str = "ä»ä¸»åŠ¨ç«™æœªçŸ¥";
             break;
     }
     
-    show_sub_name("±¨ÎÄÀ´Ô´\t");
+    show_sub_name("æŠ¥æ–‡æ¥æº\t");
     show_item_value(str); 
     printf("\n");
 
-    // ucPFC Ö¡¼ÆÊıÆ÷
+    // ucPFC å¸§è®¡æ•°å™¨
     show_main_name("ucSeq:\n");
     printf("ucSeq  = %d\t", psUnpack->ucSeq);
-    show_sub_name("Ö¡¼ÆÊıÆ÷\n"); 
+    show_sub_name("å¸§è®¡æ•°å™¨\n"); 
 
     printf("ePos = %d\t", psUnpack->ePos);
-    show_sub_name("Î»ÖÃÀàĞÍ\t"); 
+    show_sub_name("ä½ç½®ç±»å‹\t"); 
     switch(psUnpack->ePos)
     {
         case MT_POS_SIGLE:
-            show_item_value("µ¥Ö¡\n"); 
+            show_item_value("å•å¸§\n"); 
             break;
         case MT_POS_MUL_S:
-            show_item_value("¶àÖ¡ÆğÊ¼Ö¡\n"); 
+            show_item_value("å¤šå¸§èµ·å§‹å¸§\n"); 
             break;
         case MT_POS_MUL_M:
-            show_item_value("¶àÖ¡ÖĞ¼äÖ¡\n"); 
+            show_item_value("å¤šå¸§ä¸­é—´å¸§\n"); 
             break;
         case MT_POS_MUL_E:
-            show_item_value("¶àÖ¡×îºóÖ¡\n"); 
+            show_item_value("å¤šå¸§æœ€åå¸§\n"); 
             break;
     
         default:
-            show_error("´íÎóµÄÖ¡ÀàĞÍ\n"); 
+            show_error("é”™è¯¯çš„å¸§ç±»å‹\n"); 
             break;               
     }
 
-    // ¸½¼ÓÓò
+    // é™„åŠ åŸŸ
     show_main_name("aux_field:\n");
 
     // EC
     if(psUnpack->bEC == TRUE)
     {
         printf("bEC  = true\t");
-        show_sub_name("ÊÂ¼ş¼ÆÊıÆ÷\t"); 
-        show_item_value("ÓĞ\n"); 
+        show_sub_name("äº‹ä»¶è®¡æ•°å™¨\t"); 
+        show_item_value("æœ‰\n"); 
     }
     else
     {
         printf("bEC  = false\t");
-        show_sub_name("ÊÂ¼ş¼ÆÊıÆ÷\t"); 
-        show_item_value("ÎŞ\n"); 
+        show_sub_name("äº‹ä»¶è®¡æ•°å™¨\t"); 
+        show_item_value("æ— \n"); 
     }
 
     // pw
     if(psUnpack->bPW == TRUE)
     {
         printf("bPW  = true\t");
-        show_sub_name("ÏûÏ¢ÈÏÖ¤Âë\t"); 
-        show_item_value("ÓĞ\n"); 
+        show_sub_name("æ¶ˆæ¯è®¤è¯ç \t"); 
+        show_item_value("æœ‰\n"); 
     }
     else
     {
         printf("bPW  = false\t");
-        show_sub_name("ÏûÏ¢ÈÏÖ¤Âë\t"); 
-        show_item_value("ÎŞ\n"); 
+        show_sub_name("æ¶ˆæ¯è®¤è¯ç \t"); 
+        show_item_value("æ— \n"); 
     }
 
     //tp
     if(psUnpack->bTP == TRUE)
     {
         printf("bTP  = true\t");
-        show_sub_name("Ê±¼ä±êÇ©\t"); 
-        show_item_value("ÓĞ\n"); 
+        show_sub_name("æ—¶é—´æ ‡ç­¾\t"); 
+        show_item_value("æœ‰\n"); 
     }
     else
     {
         printf("bTP  = false\t");
-        show_sub_name("Ê±¼ä±êÇ©\t"); 
-        show_item_value("ÎŞ\n"); 
+        show_sub_name("æ—¶é—´æ ‡ç­¾\t"); 
+        show_item_value("æ— \n"); 
     }
 
     // show EC value
@@ -13168,10 +13168,10 @@ void show_pack(smtPack *psUnpack)
     {
        show_main_name("TP:\n");
        printf("PFC  = %d\t", psUnpack->sTP.ucPFC);
-       show_sub_name("Æô¶¯Ö¡Ö¡ĞòºÅ¼ÆÊıÆ÷PFC\n"); 
+       show_sub_name("å¯åŠ¨å¸§å¸§åºå·è®¡æ•°å™¨PFC\n"); 
        
        printf("PDM  = %d\t", psUnpack->sTP.ucPermitDelayMinutes);
-       show_sub_name("ÔÊĞí·¢ËÍ´«ÊäÑÓÊ±Ê±¼ä\n");
+       show_sub_name("å…è®¸å‘é€ä¼ è¾“å»¶æ—¶æ—¶é—´\n");
 
        #if 1
        printf("ucDD = %d\n", psUnpack->sTP.sDDHHmmss.ucDD);
@@ -13180,13 +13180,13 @@ void show_pack(smtPack *psUnpack)
        printf("ucss = %d\t", psUnpack->sTP.sDDHHmmss.ucss);
   
        printf("%d", psUnpack->sTP.sDDHHmmss.ucDD);
-       show_sub_name("ÈÕ"); 
+       show_sub_name("æ—¥"); 
        printf("%d", psUnpack->sTP.sDDHHmmss.ucHH);
-       show_sub_name("Ê±"); 
+       show_sub_name("æ—¶"); 
        printf("%d", psUnpack->sTP.sDDHHmmss.ucmm);
-       show_sub_name("·Ö");
+       show_sub_name("åˆ†");
        printf("%d", psUnpack->sTP.sDDHHmmss.ucss);
-       show_sub_name("Ãë\n"); 
+       show_sub_name("ç§’\n"); 
         
        #endif
        
@@ -13196,28 +13196,28 @@ void show_pack(smtPack *psUnpack)
        
        sprintf(str_reg,"%d", psUnpack->sTP.ucDD);
        show_item_value(str_reg);
-       show_sub_name("ÈÕ"); 
+       show_sub_name("æ—¥"); 
        
        sprintf(str_reg,"%d", psUnpack->sTP.ucHH);
        show_item_value(str_reg);
-       show_sub_name("Ê±"); 
+       show_sub_name("æ—¶"); 
        
        sprintf(str_reg, "%d", psUnpack->sTP.ucmm);
        show_item_value(str_reg);
-       show_sub_name("·Ö");
+       show_sub_name("åˆ†");
        
        sprintf(str_reg, "%d", psUnpack->sTP.ucss);
        show_item_value(str_reg);
-       show_sub_name("Ãë\n"); 
+       show_sub_name("ç§’\n"); 
        #endif
        
     }
 
-    // Ó¦ÓÃ²ãÊı¾İ
+    // åº”ç”¨å±‚æ•°æ®
     show_main_name("app_data:\n");
     nSubNum = psUnpack->usDataNum;
     printf("subNum = %d\t", nSubNum);
-    show_sub_name("×ÓÃüÁî¸öÊı\n");
+    show_sub_name("å­å‘½ä»¤ä¸ªæ•°\n");
 
     for(i = 0; i < nSubNum; i++)
     {
@@ -13240,7 +13240,7 @@ void test_unpack_adp(int nstart, int argc, char *argv[])
    // printf("argc = %d , nstart = %d, usLen = %d------------",argc, nstart, usLen);
    printf("unpack len = %d\n", usLen);
 
-    // ½â¾öÃüÁîĞĞÊäÈëµÄ²ÎÊı
+    // è§£å†³å‘½ä»¤è¡Œè¾“å…¥çš„å‚æ•°
     for(i = nstart; i < argc; i++)
     {
         g_ucInBuf[j++] = strtol(argv[i], NULL,16);
@@ -13255,12 +13255,12 @@ void test_unpack_adp(int nstart, int argc, char *argv[])
 
     //printf_buffer_color((char*)pInBuf, usLen);
 
-    // Ğ­Òé³õÊ¼»¯
+    // åè®®åˆå§‹åŒ–
     sInit.eRole = MT_ROLE_CONTOR;
     sInit.ucPermitDelayMinutes = 255;
     eMtInit(&sInit);
     
-    //µ÷ÓÃ½âÎöº¯Êı
+    //è°ƒç”¨è§£æå‡½æ•°
     eMtErr eRet = ecm_3761_unpack(pInBuf, usLen, psUnpack);
 
     if(eRet != MT_OK)
@@ -13271,7 +13271,7 @@ void test_unpack_adp(int nstart, int argc, char *argv[])
     else
     {
         fm_print("--------------------------unpack success-------------------------\n",FR_GREEN);
-        // ÏÔÊ¾½âÎö½á¹¹
+        // æ˜¾ç¤ºè§£æç»“æ„
         show_pack_adp(psUnpack); 
         fm_print("--------------------------unpack success-------------------------\n",FR_GREEN);
     }
@@ -13301,7 +13301,7 @@ void unpack_analyse(int nstart, int argc, char *argv[])
 
     pInBuf = (UINT8*)g_ucInBuf;
 
-     // Ğ­Òé³õÊ¼»¯
+     // åè®®åˆå§‹åŒ–
     sInit.eRole = MT_ROLE_CONTOR;
     sInit.ucPermitDelayMinutes = 255;
     eMtInit(&sInit);
@@ -13314,40 +13314,40 @@ void unpack_analyse(int nstart, int argc, char *argv[])
         return;
     }
     
-    // Êä³ö½á¹û
+    // è¾“å‡ºç»“æœ
     fm_print("--------------------------analyse success-------------------------\n",FR_GREEN);
-    show_main_name("ÆğÊ¼×Ö·û:\t");
+    show_main_name("èµ·å§‹å­—ç¬¦:\t");
     printf("    [%02X]\n", sUnpackCommon.sfComHead.f68);
 
     // L1   
-    show_main_name("³¤ ¶È Óò:\t");
+    show_main_name("é•¿ åº¦ åŸŸ:\t");
     show_sub_name(" L1:"); 
     printf("[%02X %02X]", (sUnpackCommon.sfComHead.p10 | (sUnpackCommon.sfComHead.L1 << 2)), sUnpackCommon.sfComHead.L2);
     printf("\t%d\t", sUnpackCommon.usLenUserField1);
 
-    show_item_value("Ó¦ÓÃ²ã");
+    show_item_value("åº”ç”¨å±‚");
     printf(" %d ", sUnpackCommon.usLenUserField1 - 6);
-    show_item_value("¿ØÖÆÓò");
+    show_item_value("æ§åˆ¶åŸŸ");
     printf(" 1 ");
-    show_item_value("µØÖ·Óò");
+    show_item_value("åœ°å€åŸŸ");
     printf(" 5\n");
   
     // L2   
     show_sub_name("\t\t L2:");
     printf("[%02X %02X]\t", (sUnpackCommon.sfComHead.p10_2 | (sUnpackCommon.sfComHead.L1_2 << 2)), sUnpackCommon.sfComHead.L2_2);
     printf("%d\t", sUnpackCommon.usLenUserField2);
-    show_item_value("Ó¦ÓÃ²ã");
+    show_item_value("åº”ç”¨å±‚");
     printf(" %d ", sUnpackCommon.usLenUserField2 - 6);
-    show_item_value("¿ØÖÆÓò");
+    show_item_value("æ§åˆ¶åŸŸ");
     printf(" 1 ");
-    show_item_value("µØÖ·Óò");
+    show_item_value("åœ°å€åŸŸ");
     printf(" 5\n");
 
     
-    show_main_name("ÆğÊ¼×Ö·û:\t");
+    show_main_name("èµ·å§‹å­—ç¬¦:\t");
     printf("    [%02X]\n", sUnpackCommon.sfComHead.s68);
 
-    show_main_name("¿Ø ÖÆ Óò:\t");
+    show_main_name("æ§ åˆ¶ åŸŸ:\t");
     show_sub_name("  C:");
     ucTemp = sUnpackCommon.sfComHead.C;
     printf("[%02X]\t", ucTemp);
@@ -13360,14 +13360,14 @@ void unpack_analyse(int nstart, int argc, char *argv[])
     show_sub_name("\t\tDIR:\t\t");
     printf("%d\t",  ucTemp & 0x80 ? 1:0);
     BOOL bDown = ((ucTemp & 0x80) == 0 ? TRUE:FALSE);
-    sprintf(buf, "%s\n", (ucTemp & 0x80) == 0 ? "ÏÂĞĞ":"ÉÏĞĞ");
+    sprintf(buf, "%s\n", (ucTemp & 0x80) == 0 ? "ä¸‹è¡Œ":"ä¸Šè¡Œ");
     show_item_value(buf);
 
     // PRM
     show_sub_name("\t\tPRM:\t\t");
     printf("%d\t",  (ucTemp & 0x40) ? 1:0);
     BOOL bPRM = ((ucTemp & 0x40) ? TRUE:FALSE);
-    sprintf(buf, "%s\n", (ucTemp & 0x40) == 0 ? "´Ó¶¯Õ¾":"Æô¶¯Õ¾");
+    sprintf(buf, "%s\n", (ucTemp & 0x40) == 0 ? "ä»åŠ¨ç«™":"å¯åŠ¨ç«™");
     show_item_value(buf);
 
     // FCB ACD
@@ -13377,18 +13377,18 @@ void unpack_analyse(int nstart, int argc, char *argv[])
         // fcb
         show_sub_name("\t\tFCB:\t\t");
         printf("%d\t",  (ucTemp & 0x20) >> 5);
-        show_item_value("·şÎñµÄ±ä»¯Î»\n");
+        show_item_value("æœåŠ¡çš„å˜åŒ–ä½\n");
 
         // fcv
         show_sub_name("\t\tFCV:\t\t");    
         printf("%d\t",  (ucTemp & 0x10) >> 4);
         if(((ucTemp & 0x10) >> 4) == 1)
         {
-            show_item_value("FCB Î»ÓĞĞ§\n");
+            show_item_value("FCB ä½æœ‰æ•ˆ\n");
         }
         else
         {
-            show_item_value("FCB Î»ÎŞĞ§\n");
+            show_item_value("FCB ä½æ— æ•ˆ\n");
         }
     }
     else
@@ -13401,11 +13401,11 @@ void unpack_analyse(int nstart, int argc, char *argv[])
         memset(buf, 0,64);
         if(((ucTemp & 0x20) >> 5) == 1)
         {
-            sprintf(buf, "\t%s", "ÓĞÊÂ¼ş\n");
+            sprintf(buf, "\t%s", "æœ‰äº‹ä»¶\n");
         }
         else
         {
-            sprintf(buf, "\t%s", "ÎŞÊÂ¼ş\n");
+            sprintf(buf, "\t%s", "æ— äº‹ä»¶\n");
         }
 
         show_item_value(buf);
@@ -13423,23 +13423,23 @@ void unpack_analyse(int nstart, int argc, char *argv[])
         switch(ucTemp)
         {
             case 0:
-            sprintf(buf, "%s", "ÈÏ¿É");
+            sprintf(buf, "%s", "è®¤å¯");
             break;     
 
             case 8:
-            sprintf(buf, "%s", "ÓÃ»§Êı¾İ");
+            sprintf(buf, "%s", "ç”¨æˆ·æ•°æ®");
             break; 
 
             case 9:
-            sprintf(buf, "%s", "·ñÈÏ£ºÎŞËùÕÙ»½µÄÊı¾İ");
+            sprintf(buf, "%s", "å¦è®¤ï¼šæ— æ‰€å¬å”¤çš„æ•°æ®");
             break; 
 
             case 11:
-            sprintf(buf, "%s", "Á´Â·×´Ì¬");
+            sprintf(buf, "%s", "é“¾è·¯çŠ¶æ€");
             break; 
 
             default:
-            sprintf(buf, "%s", "Î´Öª¹¦ÄÜÂë");
+            sprintf(buf, "%s", "æœªçŸ¥åŠŸèƒ½ç ");
 
              break;
         }
@@ -13450,27 +13450,27 @@ void unpack_analyse(int nstart, int argc, char *argv[])
         switch(ucTemp)
         {
             case 1:
-            sprintf(buf, "%s", "¸´Î»ÃüÁî");
+            sprintf(buf, "%s", "å¤ä½å‘½ä»¤");
             break;     
 
             case 4:
-            sprintf(buf, "%s", "ÓÃ»§Êı¾İ");
+            sprintf(buf, "%s", "ç”¨æˆ·æ•°æ®");
             break; 
 
             case 9:
-            sprintf(buf, "%s", "Á´Â·²âÊÔ");
+            sprintf(buf, "%s", "é“¾è·¯æµ‹è¯•");
             break; 
 
             case 10:
-            sprintf(buf, "%s", "ÇëÇó1¼¶Êı¾İ");
+            sprintf(buf, "%s", "è¯·æ±‚1çº§æ•°æ®");
             break; 
 
             case 11:
-            sprintf(buf, "%s", "ÇëÇó2¼¶Êı¾İ");
+            sprintf(buf, "%s", "è¯·æ±‚2çº§æ•°æ®");
             break; 
 
             default:
-            sprintf(buf, "%s", "Î´Öª¹¦ÄÜÂë");
+            sprintf(buf, "%s", "æœªçŸ¥åŠŸèƒ½ç ");
             break;
         }
 
@@ -13480,10 +13480,10 @@ void unpack_analyse(int nstart, int argc, char *argv[])
     printf("\n");
 
     // address
-    show_main_name("µØ Ö· Óò:");
+    show_main_name("åœ° å€ åŸŸ:");
     show_sub_name("\t A1:");
     printf("[%02X %02X]\t\t", sUnpackCommon.sfComHead.A.acRegionCode[0], sUnpackCommon.sfComHead.A.acRegionCode[1]);
-    show_item_value("ĞĞÕşÇø»®Âë\n");
+    show_item_value("è¡Œæ”¿åŒºåˆ’ç \n");
 
     show_sub_name("\t\t A2:");
     printf("[%02X %02X]\t", sUnpackCommon.sfComHead.A.acRegionCode[2], sUnpackCommon.sfComHead.A.acRegionCode[3]);
@@ -13491,15 +13491,15 @@ void unpack_analyse(int nstart, int argc, char *argv[])
     printf("%d\t", sUnpackCommon.sComPack.sAddr.usTAddress);
     if(sUnpackCommon.sComPack.sAddr.usTAddress == 0)
     {
-        show_item_value("¼¯ÖĞÆ÷ ÎŞĞ§µØÖ·");
+        show_item_value("é›†ä¸­å™¨ æ— æ•ˆåœ°å€");
     }
     else if(sUnpackCommon.sComPack.sAddr.usTAddress == 0xFFFF)
     {
-        show_item_value("¼¯ÖĞÆ÷ ¹ã²¥µØÖ·");
+        show_item_value("é›†ä¸­å™¨ å¹¿æ’­åœ°å€");
     }
     else
     {
-        show_item_value("¼¯ÖĞÆ÷µØÖ·");
+        show_item_value("é›†ä¸­å™¨åœ°å€");
 
     }
    
@@ -13508,21 +13508,21 @@ void unpack_analyse(int nstart, int argc, char *argv[])
     printf("[%02X]\t", ucTemp);
    
     printf("%d\t", sUnpackCommon.sComPack.sAddr.ucMAddress);
-    show_item_value("Ö÷Õ¾µØÖ·\n");
+    show_item_value("ä¸»ç«™åœ°å€\n");
     show_sub_name("\t\t bT:\t\t");
     ucTemp = ucTemp & 0x01;
     printf("%d\t", ucTemp);
     if(ucTemp == 1)
     {
-        show_item_value("A2Îª×éµØÖ·\n");
+        show_item_value("A2ä¸ºç»„åœ°å€\n");
     }
     else
     {
-        show_item_value("A2Îªµ¥µØÖ·\n");
+        show_item_value("A2ä¸ºå•åœ°å€\n");
     }
 
     // AFN
-    show_main_name("¹¦ÄÜÂëÓò:");
+    show_main_name("åŠŸèƒ½ç åŸŸ:");
     show_sub_name("\tAFN:");
 
     ucTemp = sUnpackCommon.sfComHead.A.acRegionCode[5];
@@ -13532,64 +13532,64 @@ void unpack_analyse(int nstart, int argc, char *argv[])
     switch(ucTemp)
     {
         case AFN_00_CONF:
-            str = "È·ÈÏ·ñÈÏ";
+            str = "ç¡®è®¤å¦è®¤";
             break;
         case AFN_01_RSET:
-            str = "¸´Î»";
+            str = "å¤ä½";
             break;
         case AFN_02_LINK:
-            str = "½Ó¿Ú¼ì²â";
+            str = "æ¥å£æ£€æµ‹";
             break;
         case AFN_03_RELY:
-            str = "ÖĞ¼ÌÕ¾ÃüÁî";
+            str = "ä¸­ç»§ç«™å‘½ä»¤";
             break;
         case AFN_04_SETP:
-            str = "ÉèÖÃ²ÎÊı";
+            str = "è®¾ç½®å‚æ•°";
             break;
         case AFN_05_CTRL:
-            str = "¿ØÖÆÃüÁî";
+            str = "æ§åˆ¶å‘½ä»¤";
             break;
          case AFN_06_AUTH:
-            str = "Éí·İÈÏÖ¤";
+            str = "èº«ä»½è®¤è¯";
             break;
          case AFN_08_CASC:
-            str = "ÇëÇó±»¼¶ÁªÖÕ¶ËÖ÷¶¯ÉÏ±¨";
+            str = "è¯·æ±‚è¢«çº§è”ç»ˆç«¯ä¸»åŠ¨ä¸ŠæŠ¥";
             break;
         case AFN_09_CFIG:
-            str = "ÇëÇóÖÕ¶ËÅäÖÃ";
+            str = "è¯·æ±‚ç»ˆç«¯é…ç½®";
             break;
         case AFN_0A_GETP:
-            str = "²éÑ¯²ÎÊı";
+            str = "æŸ¥è¯¢å‚æ•°";
             break;
          case AFN_0B_ASKT:
-            str = "ÇëÇóÈÎÎñÊı¾İ";
+            str = "è¯·æ±‚ä»»åŠ¡æ•°æ®";
             break;
          case AFN_0C_ASK1:
-            str = "ÇëÇó1ÀàÊı¾İ ÊµÊ±Êı¾İ";
+            str = "è¯·æ±‚1ç±»æ•°æ® å®æ—¶æ•°æ®";
             break;
 
         case AFN_0D_ASK2:
-            str = "ÇëÇó2ÀàÊı¾İ ÀúÊ·Êı¾İ";
+            str = "è¯·æ±‚2ç±»æ•°æ® å†å²æ•°æ®";
             break;
         case AFN_0E_ASK3:
-            str = "ÇëÇó3ÀàÊı¾İ ÊÂ¼şÊı¾İ";
+            str = "è¯·æ±‚3ç±»æ•°æ® äº‹ä»¶æ•°æ®";
             break;
          case AFN_0F_FILE:
-            str = "ÎÄ¼ş´«Êä";
+            str = "æ–‡ä»¶ä¼ è¾“";
             break;
          case AFN_10_DATA:
-            str = "Êı¾İ×ª·¢";
+            str = "æ•°æ®è½¬å‘";
             break;
 
         default:
-            str = "Î´ÖªÃüÁî";
+            str = "æœªçŸ¥å‘½ä»¤";
             break;
 
     }
     show_item_value(str);
 
     // SEQ
-    show_main_name("\nÖ¡ĞòÁĞÓò:");
+    show_main_name("\nå¸§åºåˆ—åŸŸ:");
     show_sub_name("\tSEQ:");
     ucTemp = sUnpackCommon.sfComHead.A.acRegionCode[6];
     printf("[%02X]\t", ucTemp);
@@ -13602,7 +13602,7 @@ void unpack_analyse(int nstart, int argc, char *argv[])
     show_sub_name("\t\tTpV:\t\t");
     printf("%d\t",  ucTemp & 0x80 ? 1:0);
     BOOL bTp = (ucTemp & 0x80) ? TRUE:FALSE;
-    sprintf(buf, "%s\n", (bTp == TRUE) ? "ÓĞTP 6":"ÎŞTP 0");
+    sprintf(buf, "%s\n", (bTp == TRUE) ? "æœ‰TP 6":"æ— TP 0");
     show_item_value(buf);
 
     // FIR
@@ -13619,22 +13619,22 @@ void unpack_analyse(int nstart, int argc, char *argv[])
     {
         if(ucFIN == 0)
         {
-            str = "¶àÖ¡£ºÖĞ¼äÖ¡";
+            str = "å¤šå¸§ï¼šä¸­é—´å¸§";
         }
         else
         {
-            str = "¶àÖ¡£º½áÊøÖ¡";
+            str = "å¤šå¸§ï¼šç»“æŸå¸§";
         }
     }
     else
     {
         if(ucFIN == 0)
         {
-            str = "¶àÖ¡£ºµÚ1Ö¡";
+            str = "å¤šå¸§ï¼šç¬¬1å¸§";
         }
         else
         {
-            str = "µ¥Ö¡";
+            str = "å•å¸§";
         }
         
     }
@@ -13647,21 +13647,21 @@ void unpack_analyse(int nstart, int argc, char *argv[])
     printf("%d\t",  (ucTemp & 0x10) ? 1 : 0);
     if(bCon == TRUE)
     {
-        show_item_value("ĞèÒªÈ·ÈÏ");
+        show_item_value("éœ€è¦ç¡®è®¤");
     }
     else
     {
-        show_item_value("²»ĞèÒªÈ·ÈÏ");
+        show_item_value("ä¸éœ€è¦ç¡®è®¤");
     }
     // CON
     show_sub_name("\n\t\tseq:\t\t");
     ucTemp = ucTemp & 0xF;
     printf("%d\t",  ucTemp);
  
-    show_item_value("Ö¡ĞòºÅPSEQ/RSEQ\n");
+    show_item_value("å¸§åºå·PSEQ/RSEQ\n");
 
-    //µÚÒ»¸öDaDt
-    show_main_name("Ó¦ÓÃÊı¾İ:");
+    //ç¬¬ä¸€ä¸ªDaDt
+    show_main_name("åº”ç”¨æ•°æ®:");
 
     show_sub_name("\tCMD:");
     printf("[%02X %02X %02X %02X]\n", 
@@ -13691,7 +13691,7 @@ void unpack_analyse(int nstart, int argc, char *argv[])
     UINT8    ucNumCmdPn = 0;
     if(eRet != MT_OK)
     {
-        show_item_value("±êÊ¶´íÎó\n");
+        show_item_value("æ ‡è¯†é”™è¯¯\n");
     }
     else
     {             
@@ -13699,7 +13699,7 @@ void unpack_analyse(int nstart, int argc, char *argv[])
 
         for(i = 0; i < ucNumCmdPn; i++)
         {
-             show_main_name("ÃüÁîÀàĞÍ:");
+             show_main_name("å‘½ä»¤ç±»å‹:");
             printf("\t%d:\n", i+1);
             show_sub_name("\t\tPn:\t\t");
             printf("%d\n",  sCmdPn[i].usPn);
@@ -13708,7 +13708,7 @@ void unpack_analyse(int nstart, int argc, char *argv[])
             eRet = eMtGetCmdInfor(sCmdPn[i].eCmd, eDir, &sCmdInfor);
             if(MT_OK != eRet)
             {
-               show_item_value("Î´ÖªÃüÁî\n");
+               show_item_value("æœªçŸ¥å‘½ä»¤\n");
             }
             else
             {
@@ -13734,7 +13734,7 @@ void test_unpack(int nstart, int argc, char *argv[])
     sMtInit  sInit = {0};
 
     // printf("\nargc = %d , nstart = %d, usLen = %d------------",argc, nstart, usLen);
-    // ½â¾öÃüÁîĞĞÊäÈëµÄ²ÎÊı
+    // è§£å†³å‘½ä»¤è¡Œè¾“å…¥çš„å‚æ•°
     for(i = nstart; i < argc; i++)
     {
         g_ucInBuf[j++] = strtol(argv[i], NULL,16);
@@ -13755,12 +13755,12 @@ void test_unpack(int nstart, int argc, char *argv[])
     //printf_buffer_color((char*)pInBuf, usLen);
 
 
-    // Ğ­Òé³õÊ¼»¯
+    // åè®®åˆå§‹åŒ–
     sInit.eRole = MT_ROLE_CONTOR;
     sInit.ucPermitDelayMinutes = 255;
     eMtInit(&sInit);
 
-    //µ÷ÓÃ½âÎöº¯Êı
+    //è°ƒç”¨è§£æå‡½æ•°
     eMtErr eRet = emtUnPack(psUnpack, pInBuf, usLen);
 
     if(eRet != MT_OK)
@@ -13771,7 +13771,7 @@ void test_unpack(int nstart, int argc, char *argv[])
     else
     {
         fm_print("--------------------------unpack success-------------------------\n",FR_GREEN);
-        // ÏÔÊ¾½âÎö½á¹¹
+        // æ˜¾ç¤ºè§£æç»“æ„
         show_pack(psUnpack); 
         fm_print("--------------------------unpack success-------------------------\n",FR_GREEN);
        
@@ -13786,7 +13786,7 @@ int main(int argc, char *argv[])
     int opt = 0;
     int longIndex = 0;
     char *strOpt = "uohcnmap:t:e:a:d:";
-    int    iTest= 0;// ²âÊÔÀıID
+    int    iTest= 0;// æµ‹è¯•ä¾‹ID
     struct option longOpts[] = 
     {
         {"address",     required_argument,    NULL,    'a'},
